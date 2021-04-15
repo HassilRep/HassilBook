@@ -16,5 +16,15 @@ namespace HassilBook
         {
             InitializeComponent();
         }
+
+        private void BtnFindFlight_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectTab("FindFlight");
+        }
+
+        private void BtnCheckBooking_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectTab("CheckBooking");
+        }
     }
 }
