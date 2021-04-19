@@ -27,7 +27,7 @@ namespace HassilBook
         {
             if(m_toggleStatus)
             {
-                this.Height -= 8;
+                this.Height -= 10;
                 if(this.Height <= m_panelHeight)
                 {
                     this.tmrAnimation.Stop();
@@ -37,7 +37,7 @@ namespace HassilBook
             }
             else
             {
-                this.Height += 8;
+                this.Height += 10;
                 if(this.Height >= 300)
                 {
                     this.tmrAnimation.Stop();

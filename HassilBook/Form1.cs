@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Bunifu.UI.WinForms;
+using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,7 +19,26 @@ namespace HassilBook
         public Form1()
         {
             InitializeComponent();
+            MyTooltip();
         }
+
+
+        /// <summary>
+        /// Gives the user a hint of the current components
+        /// </summary>
+        private void MyTooltip()
+        {
+            var Mytip = new Guna2HtmlToolTip();
+
+            Mytip.ToolTipIcon = ToolTipIcon.Info;
+            //Mytip.IsBalloon = true;
+            Mytip.ShowAlways = true;
+            Mytip.ForeColor = Color.Red;
+
+            Mytip.SetToolTip(DtFrom, "Departure date");
+            Mytip.SetToolTip(DtTo, "Return date");
+        }
+
 
         private void BtnFindFlight_Click(object sender, EventArgs e)
         {
@@ -31,7 +53,6 @@ namespace HassilBook
         private void BtnSearchFlight_Click(object sender, EventArgs e)
         {
             UcFoundFlights[] uc = new UcFoundFlights[10];
-
             for (int i = 0; i < uc.Length; i++)
             {
                 uc[i] = new UcFoundFlights();
@@ -61,7 +82,7 @@ namespace HassilBook
                         MySqlCommand cmd;
                         cmd = con.ActiveConnection().CreateCommand();
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "SELECT * FROM tbl_Routes WHERE Airport like('%" + TxtFrom.Text + "%')";
+                        cmd.CommandText = "SELECT * FROM tbl_Airports WHERE Airport like('%" + TxtFrom.Text + "%')";
                         cmd.ExecuteNonQuery();
                         DataTable dt = new DataTable();
                         MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
@@ -135,7 +156,7 @@ namespace HassilBook
                         MySqlCommand cmd;
                         cmd = con.ActiveConnection().CreateCommand();
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "SELECT * FROM tbl_Routes WHERE Airport like('%" + TxtTo.Text + "%')";
+                        cmd.CommandText = "SELECT * FROM tbl_Airports WHERE Airport like('%" + TxtTo.Text + "%')";
                         cmd.ExecuteNonQuery();
                         DataTable dt = new DataTable();
                         MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
@@ -218,6 +239,26 @@ namespace HassilBook
                 {
                     lstDropDownTo.Visible = false;
                 }
+            }
+        }
+
+        private void BtnAirlinesLogin_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"H{this.Height.ToString()} W{this.Width.ToString()}");
+        }
+
+        private void RbtnOneway_CheckedChanged(object sender, EventArgs e)
+        {
+            if(RbtnOneway.Checked == true)
+            {
+                DtTo.Visible = false;
+                DtFrom.Width += DtTo.Width + 6;
+
+            }
+            else
+            {
+                DtTo.Visible = true;
+                DtFrom.Width = TxtFrom.Width;
             }
         }
     }

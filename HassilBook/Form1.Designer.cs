@@ -33,17 +33,18 @@ namespace HassilBook
             this.BtnFindFlight = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.FindFlight = new System.Windows.Forms.TabPage();
+            this.lstDropDownTo = new System.Windows.Forms.ListBox();
             this.lstDropDownFrom = new System.Windows.Forms.ListBox();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.BtnSearchFlight = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.RbtnRoundTrip = new System.Windows.Forms.RadioButton();
+            this.RbtnOneway = new System.Windows.Forms.RadioButton();
+            this.DtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.CmbRoles = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.DtBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.TxtTo = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtFrom = new Guna.UI2.WinForms.Guna2TextBox();
             this.CheckBooking = new System.Windows.Forms.TabPage();
@@ -58,6 +59,7 @@ namespace HassilBook
             this.FlpFlightSearchResults = new System.Windows.Forms.FlowLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.BtnFilterFastest = new Guna.UI2.WinForms.Guna2Button();
             this.BtnFilterCheapest = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,6 +68,7 @@ namespace HassilBook
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,9 +79,6 @@ namespace HassilBook
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.BtnCheckBooking = new Guna.UI2.WinForms.Guna2Button();
-            this.lstDropDownTo = new System.Windows.Forms.ListBox();
-            this.BtnFilterFastest = new Guna.UI2.WinForms.Guna2Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabControl2.SuspendLayout();
             this.FindFlight.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -136,14 +136,14 @@ namespace HassilBook
             // 
             this.FindFlight.BackColor = System.Drawing.Color.White;
             this.FindFlight.Controls.Add(this.lstDropDownTo);
-            this.FindFlight.Controls.Add(this.lstDropDownFrom);
             this.FindFlight.Controls.Add(this.guna2ComboBox2);
             this.FindFlight.Controls.Add(this.BtnSearchFlight);
+            this.FindFlight.Controls.Add(this.lstDropDownFrom);
             this.FindFlight.Controls.Add(this.guna2ComboBox1);
             this.FindFlight.Controls.Add(this.panel9);
-            this.FindFlight.Controls.Add(this.guna2DateTimePicker1);
+            this.FindFlight.Controls.Add(this.DtTo);
             this.FindFlight.Controls.Add(this.CmbRoles);
-            this.FindFlight.Controls.Add(this.DtBirthdate);
+            this.FindFlight.Controls.Add(this.DtFrom);
             this.FindFlight.Controls.Add(this.TxtTo);
             this.FindFlight.Controls.Add(this.TxtFrom);
             this.FindFlight.Location = new System.Drawing.Point(4, 29);
@@ -153,6 +153,21 @@ namespace HassilBook
             this.FindFlight.TabIndex = 0;
             this.FindFlight.Text = "FindFlight";
             // 
+            // lstDropDownTo
+            // 
+            this.lstDropDownTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstDropDownTo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDropDownTo.FormattingEnabled = true;
+            this.lstDropDownTo.ItemHeight = 28;
+            this.lstDropDownTo.Location = new System.Drawing.Point(442, 145);
+            this.lstDropDownTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstDropDownTo.Name = "lstDropDownTo";
+            this.lstDropDownTo.Size = new System.Drawing.Size(498, 116);
+            this.lstDropDownTo.TabIndex = 21;
+            this.lstDropDownTo.Visible = false;
+            this.lstDropDownTo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstDropDownTo_MouseClick);
+            this.lstDropDownTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstDropDownTo_KeyDown);
+            // 
             // lstDropDownFrom
             // 
             this.lstDropDownFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -160,7 +175,7 @@ namespace HassilBook
             this.lstDropDownFrom.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstDropDownFrom.FormattingEnabled = true;
             this.lstDropDownFrom.ItemHeight = 28;
-            this.lstDropDownFrom.Location = new System.Drawing.Point(12, 147);
+            this.lstDropDownFrom.Location = new System.Drawing.Point(12, 145);
             this.lstDropDownFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstDropDownFrom.Name = "lstDropDownFrom";
             this.lstDropDownFrom.Size = new System.Drawing.Size(422, 116);
@@ -265,8 +280,8 @@ namespace HassilBook
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.panel9.Controls.Add(this.guna2ComboBox3);
-            this.panel9.Controls.Add(this.radioButton2);
-            this.panel9.Controls.Add(this.radioButton1);
+            this.panel9.Controls.Add(this.RbtnRoundTrip);
+            this.panel9.Controls.Add(this.RbtnOneway);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -303,54 +318,56 @@ namespace HassilBook
             this.guna2ComboBox3.StartIndex = 0;
             this.guna2ComboBox3.TabIndex = 21;
             // 
-            // radioButton2
+            // RbtnRoundTrip
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton2.Location = new System.Drawing.Point(148, 38);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(138, 29);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.Text = "ROUND TRIP";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RbtnRoundTrip.AutoSize = true;
+            this.RbtnRoundTrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RbtnRoundTrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbtnRoundTrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RbtnRoundTrip.Location = new System.Drawing.Point(148, 38);
+            this.RbtnRoundTrip.Name = "RbtnRoundTrip";
+            this.RbtnRoundTrip.Size = new System.Drawing.Size(138, 29);
+            this.RbtnRoundTrip.TabIndex = 5;
+            this.RbtnRoundTrip.Text = "ROUND TRIP";
+            this.RbtnRoundTrip.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // RbtnOneway
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton1.Location = new System.Drawing.Point(20, 38);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(108, 29);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "ONEWAY";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RbtnOneway.AutoSize = true;
+            this.RbtnOneway.Checked = true;
+            this.RbtnOneway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RbtnOneway.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbtnOneway.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RbtnOneway.Location = new System.Drawing.Point(20, 38);
+            this.RbtnOneway.Name = "RbtnOneway";
+            this.RbtnOneway.Size = new System.Drawing.Size(108, 29);
+            this.RbtnOneway.TabIndex = 4;
+            this.RbtnOneway.TabStop = true;
+            this.RbtnOneway.Text = "ONEWAY";
+            this.RbtnOneway.UseVisualStyleBackColor = true;
+            this.RbtnOneway.CheckedChanged += new System.EventHandler(this.RbtnOneway_CheckedChanged);
             // 
-            // guna2DateTimePicker1
+            // DtTo
             // 
-            this.guna2DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2DateTimePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2DateTimePicker1.BorderRadius = 5;
-            this.guna2DateTimePicker1.BorderThickness = 1;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(442, 154);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(498, 43);
-            this.guna2DateTimePicker1.TabIndex = 17;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            this.DtTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DtTo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtTo.BorderRadius = 5;
+            this.DtTo.BorderThickness = 1;
+            this.DtTo.CheckedState.Parent = this.DtTo;
+            this.DtTo.FillColor = System.Drawing.Color.White;
+            this.DtTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtTo.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtTo.HoverState.Parent = this.DtTo;
+            this.DtTo.Location = new System.Drawing.Point(442, 154);
+            this.DtTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtTo.Name = "DtTo";
+            this.DtTo.ShadowDecoration.Parent = this.DtTo;
+            this.DtTo.Size = new System.Drawing.Size(498, 43);
+            this.DtTo.TabIndex = 17;
+            this.DtTo.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            this.DtTo.Visible = false;
             // 
             // CmbRoles
             // 
@@ -389,27 +406,27 @@ namespace HassilBook
             this.CmbRoles.StartIndex = 0;
             this.CmbRoles.TabIndex = 15;
             // 
-            // DtBirthdate
+            // DtFrom
             // 
-            this.DtBirthdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DtFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtBirthdate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.DtBirthdate.BorderRadius = 5;
-            this.DtBirthdate.BorderThickness = 1;
-            this.DtBirthdate.CheckedState.Parent = this.DtBirthdate;
-            this.DtBirthdate.FillColor = System.Drawing.Color.White;
-            this.DtBirthdate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DtBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DtBirthdate.HoverState.Parent = this.DtBirthdate;
-            this.DtBirthdate.Location = new System.Drawing.Point(12, 154);
-            this.DtBirthdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DtBirthdate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DtBirthdate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DtBirthdate.Name = "DtBirthdate";
-            this.DtBirthdate.ShadowDecoration.Parent = this.DtBirthdate;
-            this.DtBirthdate.Size = new System.Drawing.Size(422, 43);
-            this.DtBirthdate.TabIndex = 16;
-            this.DtBirthdate.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            this.DtFrom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtFrom.BorderRadius = 5;
+            this.DtFrom.BorderThickness = 1;
+            this.DtFrom.CheckedState.Parent = this.DtFrom;
+            this.DtFrom.FillColor = System.Drawing.Color.White;
+            this.DtFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtFrom.HoverState.Parent = this.DtFrom;
+            this.DtFrom.Location = new System.Drawing.Point(12, 154);
+            this.DtFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtFrom.Name = "DtFrom";
+            this.DtFrom.ShadowDecoration.Parent = this.DtFrom;
+            this.DtFrom.Size = new System.Drawing.Size(928, 43);
+            this.DtFrom.TabIndex = 16;
+            this.DtFrom.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
             // 
             // TxtTo
             // 
@@ -594,7 +611,7 @@ namespace HassilBook
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.panel3.Controls.Add(this.panel10);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
@@ -604,7 +621,7 @@ namespace HassilBook
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(516, 0);
             this.panel10.Name = "panel10";
@@ -648,6 +665,30 @@ namespace HassilBook
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(816, 59);
             this.panel12.TabIndex = 0;
+            // 
+            // BtnFilterFastest
+            // 
+            this.BtnFilterFastest.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnFilterFastest.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
+            this.BtnFilterFastest.CheckedState.Parent = this.BtnFilterFastest;
+            this.BtnFilterFastest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFilterFastest.CustomBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnFilterFastest.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.BtnFilterFastest.CustomImages.Parent = this.BtnFilterFastest;
+            this.BtnFilterFastest.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnFilterFastest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BtnFilterFastest.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFilterFastest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnFilterFastest.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnFilterFastest.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnFilterFastest.HoverState.Parent = this.BtnFilterFastest;
+            this.BtnFilterFastest.Location = new System.Drawing.Point(374, 0);
+            this.BtnFilterFastest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnFilterFastest.Name = "BtnFilterFastest";
+            this.BtnFilterFastest.ShadowDecoration.Parent = this.BtnFilterFastest;
+            this.BtnFilterFastest.Size = new System.Drawing.Size(374, 59);
+            this.BtnFilterFastest.TabIndex = 5;
+            this.BtnFilterFastest.Text = "FASTEST";
             // 
             // BtnFilterCheapest
             // 
@@ -805,6 +846,17 @@ namespace HassilBook
             this.panel2.Size = new System.Drawing.Size(1370, 72);
             this.panel2.TabIndex = 5;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(548, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(746, 38);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "All our top travel offers, deals, insider tips and inspiration";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -857,6 +909,7 @@ namespace HassilBook
             this.BtnAirlinesLogin.Size = new System.Drawing.Size(224, 46);
             this.BtnAirlinesLogin.TabIndex = 16;
             this.BtnAirlinesLogin.Text = "AIRLINES LOG IN";
+            this.BtnAirlinesLogin.Click += new System.EventHandler(this.BtnAirlinesLogin_Click);
             // 
             // panel5
             // 
@@ -937,56 +990,6 @@ namespace HassilBook
             this.BtnCheckBooking.Text = "CHECK BOOKINGS";
             this.BtnCheckBooking.Click += new System.EventHandler(this.BtnCheckBooking_Click);
             // 
-            // lstDropDownTo
-            // 
-            this.lstDropDownTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstDropDownTo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstDropDownTo.FormattingEnabled = true;
-            this.lstDropDownTo.ItemHeight = 28;
-            this.lstDropDownTo.Location = new System.Drawing.Point(442, 147);
-            this.lstDropDownTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lstDropDownTo.Name = "lstDropDownTo";
-            this.lstDropDownTo.Size = new System.Drawing.Size(498, 116);
-            this.lstDropDownTo.TabIndex = 21;
-            this.lstDropDownTo.Visible = false;
-            this.lstDropDownTo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstDropDownTo_MouseClick);
-            this.lstDropDownTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstDropDownTo_KeyDown);
-            // 
-            // BtnFilterFastest
-            // 
-            this.BtnFilterFastest.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.BtnFilterFastest.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
-            this.BtnFilterFastest.CheckedState.Parent = this.BtnFilterFastest;
-            this.BtnFilterFastest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnFilterFastest.CustomBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnFilterFastest.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.BtnFilterFastest.CustomImages.Parent = this.BtnFilterFastest;
-            this.BtnFilterFastest.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnFilterFastest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.BtnFilterFastest.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnFilterFastest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnFilterFastest.HoverState.FillColor = System.Drawing.Color.White;
-            this.BtnFilterFastest.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnFilterFastest.HoverState.Parent = this.BtnFilterFastest;
-            this.BtnFilterFastest.Location = new System.Drawing.Point(374, 0);
-            this.BtnFilterFastest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnFilterFastest.Name = "BtnFilterFastest";
-            this.BtnFilterFastest.ShadowDecoration.Parent = this.BtnFilterFastest;
-            this.BtnFilterFastest.Size = new System.Drawing.Size(374, 59);
-            this.BtnFilterFastest.TabIndex = 5;
-            this.BtnFilterFastest.Text = "FASTEST";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(548, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(746, 38);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "All our top travel offers, deals, insider tips and inspiration";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -998,6 +1001,7 @@ namespace HassilBook
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
+            this.MinimumSize = new System.Drawing.Size(22, 976);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -1035,11 +1039,11 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2TextBox TxtTo;
         private Guna.UI2.WinForms.Guna2ComboBox CmbRoles;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker DtBirthdate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DtTo;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DtFrom;
         private Guna.UI2.WinForms.Guna2Button BtnSearchFlight;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton RbtnOneway;
+        private System.Windows.Forms.RadioButton RbtnRoundTrip;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
         private Guna.UI2.WinForms.Guna2Button BtnSearchBooking;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
