@@ -63,7 +63,7 @@ namespace HassilBook
                 }
                 else
                 {
-                    uc[i].Width = FlpFlightSearchResults.Width - 25;
+                    uc[i].Width = FlpFlightSearchResults.Width - 21;
                     FlpFlightSearchResults.Controls.Add(uc[i]);
                 }
             }
