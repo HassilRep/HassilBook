@@ -61,7 +61,6 @@ namespace HassilBook
             this.label13 = new System.Windows.Forms.Label();
             this.LblFlightID = new System.Windows.Forms.Label();
             this.LblAirlines = new System.Windows.Forms.Label();
-            this.PbLogo3 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.LblOrigin = new System.Windows.Forms.Label();
             this.LblDetailDepTime = new System.Windows.Forms.Label();
             this.LblOriginAirport = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@ namespace HassilBook
             this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.LblStopover = new System.Windows.Forms.Label();
             this.LblClass = new System.Windows.Forms.Label();
+            this.PbLogo3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlFlights.SuspendLayout();
@@ -486,22 +486,6 @@ namespace HassilBook
             this.LblAirlines.TabIndex = 19;
             this.LblAirlines.Text = "Somali Airlines";
             // 
-            // PbLogo3
-            // 
-            this.PbLogo3.AllowFocused = false;
-            this.PbLogo3.AutoSizeHeight = true;
-            this.PbLogo3.BorderRadius = 10;
-            this.PbLogo3.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo3.Image")));
-            this.PbLogo3.IsCircle = true;
-            this.PbLogo3.Location = new System.Drawing.Point(21, 144);
-            this.PbLogo3.Margin = new System.Windows.Forms.Padding(2);
-            this.PbLogo3.Name = "PbLogo3";
-            this.PbLogo3.Size = new System.Drawing.Size(20, 20);
-            this.PbLogo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbLogo3.TabIndex = 20;
-            this.PbLogo3.TabStop = false;
-            this.PbLogo3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
             // LblOrigin
             // 
             this.LblOrigin.AutoSize = true;
@@ -653,11 +637,24 @@ namespace HassilBook
             this.LblClass.TabIndex = 34;
             this.LblClass.Text = "Class: Economy";
             // 
+            // PbLogo3
+            // 
+            this.PbLogo3.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo3.Image")));
+            this.PbLogo3.Location = new System.Drawing.Point(21, 144);
+            this.PbLogo3.Name = "PbLogo3";
+            this.PbLogo3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PbLogo3.ShadowDecoration.Parent = this.PbLogo3;
+            this.PbLogo3.Size = new System.Drawing.Size(20, 20);
+            this.PbLogo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbLogo3.TabIndex = 35;
+            this.PbLogo3.TabStop = false;
+            // 
             // UcFoundFlights
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.Controls.Add(this.PbLogo3);
             this.Controls.Add(this.LblClass);
             this.Controls.Add(this.LblStopover);
             this.Controls.Add(this.bunifuSeparator4);
@@ -671,7 +668,6 @@ namespace HassilBook
             this.Controls.Add(this.LblOriginAirport);
             this.Controls.Add(this.LblOrigin);
             this.Controls.Add(this.LblDetailDepTime);
-            this.Controls.Add(this.PbLogo3);
             this.Controls.Add(this.LblAirlines);
             this.Controls.Add(this.LblFlightID);
             this.Controls.Add(this.pnlPrice);
@@ -727,7 +723,6 @@ namespace HassilBook
         public System.Windows.Forms.Label LblNumberOfStops;
         public System.Windows.Forms.Label LblFlightID;
         public System.Windows.Forms.Label LblAirlines;
-        public Bunifu.UI.WinForms.BunifuPictureBox PbLogo3;
         public System.Windows.Forms.Label LblOrigin;
         public System.Windows.Forms.Label LblDetailDepTime;
         public System.Windows.Forms.Label LblOriginAirport;
@@ -741,5 +736,6 @@ namespace HassilBook
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
         public System.Windows.Forms.Label LblStopover;
         public System.Windows.Forms.Label LblClass;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox PbLogo3;
     }
 }
