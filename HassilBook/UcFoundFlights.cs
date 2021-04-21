@@ -38,7 +38,7 @@ namespace HassilBook
             else
             {
                 this.Height += 10;
-                if(this.Height >= 300)
+                if(this.Height >= 275)
                 {
                     this.tmrAnimation.Stop();
                     this.m_toggleStatus = true;

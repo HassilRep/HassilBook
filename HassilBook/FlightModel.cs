@@ -15,6 +15,11 @@ namespace HassilBook
         public int OfficeID { get; set; }
 
         /// <summary>
+        /// Airline company name
+        /// </summary>
+        public string Airlines { get; set; }
+
+        /// <summary>
         /// Airline flight ID
         /// </summary>
         public string FlightID { get; set; }

@@ -21,6 +21,9 @@ namespace HassilBook
         {
             InitializeComponent();
             MyTooltip();
+
+            DtFrom.Text = DateTime.Now.ToString();
+            DtTo.Text = DateTime.Now.ToString();
         }
 
 
@@ -61,61 +64,162 @@ namespace HassilBook
             {
                 if(RbtnOneway.Checked)
                 {
-                    FlpFlightSearchResults.Controls.Clear();
-                    Flight f = new Flight();
-                    var flight = f.Search(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"), DtFrom.Value.ToString("yyyy/MM/dd"), CmbClass.Text, int.Parse(CmbAdult.Text), int.Parse(CmbChild.Text), int.Parse(CmbInfant.Text));
-                    UcFoundFlights[] uc = new UcFoundFlights[flight.Count];
-                    for (int i = 0; i < uc.Length; i++)
+                    if(CmbClass.SelectedIndex == 1)
                     {
-                        uc[i] = new UcFoundFlights();
-                        uc[i].LblDepartureTime.Text = flight[i].DepartureTime.ToString().Substring(0, 5);
-                        uc[i].LblArrivalTime.Text = flight[i].ArrivalTime.ToString().Substring(0, 5);
-                        uc[i].LblFromAndDepDate.Text = $"{flight[i].From.ToString().Substring(0, 3)} - {flight[i].DepartureDate.ToString("dd MMM")}";
-                        uc[i].LblToAndArrDate.Text = $"{flight[i].To.ToString().Substring(0, 3)} - {flight[i].DepartureDate.ToString("dd MMM")}";
-                        uc[i].LblFrom.Text = flight[i].CityFrom.ToUpper();
-                        uc[i].LblTo.Text = flight[i].CityTo.ToUpper();
-                        if(flight[i].Stops == "Direct")
-                        {
-                            uc[i].LblStops.Text =  flight[i].Stops.ToUpper();
-                            uc[i].LblNumberOfStops.Visible = false;
-                        }
-                        else
-                        {
-                            uc[i].LblNumberOfStops.Visible = true;
-                            uc[i].LblNumberOfStops.Text = "1 Stop";
-                            uc[i].LblStops.Text = flight[i].Stops.ToString().Substring(0, 3);
-                        }
+                        // ECONOMY SEARCH RESULTS
 
-                        if (Convert.IsDBNull(flight[i].Logo == null))
+                        FlpFlightSearchResults.Controls.Clear();
+                        Flight f = new Flight();
+                        var flight = f.EconomySearch(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"));
+                        UcFoundFlights[] uc = new UcFoundFlights[flight.Count];
+                        for (int i = 0; i < uc.Length; i++)
                         {
-                            uc[i].PbLogo1.Image = null;
-                            uc[i].PbLogo2.Image = null;
-                        }
-                        else
-                        {
-                            MemoryStream ms = new MemoryStream(flight[i].Logo);
-                            uc[i].PbLogo1.Image = Image.FromStream(ms);
-                            uc[i].PbLogo2.Image = Image.FromStream(ms);
-                        }
+                            uc[i] = new UcFoundFlights();
+                            uc[i].LblDepartureTime.Text = flight[i].DepartureTime.ToString().Substring(0, 5);
+                            uc[i].LblDetailDepTime.Text = flight[i].DepartureTime.ToString().Substring(0, 5);
+                            uc[i].LblArrivalTime.Text = flight[i].ArrivalTime.ToString().Substring(0, 5);
+                            uc[i].LblDetailArrTime.Text = flight[i].ArrivalTime.ToString().Substring(0, 5);
+                            uc[i].LblFromAndDepDate.Text = $"{flight[i].From.ToString().Substring(0, 3)} - {flight[i].DepartureDate.ToString("dd MMM")}";
+                            uc[i].LblToAndArrDate.Text = $"{flight[i].To.ToString().Substring(0, 3)} - {flight[i].DepartureDate.ToString("dd MMM")}";
+                            uc[i].LblFrom.Text = flight[i].CityFrom.ToUpper();
+                            uc[i].LblOrigin.Text = $"{flight[i].CityFrom} ({flight[i].From.ToString().Substring(0, 3)})";
+                            uc[i].LblTo.Text = flight[i].CityTo.ToUpper();
+                            uc[i].LblDestination.Text = $"{flight[i].CityTo} ({flight[i].To.ToString().Substring(0, 3)})";
+                            uc[i].LblFlightID.Text = flight[i].FlightID.ToUpper();
+                            uc[i].LblAirlines.Text = flight[i].Airlines;
+                            uc[i].LblOriginAirport.Text = flight[i].From.ToString().Substring(5).Trim();
+                            uc[i].LblDestinationAirport.Text = flight[i].To.ToString().Substring(5).Trim();
+                            uc[i].LblClass.Text = $"Class: {CmbClass.Text}";
 
-                        // Duration will be here
+                            if (flight[i].Stops == "Direct")
+                            {
+                                uc[i].LblStops.Text = flight[i].Stops.ToUpper();
+                                uc[i].LblNumberOfStops.Visible = false;
+                                uc[i].LblStopover.Visible = false;
+                            }
+                            else
+                            {
+                                uc[i].LblNumberOfStops.Visible = true;
+                                uc[i].LblNumberOfStops.Text = "1 Stop";
+                                uc[i].LblStops.Text = flight[i].Stops.ToString().Substring(0, 3);
+                                uc[i].LblStopover.Visible = true;
+                                uc[i].LblStopover.Text = $"Stopover ({flight[i].Stops})";
+                            }
 
+                            if (Convert.IsDBNull(flight[i].Logo == null))
+                            {
+                                uc[i].PbLogo1.Image = null;
+                                uc[i].PbLogo2.Image = null;
+                            }
+                            else
+                            {
+                                MemoryStream ms = new MemoryStream(flight[i].Logo);
+                                uc[i].PbLogo1.Image = Image.FromStream(ms);
+                                uc[i].PbLogo2.Image = Image.FromStream(ms);
+                                uc[i].PbLogo3.Image = Image.FromStream(ms);
+                            }
 
-                        var adultsTotal = int.Parse(CmbAdult.Text) * flight[i].AdultEconomyPrice;
+                            // Flight duration and intervals will be calculated here.
+                            var interval = flight[i].ArrivalTime - flight[i].DepartureTime;
+                            uc[i].LblDuration.Text = $"{interval.Hours.ToString()}h {interval.Minutes.ToString()}m";
 
-                        uc[i].LblPrice.Text = $"USD {adultsTotal.ToString()}";
+                            // Price of the travelling people will be calculated here.
+                            decimal total = 0;
+                            decimal adultsTotal = (CmbAdult.SelectedIndex == 0 ? CmbAdult.SelectedIndex = 1 : int.Parse(CmbAdult.Text)) * flight[i].AdultEconomyPrice;
+                            decimal childTotal = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text)) * flight[i].ChildEconomyPrice;
+                            decimal infantTotal = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text)) * flight[i].InfantEconomyPrice;
+                            total = adultsTotal + childTotal + infantTotal;
 
-                        if (FlpFlightSearchResults.Controls.Count < 0)
-                        {
-                            FlpFlightSearchResults.Controls.Clear();
-                        }
-                        else
-                        {
+                            // Price break down
+                            uc[i].LblAdultPrice.Text = $"ADL - {CmbAdult.Text} x {flight[i].AdultEconomyPrice} USD";
+                            uc[i].LblChildPrice.Text = $"CHD - {CmbChild.Text} x {flight[i].ChildEconomyPrice} USD";
+                            uc[i].LblInfantPrice.Text =$"INF - {CmbInfant.Text} x {flight[i].InfantEconomyPrice} USD";
+                            uc[i].LblTotalPrice.Text = $"TOTAL: {total}";
+
+                            
+                            uc[i].LblPrice.Text = $"USD {total.ToString()}";
                             uc[i].Width = FlpFlightSearchResults.Width - 21;
                             FlpFlightSearchResults.Controls.Add(uc[i]);
                         }
                     }
+                    else
+                    {
+                        // BUSINESS SEARCH RESULTS
 
+                        FlpFlightSearchResults.Controls.Clear();
+                        Flight f = new Flight();
+                        var flight = f.BusinessSearch(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"));
+                        UcFoundFlights[] uc = new UcFoundFlights[flight.Count];
+                        for (int i = 0; i < uc.Length; i++)
+                        {
+                            uc[i] = new UcFoundFlights();
+                            uc[i].LblDepartureTime.Text = flight[i].DepartureTime.ToString().Substring(0, 5);
+                            uc[i].LblDetailDepTime.Text = flight[i].DepartureTime.ToString().Substring(0, 5);
+                            uc[i].LblArrivalTime.Text = flight[i].ArrivalTime.ToString().Substring(0, 5);
+                            uc[i].LblDetailArrTime.Text = flight[i].ArrivalTime.ToString().Substring(0, 5);
+                            uc[i].LblFromAndDepDate.Text = $"{flight[i].From.ToString().Substring(0, 3)} - {flight[i].DepartureDate.ToString("dd MMM")}";
+                            uc[i].LblToAndArrDate.Text = $"{flight[i].To.ToString().Substring(0, 3)} - {flight[i].DepartureDate.ToString("dd MMM")}";
+                            uc[i].LblFrom.Text = flight[i].CityFrom.ToUpper();
+                            uc[i].LblOrigin.Text = $"{flight[i].CityFrom} ({flight[i].From.ToString().Substring(0, 3)})";
+                            uc[i].LblTo.Text = flight[i].CityTo.ToUpper();
+                            uc[i].LblDestination.Text = $"{flight[i].CityTo} ({flight[i].To.ToString().Substring(0, 3)})";
+                            uc[i].LblFlightID.Text = flight[i].FlightID.ToUpper();
+                            uc[i].LblAirlines.Text = flight[i].Airlines;
+                            uc[i].LblOriginAirport.Text = flight[i].From.ToString().Substring(5).Trim();
+                            uc[i].LblDestinationAirport.Text = flight[i].To.ToString().Substring(5).Trim();
+                            uc[i].LblClass.Text = $"Class: {CmbClass.Text}";
+
+                            if (flight[i].Stops == "Direct")
+                            {
+                                uc[i].LblStops.Text = flight[i].Stops.ToUpper();
+                                uc[i].LblNumberOfStops.Visible = false;
+                                uc[i].LblStopover.Visible = false;
+                            }
+                            else
+                            {
+                                uc[i].LblNumberOfStops.Visible = true;
+                                uc[i].LblNumberOfStops.Text = "1 Stop";
+                                uc[i].LblStops.Text = flight[i].Stops.ToString().Substring(0, 3);
+                                uc[i].LblStopover.Visible = true;
+                                uc[i].LblStopover.Text = $"Stopover ({flight[i].Stops})";
+                            }
+
+                            if (Convert.IsDBNull(flight[i].Logo == null))
+                            {
+                                uc[i].PbLogo1.Image = null;
+                                uc[i].PbLogo2.Image = null;
+                            }
+                            else
+                            {
+                                MemoryStream ms = new MemoryStream(flight[i].Logo);
+                                uc[i].PbLogo1.Image = Image.FromStream(ms);
+                                uc[i].PbLogo2.Image = Image.FromStream(ms);
+                                uc[i].PbLogo3.Image = Image.FromStream(ms);
+                            }
+
+                            // Flight duration and intervals will be calculated here.
+                            var interval = flight[i].ArrivalTime - flight[i].DepartureTime;
+                            uc[i].LblDuration.Text = $"{interval.Hours.ToString()}h {interval.Minutes.ToString()}m";
+
+                            // Price of the travelling people will be calculated here.
+                            decimal total = 0;
+                            decimal adultsTotal = (CmbAdult.SelectedIndex == 0 ? CmbAdult.SelectedIndex = 1 : int.Parse(CmbAdult.Text)) * flight[i].AdultBusinessPrice;
+                            decimal childTotal = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text)) * flight[i].ChildBusinessPrice;
+                            decimal infantTotal = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text)) * flight[i].InfantBusinessPrice;
+                            total = adultsTotal + childTotal + infantTotal;
+
+                            // Price break down
+                            uc[i].LblAdultPrice.Text = $"ADL - {CmbAdult.Text} x {flight[i].AdultBusinessPrice} USD";
+                            uc[i].LblChildPrice.Text = $"CHD - {CmbChild.Text} x {flight[i].ChildBusinessPrice} USD";
+                            uc[i].LblInfantPrice.Text = $"INF - {CmbInfant.Text} x {flight[i].InfantBusinessPrice} USD";
+                            uc[i].LblTotalPrice.Text = $"TOTAL: {total}";
+
+
+                            uc[i].LblPrice.Text = $"USD {total.ToString()}";
+                            uc[i].Width = FlpFlightSearchResults.Width - 21;
+                            FlpFlightSearchResults.Controls.Add(uc[i]);
+                        }
+                    }
                 }
                 else
                 {
