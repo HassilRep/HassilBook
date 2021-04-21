@@ -489,7 +489,6 @@ namespace HassilBook
             // PbLogo3
             // 
             this.PbLogo3.AllowFocused = false;
-            this.PbLogo3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PbLogo3.AutoSizeHeight = true;
             this.PbLogo3.BorderRadius = 10;
             this.PbLogo3.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo3.Image")));
