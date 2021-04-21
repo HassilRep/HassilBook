@@ -16,5 +16,15 @@ namespace HassilBook
         {
             InitializeComponent();
         }
+
+        private void BtnFindFlights_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnFindBookings_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

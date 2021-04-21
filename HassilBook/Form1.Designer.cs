@@ -127,7 +127,7 @@ namespace HassilBook
             this.tabControl2.Controls.Add(this.CheckBooking);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(640, 205);
@@ -148,9 +148,9 @@ namespace HassilBook
             this.FindFlight.Controls.Add(this.TxtTo);
             this.FindFlight.Controls.Add(this.TxtFrom);
             this.FindFlight.Location = new System.Drawing.Point(4, 22);
-            this.FindFlight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FindFlight.Margin = new System.Windows.Forms.Padding(2);
             this.FindFlight.Name = "FindFlight";
-            this.FindFlight.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FindFlight.Padding = new System.Windows.Forms.Padding(2);
             this.FindFlight.Size = new System.Drawing.Size(632, 179);
             this.FindFlight.TabIndex = 0;
             this.FindFlight.Text = "FindFlight";
@@ -320,7 +320,7 @@ namespace HassilBook
             this.RbtnRoundTrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnRoundTrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.RbtnRoundTrip.Location = new System.Drawing.Point(99, 25);
-            this.RbtnRoundTrip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RbtnRoundTrip.Margin = new System.Windows.Forms.Padding(2);
             this.RbtnRoundTrip.Name = "RbtnRoundTrip";
             this.RbtnRoundTrip.Size = new System.Drawing.Size(91, 19);
             this.RbtnRoundTrip.TabIndex = 5;
@@ -335,7 +335,7 @@ namespace HassilBook
             this.RbtnOneway.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtnOneway.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.RbtnOneway.Location = new System.Drawing.Point(13, 25);
-            this.RbtnOneway.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RbtnOneway.Margin = new System.Windows.Forms.Padding(2);
             this.RbtnOneway.Name = "RbtnOneway";
             this.RbtnOneway.Size = new System.Drawing.Size(73, 19);
             this.RbtnOneway.TabIndex = 4;
@@ -490,9 +490,9 @@ namespace HassilBook
             this.CheckBooking.Controls.Add(this.guna2TextBox4);
             this.CheckBooking.Controls.Add(this.guna2TextBox5);
             this.CheckBooking.Location = new System.Drawing.Point(4, 22);
-            this.CheckBooking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckBooking.Margin = new System.Windows.Forms.Padding(2);
             this.CheckBooking.Name = "CheckBooking";
-            this.CheckBooking.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckBooking.Padding = new System.Windows.Forms.Padding(2);
             this.CheckBooking.Size = new System.Drawing.Size(632, 179);
             this.CheckBooking.TabIndex = 1;
             this.CheckBooking.Text = "CheckBooking";
@@ -579,7 +579,7 @@ namespace HassilBook
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 404);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(913, 83);
             this.panel1.TabIndex = 4;
@@ -594,7 +594,7 @@ namespace HassilBook
             this.tableLayoutPanel1.Controls.Add(this.panel11, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -607,7 +607,7 @@ namespace HassilBook
             this.panel3.Controls.Add(this.panel10);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(2, 2);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(333, 79);
             this.panel3.TabIndex = 0;
@@ -617,7 +617,7 @@ namespace HassilBook
             this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(316, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(17, 79);
             this.panel10.TabIndex = 0;
@@ -629,7 +629,7 @@ namespace HassilBook
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(339, 2);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(572, 79);
             this.panel11.TabIndex = 1;
@@ -639,7 +639,7 @@ namespace HassilBook
             this.FlpFlightSearchResults.AutoScroll = true;
             this.FlpFlightSearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlpFlightSearchResults.Location = new System.Drawing.Point(0, 41);
-            this.FlpFlightSearchResults.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FlpFlightSearchResults.Margin = new System.Windows.Forms.Padding(2);
             this.FlpFlightSearchResults.Name = "FlpFlightSearchResults";
             this.FlpFlightSearchResults.Size = new System.Drawing.Size(572, 38);
             this.FlpFlightSearchResults.TabIndex = 1;
@@ -648,7 +648,7 @@ namespace HassilBook
             // 
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 38);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(572, 3);
             this.panel13.TabIndex = 2;
@@ -659,7 +659,7 @@ namespace HassilBook
             this.panel12.Controls.Add(this.BtnFilterCheapest);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(572, 38);
             this.panel12.TabIndex = 0;
@@ -727,7 +727,7 @@ namespace HassilBook
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(27, 41);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(235, 205);
@@ -838,7 +838,7 @@ namespace HassilBook
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 357);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(913, 47);
             this.panel2.TabIndex = 5;
@@ -873,7 +873,7 @@ namespace HassilBook
             this.panel4.Controls.Add(this.BtnAirlinesLogin);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(913, 55);
             this.panel4.TabIndex = 6;
@@ -883,7 +883,7 @@ namespace HassilBook
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -917,7 +917,7 @@ namespace HassilBook
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 55);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(913, 27);
             this.panel5.TabIndex = 17;
@@ -999,7 +999,7 @@ namespace HassilBook
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(20, 486);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
