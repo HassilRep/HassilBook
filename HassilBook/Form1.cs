@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -52,19 +53,73 @@ namespace HassilBook
 
         private void BtnSearchFlight_Click(object sender, EventArgs e)
         {
-            UcFoundFlights[] uc = new UcFoundFlights[10];
-            for (int i = 0; i < uc.Length; i++)
+            if(TxtFrom.Text == string.Empty || TxtTo.Text == string.Empty || CmbClass.SelectedIndex == 0)
             {
-                uc[i] = new UcFoundFlights();
-                uc[i].LblStops.Text = $"{i} Stops";
-                if (FlpFlightSearchResults.Controls.Count < 0)
+
+            }
+            else
+            {
+                if(RbtnOneway.Checked)
                 {
                     FlpFlightSearchResults.Controls.Clear();
+                    Flight f = new Flight();
+                    var flight = f.Search(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"), DtFrom.Value.ToString("yyyy/MM/dd"), CmbClass.Text, int.Parse(CmbAdult.Text), int.Parse(CmbChild.Text), int.Parse(CmbInfant.Text));
+                    UcFoundFlights[] uc = new UcFoundFlights[flight.Count];
+                    for (int i = 0; i < uc.Length; i++)
+                    {
+                        uc[i] = new UcFoundFlights();
+                        uc[i].LblDepartureTime.Text = flight[i].DepartureTime.ToString().Substring(0, 5);
+                        uc[i].LblArrivalTime.Text = flight[i].ArrivalTime.ToString().Substring(0, 5);
+                        uc[i].LblFromAndDepDate.Text = $"{flight[i].From.ToString().Substring(0, 3)} - {flight[i].DepartureDate.ToString("dd MMM")}";
+                        uc[i].LblToAndArrDate.Text = $"{flight[i].To.ToString().Substring(0, 3)} - {flight[i].DepartureDate.ToString("dd MMM")}";
+                        uc[i].LblFrom.Text = flight[i].CityFrom.ToUpper();
+                        uc[i].LblTo.Text = flight[i].CityTo.ToUpper();
+                        if(flight[i].Stops == "Direct")
+                        {
+                            uc[i].LblStops.Text =  flight[i].Stops.ToUpper();
+                            uc[i].LblNumberOfStops.Visible = false;
+                        }
+                        else
+                        {
+                            uc[i].LblNumberOfStops.Visible = true;
+                            uc[i].LblNumberOfStops.Text = "1 Stop";
+                            uc[i].LblStops.Text = flight[i].Stops.ToString().Substring(0, 3);
+                        }
+
+                        if (Convert.IsDBNull(flight[i].Logo == null))
+                        {
+                            uc[i].PbLogo1.Image = null;
+                            uc[i].PbLogo2.Image = null;
+                        }
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(flight[i].Logo);
+                            uc[i].PbLogo1.Image = Image.FromStream(ms);
+                            uc[i].PbLogo2.Image = Image.FromStream(ms);
+                        }
+
+                        // Duration will be here
+
+
+                        var adultsTotal = int.Parse(CmbAdult.Text) * flight[i].AdultEconomyPrice;
+
+                        uc[i].LblPrice.Text = $"USD {adultsTotal.ToString()}";
+
+                        if (FlpFlightSearchResults.Controls.Count < 0)
+                        {
+                            FlpFlightSearchResults.Controls.Clear();
+                        }
+                        else
+                        {
+                            uc[i].Width = FlpFlightSearchResults.Width - 21;
+                            FlpFlightSearchResults.Controls.Add(uc[i]);
+                        }
+                    }
+
                 }
                 else
                 {
-                    uc[i].Width = FlpFlightSearchResults.Width - 21;
-                    FlpFlightSearchResults.Controls.Add(uc[i]);
+                    MessageBox.Show("Currently not available.");
                 }
             }
         }
@@ -130,17 +185,23 @@ namespace HassilBook
 
         private void lstDropDown_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if(lstDropDownFrom.SelectedItem !=null)
             {
-                TxtFrom.Text = lstDropDownFrom.SelectedItem.ToString();
-                lstDropDownFrom.Visible = false;
+                if (e.KeyCode == Keys.Enter)
+                {
+                    TxtFrom.Text = lstDropDownFrom.SelectedItem.ToString();
+                    lstDropDownFrom.Visible = false;
+                }
             }
         }
 
         private void lstDropDown_MouseClick(object sender, MouseEventArgs e)
         {
-            TxtFrom.Text = lstDropDownFrom.SelectedItem.ToString();
-            lstDropDownFrom.Visible = false;
+            if(lstDropDownFrom.SelectedItem !=null)
+            {
+                TxtFrom.Text = lstDropDownFrom.SelectedItem.ToString();
+                lstDropDownFrom.Visible = false;
+            }
         }
 
         private void TxtTo_KeyUp(object sender, KeyEventArgs e)
@@ -194,16 +255,19 @@ namespace HassilBook
         {
             if (e.KeyCode == Keys.Down)
             {
-                if (TxtFrom.Text != string.Empty)
+                if(lstDropDownFrom.SelectedItem != null)
                 {
-                    if (TxtFrom.Text == TxtTo.Text)
+                    if (TxtFrom.Text != string.Empty)
                     {
-                        MessageBox.Show("Nop");
-                    }
-                    else
-                    {
-                        lstDropDownTo.Focus();
-                        lstDropDownTo.SelectedIndex = 0;
+                        if (TxtFrom.Text == TxtTo.Text)
+                        {
+                            MessageBox.Show("Origin and destination can't be the same. Please change one of them.", "same destination detected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            lstDropDownTo.Focus();
+                            lstDropDownTo.SelectedIndex = 0;
+                        }
                     }
                 }
             }
@@ -211,33 +275,39 @@ namespace HassilBook
 
         private void lstDropDownTo_MouseClick(object sender, MouseEventArgs e)
         {
-            TxtTo.Text = lstDropDownTo.SelectedItem.ToString();
-            if (TxtFrom.Text == TxtTo.Text)
+            if(lstDropDownTo.SelectedItem != null)
             {
-                MessageBox.Show("Nop");
-                TxtTo.Text = string.Empty;
-                lstDropDownTo.Visible = false;
-            }
-            else
-            {
-                lstDropDownTo.Visible = false;
-            }
-        }
-
-        private void lstDropDownTo_KeyDown(object sender, KeyEventArgs e)
-        {
-            TxtTo.Text = lstDropDownTo.SelectedItem.ToString();
-            if (e.KeyCode == Keys.Enter)
-            {
-                if(TxtFrom.Text == TxtTo.Text)
+                TxtTo.Text = lstDropDownTo.SelectedItem.ToString();
+                if (TxtFrom.Text == TxtTo.Text)
                 {
-                    MessageBox.Show("Nop");
+                    MessageBox.Show("Origin and destination can't be the same. Please change one of them.","same destination detected", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     TxtTo.Text = string.Empty;
                     lstDropDownTo.Visible = false;
                 }
                 else
                 {
                     lstDropDownTo.Visible = false;
+                }
+            }
+        }
+
+        private void lstDropDownTo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(lstDropDownTo.SelectedItem != null)
+            {
+                TxtTo.Text = lstDropDownTo.SelectedItem.ToString();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (TxtFrom.Text == TxtTo.Text)
+                    {
+                        MessageBox.Show("Origin and destination can't be the same. Please change one of them.", "same destination detected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TxtTo.Text = string.Empty;
+                        lstDropDownTo.Visible = false;
+                    }
+                    else
+                    {
+                        lstDropDownTo.Visible = false;
+                    }
                 }
             }
         }

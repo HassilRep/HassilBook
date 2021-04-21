@@ -131,15 +131,16 @@
   </data>
   <data name="bunifuSeparator1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAA1CAYAAACeN7GBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA2SURBVEhL7cuhDQBADMPA7D9jdumTx5UMynzIxNm0nZ+c
-        M+QMOUPOkDPkDDlDzpAz5AwdzskDcz69cMntgnQAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABYAAABSCAYAAABQfSRBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABLSURBVFhH7cyhDcBADMDA7D9jdumTl3mlouoOGXne2N3n
+        5reMYxzjGMc4xjGOcYxjHOMYxzjGMY5xjGMc4xjHOMYxjnGMY5w/j2cOVMslJjve0pQAAAAASUVORK5C
+        YII=
 </value>
   </data>
   <metadata name="tmrAnimation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="bunifuPictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PbLogo2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAp0AAAKDCAYAAABYCbHVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAP+NSURBVHhe7P0H
@@ -2139,12 +2140,13 @@
   </data>
   <data name="bunifuSeparator3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAA1CAYAAACeN7GBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA2SURBVEhL7cuhDQBADMPA7D9jdumTx5UMynzIxNm0nZ+c
-        M+QMOUPOkDPkDDlDzpAz5AwdzskDcz69cMntgnQAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABYAAABSCAYAAABQfSRBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABLSURBVFhH7cyhDcBADMDA7D9jdumTl3mlouoOGXne2N3n
+        5reMYxzjGMc4xjGOcYxjHOMYxzjGMY5xjGMc4xjHOMYxjnGMY5w/j2cOVMslJjve0pQAAAAASUVORK5C
+        YII=
 </value>
   </data>
-  <data name="bunifuPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PbLogo1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAMCAggICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI
         CAgICAgICAgICAoICAgICQkJCAgLDQoIDQgICgj/2wBDAQMEBAYFBgoGBgoPDgwODw0NDQ0QDw0PDw0N
@@ -2306,9 +2308,9 @@
   </data>
   <data name="bunifuSeparator2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAM0AAAAOCAYAAACMwJhzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAxSURBVGhD7dOhEQAwDAMx7z+VN2tJUVBBoHT3I3wAAAAA
-        AGBJ2yPpv7cOAAAAADAkF8/pmZIaxau1AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAATQAAAAWCAYAAABOkmAWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAA/SURBVHhe7dRBDQAwDAOx8EcVZt1nIKrKlo7CBQAAAAAA
+        AAAAAAAAAGChtiNJF/pbAwAAAAAAAAAAAAAADkgeicXn+tiCWkQAAAAASUVORK5CYII=
 </value>
   </data>
 </root>
