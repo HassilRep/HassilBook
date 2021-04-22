@@ -440,7 +440,7 @@ namespace HassilBook
 
         private void guna2TrackBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            LblToPrice.Text = $"{guna2TrackBar1.Value.ToString()} USD";
+            //LblToPrice.Text = $"{guna2TrackBar1.Value.ToString()} USD";
         }
     }
 }
