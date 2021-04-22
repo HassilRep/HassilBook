@@ -437,5 +437,10 @@ namespace HassilBook
             //}
             PnlFilter.Visible = true;
         }
+
+        private void guna2TrackBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            LblToPrice.Text = $"{guna2TrackBar1.Value.ToString()} USD";
+        }
     }
 }
