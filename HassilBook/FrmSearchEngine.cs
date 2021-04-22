@@ -16,6 +16,9 @@ namespace HassilBook
         {
             InitializeComponent();
             CheckRadionButton();
+
+            DtFrom.Text = DateTime.Now.ToString();
+            DtTo.Text = DateTime.Now.ToString();
         }
 
         private void BtnFindFlights_Click(object sender, EventArgs e)
@@ -38,17 +41,17 @@ namespace HassilBook
             if (RbtnOneway.Checked == true)
             {
                 CmbClass.Location = new Point(CmbClass.Location.X, CmbClass.Location.Y - 37);
-                NAdult.Location = new Point(NAdult.Location.X, NAdult.Location.Y - 37);
-                NChild.Location = new Point(NChild.Location.X, NChild.Location.Y - 37);
-                NInfant.Location = new Point(NInfant.Location.X, NInfant.Location.Y - 37);
+                CmbAdult.Location = new Point(CmbAdult.Location.X, CmbAdult.Location.Y - 37);
+                CmbChild.Location = new Point(CmbChild.Location.X, CmbChild.Location.Y - 37);
+                CmbInfant.Location = new Point(CmbInfant.Location.X, CmbInfant.Location.Y - 37);
                 BtnSearchFlight.Location = new Point(BtnSearchFlight.Location.X, BtnSearchFlight.Location.Y - 37);
             }
             else
             {
                 CmbClass.Location = new Point(CmbClass.Location.X, CmbClass.Location.Y + 37);
-                NAdult.Location = new Point(NAdult.Location.X, NAdult.Location.Y + 37);
-                NChild.Location = new Point(NChild.Location.X, NChild.Location.Y + 37);
-                NInfant.Location = new Point(NInfant.Location.X, NInfant.Location.Y + 37);
+                CmbAdult.Location = new Point(CmbAdult.Location.X, CmbAdult.Location.Y + 37);
+                CmbChild.Location = new Point(CmbChild.Location.X, CmbChild.Location.Y + 37);
+                CmbInfant.Location = new Point(CmbInfant.Location.X, CmbInfant.Location.Y + 37);
                 BtnSearchFlight.Location = new Point(BtnSearchFlight.Location.X, BtnSearchFlight.Location.Y + 37);
                 DtTo.Visible = true;
             }
