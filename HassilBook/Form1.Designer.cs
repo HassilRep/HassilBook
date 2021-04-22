@@ -162,9 +162,9 @@ namespace HassilBook
             this.lstDropDownFrom.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstDropDownFrom.FormattingEnabled = true;
             this.lstDropDownFrom.ItemHeight = 17;
-            this.lstDropDownFrom.Location = new System.Drawing.Point(8, 94);
+            this.lstDropDownFrom.Location = new System.Drawing.Point(31, 94);
             this.lstDropDownFrom.Name = "lstDropDownFrom";
-            this.lstDropDownFrom.Size = new System.Drawing.Size(283, 55);
+            this.lstDropDownFrom.Size = new System.Drawing.Size(260, 55);
             this.lstDropDownFrom.TabIndex = 6;
             this.lstDropDownFrom.Visible = false;
             this.lstDropDownFrom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstDropDown_MouseClick);
