@@ -29,8 +29,8 @@ namespace HassilBook
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSearchEngine));
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSearchEngine));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PnlButtonHolder = new Guna.UI2.WinForms.Guna2Panel();
@@ -54,9 +54,14 @@ namespace HassilBook
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.FlpFlightSearchResults = new System.Windows.Forms.FlowLayoutPanel();
+            this.PnlFilter = new Guna.UI2.WinForms.Guna2Panel();
+            this.lstDropDownFrom = new System.Windows.Forms.ListBox();
+            this.lstDropDownTo = new System.Windows.Forms.ListBox();
+            this.PnlContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.PnlButtonHolder.SuspendLayout();
             this.bunifuPages1.SuspendLayout();
@@ -64,6 +69,7 @@ namespace HassilBook
             this.tabPage2.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PnlContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -73,14 +79,15 @@ namespace HassilBook
             this.guna2Panel1.Controls.Add(this.PnlButtonHolder);
             this.guna2Panel1.Controls.Add(this.bunifuPages1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 105);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 68);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.BorderRadius = 3;
             this.guna2Panel1.ShadowDecoration.Depth = 5;
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.guna2Panel1.Size = new System.Drawing.Size(470, 644);
+            this.guna2Panel1.Size = new System.Drawing.Size(313, 419);
             this.guna2Panel1.TabIndex = 0;
             // 
             // label1
@@ -88,10 +95,9 @@ namespace HassilBook
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(18, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 31);
+            this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "TAKE A BREAK!";
             // 
@@ -100,14 +106,15 @@ namespace HassilBook
             this.PnlButtonHolder.BackColor = System.Drawing.Color.White;
             this.PnlButtonHolder.Controls.Add(this.BtnFindBookings);
             this.PnlButtonHolder.Controls.Add(this.BtnFindFlights);
-            this.PnlButtonHolder.Location = new System.Drawing.Point(0, 88);
+            this.PnlButtonHolder.Location = new System.Drawing.Point(0, 57);
+            this.PnlButtonHolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PnlButtonHolder.Name = "PnlButtonHolder";
             this.PnlButtonHolder.ShadowDecoration.BorderRadius = 3;
             this.PnlButtonHolder.ShadowDecoration.Depth = 5;
             this.PnlButtonHolder.ShadowDecoration.Enabled = true;
             this.PnlButtonHolder.ShadowDecoration.Parent = this.PnlButtonHolder;
             this.PnlButtonHolder.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.PnlButtonHolder.Size = new System.Drawing.Size(470, 69);
+            this.PnlButtonHolder.Size = new System.Drawing.Size(313, 45);
             this.PnlButtonHolder.TabIndex = 0;
             // 
             // BtnFindBookings
@@ -131,13 +138,14 @@ namespace HassilBook
             this.BtnFindBookings.HoverState.Parent = this.BtnFindBookings;
             this.BtnFindBookings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnFindBookings.ImageSize = new System.Drawing.Size(0, 0);
-            this.BtnFindBookings.Location = new System.Drawing.Point(226, 0);
+            this.BtnFindBookings.Location = new System.Drawing.Point(151, 0);
+            this.BtnFindBookings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnFindBookings.Name = "BtnFindBookings";
             this.BtnFindBookings.PressedColor = System.Drawing.Color.White;
             this.BtnFindBookings.ShadowDecoration.Enabled = true;
             this.BtnFindBookings.ShadowDecoration.Parent = this.BtnFindBookings;
             this.BtnFindBookings.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.BtnFindBookings.Size = new System.Drawing.Size(244, 69);
+            this.BtnFindBookings.Size = new System.Drawing.Size(162, 45);
             this.BtnFindBookings.TabIndex = 2;
             this.BtnFindBookings.Text = "MANAGE BOOKING";
             this.BtnFindBookings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -167,12 +175,13 @@ namespace HassilBook
             this.BtnFindFlights.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnFindFlights.ImageSize = new System.Drawing.Size(0, 0);
             this.BtnFindFlights.Location = new System.Drawing.Point(0, 0);
+            this.BtnFindFlights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnFindFlights.Name = "BtnFindFlights";
             this.BtnFindFlights.PressedColor = System.Drawing.Color.White;
             this.BtnFindFlights.ShadowDecoration.Enabled = true;
             this.BtnFindFlights.ShadowDecoration.Parent = this.BtnFindFlights;
             this.BtnFindFlights.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.BtnFindFlights.Size = new System.Drawing.Size(226, 69);
+            this.BtnFindFlights.Size = new System.Drawing.Size(151, 45);
             this.BtnFindFlights.TabIndex = 1;
             this.BtnFindFlights.Text = "BOOK A FLIGHT";
             this.BtnFindFlights.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -185,8 +194,7 @@ namespace HassilBook
             this.bunifuPages1.AllowTransitions = true;
             this.bunifuPages1.Controls.Add(this.tabPage1);
             this.bunifuPages1.Controls.Add(this.tabPage2);
-            this.bunifuPages1.Location = new System.Drawing.Point(-14, 142);
-            this.bunifuPages1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuPages1.Location = new System.Drawing.Point(-9, 92);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
             this.bunifuPages1.Page = this.tabPage1;
@@ -194,7 +202,7 @@ namespace HassilBook
             this.bunifuPages1.PageName = "tabPage1";
             this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
-            this.bunifuPages1.Size = new System.Drawing.Size(496, 605);
+            this.bunifuPages1.Size = new System.Drawing.Size(331, 393);
             this.bunifuPages1.TabIndex = 2;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -217,6 +225,8 @@ namespace HassilBook
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
+            this.tabPage1.Controls.Add(this.lstDropDownFrom);
+            this.tabPage1.Controls.Add(this.lstDropDownTo);
             this.tabPage1.Controls.Add(this.CmbInfant);
             this.tabPage1.Controls.Add(this.CmbChild);
             this.tabPage1.Controls.Add(this.CmbAdult);
@@ -229,10 +239,9 @@ namespace HassilBook
             this.tabPage1.Controls.Add(this.DtFrom);
             this.tabPage1.Controls.Add(this.TxtTo);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage1.Size = new System.Drawing.Size(488, 572);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(323, 367);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -263,11 +272,10 @@ namespace HassilBook
             this.CmbInfant.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.CmbInfant.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
             this.CmbInfant.ItemsAppearance.Parent = this.CmbInfant;
-            this.CmbInfant.Location = new System.Drawing.Point(315, 368);
-            this.CmbInfant.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbInfant.Location = new System.Drawing.Point(210, 239);
             this.CmbInfant.Name = "CmbInfant";
             this.CmbInfant.ShadowDecoration.Parent = this.CmbInfant;
-            this.CmbInfant.Size = new System.Drawing.Size(134, 28);
+            this.CmbInfant.Size = new System.Drawing.Size(91, 28);
             this.CmbInfant.StartIndex = 0;
             this.CmbInfant.TabIndex = 33;
             // 
@@ -298,11 +306,10 @@ namespace HassilBook
             this.CmbChild.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.CmbChild.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
             this.CmbChild.ItemsAppearance.Parent = this.CmbChild;
-            this.CmbChild.Location = new System.Drawing.Point(176, 368);
-            this.CmbChild.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbChild.Location = new System.Drawing.Point(117, 239);
             this.CmbChild.Name = "CmbChild";
             this.CmbChild.ShadowDecoration.Parent = this.CmbChild;
-            this.CmbChild.Size = new System.Drawing.Size(134, 28);
+            this.CmbChild.Size = new System.Drawing.Size(91, 28);
             this.CmbChild.StartIndex = 0;
             this.CmbChild.TabIndex = 32;
             // 
@@ -333,11 +340,10 @@ namespace HassilBook
             this.CmbAdult.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.CmbAdult.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
             this.CmbAdult.ItemsAppearance.Parent = this.CmbAdult;
-            this.CmbAdult.Location = new System.Drawing.Point(38, 368);
-            this.CmbAdult.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbAdult.Location = new System.Drawing.Point(25, 239);
             this.CmbAdult.Name = "CmbAdult";
             this.CmbAdult.ShadowDecoration.Parent = this.CmbAdult;
-            this.CmbAdult.Size = new System.Drawing.Size(134, 28);
+            this.CmbAdult.Size = new System.Drawing.Size(91, 28);
             this.CmbAdult.StartIndex = 0;
             this.CmbAdult.TabIndex = 31;
             // 
@@ -361,11 +367,10 @@ namespace HassilBook
             this.CmbClass.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.CmbClass.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
             this.CmbClass.ItemsAppearance.Parent = this.CmbClass;
-            this.CmbClass.Location = new System.Drawing.Point(38, 311);
-            this.CmbClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbClass.Location = new System.Drawing.Point(25, 202);
             this.CmbClass.Name = "CmbClass";
             this.CmbClass.ShadowDecoration.Parent = this.CmbClass;
-            this.CmbClass.Size = new System.Drawing.Size(412, 28);
+            this.CmbClass.Size = new System.Drawing.Size(276, 28);
             this.CmbClass.StartIndex = 0;
             this.CmbClass.TabIndex = 30;
             // 
@@ -373,10 +378,9 @@ namespace HassilBook
             // 
             this.RbtnRoundTrip.AutoSize = true;
             this.RbtnRoundTrip.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RbtnRoundTrip.Location = new System.Drawing.Point(176, 40);
-            this.RbtnRoundTrip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RbtnRoundTrip.Location = new System.Drawing.Point(117, 26);
             this.RbtnRoundTrip.Name = "RbtnRoundTrip";
-            this.RbtnRoundTrip.Size = new System.Drawing.Size(116, 27);
+            this.RbtnRoundTrip.Size = new System.Drawing.Size(81, 17);
             this.RbtnRoundTrip.TabIndex = 29;
             this.RbtnRoundTrip.Text = "Round trip";
             this.RbtnRoundTrip.UseVisualStyleBackColor = true;
@@ -386,10 +390,9 @@ namespace HassilBook
             this.RbtnOneway.AutoSize = true;
             this.RbtnOneway.Checked = true;
             this.RbtnOneway.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RbtnOneway.Location = new System.Drawing.Point(42, 40);
-            this.RbtnOneway.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RbtnOneway.Location = new System.Drawing.Point(28, 26);
             this.RbtnOneway.Name = "RbtnOneway";
-            this.RbtnOneway.Size = new System.Drawing.Size(96, 27);
+            this.RbtnOneway.Size = new System.Drawing.Size(67, 17);
             this.RbtnOneway.TabIndex = 28;
             this.RbtnOneway.TabStop = true;
             this.RbtnOneway.Text = "Oneway";
@@ -406,13 +409,13 @@ namespace HassilBook
             this.BtnSearchFlight.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSearchFlight.ForeColor = System.Drawing.Color.White;
             this.BtnSearchFlight.HoverState.Parent = this.BtnSearchFlight;
-            this.BtnSearchFlight.Location = new System.Drawing.Point(38, 425);
-            this.BtnSearchFlight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnSearchFlight.Location = new System.Drawing.Point(25, 276);
             this.BtnSearchFlight.Name = "BtnSearchFlight";
             this.BtnSearchFlight.ShadowDecoration.Parent = this.BtnSearchFlight;
-            this.BtnSearchFlight.Size = new System.Drawing.Size(414, 43);
+            this.BtnSearchFlight.Size = new System.Drawing.Size(276, 28);
             this.BtnSearchFlight.TabIndex = 23;
             this.BtnSearchFlight.Text = "SEARCH FLIGHT";
+            this.BtnSearchFlight.Click += new System.EventHandler(this.BtnSearchFlight_Click);
             // 
             // DtTo
             // 
@@ -424,13 +427,12 @@ namespace HassilBook
             this.DtTo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DtTo.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DtTo.HoverState.Parent = this.DtTo;
-            this.DtTo.Location = new System.Drawing.Point(38, 254);
-            this.DtTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtTo.Location = new System.Drawing.Point(25, 165);
             this.DtTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DtTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DtTo.Name = "DtTo";
             this.DtTo.ShadowDecoration.Parent = this.DtTo;
-            this.DtTo.Size = new System.Drawing.Size(414, 43);
+            this.DtTo.Size = new System.Drawing.Size(276, 28);
             this.DtTo.TabIndex = 20;
             this.DtTo.Value = new System.DateTime(2021, 4, 22, 0, 0, 0, 0);
             this.DtTo.Visible = false;
@@ -453,15 +455,16 @@ namespace HassilBook
             this.TxtFrom.HoverState.Parent = this.TxtFrom;
             this.TxtFrom.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtFrom.IconLeft")));
             this.TxtFrom.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtFrom.Location = new System.Drawing.Point(38, 83);
-            this.TxtFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtFrom.Location = new System.Drawing.Point(25, 54);
             this.TxtFrom.Name = "TxtFrom";
             this.TxtFrom.PasswordChar = '\0';
             this.TxtFrom.PlaceholderText = "FROM?";
             this.TxtFrom.SelectedText = "";
             this.TxtFrom.ShadowDecoration.Parent = this.TxtFrom;
-            this.TxtFrom.Size = new System.Drawing.Size(414, 43);
+            this.TxtFrom.Size = new System.Drawing.Size(276, 28);
             this.TxtFrom.TabIndex = 15;
+            this.TxtFrom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtFrom_KeyDown);
+            this.TxtFrom.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFrom_KeyUp);
             // 
             // DtFrom
             // 
@@ -473,13 +476,12 @@ namespace HassilBook
             this.DtFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DtFrom.HoverState.Parent = this.DtFrom;
-            this.DtFrom.Location = new System.Drawing.Point(38, 197);
-            this.DtFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtFrom.Location = new System.Drawing.Point(25, 128);
             this.DtFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DtFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DtFrom.Name = "DtFrom";
             this.DtFrom.ShadowDecoration.Parent = this.DtFrom;
-            this.DtFrom.Size = new System.Drawing.Size(414, 43);
+            this.DtFrom.Size = new System.Drawing.Size(276, 28);
             this.DtFrom.TabIndex = 19;
             this.DtFrom.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
             // 
@@ -501,15 +503,16 @@ namespace HassilBook
             this.TxtTo.HoverState.Parent = this.TxtTo;
             this.TxtTo.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtTo.IconLeft")));
             this.TxtTo.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtTo.Location = new System.Drawing.Point(38, 140);
-            this.TxtTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtTo.Location = new System.Drawing.Point(25, 91);
             this.TxtTo.Name = "TxtTo";
             this.TxtTo.PasswordChar = '\0';
             this.TxtTo.PlaceholderText = "TO?";
             this.TxtTo.SelectedText = "";
             this.TxtTo.ShadowDecoration.Parent = this.TxtTo;
-            this.TxtTo.Size = new System.Drawing.Size(414, 43);
+            this.TxtTo.Size = new System.Drawing.Size(276, 28);
             this.TxtTo.TabIndex = 16;
+            this.TxtTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTo_KeyDown);
+            this.TxtTo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtTo_KeyUp);
             // 
             // tabPage2
             // 
@@ -518,10 +521,9 @@ namespace HassilBook
             this.tabPage2.Controls.Add(this.guna2TextBox1);
             this.tabPage2.Controls.Add(this.guna2TextBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(488, 572);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(323, 367);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -535,11 +537,10 @@ namespace HassilBook
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(38, 165);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button2.Location = new System.Drawing.Point(25, 107);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(414, 43);
+            this.guna2Button2.Size = new System.Drawing.Size(276, 28);
             this.guna2Button2.TabIndex = 26;
             this.guna2Button2.Text = "SEARCH MY BOOKING";
             // 
@@ -561,14 +562,13 @@ namespace HassilBook
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox1.Location = new System.Drawing.Point(38, 51);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(25, 33);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "PNR OR YOUR E-TICKET NUMBER";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(414, 43);
+            this.guna2TextBox1.Size = new System.Drawing.Size(276, 28);
             this.guna2TextBox1.TabIndex = 24;
             // 
             // guna2TextBox2
@@ -589,59 +589,58 @@ namespace HassilBook
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
             this.guna2TextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconLeft")));
             this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox2.Location = new System.Drawing.Point(38, 108);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox2.Location = new System.Drawing.Point(25, 70);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "YOUR LASTNAME";
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(414, 43);
+            this.guna2TextBox2.Size = new System.Drawing.Size(276, 28);
             this.guna2TextBox2.TabIndex = 25;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.Controls.Add(this.guna2Button1);
+            this.guna2Panel2.Controls.Add(this.BtnLogin);
             this.guna2Panel2.Controls.Add(this.pictureBox1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.BorderRadius = 3;
             this.guna2Panel2.ShadowDecoration.Depth = 5;
             this.guna2Panel2.ShadowDecoration.Enabled = true;
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Panel2.Size = new System.Drawing.Size(1156, 63);
+            this.guna2Panel2.Size = new System.Drawing.Size(771, 41);
             this.guna2Panel2.TabIndex = 1;
             // 
-            // guna2Button1
+            // BtnLogin
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(998, 9);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(147, 43);
-            this.guna2Button1.TabIndex = 31;
-            this.guna2Button1.Text = "LOG IN";
+            this.BtnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnLogin.BorderRadius = 5;
+            this.BtnLogin.CheckedState.Parent = this.BtnLogin;
+            this.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnLogin.CustomImages.Parent = this.BtnLogin;
+            this.BtnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
+            this.BtnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.ForeColor = System.Drawing.Color.White;
+            this.BtnLogin.HoverState.Parent = this.BtnLogin;
+            this.BtnLogin.Location = new System.Drawing.Point(665, 6);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.ShadowDecoration.Parent = this.BtnLogin;
+            this.BtnLogin.Size = new System.Drawing.Size(98, 28);
+            this.BtnLogin.TabIndex = 31;
+            this.BtnLogin.Text = "LOG IN";
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -650,26 +649,90 @@ namespace HassilBook
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 63);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 41);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.BorderRadius = 3;
             this.guna2Panel3.ShadowDecoration.Depth = 5;
             this.guna2Panel3.ShadowDecoration.Enabled = true;
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
             this.guna2Panel3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Panel3.Size = new System.Drawing.Size(1156, 42);
+            this.guna2Panel3.Size = new System.Drawing.Size(771, 27);
             this.guna2Panel3.TabIndex = 2;
+            // 
+            // FlpFlightSearchResults
+            // 
+            this.FlpFlightSearchResults.AutoScroll = true;
+            this.FlpFlightSearchResults.BackColor = System.Drawing.Color.White;
+            this.FlpFlightSearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlpFlightSearchResults.Location = new System.Drawing.Point(0, 0);
+            this.FlpFlightSearchResults.Margin = new System.Windows.Forms.Padding(2);
+            this.FlpFlightSearchResults.Name = "FlpFlightSearchResults";
+            this.FlpFlightSearchResults.Size = new System.Drawing.Size(219, 419);
+            this.FlpFlightSearchResults.TabIndex = 3;
+            // 
+            // PnlFilter
+            // 
+            this.PnlFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PnlFilter.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PnlFilter.Location = new System.Drawing.Point(313, 68);
+            this.PnlFilter.Name = "PnlFilter";
+            this.PnlFilter.ShadowDecoration.BorderRadius = 3;
+            this.PnlFilter.ShadowDecoration.Depth = 5;
+            this.PnlFilter.ShadowDecoration.Enabled = true;
+            this.PnlFilter.ShadowDecoration.Parent = this.PnlFilter;
+            this.PnlFilter.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.PnlFilter.Size = new System.Drawing.Size(239, 419);
+            this.PnlFilter.TabIndex = 4;
+            this.PnlFilter.Visible = false;
+            // 
+            // lstDropDownFrom
+            // 
+            this.lstDropDownFrom.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDropDownFrom.FormattingEnabled = true;
+            this.lstDropDownFrom.ItemHeight = 17;
+            this.lstDropDownFrom.Location = new System.Drawing.Point(25, 84);
+            this.lstDropDownFrom.Name = "lstDropDownFrom";
+            this.lstDropDownFrom.Size = new System.Drawing.Size(276, 55);
+            this.lstDropDownFrom.TabIndex = 34;
+            this.lstDropDownFrom.Visible = false;
+            this.lstDropDownFrom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstDropDownFrom_MouseClick);
+            this.lstDropDownFrom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstDropDownFrom_KeyDown);
+            // 
+            // lstDropDownTo
+            // 
+            this.lstDropDownTo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDropDownTo.FormattingEnabled = true;
+            this.lstDropDownTo.ItemHeight = 17;
+            this.lstDropDownTo.Location = new System.Drawing.Point(25, 121);
+            this.lstDropDownTo.Name = "lstDropDownTo";
+            this.lstDropDownTo.Size = new System.Drawing.Size(276, 55);
+            this.lstDropDownTo.TabIndex = 22;
+            this.lstDropDownTo.Visible = false;
+            this.lstDropDownTo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstDropDownTo_MouseClick);
+            this.lstDropDownTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstDropDownTo_KeyDown);
+            // 
+            // PnlContainer
+            // 
+            this.PnlContainer.Controls.Add(this.FlpFlightSearchResults);
+            this.PnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlContainer.Location = new System.Drawing.Point(552, 68);
+            this.PnlContainer.Name = "PnlContainer";
+            this.PnlContainer.ShadowDecoration.Parent = this.PnlContainer;
+            this.PnlContainer.Size = new System.Drawing.Size(219, 419);
+            this.PnlContainer.TabIndex = 5;
             // 
             // FrmSearchEngine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1156, 749);
+            this.ClientSize = new System.Drawing.Size(771, 487);
+            this.Controls.Add(this.PnlContainer);
+            this.Controls.Add(this.PnlFilter);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmSearchEngine";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -683,6 +746,7 @@ namespace HassilBook
             this.tabPage2.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PnlContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -707,7 +771,7 @@ namespace HassilBook
         private System.Windows.Forms.RadioButton RbtnOneway;
         private System.Windows.Forms.RadioButton RbtnRoundTrip;
         private Guna.UI2.WinForms.Guna2ComboBox CmbClass;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button BtnLogin;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
@@ -715,5 +779,10 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2ComboBox CmbChild;
         private Guna.UI2.WinForms.Guna2ComboBox CmbAdult;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.FlowLayoutPanel FlpFlightSearchResults;
+        private Guna.UI2.WinForms.Guna2Panel PnlFilter;
+        private System.Windows.Forms.ListBox lstDropDownFrom;
+        private System.Windows.Forms.ListBox lstDropDownTo;
+        private Guna.UI2.WinForms.Guna2Panel PnlContainer;
     }
 }

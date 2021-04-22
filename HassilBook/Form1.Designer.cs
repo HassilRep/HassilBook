@@ -581,7 +581,7 @@ namespace HassilBook
             this.panel1.Location = new System.Drawing.Point(0, 404);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 83);
+            this.panel1.Size = new System.Drawing.Size(913, 142);
             this.panel1.TabIndex = 4;
             // 
             // tableLayoutPanel1
@@ -598,7 +598,7 @@ namespace HassilBook
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(913, 83);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(913, 142);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel3
@@ -609,7 +609,7 @@ namespace HassilBook
             this.panel3.Location = new System.Drawing.Point(2, 2);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 79);
+            this.panel3.Size = new System.Drawing.Size(333, 138);
             this.panel3.TabIndex = 0;
             // 
             // panel10
@@ -619,7 +619,7 @@ namespace HassilBook
             this.panel10.Location = new System.Drawing.Point(316, 0);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(17, 79);
+            this.panel10.Size = new System.Drawing.Size(17, 138);
             this.panel10.TabIndex = 0;
             // 
             // panel11
@@ -631,7 +631,7 @@ namespace HassilBook
             this.panel11.Location = new System.Drawing.Point(339, 2);
             this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(572, 79);
+            this.panel11.Size = new System.Drawing.Size(572, 138);
             this.panel11.TabIndex = 1;
             // 
             // FlpFlightSearchResults
@@ -641,7 +641,7 @@ namespace HassilBook
             this.FlpFlightSearchResults.Location = new System.Drawing.Point(0, 41);
             this.FlpFlightSearchResults.Margin = new System.Windows.Forms.Padding(2);
             this.FlpFlightSearchResults.Name = "FlpFlightSearchResults";
-            this.FlpFlightSearchResults.Size = new System.Drawing.Size(572, 38);
+            this.FlpFlightSearchResults.Size = new System.Drawing.Size(572, 97);
             this.FlpFlightSearchResults.TabIndex = 1;
             // 
             // panel13
@@ -993,7 +993,7 @@ namespace HassilBook
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(913, 487);
+            this.ClientSize = new System.Drawing.Size(913, 546);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
