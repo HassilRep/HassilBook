@@ -42,6 +42,7 @@ namespace HassilBook
             this.LblStops = new System.Windows.Forms.Label();
             this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -73,7 +74,6 @@ namespace HassilBook
             this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.LblStopover = new System.Windows.Forms.Label();
             this.LblClass = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.PbLogo3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -223,6 +223,17 @@ namespace HassilBook
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(811, 27);
             this.panel1.TabIndex = 15;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(661, 3);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(141, 19);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "TOTAL BREAKDOWN";
             // 
             // label11
             // 
@@ -626,17 +637,6 @@ namespace HassilBook
             this.LblClass.TabIndex = 34;
             this.LblClass.Text = "Class: Economy";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(661, 3);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 19);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "TOTAL BREAKDOWN";
-            // 
             // PbLogo3
             // 
             this.PbLogo3.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo3.Image")));
@@ -675,7 +675,7 @@ namespace HassilBook
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UcFoundFlights";
-            this.Size = new System.Drawing.Size(827, 363);
+            this.Size = new System.Drawing.Size(827, 108);
             this.Load += new System.EventHandler(this.UcFoundFlights_Load);
             this.Click += new System.EventHandler(this.UcFoundFlights_Click);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
