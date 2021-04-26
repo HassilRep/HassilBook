@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace HassilBook
 {
-    public partial class UcDirectFlights : UserControl
+    public partial class UcOnewayDirectFlights : UserControl
     {
         private int m_panelHeight;
         private bool m_toggleStatus;
-        public UcDirectFlights()
+        public UcOnewayDirectFlights()
         {
             InitializeComponent();
             // animation

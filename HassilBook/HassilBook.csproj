@@ -217,6 +217,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAirlinesControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAirlinesControlPanel.Designer.cs">
+      <DependentUpon>FrmAirlinesControlPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,11 +244,41 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Flight.cs" />
-    <Compile Include="UcDirectFlights.cs">
+    <Compile Include="UcReturnBackStopFlights.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcDirectFlights.Designer.cs">
-      <DependentUpon>UcDirectFlights.cs</DependentUpon>
+    <Compile Include="UcReturnBackStopFlights.Designer.cs">
+      <DependentUpon>UcReturnBackStopFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcReturnGoStopFlights.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcReturnGoStopFlights.Designer.cs">
+      <DependentUpon>UcReturnGoStopFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcReturnStopFlights.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcReturnStopFlights.Designer.cs">
+      <DependentUpon>UcReturnStopFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcReturnDirectFlights.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcReturnDirectFlights.Designer.cs">
+      <DependentUpon>UcReturnDirectFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcOnewayStopFlights.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcOnewayStopFlights.Designer.cs">
+      <DependentUpon>UcOnewayStopFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcOnewayDirectFlights.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcOnewayDirectFlights.Designer.cs">
+      <DependentUpon>UcOnewayDirectFlights.cs</DependentUpon>
     </Compile>
     <Compile Include="UcFoundFlights.cs">
       <SubType>UserControl</SubType>
@@ -252,6 +288,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAirlinesControlPanel.resx">
+      <DependentUpon>FrmAirlinesControlPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
@@ -272,8 +311,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UcDirectFlights.resx">
-      <DependentUpon>UcDirectFlights.cs</DependentUpon>
+    <EmbeddedResource Include="UcReturnBackStopFlights.resx">
+      <DependentUpon>UcReturnBackStopFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcReturnGoStopFlights.resx">
+      <DependentUpon>UcReturnGoStopFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcReturnStopFlights.resx">
+      <DependentUpon>UcReturnStopFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcReturnDirectFlights.resx">
+      <DependentUpon>UcReturnDirectFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcOnewayStopFlights.resx">
+      <DependentUpon>UcOnewayStopFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcOnewayDirectFlights.resx">
+      <DependentUpon>UcOnewayDirectFlights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcFoundFlights.resx">
       <DependentUpon>UcFoundFlights.cs</DependentUpon>

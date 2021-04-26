@@ -423,18 +423,58 @@ namespace HassilBook
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            UcDirectFlights[] uc = new UcDirectFlights[1];
+            UcOnewayDirectFlights[] uc = new UcOnewayDirectFlights[1];
             UcFoundFlights[] t = new UcFoundFlights[1];
             for (int i = 0; i < uc.Length; i++)
             {
-                uc[i] = new UcDirectFlights();
+                uc[i] = new UcOnewayDirectFlights();
                 FlpFlightSearchResults.Controls.Add(uc[i]);
             }
-            //for (int i = 0; i < t.Length; i++)
-            //{
-            //    t[i] = new UcFoundFlights();
-            //    FlpFlightSearchResults.Controls.Add(t[i]);
-            //}
+
+
+            UcOnewayStopFlights[] uc1 = new UcOnewayStopFlights[1];
+            UcFoundFlights[] t1 = new UcFoundFlights[1];
+            for (int i = 0; i < uc1.Length; i++)
+            {
+                uc1[i] = new UcOnewayStopFlights();
+                FlpFlightSearchResults.Controls.Add(uc1[i]);
+            }
+
+
+            UcReturnBackStopFlights[] uc2 = new UcReturnBackStopFlights[1];
+            UcFoundFlights[] t2 = new UcFoundFlights[1];
+            for (int i = 0; i < uc1.Length; i++)
+            {
+                uc2[i] = new UcReturnBackStopFlights();
+                FlpFlightSearchResults.Controls.Add(uc2[i]);
+            }
+
+
+            UcReturnDirectFlights[] uc3 = new UcReturnDirectFlights[1];
+            UcFoundFlights[] t3 = new UcFoundFlights[1];
+            for (int i = 0; i < uc1.Length; i++)
+            {
+                uc3[i] = new UcReturnDirectFlights();
+                FlpFlightSearchResults.Controls.Add(uc3[i]);
+            }
+
+
+            UcReturnGoStopFlights[] uc4 = new UcReturnGoStopFlights[1];
+            UcFoundFlights[] t4 = new UcFoundFlights[1];
+            for (int i = 0; i < uc1.Length; i++)
+            {
+                uc4[i] = new UcReturnGoStopFlights();
+                FlpFlightSearchResults.Controls.Add(uc4[i]);
+            }
+
+            UcReturnStopFlights[] uc5 = new UcReturnStopFlights[1];
+            UcFoundFlights[] t5 = new UcFoundFlights[1];
+            for (int i = 0; i < uc1.Length; i++)
+            {
+                uc5[i] = new UcReturnStopFlights();
+                FlpFlightSearchResults.Controls.Add(uc5[i]);
+            }
+
             PnlFilter.Visible = true;
         }
 

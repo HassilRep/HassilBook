@@ -16,7 +16,7 @@ namespace HassilBook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSearchEngine());
+            Application.Run(new FrmAirlinesControlPanel());
         }
     }
 }
