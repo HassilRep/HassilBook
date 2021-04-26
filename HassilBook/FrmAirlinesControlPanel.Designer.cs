@@ -89,7 +89,7 @@ namespace HassilBook
             this.BtnSupplier.CheckedState.Parent = this.BtnSupplier;
             this.BtnSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSupplier.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.BtnSupplier.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.BtnSupplier.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.BtnSupplier.CustomImages.Parent = this.BtnSupplier;
             this.BtnSupplier.FillColor = System.Drawing.Color.White;
             this.BtnSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,7 +196,7 @@ namespace HassilBook
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.White;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
