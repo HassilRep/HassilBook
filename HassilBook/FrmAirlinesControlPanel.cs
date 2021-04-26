@@ -17,6 +17,12 @@ namespace HassilBook
         {
             InitializeComponent();
             m_IsHidden = false;
+
+            //panel1.HorizontalScroll.Maximum = 0;
+            //panel1.AutoScroll = false;
+            panel1.VerticalScroll.Visible = true;
+            panel1.HorizontalScroll.Visible = false;
+            //panel1.AutoScroll = true;
         }
 
         private void TmrAnimation_Tick(object sender, EventArgs e)
