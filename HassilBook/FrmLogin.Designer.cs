@@ -29,7 +29,7 @@ namespace HassilBook
         /// </summary>
         private void InitializeComponent()
         {
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.LoginTabForm = new Bunifu.UI.WinForms.BunifuPages();
             this.AirlineLoginPage = new System.Windows.Forms.TabPage();
@@ -62,8 +62,7 @@ namespace HassilBook
             this.LoginTabForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LoginTabForm.Controls.Add(this.AirlineLoginPage);
             this.LoginTabForm.Controls.Add(this.AgencyLoginPage);
-            this.LoginTabForm.Location = new System.Drawing.Point(161, 164);
-            this.LoginTabForm.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginTabForm.Location = new System.Drawing.Point(242, 252);
             this.LoginTabForm.Multiline = true;
             this.LoginTabForm.Name = "LoginTabForm";
             this.LoginTabForm.Page = this.AirlineLoginPage;
@@ -71,24 +70,24 @@ namespace HassilBook
             this.LoginTabForm.PageName = "AirlineLoginPage";
             this.LoginTabForm.PageTitle = "tabPage1";
             this.LoginTabForm.SelectedIndex = 0;
-            this.LoginTabForm.Size = new System.Drawing.Size(321, 252);
+            this.LoginTabForm.Size = new System.Drawing.Size(482, 388);
             this.LoginTabForm.TabIndex = 1;
-            animation2.AnimateOnlyDifferences = false;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.LoginTabForm.Transition = animation2;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.LoginTabForm.Transition = animation1;
             this.LoginTabForm.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // AirlineLoginPage
@@ -100,10 +99,9 @@ namespace HassilBook
             this.AirlineLoginPage.Controls.Add(this.BtnSearchFlight);
             this.AirlineLoginPage.Controls.Add(this.TxtFrom);
             this.AirlineLoginPage.Location = new System.Drawing.Point(4, 4);
-            this.AirlineLoginPage.Margin = new System.Windows.Forms.Padding(2);
             this.AirlineLoginPage.Name = "AirlineLoginPage";
-            this.AirlineLoginPage.Padding = new System.Windows.Forms.Padding(2);
-            this.AirlineLoginPage.Size = new System.Drawing.Size(313, 226);
+            this.AirlineLoginPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.AirlineLoginPage.Size = new System.Drawing.Size(474, 355);
             this.AirlineLoginPage.TabIndex = 0;
             this.AirlineLoginPage.Text = "tabPage1";
             this.AirlineLoginPage.UseVisualStyleBackColor = true;
@@ -126,13 +124,14 @@ namespace HassilBook
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
             this.guna2TextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconLeft")));
             this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox2.Location = new System.Drawing.Point(21, 50);
+            this.guna2TextBox2.Location = new System.Drawing.Point(32, 77);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "OFFICE ID";
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(276, 28);
+            this.guna2TextBox2.Size = new System.Drawing.Size(414, 43);
             this.guna2TextBox2.TabIndex = 35;
             // 
             // label1
@@ -140,10 +139,9 @@ namespace HassilBook
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
-            this.label1.Location = new System.Drawing.Point(21, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 20);
+            this.label1.Size = new System.Drawing.Size(320, 30);
             this.label1.TabIndex = 34;
             this.label1.Text = "AIRLINE LOGIN INFORMATION";
             // 
@@ -165,14 +163,16 @@ namespace HassilBook
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox1.Location = new System.Drawing.Point(21, 123);
+            this.guna2TextBox1.Location = new System.Drawing.Point(32, 189);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "YOUR PASSWORD";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(276, 28);
+            this.guna2TextBox1.Size = new System.Drawing.Size(414, 43);
             this.guna2TextBox1.TabIndex = 33;
+            this.guna2TextBox1.UseSystemPasswordChar = true;
             // 
             // guna2Button1
             // 
@@ -184,10 +184,11 @@ namespace HassilBook
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(21, 159);
+            this.guna2Button1.Location = new System.Drawing.Point(32, 245);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(276, 28);
+            this.guna2Button1.Size = new System.Drawing.Size(414, 43);
             this.guna2Button1.TabIndex = 32;
             this.guna2Button1.Text = "LOG IN";
             // 
@@ -201,10 +202,11 @@ namespace HassilBook
             this.BtnSearchFlight.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSearchFlight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
             this.BtnSearchFlight.HoverState.Parent = this.BtnSearchFlight;
-            this.BtnSearchFlight.Location = new System.Drawing.Point(21, 196);
+            this.BtnSearchFlight.Location = new System.Drawing.Point(32, 302);
+            this.BtnSearchFlight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnSearchFlight.Name = "BtnSearchFlight";
             this.BtnSearchFlight.ShadowDecoration.Parent = this.BtnSearchFlight;
-            this.BtnSearchFlight.Size = new System.Drawing.Size(276, 28);
+            this.BtnSearchFlight.Size = new System.Drawing.Size(414, 43);
             this.BtnSearchFlight.TabIndex = 31;
             this.BtnSearchFlight.Text = "E&XIT";
             // 
@@ -226,13 +228,14 @@ namespace HassilBook
             this.TxtFrom.HoverState.Parent = this.TxtFrom;
             this.TxtFrom.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtFrom.IconLeft")));
             this.TxtFrom.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtFrom.Location = new System.Drawing.Point(21, 86);
+            this.TxtFrom.Location = new System.Drawing.Point(32, 132);
+            this.TxtFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtFrom.Name = "TxtFrom";
             this.TxtFrom.PasswordChar = '\0';
             this.TxtFrom.PlaceholderText = "YOUR EMAIL OR USERNAME";
             this.TxtFrom.SelectedText = "";
             this.TxtFrom.ShadowDecoration.Parent = this.TxtFrom;
-            this.TxtFrom.Size = new System.Drawing.Size(276, 28);
+            this.TxtFrom.Size = new System.Drawing.Size(414, 43);
             this.TxtFrom.TabIndex = 30;
             // 
             // AgencyLoginPage
@@ -244,10 +247,9 @@ namespace HassilBook
             this.AgencyLoginPage.Controls.Add(this.guna2Button3);
             this.AgencyLoginPage.Controls.Add(this.guna2TextBox5);
             this.AgencyLoginPage.Location = new System.Drawing.Point(4, 4);
-            this.AgencyLoginPage.Margin = new System.Windows.Forms.Padding(2);
             this.AgencyLoginPage.Name = "AgencyLoginPage";
-            this.AgencyLoginPage.Padding = new System.Windows.Forms.Padding(2);
-            this.AgencyLoginPage.Size = new System.Drawing.Size(313, 226);
+            this.AgencyLoginPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.AgencyLoginPage.Size = new System.Drawing.Size(474, 355);
             this.AgencyLoginPage.TabIndex = 1;
             this.AgencyLoginPage.Text = "tabPage2";
             this.AgencyLoginPage.UseVisualStyleBackColor = true;
@@ -270,13 +272,14 @@ namespace HassilBook
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
             this.guna2TextBox3.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox3.IconLeft")));
             this.guna2TextBox3.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox3.Location = new System.Drawing.Point(20, 51);
+            this.guna2TextBox3.Location = new System.Drawing.Point(32, 77);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "OFFICE ID";
             this.guna2TextBox3.SelectedText = "";
             this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(276, 28);
+            this.guna2TextBox3.Size = new System.Drawing.Size(414, 43);
             this.guna2TextBox3.TabIndex = 35;
             // 
             // label2
@@ -284,10 +287,9 @@ namespace HassilBook
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
-            this.label2.Location = new System.Drawing.Point(21, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(34, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 20);
+            this.label2.Size = new System.Drawing.Size(325, 30);
             this.label2.TabIndex = 34;
             this.label2.Text = "AGENCY LOGIN INFORMATION";
             // 
@@ -309,14 +311,16 @@ namespace HassilBook
             this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
             this.guna2TextBox4.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox4.IconLeft")));
             this.guna2TextBox4.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox4.Location = new System.Drawing.Point(20, 123);
+            this.guna2TextBox4.Location = new System.Drawing.Point(32, 188);
+            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderText = "YOUR PASSWORD";
             this.guna2TextBox4.SelectedText = "";
             this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(276, 28);
+            this.guna2TextBox4.Size = new System.Drawing.Size(414, 43);
             this.guna2TextBox4.TabIndex = 33;
+            this.guna2TextBox4.UseSystemPasswordChar = true;
             // 
             // guna2Button2
             // 
@@ -328,10 +332,11 @@ namespace HassilBook
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(20, 160);
+            this.guna2Button2.Location = new System.Drawing.Point(32, 245);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(276, 28);
+            this.guna2Button2.Size = new System.Drawing.Size(414, 43);
             this.guna2Button2.TabIndex = 32;
             this.guna2Button2.Text = "LOG IN";
             // 
@@ -345,10 +350,11 @@ namespace HassilBook
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(20, 196);
+            this.guna2Button3.Location = new System.Drawing.Point(32, 301);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(276, 28);
+            this.guna2Button3.Size = new System.Drawing.Size(414, 43);
             this.guna2Button3.TabIndex = 31;
             this.guna2Button3.Text = "E&XIT";
             // 
@@ -370,13 +376,14 @@ namespace HassilBook
             this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
             this.guna2TextBox5.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox5.IconLeft")));
             this.guna2TextBox5.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox5.Location = new System.Drawing.Point(20, 87);
+            this.guna2TextBox5.Location = new System.Drawing.Point(32, 133);
+            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
             this.guna2TextBox5.PlaceholderText = "YOUR EMAIL OR USERNAME";
             this.guna2TextBox5.SelectedText = "";
             this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Size = new System.Drawing.Size(276, 28);
+            this.guna2TextBox5.Size = new System.Drawing.Size(414, 43);
             this.guna2TextBox5.TabIndex = 30;
             // 
             // PnlButtonHolder
@@ -385,15 +392,14 @@ namespace HassilBook
             this.PnlButtonHolder.BackColor = System.Drawing.Color.White;
             this.PnlButtonHolder.Controls.Add(this.BtnAgencyLogin);
             this.PnlButtonHolder.Controls.Add(this.BtnAirlineLogin);
-            this.PnlButtonHolder.Location = new System.Drawing.Point(161, 119);
-            this.PnlButtonHolder.Margin = new System.Windows.Forms.Padding(2);
+            this.PnlButtonHolder.Location = new System.Drawing.Point(242, 183);
             this.PnlButtonHolder.Name = "PnlButtonHolder";
             this.PnlButtonHolder.ShadowDecoration.BorderRadius = 3;
             this.PnlButtonHolder.ShadowDecoration.Depth = 5;
             this.PnlButtonHolder.ShadowDecoration.Enabled = true;
             this.PnlButtonHolder.ShadowDecoration.Parent = this.PnlButtonHolder;
             this.PnlButtonHolder.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.PnlButtonHolder.Size = new System.Drawing.Size(321, 45);
+            this.PnlButtonHolder.Size = new System.Drawing.Size(482, 69);
             this.PnlButtonHolder.TabIndex = 2;
             // 
             // BtnAgencyLogin
@@ -415,11 +421,10 @@ namespace HassilBook
             this.BtnAgencyLogin.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgencyLogin.Image")));
             this.BtnAgencyLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnAgencyLogin.ImageSize = new System.Drawing.Size(15, 15);
-            this.BtnAgencyLogin.Location = new System.Drawing.Point(151, 0);
-            this.BtnAgencyLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAgencyLogin.Location = new System.Drawing.Point(226, 0);
             this.BtnAgencyLogin.Name = "BtnAgencyLogin";
             this.BtnAgencyLogin.ShadowDecoration.Parent = this.BtnAgencyLogin;
-            this.BtnAgencyLogin.Size = new System.Drawing.Size(170, 45);
+            this.BtnAgencyLogin.Size = new System.Drawing.Size(256, 69);
             this.BtnAgencyLogin.TabIndex = 3;
             this.BtnAgencyLogin.Text = "AGENCY LOGIN";
             this.BtnAgencyLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -447,10 +452,9 @@ namespace HassilBook
             this.BtnAirlineLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnAirlineLogin.ImageSize = new System.Drawing.Size(15, 15);
             this.BtnAirlineLogin.Location = new System.Drawing.Point(0, 0);
-            this.BtnAirlineLogin.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAirlineLogin.Name = "BtnAirlineLogin";
             this.BtnAirlineLogin.ShadowDecoration.Parent = this.BtnAirlineLogin;
-            this.BtnAirlineLogin.Size = new System.Drawing.Size(151, 45);
+            this.BtnAirlineLogin.Size = new System.Drawing.Size(226, 69);
             this.BtnAirlineLogin.TabIndex = 4;
             this.BtnAirlineLogin.Text = "AIRLINE LOGIN";
             this.BtnAirlineLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -459,13 +463,12 @@ namespace HassilBook
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(655, 531);
+            this.ClientSize = new System.Drawing.Size(982, 817);
             this.Controls.Add(this.PnlButtonHolder);
             this.Controls.Add(this.LoginTabForm);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
