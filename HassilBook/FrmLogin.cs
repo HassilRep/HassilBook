@@ -16,5 +16,15 @@ namespace HassilBook
         {
             InitializeComponent();
         }
+
+        private void BtnAirlineLogin_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.SelectTab("AirlineLoginPage");
+        }
+
+        private void BtnAgencyLogin_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.SelectTab("AgencyLoginPage");
+        }
     }
 }
