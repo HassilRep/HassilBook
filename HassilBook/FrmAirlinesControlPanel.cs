@@ -18,11 +18,8 @@ namespace HassilBook
             InitializeComponent();
             m_IsHidden = false;
 
-            //panel1.HorizontalScroll.Maximum = 0;
-            //panel1.AutoScroll = false;
-            panel1.VerticalScroll.Visible = true;
-            panel1.HorizontalScroll.Visible = false;
-            //panel1.AutoScroll = true;
+            // COPYRIGHT © [Year] Hassil Enterprise
+            LblCopyright.Text = $"© {DateTime.Now.Year.ToString()} Hassil Enterprise";
         }
 
         private void TmrAnimation_Tick(object sender, EventArgs e)
@@ -51,7 +48,26 @@ namespace HassilBook
 
         private void BtnHamburgerMenu_Click(object sender, EventArgs e)
         {
-            TmrAnimation.Start();
+            if (m_IsHidden)
+            {
+                pnlContainer.Width -= (pnlLeft.MaximumSize.Width - pnlLeft.MinimumSize.Width);
+                pnlLeft.Width = pnlLeft.MaximumSize.Width;
+                pnlContainer.Location = new Point(pnlLeft.Width + 8, pnlContainer.Location.Y);
+                m_IsHidden = false;
+                pnlMenu.AutoScroll = true;
+                LblCopyright.Visible = true;
+                this.Refresh();
+            }
+            else
+            {
+                pnlContainer.Width += (pnlLeft.MaximumSize.Width - pnlLeft.MinimumSize.Width);
+                pnlLeft.Width = pnlLeft.MinimumSize.Width;
+                m_IsHidden = true;
+                pnlContainer.Location = new Point(pnlLeft.Width + 8, pnlContainer.Location.Y);
+                pnlMenu.AutoScroll = false;
+                LblCopyright.Visible = false;
+                this.Refresh();
+            }
         }
     }
 }

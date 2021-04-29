@@ -217,6 +217,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAgencyDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgencyDashboard.Designer.cs">
+      <DependentUpon>FrmAgencyDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAirlinesControlPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,12 @@
     </Compile>
     <Compile Include="FrmLoader.Designer.cs">
       <DependentUpon>FrmLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSearchEngine.cs">
       <SubType>Form</SubType>
@@ -297,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoader.resx">
       <DependentUpon>FrmLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSearchEngine.resx">
       <DependentUpon>FrmSearchEngine.cs</DependentUpon>
