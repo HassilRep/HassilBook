@@ -19,12 +19,12 @@ namespace HassilBook
 
         private void BtnAirlineLogin_Click(object sender, EventArgs e)
         {
-            bunifuPages1.SelectTab("AirlineLoginPage");
+            LoginTabForm.SelectTab("AirlineLoginPage");
         }
 
         private void BtnAgencyLogin_Click(object sender, EventArgs e)
         {
-            bunifuPages1.SelectTab("AgencyLoginPage");
+            LoginTabForm.SelectTab("AgencyLoginPage");
         }
     }
 }
