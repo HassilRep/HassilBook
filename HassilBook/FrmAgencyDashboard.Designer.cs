@@ -49,6 +49,7 @@ namespace HassilBook
             this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlNavigator.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -64,12 +65,13 @@ namespace HassilBook
             this.pnlNavigator.Controls.Add(this.guna2ControlBox1);
             this.pnlNavigator.Controls.Add(this.BtnHamburgerMenu);
             this.pnlNavigator.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlNavigator.Location = new System.Drawing.Point(306, 0);
+            this.pnlNavigator.Location = new System.Drawing.Point(204, 0);
+            this.pnlNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlNavigator.Name = "pnlNavigator";
             this.pnlNavigator.ShadowDecoration.Depth = 10;
             this.pnlNavigator.ShadowDecoration.Enabled = true;
             this.pnlNavigator.ShadowDecoration.Parent = this.pnlNavigator;
-            this.pnlNavigator.Size = new System.Drawing.Size(894, 62);
+            this.pnlNavigator.Size = new System.Drawing.Size(590, 40);
             this.pnlNavigator.TabIndex = 1;
             // 
             // guna2ControlBox3
@@ -80,11 +82,10 @@ namespace HassilBook
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
             this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(766, 11);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(505, 7);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
-            this.guna2ControlBox3.Size = new System.Drawing.Size(38, 38);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(25, 25);
             this.guna2ControlBox3.TabIndex = 5;
             // 
             // guna2ControlBox2
@@ -95,11 +96,10 @@ namespace HassilBook
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(804, 11);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(530, 7);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(38, 38);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(25, 25);
             this.guna2ControlBox2.TabIndex = 4;
             // 
             // guna2ControlBox1
@@ -109,11 +109,10 @@ namespace HassilBook
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(842, 11);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(555, 7);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(38, 38);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(25, 25);
             this.guna2ControlBox1.TabIndex = 3;
             // 
             // BtnHamburgerMenu
@@ -129,10 +128,12 @@ namespace HassilBook
             this.BtnHamburgerMenu.HoverState.Parent = this.BtnHamburgerMenu;
             this.BtnHamburgerMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnHamburgerMenu.Image")));
             this.BtnHamburgerMenu.Location = new System.Drawing.Point(0, 0);
+            this.BtnHamburgerMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnHamburgerMenu.Name = "BtnHamburgerMenu";
             this.BtnHamburgerMenu.ShadowDecoration.Parent = this.BtnHamburgerMenu;
-            this.BtnHamburgerMenu.Size = new System.Drawing.Size(57, 62);
+            this.BtnHamburgerMenu.Size = new System.Drawing.Size(38, 40);
             this.BtnHamburgerMenu.TabIndex = 2;
+            this.BtnHamburgerMenu.Click += new System.EventHandler(this.BtnHamburgerMenu_Click);
             // 
             // pnlLeft
             // 
@@ -143,14 +144,15 @@ namespace HassilBook
             this.pnlLeft.Controls.Add(this.guna2PictureBox1);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeft.MaximumSize = new System.Drawing.Size(306, 0);
-            this.pnlLeft.MinimumSize = new System.Drawing.Size(74, 0);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlLeft.MaximumSize = new System.Drawing.Size(204, 0);
+            this.pnlLeft.MinimumSize = new System.Drawing.Size(49, 0);
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.ShadowDecoration.Depth = 10;
             this.pnlLeft.ShadowDecoration.Enabled = true;
             this.pnlLeft.ShadowDecoration.Parent = this.pnlLeft;
             this.pnlLeft.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.pnlLeft.Size = new System.Drawing.Size(306, 1185);
+            this.pnlLeft.Size = new System.Drawing.Size(204, 512);
             this.pnlLeft.TabIndex = 2;
             // 
             // pnlMenu
@@ -164,10 +166,9 @@ namespace HassilBook
             this.pnlMenu.Controls.Add(this.guna2Button1);
             this.pnlMenu.Controls.Add(this.BtnSupplier);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 178);
-            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 116);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(306, 893);
+            this.pnlMenu.Size = new System.Drawing.Size(204, 322);
             this.pnlMenu.TabIndex = 5;
             // 
             // guna2Button2
@@ -192,11 +193,12 @@ namespace HassilBook
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 69);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 45);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.PressedColor = System.Drawing.Color.White;
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(304, 69);
+            this.guna2Button2.Size = new System.Drawing.Size(203, 45);
             this.guna2Button2.TabIndex = 14;
             this.guna2Button2.Text = "BOOKINGS";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -224,11 +226,12 @@ namespace HassilBook
             this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button6.Location = new System.Drawing.Point(0, 346);
+            this.guna2Button6.Location = new System.Drawing.Point(0, 225);
+            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.PressedColor = System.Drawing.Color.White;
             this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
-            this.guna2Button6.Size = new System.Drawing.Size(304, 69);
+            this.guna2Button6.Size = new System.Drawing.Size(203, 45);
             this.guna2Button6.TabIndex = 6;
             this.guna2Button6.Text = "AGENTS";
             this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -256,11 +259,12 @@ namespace HassilBook
             this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button7.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button7.Location = new System.Drawing.Point(0, 277);
+            this.guna2Button7.Location = new System.Drawing.Point(0, 180);
+            this.guna2Button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.PressedColor = System.Drawing.Color.White;
             this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
-            this.guna2Button7.Size = new System.Drawing.Size(304, 69);
+            this.guna2Button7.Size = new System.Drawing.Size(203, 45);
             this.guna2Button7.TabIndex = 5;
             this.guna2Button7.Text = "FLIGHTS";
             this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -288,11 +292,12 @@ namespace HassilBook
             this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button3.Location = new System.Drawing.Point(0, 208);
+            this.guna2Button3.Location = new System.Drawing.Point(0, 135);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.PressedColor = System.Drawing.Color.White;
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(304, 69);
+            this.guna2Button3.Size = new System.Drawing.Size(203, 45);
             this.guna2Button3.TabIndex = 3;
             this.guna2Button3.Text = "PRICE MANAGER";
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -320,11 +325,12 @@ namespace HassilBook
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 138);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 90);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.White;
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(304, 69);
+            this.guna2Button1.Size = new System.Drawing.Size(203, 45);
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "AIRPLANES";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -354,10 +360,11 @@ namespace HassilBook
             this.BtnSupplier.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnSupplier.ImageOffset = new System.Drawing.Point(5, 0);
             this.BtnSupplier.Location = new System.Drawing.Point(0, 0);
+            this.BtnSupplier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSupplier.Name = "BtnSupplier";
             this.BtnSupplier.PressedColor = System.Drawing.Color.White;
             this.BtnSupplier.ShadowDecoration.Parent = this.BtnSupplier;
-            this.BtnSupplier.Size = new System.Drawing.Size(304, 69);
+            this.BtnSupplier.Size = new System.Drawing.Size(203, 45);
             this.BtnSupplier.TabIndex = 1;
             this.BtnSupplier.Text = "DASHBOARD";
             this.BtnSupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -369,23 +376,21 @@ namespace HassilBook
             this.pnlLeftBottom.Controls.Add(this.LblCopyright);
             this.pnlLeftBottom.Controls.Add(this.guna2Button12);
             this.pnlLeftBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlLeftBottom.Location = new System.Drawing.Point(0, 1071);
-            this.pnlLeftBottom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlLeftBottom.Location = new System.Drawing.Point(0, 438);
             this.pnlLeftBottom.Name = "pnlLeftBottom";
             this.pnlLeftBottom.ShadowDecoration.Enabled = true;
             this.pnlLeftBottom.ShadowDecoration.Parent = this.pnlLeftBottom;
             this.pnlLeftBottom.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.pnlLeftBottom.Size = new System.Drawing.Size(306, 114);
+            this.pnlLeftBottom.Size = new System.Drawing.Size(204, 74);
             this.pnlLeftBottom.TabIndex = 4;
             // 
             // LblCopyright
             // 
             this.LblCopyright.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCopyright.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.LblCopyright.Location = new System.Drawing.Point(-2, 75);
-            this.LblCopyright.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCopyright.Location = new System.Drawing.Point(-1, 49);
             this.LblCopyright.Name = "LblCopyright";
-            this.LblCopyright.Size = new System.Drawing.Size(302, 35);
+            this.LblCopyright.Size = new System.Drawing.Size(201, 23);
             this.LblCopyright.TabIndex = 5;
             this.LblCopyright.Text = "© 1998 Hassil Enterprise";
             this.LblCopyright.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -413,10 +418,11 @@ namespace HassilBook
             this.guna2Button12.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button12.ImageOffset = new System.Drawing.Point(5, 0);
             this.guna2Button12.Location = new System.Drawing.Point(0, 0);
+            this.guna2Button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button12.Name = "guna2Button12";
             this.guna2Button12.PressedColor = System.Drawing.Color.White;
             this.guna2Button12.ShadowDecoration.Parent = this.guna2Button12;
-            this.guna2Button12.Size = new System.Drawing.Size(306, 69);
+            this.guna2Button12.Size = new System.Drawing.Size(204, 45);
             this.guna2Button12.TabIndex = 14;
             this.guna2Button12.Text = "LOG OUT";
             this.guna2Button12.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -428,10 +434,9 @@ namespace HassilBook
             this.guna2PictureBox1.FillColor = System.Drawing.Color.White;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(306, 178);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(204, 116);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
@@ -441,16 +446,28 @@ namespace HassilBook
             this.guna2DragControl1.ContainerControl = this;
             this.guna2DragControl1.TargetControl = this.pnlNavigator;
             // 
+            // pnlContainer
+            // 
+            this.pnlContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContainer.BackColor = System.Drawing.Color.White;
+            this.pnlContainer.Location = new System.Drawing.Point(211, 47);
+            this.pnlContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(577, 702);
+            this.pnlContainer.TabIndex = 3;
+            // 
             // FrmAgencyDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 1185);
+            this.ClientSize = new System.Drawing.Size(794, 512);
+            this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlNavigator);
             this.Controls.Add(this.pnlLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmAgencyDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgencyDashboard";
@@ -484,6 +501,7 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2Button guna2Button12;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.Panel pnlContainer;
         //private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

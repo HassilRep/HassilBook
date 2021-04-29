@@ -18,7 +18,7 @@ namespace HassilBook
             InitializeComponent();
             m_IsHidden = false;
 
-            // COPYRIGHT © [Year] Hassil Enterprise
+            // COPYRIGHT © [Year] Hassil Technology
             LblCopyright.Text = $"© {DateTime.Now.Year.ToString()} Hassil Technology";
         }
 
