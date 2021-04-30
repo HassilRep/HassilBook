@@ -22,28 +22,16 @@ namespace HassilBook
             LblCopyright.Text = $"© {DateTime.Now.Year.ToString()} Hassil Technology";
         }
 
-        private void TmrAnimation_Tick(object sender, EventArgs e)
+        private void MyContainer(Form changer)
         {
-            if(m_IsHidden)
-            {
-                pnlLeft.Width += 10;
-                if(pnlLeft.Width >= pnlLeft.MaximumSize.Width)
-                {
-                    TmrAnimation.Stop();
-                    m_IsHidden = false;
-                    this.Refresh();
-                }
-            }
-            else
-            {
-                pnlLeft.Width -= 10;
-                if (pnlLeft.Width <= pnlLeft.MinimumSize.Width)
-                {
-                    TmrAnimation.Stop();
-                    m_IsHidden = true;
-                    this.Refresh();
-                }
-            }
+            if (pnlContainer.Controls.Count > 0)
+                pnlContainer.Controls.RemoveAt(0);
+            Form F = changer as Form;
+            changer.TopLevel = false;
+            changer.Dock = DockStyle.Fill;
+            this.pnlContainer.Controls.Add(changer);
+            this.pnlContainer.Tag = F;
+            changer.Show();
         }
 
         private void BtnHamburgerMenu_Click(object sender, EventArgs e)
@@ -68,6 +56,11 @@ namespace HassilBook
                 LblCopyright.Visible = false;
                 this.Refresh();
             }
+        }
+
+        private void BtnAirplanes_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmClientAirplanes());
         }
     }
 }
