@@ -12,6 +12,7 @@ namespace HassilBook
 {
     public partial class FrmLogin : Form
     {
+        public static int OfficeID = 1;
         public FrmLogin()
         {
             InitializeComponent();

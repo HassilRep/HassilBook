@@ -209,6 +209,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Airplane.cs" />
+    <Compile Include="AirplaneModel.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="FlightModel.cs" />
     <Compile Include="Form1.cs">

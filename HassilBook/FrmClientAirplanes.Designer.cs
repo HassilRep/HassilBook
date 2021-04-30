@@ -29,8 +29,8 @@ namespace HassilBook
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientAirplanes));
             this.DGClientAirplanes = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +43,8 @@ namespace HassilBook
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DEL = new System.Windows.Forms.DataGridViewImageColumn();
+            this.TxtSearchWith = new Guna.UI2.WinForms.Guna2TextBox();
+            this.BtnAddEdit = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGClientAirplanes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,16 +58,15 @@ namespace HassilBook
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGClientAirplanes.BackgroundColor = System.Drawing.Color.White;
             this.DGClientAirplanes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGClientAirplanes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGClientAirplanes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGClientAirplanes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGClientAirplanes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGClientAirplanes.ColumnHeadersHeight = 25;
             this.DGClientAirplanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGClientAirplanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -79,25 +80,28 @@ namespace HassilBook
             this.Column6,
             this.EDIT,
             this.DEL});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGClientAirplanes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGClientAirplanes.DefaultCellStyle = dataGridViewCellStyle4;
             this.DGClientAirplanes.EnableHeadersVisualStyles = false;
-            this.DGClientAirplanes.GridColor = System.Drawing.Color.Gainsboro;
-            this.DGClientAirplanes.Location = new System.Drawing.Point(9, 83);
+            this.DGClientAirplanes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DGClientAirplanes.Location = new System.Drawing.Point(9, 37);
             this.DGClientAirplanes.Margin = new System.Windows.Forms.Padding(0);
             this.DGClientAirplanes.Name = "DGClientAirplanes";
             this.DGClientAirplanes.ReadOnly = true;
             this.DGClientAirplanes.RowHeadersVisible = false;
-            this.DGClientAirplanes.RowHeadersWidth = 62;
+            this.DGClientAirplanes.RowHeadersWidth = 61;
+            this.DGClientAirplanes.RowTemplate.Height = 25;
+            this.DGClientAirplanes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DGClientAirplanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientAirplanes.Size = new System.Drawing.Size(782, 458);
+            this.DGClientAirplanes.Size = new System.Drawing.Size(782, 504);
             this.DGClientAirplanes.TabIndex = 36;
+            this.DGClientAirplanes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientAirplanes_CellContentClick);
             // 
             // Column4
             // 
@@ -186,12 +190,62 @@ namespace HassilBook
             this.DEL.ReadOnly = true;
             this.DEL.Width = 31;
             // 
+            // TxtSearchWith
+            // 
+            this.TxtSearchWith.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtSearchWith.BorderRadius = 5;
+            this.TxtSearchWith.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtSearchWith.DefaultText = "";
+            this.TxtSearchWith.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtSearchWith.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtSearchWith.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtSearchWith.DisabledState.Parent = this.TxtSearchWith;
+            this.TxtSearchWith.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtSearchWith.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtSearchWith.FocusedState.Parent = this.TxtSearchWith;
+            this.TxtSearchWith.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtSearchWith.ForeColor = System.Drawing.Color.Black;
+            this.TxtSearchWith.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtSearchWith.HoverState.Parent = this.TxtSearchWith;
+            this.TxtSearchWith.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSearchWith.IconLeft")));
+            this.TxtSearchWith.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtSearchWith.Location = new System.Drawing.Point(9, 5);
+            this.TxtSearchWith.Name = "TxtSearchWith";
+            this.TxtSearchWith.PasswordChar = '\0';
+            this.TxtSearchWith.PlaceholderText = "Search with department ID, description or manager by pressing enter";
+            this.TxtSearchWith.SelectedText = "";
+            this.TxtSearchWith.ShadowDecoration.Parent = this.TxtSearchWith;
+            this.TxtSearchWith.Size = new System.Drawing.Size(611, 28);
+            this.TxtSearchWith.TabIndex = 37;
+            this.TxtSearchWith.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchWith_KeyDown);
+            // 
+            // BtnAddEdit
+            // 
+            this.BtnAddEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAddEdit.BorderRadius = 5;
+            this.BtnAddEdit.CheckedState.Parent = this.BtnAddEdit;
+            this.BtnAddEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAddEdit.CustomImages.Parent = this.BtnAddEdit;
+            this.BtnAddEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnAddEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnAddEdit.ForeColor = System.Drawing.Color.White;
+            this.BtnAddEdit.HoverState.Parent = this.BtnAddEdit;
+            this.BtnAddEdit.Location = new System.Drawing.Point(626, 5);
+            this.BtnAddEdit.Name = "BtnAddEdit";
+            this.BtnAddEdit.ShadowDecoration.Parent = this.BtnAddEdit;
+            this.BtnAddEdit.Size = new System.Drawing.Size(165, 28);
+            this.BtnAddEdit.TabIndex = 38;
+            this.BtnAddEdit.Text = "ADD NEW AIRPLANE";
+            // 
             // FrmClientAirplanes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 550);
+            this.Controls.Add(this.BtnAddEdit);
+            this.Controls.Add(this.TxtSearchWith);
             this.Controls.Add(this.DGClientAirplanes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmClientAirplanes";
@@ -214,5 +268,7 @@ namespace HassilBook
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DEL;
+        private Guna.UI2.WinForms.Guna2TextBox TxtSearchWith;
+        private Guna.UI2.WinForms.Guna2Button BtnAddEdit;
     }
 }
