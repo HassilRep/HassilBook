@@ -67,5 +67,10 @@ namespace HassilBook
         {
             MyContainer(new FrmDepartments());
         }
+
+        private void BtnEmployees_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmEmployees());
+        }
     }
 }

@@ -222,6 +222,12 @@
     <Compile Include="FrmDepartments.Designer.cs">
       <DependentUpon>FrmDepartments.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployees.Designer.cs">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="IDGenerator.cs" />
     <Compile Include="Model\AirplaneModel.cs" />
     <Compile Include="DatabaseConnection.cs" />
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDepartments.resx">
       <DependentUpon>FrmDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployees.resx">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoader.resx">
       <DependentUpon>FrmLoader.cs</DependentUpon>
