@@ -28,7 +28,7 @@ namespace HassilBook
             {
                 DatabaseConnection con = new DatabaseConnection();
                 int i = 0;
-                DGClientAirplanes.Rows.Clear();
+                DGClientDepartments.Rows.Clear();
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -37,7 +37,7 @@ namespace HassilBook
                 while (dr.Read())
                 {
                     i += 1;
-                    DGClientAirplanes.Rows.Add(i, dr["DepartmentID"].ToString(), dr["Description"].ToString(), dr["Manager"].ToString());
+                    DGClientDepartments.Rows.Add(i, dr["DepartmentID"].ToString(), dr["Description"].ToString(), dr["Manager"].ToString());
                 }
                 dr.Close();
                 con.ActiveConnection().Close();
@@ -50,11 +50,16 @@ namespace HassilBook
 
         private void BtnAddEdit_Click(object sender, EventArgs e)
         {
-            FrmAddEditDepartment F = new FrmAddEditDepartment();
+            FrmAddEditDepartment F = new FrmAddEditDepartment(this);
             IDGenerator ID = new IDGenerator();
             ID.ClientDepartmentID(FrmLogin.OfficeID);
             F.TxtDepartmentID.Text = ID.M_ClientDepartmentID;
             F.ShowDialog();
+        }
+
+        private void DGClientDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

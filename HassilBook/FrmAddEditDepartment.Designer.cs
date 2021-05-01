@@ -51,11 +51,9 @@ namespace HassilBook
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox1.LabelIndent = 10;
             this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(7, 5);
-            this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuGroupBox1.Location = new System.Drawing.Point(5, 3);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(444, 208);
+            this.bunifuGroupBox1.Size = new System.Drawing.Size(296, 135);
             this.bunifuGroupBox1.TabIndex = 35;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Department details";
@@ -76,13 +74,13 @@ namespace HassilBook
             this.CmbManager.Items.AddRange(new object[] {
             "- Manager -"});
             this.CmbManager.ItemsAppearance.Parent = this.CmbManager;
-            this.CmbManager.Location = new System.Drawing.Point(9, 145);
-            this.CmbManager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbManager.Location = new System.Drawing.Point(6, 94);
             this.CmbManager.Name = "CmbManager";
             this.CmbManager.ShadowDecoration.Parent = this.CmbManager;
-            this.CmbManager.Size = new System.Drawing.Size(424, 29);
+            this.CmbManager.Size = new System.Drawing.Size(284, 29);
             this.CmbManager.StartIndex = 0;
             this.CmbManager.TabIndex = 40;
+            //this.CmbManager.SelectedIndexChanged += new System.EventHandler(this.CmbManager_SelectedIndexChanged);
             // 
             // TxtDepartment
             // 
@@ -102,14 +100,13 @@ namespace HassilBook
             this.TxtDepartment.HoverState.Parent = this.TxtDepartment;
             this.TxtDepartment.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtDepartment.IconLeft")));
             this.TxtDepartment.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtDepartment.Location = new System.Drawing.Point(9, 92);
-            this.TxtDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtDepartment.Location = new System.Drawing.Point(6, 60);
             this.TxtDepartment.Name = "TxtDepartment";
             this.TxtDepartment.PasswordChar = '\0';
             this.TxtDepartment.PlaceholderText = "Department";
             this.TxtDepartment.SelectedText = "";
             this.TxtDepartment.ShadowDecoration.Parent = this.TxtDepartment;
-            this.TxtDepartment.Size = new System.Drawing.Size(426, 43);
+            this.TxtDepartment.Size = new System.Drawing.Size(284, 28);
             this.TxtDepartment.TabIndex = 39;
             // 
             // TxtDepartmentID
@@ -130,14 +127,13 @@ namespace HassilBook
             this.TxtDepartmentID.HoverState.Parent = this.TxtDepartmentID;
             this.TxtDepartmentID.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtDepartmentID.IconLeft")));
             this.TxtDepartmentID.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtDepartmentID.Location = new System.Drawing.Point(9, 42);
-            this.TxtDepartmentID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtDepartmentID.Location = new System.Drawing.Point(6, 27);
             this.TxtDepartmentID.Name = "TxtDepartmentID";
             this.TxtDepartmentID.PasswordChar = '\0';
             this.TxtDepartmentID.PlaceholderText = "Department ID";
             this.TxtDepartmentID.SelectedText = "";
             this.TxtDepartmentID.ShadowDecoration.Parent = this.TxtDepartmentID;
-            this.TxtDepartmentID.Size = new System.Drawing.Size(426, 43);
+            this.TxtDepartmentID.Size = new System.Drawing.Size(284, 28);
             this.TxtDepartmentID.TabIndex = 35;
             // 
             // BtnAddEdit
@@ -150,25 +146,23 @@ namespace HassilBook
             this.BtnAddEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddEdit.ForeColor = System.Drawing.Color.White;
             this.BtnAddEdit.HoverState.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Location = new System.Drawing.Point(7, 220);
-            this.BtnAddEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnAddEdit.Location = new System.Drawing.Point(5, 143);
             this.BtnAddEdit.Name = "BtnAddEdit";
             this.BtnAddEdit.ShadowDecoration.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Size = new System.Drawing.Size(444, 43);
+            this.BtnAddEdit.Size = new System.Drawing.Size(296, 28);
             this.BtnAddEdit.TabIndex = 36;
             this.BtnAddEdit.Text = "ADD NEW DEPARTMENT";
             this.BtnAddEdit.Click += new System.EventHandler(this.BtnAddEdit_Click);
             // 
             // FrmAddEditDepartment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(459, 274);
+            this.ClientSize = new System.Drawing.Size(306, 178);
             this.Controls.Add(this.bunifuGroupBox1);
             this.Controls.Add(this.BtnAddEdit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmAddEditDepartment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add | Edit new or existing department";

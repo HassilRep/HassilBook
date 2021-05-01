@@ -13,11 +13,13 @@ namespace HassilBook
 {
     public partial class FrmAddEditDepartment : Form
     {
+        //private int m_employeeID;
         FrmDepartments F;
         public FrmAddEditDepartment(FrmDepartments f)
         {
             InitializeComponent();
             F = f;
+            LoadEmployees();
         }
 
         private void LoadDepartmentID()
@@ -43,18 +45,24 @@ namespace HassilBook
             {
                 DatabaseConnection con = new DatabaseConnection();
                 CmbManager.Items.Clear();
-                CmbManager.Items.Add("- Assign Manager -");
-                CmbManager.SelectedIndex = 0;
-                MySqlCommand cmd;
-                cmd = con.ActiveConnection().CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT E.Firstname FROM tbl_ClientEmployees E WHERE E.OfficeID = '" + FrmLogin.OfficeID + "'";
-                MySqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                DataTable dt = new DataTable();
+                dt.Columns.Add("ID");
+                dt.Columns.Add("Model");
+                dt.Rows.Add("0","- Assign Manager -");
+                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Model FROM tbl_ClientAirplanes WHERE OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                DataTable table = new DataTable();
+                sda.Fill(table);
+                if(dt.Rows.Count > 0)
                 {
-                    CmbManager.Items.Add(dr["Firstname"].ToString());
+                    foreach (DataRow item in table.Rows)
+                    {
+                        dt.Rows.Add(item["ID"], item["Model"]);
+                    }
                 }
-                dr.Close();
+                CmbManager.DataSource = dt;
+                CmbManager.ValueMember = "ID";
+                CmbManager.DisplayMember = "Model";
+
                 con.ActiveConnection().Close();
             }
             catch (Exception ex)
@@ -81,22 +89,20 @@ namespace HassilBook
                         {
                             MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientDepartment(OfficeID,DepartmentID,Description)VALUES('" + FrmLogin.OfficeID + "','" + TxtDepartmentID.Text + "','" + TxtDepartment.Text + "')", con.ActiveConnection());
                             cmd.ExecuteNonQuery();
-                            LoadDepartmentID();
                             F.LoadDepartments();
-                            LoadEmployees();
                             TxtDepartment.Text = string.Empty;
                             MessageBox.Show($"New department '{TxtDepartmentID.Text}' has been added.", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadDepartmentID();
                             con.ActiveConnection().Close();
                         }
                         else
                         {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientDepartment(OfficeID,DepartmentID,Description,ManagerID)VALUES('" + FrmLogin.OfficeID + "','" + TxtDepartmentID.Text + "','" + TxtDepartment.Text + "','" + m_employeeID + "')", con.ActiveConnection());
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientDepartment(OfficeID,DepartmentID,Description,ManagerID)VALUES('" + FrmLogin.OfficeID + "','" + TxtDepartmentID.Text + "','" + TxtDepartment.Text + "','" + CmbManager.SelectedValue + "')", con.ActiveConnection());
                             cmd.ExecuteNonQuery();
-                            LoadDepartmentID();
                             F.LoadDepartments();
-                            LoadEmployees();
                             TxtDepartment.Text = string.Empty;
                             MessageBox.Show($"New department '{TxtDepartmentID.Text}' has been added.", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadDepartmentID();
                             con.ActiveConnection().Close();
                         }
                     }
@@ -121,7 +127,7 @@ namespace HassilBook
                             MySqlCommand cmd;
                             cmd = con.ActiveConnection().CreateCommand();
                             cmd.CommandType = CommandType.Text;
-                            cmd.CommandText = "UPDATE tbl_ClientDepartment SET Description = '" + TxtDepartment.Text + "', ManagerID = '" +  + "' WHERE DepartmentID = '" + TxtDepartmentID.Text + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                            cmd.CommandText = "UPDATE tbl_ClientDepartment SET Description = '" + TxtDepartment.Text + "', ManagerID = '" + CmbManager.SelectedValue + "' WHERE DepartmentID = '" + TxtDepartmentID.Text + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
                             cmd.ExecuteNonQuery();
                             MessageBox.Show($"Department '{TxtDepartmentID.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             F.LoadDepartments();

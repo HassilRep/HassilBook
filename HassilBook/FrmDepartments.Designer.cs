@@ -32,7 +32,7 @@ namespace HassilBook
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDepartments));
-            this.DGClientAirplanes = new System.Windows.Forms.DataGridView();
+            this.DGClientDepartments = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,20 +41,20 @@ namespace HassilBook
             this.DEL = new System.Windows.Forms.DataGridViewImageColumn();
             this.BtnAddEdit = new Guna.UI2.WinForms.Guna2Button();
             this.TxtSearchWith = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGClientAirplanes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientDepartments)).BeginInit();
             this.SuspendLayout();
             // 
-            // DGClientAirplanes
+            // DGClientDepartments
             // 
-            this.DGClientAirplanes.AllowUserToAddRows = false;
-            this.DGClientAirplanes.AllowUserToResizeColumns = false;
-            this.DGClientAirplanes.AllowUserToResizeRows = false;
-            this.DGClientAirplanes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGClientDepartments.AllowUserToAddRows = false;
+            this.DGClientDepartments.AllowUserToResizeColumns = false;
+            this.DGClientDepartments.AllowUserToResizeRows = false;
+            this.DGClientDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGClientAirplanes.BackgroundColor = System.Drawing.Color.White;
-            this.DGClientAirplanes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGClientAirplanes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGClientDepartments.BackgroundColor = System.Drawing.Color.White;
+            this.DGClientDepartments.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGClientDepartments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,10 +62,10 @@ namespace HassilBook
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGClientAirplanes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGClientAirplanes.ColumnHeadersHeight = 25;
-            this.DGClientAirplanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGClientAirplanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGClientDepartments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGClientDepartments.ColumnHeadersHeight = 25;
+            this.DGClientDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGClientDepartments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column3,
             this.Column5,
@@ -79,20 +79,21 @@ namespace HassilBook
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGClientAirplanes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGClientAirplanes.EnableHeadersVisualStyles = false;
-            this.DGClientAirplanes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientAirplanes.Location = new System.Drawing.Point(14, 57);
-            this.DGClientAirplanes.Margin = new System.Windows.Forms.Padding(0);
-            this.DGClientAirplanes.Name = "DGClientAirplanes";
-            this.DGClientAirplanes.ReadOnly = true;
-            this.DGClientAirplanes.RowHeadersVisible = false;
-            this.DGClientAirplanes.RowHeadersWidth = 61;
-            this.DGClientAirplanes.RowTemplate.Height = 25;
-            this.DGClientAirplanes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DGClientAirplanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientAirplanes.Size = new System.Drawing.Size(1173, 775);
-            this.DGClientAirplanes.TabIndex = 39;
+            this.DGClientDepartments.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGClientDepartments.EnableHeadersVisualStyles = false;
+            this.DGClientDepartments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DGClientDepartments.Location = new System.Drawing.Point(9, 37);
+            this.DGClientDepartments.Margin = new System.Windows.Forms.Padding(0);
+            this.DGClientDepartments.Name = "DGClientDepartments";
+            this.DGClientDepartments.ReadOnly = true;
+            this.DGClientDepartments.RowHeadersVisible = false;
+            this.DGClientDepartments.RowHeadersWidth = 61;
+            this.DGClientDepartments.RowTemplate.Height = 25;
+            this.DGClientDepartments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DGClientDepartments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGClientDepartments.Size = new System.Drawing.Size(782, 466);
+            this.DGClientDepartments.TabIndex = 39;
+            this.DGClientDepartments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientDepartments_CellContentClick);
             // 
             // Column4
             // 
@@ -101,7 +102,7 @@ namespace HassilBook
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 54;
+            this.Column4.Width = 37;
             // 
             // Column3
             // 
@@ -110,7 +111,7 @@ namespace HassilBook
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 61;
+            this.Column3.Width = 41;
             // 
             // Column5
             // 
@@ -127,7 +128,7 @@ namespace HassilBook
             this.Column9.MinimumWidth = 8;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 240;
+            this.Column9.Width = 155;
             // 
             // EDIT
             // 
@@ -137,7 +138,7 @@ namespace HassilBook
             this.EDIT.MinimumWidth = 8;
             this.EDIT.Name = "EDIT";
             this.EDIT.ReadOnly = true;
-            this.EDIT.Width = 49;
+            this.EDIT.Width = 34;
             // 
             // DEL
             // 
@@ -147,7 +148,7 @@ namespace HassilBook
             this.DEL.MinimumWidth = 8;
             this.DEL.Name = "DEL";
             this.DEL.ReadOnly = true;
-            this.DEL.Width = 43;
+            this.DEL.Width = 30;
             // 
             // BtnAddEdit
             // 
@@ -160,11 +161,10 @@ namespace HassilBook
             this.BtnAddEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAddEdit.ForeColor = System.Drawing.Color.White;
             this.BtnAddEdit.HoverState.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Location = new System.Drawing.Point(939, 8);
-            this.BtnAddEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnAddEdit.Location = new System.Drawing.Point(626, 5);
             this.BtnAddEdit.Name = "BtnAddEdit";
             this.BtnAddEdit.ShadowDecoration.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Size = new System.Drawing.Size(248, 43);
+            this.BtnAddEdit.Size = new System.Drawing.Size(165, 28);
             this.BtnAddEdit.TabIndex = 41;
             this.BtnAddEdit.Text = "ADD NEW DEPARTMENT";
             this.BtnAddEdit.Click += new System.EventHandler(this.BtnAddEdit_Click);
@@ -189,36 +189,36 @@ namespace HassilBook
             this.TxtSearchWith.HoverState.Parent = this.TxtSearchWith;
             this.TxtSearchWith.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSearchWith.IconLeft")));
             this.TxtSearchWith.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtSearchWith.Location = new System.Drawing.Point(14, 8);
-            this.TxtSearchWith.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtSearchWith.Location = new System.Drawing.Point(9, 5);
             this.TxtSearchWith.Name = "TxtSearchWith";
             this.TxtSearchWith.PasswordChar = '\0';
             this.TxtSearchWith.PlaceholderText = "Search with department ID, description or manager by pressing enter";
             this.TxtSearchWith.SelectedText = "";
             this.TxtSearchWith.ShadowDecoration.Parent = this.TxtSearchWith;
-            this.TxtSearchWith.Size = new System.Drawing.Size(916, 43);
+            this.TxtSearchWith.Size = new System.Drawing.Size(611, 28);
             this.TxtSearchWith.TabIndex = 40;
             // 
             // FrmDepartments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 788);
-            this.Controls.Add(this.DGClientAirplanes);
+            this.ClientSize = new System.Drawing.Size(800, 512);
+            this.Controls.Add(this.DGClientDepartments);
             this.Controls.Add(this.BtnAddEdit);
             this.Controls.Add(this.TxtSearchWith);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmDepartments";
             this.Text = "FrmDepartments";
-            ((System.ComponentModel.ISupportInitialize)(this.DGClientAirplanes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientDepartments)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DGClientAirplanes;
+        private System.Windows.Forms.DataGridView DGClientDepartments;
         private Guna.UI2.WinForms.Guna2Button BtnAddEdit;
         private Guna.UI2.WinForms.Guna2TextBox TxtSearchWith;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
