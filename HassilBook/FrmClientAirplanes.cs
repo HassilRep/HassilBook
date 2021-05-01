@@ -110,5 +110,11 @@ namespace HassilBook
                 SearchAirplane(TxtSearchWith.Text);
             }
         }
+
+        private void BtnAddEdit_Click(object sender, EventArgs e)
+        {
+            FrmAddEditAirplane F = new FrmAddEditAirplane();
+            F.ShowDialog();
+        }
     }
 }

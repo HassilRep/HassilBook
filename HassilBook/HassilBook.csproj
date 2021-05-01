@@ -219,6 +219,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddEditAirplane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditAirplane.Designer.cs">
+      <DependentUpon>FrmAddEditAirplane.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAgencyDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditAirplane.resx">
+      <DependentUpon>FrmAddEditAirplane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAgencyDashboard.resx">
       <DependentUpon>FrmAgencyDashboard.cs</DependentUpon>
