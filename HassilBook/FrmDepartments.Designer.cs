@@ -33,14 +33,14 @@ namespace HassilBook
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDepartments));
             this.DGClientAirplanes = new System.Windows.Forms.DataGridView();
-            this.BtnAddEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.TxtSearchWith = new Guna.UI2.WinForms.Guna2TextBox();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DEL = new System.Windows.Forms.DataGridViewImageColumn();
+            this.BtnAddEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.TxtSearchWith = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGClientAirplanes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +82,7 @@ namespace HassilBook
             this.DGClientAirplanes.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGClientAirplanes.EnableHeadersVisualStyles = false;
             this.DGClientAirplanes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientAirplanes.Location = new System.Drawing.Point(9, 37);
+            this.DGClientAirplanes.Location = new System.Drawing.Point(14, 57);
             this.DGClientAirplanes.Margin = new System.Windows.Forms.Padding(0);
             this.DGClientAirplanes.Name = "DGClientAirplanes";
             this.DGClientAirplanes.ReadOnly = true;
@@ -91,8 +91,63 @@ namespace HassilBook
             this.DGClientAirplanes.RowTemplate.Height = 25;
             this.DGClientAirplanes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DGClientAirplanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientAirplanes.Size = new System.Drawing.Size(782, 504);
+            this.DGClientAirplanes.Size = new System.Drawing.Size(1173, 775);
             this.DGClientAirplanes.TabIndex = 39;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "#";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 54;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "ID";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 61;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "DEPARTMENT";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column9.HeaderText = "DEPARTMENT MANAGER";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 240;
+            // 
+            // EDIT
+            // 
+            this.EDIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.EDIT.HeaderText = "EDIT";
+            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
+            this.EDIT.MinimumWidth = 8;
+            this.EDIT.Name = "EDIT";
+            this.EDIT.ReadOnly = true;
+            this.EDIT.Width = 49;
+            // 
+            // DEL
+            // 
+            this.DEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DEL.HeaderText = "DEL";
+            this.DEL.Image = ((System.Drawing.Image)(resources.GetObject("DEL.Image")));
+            this.DEL.MinimumWidth = 8;
+            this.DEL.Name = "DEL";
+            this.DEL.ReadOnly = true;
+            this.DEL.Width = 43;
             // 
             // BtnAddEdit
             // 
@@ -105,12 +160,14 @@ namespace HassilBook
             this.BtnAddEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAddEdit.ForeColor = System.Drawing.Color.White;
             this.BtnAddEdit.HoverState.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Location = new System.Drawing.Point(626, 5);
+            this.BtnAddEdit.Location = new System.Drawing.Point(939, 8);
+            this.BtnAddEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnAddEdit.Name = "BtnAddEdit";
             this.BtnAddEdit.ShadowDecoration.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Size = new System.Drawing.Size(165, 28);
+            this.BtnAddEdit.Size = new System.Drawing.Size(248, 43);
             this.BtnAddEdit.TabIndex = 41;
             this.BtnAddEdit.Text = "ADD NEW DEPARTMENT";
+            this.BtnAddEdit.Click += new System.EventHandler(this.BtnAddEdit_Click);
             // 
             // TxtSearchWith
             // 
@@ -132,81 +189,26 @@ namespace HassilBook
             this.TxtSearchWith.HoverState.Parent = this.TxtSearchWith;
             this.TxtSearchWith.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSearchWith.IconLeft")));
             this.TxtSearchWith.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtSearchWith.Location = new System.Drawing.Point(9, 5);
+            this.TxtSearchWith.Location = new System.Drawing.Point(14, 8);
+            this.TxtSearchWith.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtSearchWith.Name = "TxtSearchWith";
             this.TxtSearchWith.PasswordChar = '\0';
             this.TxtSearchWith.PlaceholderText = "Search with department ID, description or manager by pressing enter";
             this.TxtSearchWith.SelectedText = "";
             this.TxtSearchWith.ShadowDecoration.Parent = this.TxtSearchWith;
-            this.TxtSearchWith.Size = new System.Drawing.Size(611, 28);
+            this.TxtSearchWith.Size = new System.Drawing.Size(916, 43);
             this.TxtSearchWith.TabIndex = 40;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "#";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 37;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "ID";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 41;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "DEPARTMENT";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "DEPARTMENT MANAGER";
-            this.Column9.MinimumWidth = 8;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 155;
-            // 
-            // EDIT
-            // 
-            this.EDIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.EDIT.HeaderText = "EDIT";
-            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
-            this.EDIT.MinimumWidth = 8;
-            this.EDIT.Name = "EDIT";
-            this.EDIT.ReadOnly = true;
-            this.EDIT.Width = 34;
-            // 
-            // DEL
-            // 
-            this.DEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.DEL.HeaderText = "DEL";
-            this.DEL.Image = ((System.Drawing.Image)(resources.GetObject("DEL.Image")));
-            this.DEL.MinimumWidth = 8;
-            this.DEL.Name = "DEL";
-            this.DEL.ReadOnly = true;
-            this.DEL.Width = 30;
             // 
             // FrmDepartments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 512);
+            this.ClientSize = new System.Drawing.Size(1200, 788);
             this.Controls.Add(this.DGClientAirplanes);
             this.Controls.Add(this.BtnAddEdit);
             this.Controls.Add(this.TxtSearchWith);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmDepartments";
             this.Text = "FrmDepartments";
             ((System.ComponentModel.ISupportInitialize)(this.DGClientAirplanes)).EndInit();

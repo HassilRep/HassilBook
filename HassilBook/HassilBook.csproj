@@ -222,6 +222,7 @@
     <Compile Include="FrmDepartments.Designer.cs">
       <DependentUpon>FrmDepartments.cs</DependentUpon>
     </Compile>
+    <Compile Include="IDGenerator.cs" />
     <Compile Include="Model\AirplaneModel.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Model\FlightModel.cs" />
