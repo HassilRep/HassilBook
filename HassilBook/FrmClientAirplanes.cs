@@ -13,6 +13,7 @@ namespace HassilBook
 {
     public partial class FrmClientAirplanes : Form
     {
+        public int m_airplaneID;
         public FrmClientAirplanes()
         {
             InitializeComponent();
@@ -85,7 +86,28 @@ namespace HassilBook
             {
                 if(cel == "EDIT")
                 {
-
+                    FrmAddEditAirplane F = new FrmAddEditAirplane(this);
+                    DatabaseConnection con = new DatabaseConnection();
+                    MySqlCommand cmd;
+                    cmd = con.ActiveConnection().CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT * FROM tbl_ClientAirplanes WHERE RegNumber = '"+DGClientAirplanes[2, e.RowIndex].Value.ToString()+"' AND OfficeID = '"+FrmLogin.OfficeID+"'";
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    while(dr.Read())
+                    {
+                        m_airplaneID = int.Parse(dr["ID"].ToString());
+                        F.TxtRegistrationNumber.Text = dr["RegNumber"].ToString();
+                        F.DtRegistrationDate.Text = dr["RegDate"].ToString();
+                        F.TxtManufacturer.Text = dr["Manufacturer"].ToString();
+                        F.TxtModel.Text = dr["Model"].ToString();
+                        F.TxtSeats.Text = dr["Seats"].ToString();
+                        F.CmbCategory.Text = dr["Category"].ToString();
+                        F.CmbStatus.Text = dr["Status"].ToString();
+                        F.BtnAddEdit.Text = "UPDATE AIRPLANE";
+                        F.ShowDialog();
+                    }
+                    dr.Close();
+                    con.ActiveConnection().Close();
                 }
                 else if(cel == "DEL")
                 {
@@ -113,7 +135,7 @@ namespace HassilBook
 
         private void BtnAddEdit_Click(object sender, EventArgs e)
         {
-            FrmAddEditAirplane F = new FrmAddEditAirplane();
+            FrmAddEditAirplane F = new FrmAddEditAirplane(this);
             F.ShowDialog();
         }
     }

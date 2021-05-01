@@ -31,14 +31,14 @@ namespace HassilBook
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddEditAirplane));
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CmbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.TxtSeats = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxtModel = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxtManufacturer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DtRegistrationDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.TxtRegistrationNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.BtnAddEdit = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,235 +47,242 @@ namespace HassilBook
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.bunifuGroupBox1.BorderRadius = 1;
             this.bunifuGroupBox1.BorderThickness = 1;
-            this.bunifuGroupBox1.Controls.Add(this.guna2ComboBox2);
-            this.bunifuGroupBox1.Controls.Add(this.guna2ComboBox1);
-            this.bunifuGroupBox1.Controls.Add(this.guna2TextBox3);
-            this.bunifuGroupBox1.Controls.Add(this.guna2TextBox2);
-            this.bunifuGroupBox1.Controls.Add(this.guna2TextBox1);
-            this.bunifuGroupBox1.Controls.Add(this.guna2DateTimePicker1);
-            this.bunifuGroupBox1.Controls.Add(this.guna2TextBox4);
+            this.bunifuGroupBox1.Controls.Add(this.CmbStatus);
+            this.bunifuGroupBox1.Controls.Add(this.CmbCategory);
+            this.bunifuGroupBox1.Controls.Add(this.TxtSeats);
+            this.bunifuGroupBox1.Controls.Add(this.TxtModel);
+            this.bunifuGroupBox1.Controls.Add(this.TxtManufacturer);
+            this.bunifuGroupBox1.Controls.Add(this.DtRegistrationDate);
+            this.bunifuGroupBox1.Controls.Add(this.TxtRegistrationNumber);
             this.bunifuGroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuGroupBox1.ForeColor = System.Drawing.Color.Gray;
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox1.LabelIndent = 10;
             this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(4, 2);
+            this.bunifuGroupBox1.Location = new System.Drawing.Point(6, 3);
+            this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(296, 272);
+            this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuGroupBox1.Size = new System.Drawing.Size(444, 418);
             this.bunifuGroupBox1.TabIndex = 0;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Airplane details";
             // 
-            // guna2TextBox4
+            // CmbStatus
             // 
-            this.guna2TextBox4.BorderRadius = 5;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox4.IconLeft")));
-            this.guna2TextBox4.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox4.Location = new System.Drawing.Point(6, 27);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "Registration number";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(284, 28);
-            this.guna2TextBox4.TabIndex = 35;
-            this.guna2TextBox4.UseSystemPasswordChar = true;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderRadius = 5;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(4, 278);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(296, 28);
-            this.guna2Button2.TabIndex = 34;
-            this.guna2Button2.Text = "ADD NEW AIRPLANE";
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2DateTimePicker1.BorderRadius = 5;
-            this.guna2DateTimePicker1.BorderThickness = 1;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.Black;
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(6, 61);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(284, 28);
-            this.guna2DateTimePicker1.TabIndex = 36;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 1, 10, 17, 33, 83);
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox1.Location = new System.Drawing.Point(6, 95);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Manufacturer";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(284, 28);
-            this.guna2TextBox1.TabIndex = 37;
-            this.guna2TextBox1.UseSystemPasswordChar = true;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BorderRadius = 5;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconLeft")));
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox2.Location = new System.Drawing.Point(6, 129);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Model";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(284, 28);
-            this.guna2TextBox2.TabIndex = 38;
-            this.guna2TextBox2.UseSystemPasswordChar = true;
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.BorderRadius = 5;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox3.IconLeft")));
-            this.guna2TextBox3.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.guna2TextBox3.Location = new System.Drawing.Point(6, 163);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "Seats";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(284, 28);
-            this.guna2TextBox3.TabIndex = 39;
-            this.guna2TextBox3.UseSystemPasswordChar = true;
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 23;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "- Category -",
-            "Schedule",
-            "Charter"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(6, 197);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(284, 29);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 40;
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 5;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.ItemHeight = 23;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.CmbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.CmbStatus.BorderRadius = 5;
+            this.CmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbStatus.FocusedState.Parent = this.CmbStatus;
+            this.CmbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbStatus.ForeColor = System.Drawing.Color.Black;
+            this.CmbStatus.HoverState.Parent = this.CmbStatus;
+            this.CmbStatus.ItemHeight = 23;
+            this.CmbStatus.Items.AddRange(new object[] {
             "- Status -",
             "Operational",
             "Defect"});
-            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(6, 232);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Size = new System.Drawing.Size(284, 29);
-            this.guna2ComboBox2.TabIndex = 41;
+            this.CmbStatus.ItemsAppearance.Parent = this.CmbStatus;
+            this.CmbStatus.Location = new System.Drawing.Point(9, 357);
+            this.CmbStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbStatus.Name = "CmbStatus";
+            this.CmbStatus.ShadowDecoration.Parent = this.CmbStatus;
+            this.CmbStatus.Size = new System.Drawing.Size(424, 29);
+            this.CmbStatus.TabIndex = 41;
+            // 
+            // CmbCategory
+            // 
+            this.CmbCategory.BackColor = System.Drawing.Color.Transparent;
+            this.CmbCategory.BorderRadius = 5;
+            this.CmbCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbCategory.FocusedState.Parent = this.CmbCategory;
+            this.CmbCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbCategory.ForeColor = System.Drawing.Color.Black;
+            this.CmbCategory.HoverState.Parent = this.CmbCategory;
+            this.CmbCategory.ItemHeight = 23;
+            this.CmbCategory.Items.AddRange(new object[] {
+            "- Category -",
+            "Schedule",
+            "Charter"});
+            this.CmbCategory.ItemsAppearance.Parent = this.CmbCategory;
+            this.CmbCategory.Location = new System.Drawing.Point(9, 303);
+            this.CmbCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbCategory.Name = "CmbCategory";
+            this.CmbCategory.ShadowDecoration.Parent = this.CmbCategory;
+            this.CmbCategory.Size = new System.Drawing.Size(424, 29);
+            this.CmbCategory.StartIndex = 0;
+            this.CmbCategory.TabIndex = 40;
+            // 
+            // TxtSeats
+            // 
+            this.TxtSeats.BorderRadius = 5;
+            this.TxtSeats.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtSeats.DefaultText = "";
+            this.TxtSeats.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtSeats.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtSeats.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtSeats.DisabledState.Parent = this.TxtSeats;
+            this.TxtSeats.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtSeats.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtSeats.FocusedState.Parent = this.TxtSeats;
+            this.TxtSeats.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtSeats.ForeColor = System.Drawing.Color.Black;
+            this.TxtSeats.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtSeats.HoverState.Parent = this.TxtSeats;
+            this.TxtSeats.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSeats.IconLeft")));
+            this.TxtSeats.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtSeats.Location = new System.Drawing.Point(9, 251);
+            this.TxtSeats.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtSeats.Name = "TxtSeats";
+            this.TxtSeats.PasswordChar = '\0';
+            this.TxtSeats.PlaceholderText = "Seats";
+            this.TxtSeats.SelectedText = "";
+            this.TxtSeats.ShadowDecoration.Parent = this.TxtSeats;
+            this.TxtSeats.Size = new System.Drawing.Size(426, 43);
+            this.TxtSeats.TabIndex = 39;
+            // 
+            // TxtModel
+            // 
+            this.TxtModel.BorderRadius = 5;
+            this.TxtModel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtModel.DefaultText = "";
+            this.TxtModel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtModel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtModel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtModel.DisabledState.Parent = this.TxtModel;
+            this.TxtModel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtModel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtModel.FocusedState.Parent = this.TxtModel;
+            this.TxtModel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtModel.ForeColor = System.Drawing.Color.Black;
+            this.TxtModel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtModel.HoverState.Parent = this.TxtModel;
+            this.TxtModel.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtModel.IconLeft")));
+            this.TxtModel.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtModel.Location = new System.Drawing.Point(9, 198);
+            this.TxtModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtModel.Name = "TxtModel";
+            this.TxtModel.PasswordChar = '\0';
+            this.TxtModel.PlaceholderText = "Model";
+            this.TxtModel.SelectedText = "";
+            this.TxtModel.ShadowDecoration.Parent = this.TxtModel;
+            this.TxtModel.Size = new System.Drawing.Size(426, 43);
+            this.TxtModel.TabIndex = 38;
+            // 
+            // TxtManufacturer
+            // 
+            this.TxtManufacturer.BorderRadius = 5;
+            this.TxtManufacturer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtManufacturer.DefaultText = "";
+            this.TxtManufacturer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtManufacturer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtManufacturer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtManufacturer.DisabledState.Parent = this.TxtManufacturer;
+            this.TxtManufacturer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtManufacturer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtManufacturer.FocusedState.Parent = this.TxtManufacturer;
+            this.TxtManufacturer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtManufacturer.ForeColor = System.Drawing.Color.Black;
+            this.TxtManufacturer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtManufacturer.HoverState.Parent = this.TxtManufacturer;
+            this.TxtManufacturer.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtManufacturer.IconLeft")));
+            this.TxtManufacturer.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtManufacturer.Location = new System.Drawing.Point(9, 146);
+            this.TxtManufacturer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtManufacturer.Name = "TxtManufacturer";
+            this.TxtManufacturer.PasswordChar = '\0';
+            this.TxtManufacturer.PlaceholderText = "Manufacturer";
+            this.TxtManufacturer.SelectedText = "";
+            this.TxtManufacturer.ShadowDecoration.Parent = this.TxtManufacturer;
+            this.TxtManufacturer.Size = new System.Drawing.Size(426, 43);
+            this.TxtManufacturer.TabIndex = 37;
+            // 
+            // DtRegistrationDate
+            // 
+            this.DtRegistrationDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtRegistrationDate.BorderRadius = 5;
+            this.DtRegistrationDate.BorderThickness = 1;
+            this.DtRegistrationDate.CheckedState.Parent = this.DtRegistrationDate;
+            this.DtRegistrationDate.FillColor = System.Drawing.Color.White;
+            this.DtRegistrationDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtRegistrationDate.ForeColor = System.Drawing.Color.Black;
+            this.DtRegistrationDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtRegistrationDate.HoverState.Parent = this.DtRegistrationDate;
+            this.DtRegistrationDate.Location = new System.Drawing.Point(9, 94);
+            this.DtRegistrationDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtRegistrationDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtRegistrationDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtRegistrationDate.Name = "DtRegistrationDate";
+            this.DtRegistrationDate.ShadowDecoration.Parent = this.DtRegistrationDate;
+            this.DtRegistrationDate.Size = new System.Drawing.Size(426, 43);
+            this.DtRegistrationDate.TabIndex = 36;
+            this.DtRegistrationDate.Value = new System.DateTime(2021, 5, 1, 10, 17, 33, 83);
+            // 
+            // TxtRegistrationNumber
+            // 
+            this.TxtRegistrationNumber.BorderRadius = 5;
+            this.TxtRegistrationNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtRegistrationNumber.DefaultText = "";
+            this.TxtRegistrationNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtRegistrationNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtRegistrationNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtRegistrationNumber.DisabledState.Parent = this.TxtRegistrationNumber;
+            this.TxtRegistrationNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtRegistrationNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtRegistrationNumber.FocusedState.Parent = this.TxtRegistrationNumber;
+            this.TxtRegistrationNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtRegistrationNumber.ForeColor = System.Drawing.Color.Black;
+            this.TxtRegistrationNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtRegistrationNumber.HoverState.Parent = this.TxtRegistrationNumber;
+            this.TxtRegistrationNumber.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtRegistrationNumber.IconLeft")));
+            this.TxtRegistrationNumber.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtRegistrationNumber.Location = new System.Drawing.Point(9, 42);
+            this.TxtRegistrationNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtRegistrationNumber.Name = "TxtRegistrationNumber";
+            this.TxtRegistrationNumber.PasswordChar = '\0';
+            this.TxtRegistrationNumber.PlaceholderText = "Registration number";
+            this.TxtRegistrationNumber.SelectedText = "";
+            this.TxtRegistrationNumber.ShadowDecoration.Parent = this.TxtRegistrationNumber;
+            this.TxtRegistrationNumber.Size = new System.Drawing.Size(426, 43);
+            this.TxtRegistrationNumber.TabIndex = 35;
+            // 
+            // BtnAddEdit
+            // 
+            this.BtnAddEdit.BorderRadius = 5;
+            this.BtnAddEdit.CheckedState.Parent = this.BtnAddEdit;
+            this.BtnAddEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAddEdit.CustomImages.Parent = this.BtnAddEdit;
+            this.BtnAddEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(173)))), ((int)(((byte)(247)))));
+            this.BtnAddEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddEdit.ForeColor = System.Drawing.Color.White;
+            this.BtnAddEdit.HoverState.Parent = this.BtnAddEdit;
+            this.BtnAddEdit.Location = new System.Drawing.Point(6, 428);
+            this.BtnAddEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnAddEdit.Name = "BtnAddEdit";
+            this.BtnAddEdit.ShadowDecoration.Parent = this.BtnAddEdit;
+            this.BtnAddEdit.Size = new System.Drawing.Size(444, 43);
+            this.BtnAddEdit.TabIndex = 34;
+            this.BtnAddEdit.Text = "ADD NEW AIRPLANE";
+            this.BtnAddEdit.Click += new System.EventHandler(this.BtnAddEdit_Click);
             // 
             // FrmAddEditAirplane
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(306, 311);
+            this.ClientSize = new System.Drawing.Size(450, 452);
             this.Controls.Add(this.bunifuGroupBox1);
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.BtnAddEdit);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(322, 350);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(322, 350);
+            this.MinimumSize = new System.Drawing.Size(472, 508);
             this.Name = "FrmAddEditAirplane";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -288,13 +295,13 @@ namespace HassilBook
         #endregion
 
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        public Guna.UI2.WinForms.Guna2DateTimePicker DtRegistrationDate;
+        public Guna.UI2.WinForms.Guna2TextBox TxtRegistrationNumber;
+        public Guna.UI2.WinForms.Guna2Button BtnAddEdit;
+        public Guna.UI2.WinForms.Guna2ComboBox CmbStatus;
+        public Guna.UI2.WinForms.Guna2ComboBox CmbCategory;
+        public Guna.UI2.WinForms.Guna2TextBox TxtSeats;
+        public Guna.UI2.WinForms.Guna2TextBox TxtModel;
+        public Guna.UI2.WinForms.Guna2TextBox TxtManufacturer;
     }
 }

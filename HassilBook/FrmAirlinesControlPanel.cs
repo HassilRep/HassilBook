@@ -62,5 +62,10 @@ namespace HassilBook
         {
             MyContainer(new FrmClientAirplanes());
         }
+
+        private void BtnDepartments_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmDepartments());
+        }
     }
 }

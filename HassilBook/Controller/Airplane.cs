@@ -1,14 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HassilBook
 {
+    /// <summary>
+    /// Client airplane management
+    /// </summary>
     public class Airplane
     {
         /// <summary>
@@ -41,9 +40,28 @@ namespace HassilBook
             }
         }
         
-        public void Edit()
+        /// <summary>
+        /// updates selected airplane information
+        /// </summary>
+        /// <param name="air">current airplane</param>
+        /// <param name="ID">current airplane ID</param>
+        public void Edit(AirplaneModel air, int ID)
         {
-
+            try
+            {
+                DatabaseConnection con = new DatabaseConnection();
+                MySqlCommand cmd;
+                cmd = con.ActiveConnection().CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE tbl_ClientAirplanes SET RegDate = '"+air.RegisteredDate.ToString("yyyy/MM/dd")+ "', RegNumber = '"+air.RegistrationNumber+ "', Manufacturer = '"+air.Manufacturer+ "', Model = '"+air.Model+ "', Seats = '"+air.Seats+ "', Category = '"+air.Category+ "', Status = '"+air.Status+ "' WHERE ID = '"+ID+"' AND OfficeID = '" + air.OfficeID+"'";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Congratulation, airplane has been successfully updated.", "updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con.ActiveConnection().Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         
         /// <summary>
@@ -68,8 +86,7 @@ namespace HassilBook
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-        
+        } 
         
         /// <summary>
         /// Checks if the airplane already registered or not.
