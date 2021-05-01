@@ -59,11 +59,9 @@ namespace HassilBook
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox1.LabelIndent = 10;
             this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(6, 3);
-            this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuGroupBox1.Location = new System.Drawing.Point(4, 2);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(444, 418);
+            this.bunifuGroupBox1.Size = new System.Drawing.Size(296, 272);
             this.bunifuGroupBox1.TabIndex = 0;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Airplane details";
@@ -86,11 +84,10 @@ namespace HassilBook
             "Operational",
             "Defect"});
             this.CmbStatus.ItemsAppearance.Parent = this.CmbStatus;
-            this.CmbStatus.Location = new System.Drawing.Point(9, 357);
-            this.CmbStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbStatus.Location = new System.Drawing.Point(6, 232);
             this.CmbStatus.Name = "CmbStatus";
             this.CmbStatus.ShadowDecoration.Parent = this.CmbStatus;
-            this.CmbStatus.Size = new System.Drawing.Size(424, 29);
+            this.CmbStatus.Size = new System.Drawing.Size(284, 29);
             this.CmbStatus.TabIndex = 41;
             // 
             // CmbCategory
@@ -111,11 +108,10 @@ namespace HassilBook
             "Schedule",
             "Charter"});
             this.CmbCategory.ItemsAppearance.Parent = this.CmbCategory;
-            this.CmbCategory.Location = new System.Drawing.Point(9, 303);
-            this.CmbCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbCategory.Location = new System.Drawing.Point(6, 197);
             this.CmbCategory.Name = "CmbCategory";
             this.CmbCategory.ShadowDecoration.Parent = this.CmbCategory;
-            this.CmbCategory.Size = new System.Drawing.Size(424, 29);
+            this.CmbCategory.Size = new System.Drawing.Size(284, 29);
             this.CmbCategory.StartIndex = 0;
             this.CmbCategory.TabIndex = 40;
             // 
@@ -137,14 +133,13 @@ namespace HassilBook
             this.TxtSeats.HoverState.Parent = this.TxtSeats;
             this.TxtSeats.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSeats.IconLeft")));
             this.TxtSeats.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtSeats.Location = new System.Drawing.Point(9, 251);
-            this.TxtSeats.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtSeats.Location = new System.Drawing.Point(6, 163);
             this.TxtSeats.Name = "TxtSeats";
             this.TxtSeats.PasswordChar = '\0';
             this.TxtSeats.PlaceholderText = "Seats";
             this.TxtSeats.SelectedText = "";
             this.TxtSeats.ShadowDecoration.Parent = this.TxtSeats;
-            this.TxtSeats.Size = new System.Drawing.Size(426, 43);
+            this.TxtSeats.Size = new System.Drawing.Size(284, 28);
             this.TxtSeats.TabIndex = 39;
             // 
             // TxtModel
@@ -165,14 +160,13 @@ namespace HassilBook
             this.TxtModel.HoverState.Parent = this.TxtModel;
             this.TxtModel.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtModel.IconLeft")));
             this.TxtModel.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtModel.Location = new System.Drawing.Point(9, 198);
-            this.TxtModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtModel.Location = new System.Drawing.Point(6, 129);
             this.TxtModel.Name = "TxtModel";
             this.TxtModel.PasswordChar = '\0';
             this.TxtModel.PlaceholderText = "Model";
             this.TxtModel.SelectedText = "";
             this.TxtModel.ShadowDecoration.Parent = this.TxtModel;
-            this.TxtModel.Size = new System.Drawing.Size(426, 43);
+            this.TxtModel.Size = new System.Drawing.Size(284, 28);
             this.TxtModel.TabIndex = 38;
             // 
             // TxtManufacturer
@@ -193,14 +187,13 @@ namespace HassilBook
             this.TxtManufacturer.HoverState.Parent = this.TxtManufacturer;
             this.TxtManufacturer.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtManufacturer.IconLeft")));
             this.TxtManufacturer.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtManufacturer.Location = new System.Drawing.Point(9, 146);
-            this.TxtManufacturer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtManufacturer.Location = new System.Drawing.Point(6, 95);
             this.TxtManufacturer.Name = "TxtManufacturer";
             this.TxtManufacturer.PasswordChar = '\0';
             this.TxtManufacturer.PlaceholderText = "Manufacturer";
             this.TxtManufacturer.SelectedText = "";
             this.TxtManufacturer.ShadowDecoration.Parent = this.TxtManufacturer;
-            this.TxtManufacturer.Size = new System.Drawing.Size(426, 43);
+            this.TxtManufacturer.Size = new System.Drawing.Size(284, 28);
             this.TxtManufacturer.TabIndex = 37;
             // 
             // DtRegistrationDate
@@ -214,13 +207,12 @@ namespace HassilBook
             this.DtRegistrationDate.ForeColor = System.Drawing.Color.Black;
             this.DtRegistrationDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DtRegistrationDate.HoverState.Parent = this.DtRegistrationDate;
-            this.DtRegistrationDate.Location = new System.Drawing.Point(9, 94);
-            this.DtRegistrationDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtRegistrationDate.Location = new System.Drawing.Point(6, 61);
             this.DtRegistrationDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DtRegistrationDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DtRegistrationDate.Name = "DtRegistrationDate";
             this.DtRegistrationDate.ShadowDecoration.Parent = this.DtRegistrationDate;
-            this.DtRegistrationDate.Size = new System.Drawing.Size(426, 43);
+            this.DtRegistrationDate.Size = new System.Drawing.Size(284, 28);
             this.DtRegistrationDate.TabIndex = 36;
             this.DtRegistrationDate.Value = new System.DateTime(2021, 5, 1, 10, 17, 33, 83);
             // 
@@ -242,14 +234,13 @@ namespace HassilBook
             this.TxtRegistrationNumber.HoverState.Parent = this.TxtRegistrationNumber;
             this.TxtRegistrationNumber.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtRegistrationNumber.IconLeft")));
             this.TxtRegistrationNumber.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtRegistrationNumber.Location = new System.Drawing.Point(9, 42);
-            this.TxtRegistrationNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtRegistrationNumber.Location = new System.Drawing.Point(6, 27);
             this.TxtRegistrationNumber.Name = "TxtRegistrationNumber";
             this.TxtRegistrationNumber.PasswordChar = '\0';
             this.TxtRegistrationNumber.PlaceholderText = "Registration number";
             this.TxtRegistrationNumber.SelectedText = "";
             this.TxtRegistrationNumber.ShadowDecoration.Parent = this.TxtRegistrationNumber;
-            this.TxtRegistrationNumber.Size = new System.Drawing.Size(426, 43);
+            this.TxtRegistrationNumber.Size = new System.Drawing.Size(284, 28);
             this.TxtRegistrationNumber.TabIndex = 35;
             // 
             // BtnAddEdit
@@ -262,27 +253,26 @@ namespace HassilBook
             this.BtnAddEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddEdit.ForeColor = System.Drawing.Color.White;
             this.BtnAddEdit.HoverState.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Location = new System.Drawing.Point(6, 428);
-            this.BtnAddEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnAddEdit.Location = new System.Drawing.Point(4, 278);
             this.BtnAddEdit.Name = "BtnAddEdit";
             this.BtnAddEdit.ShadowDecoration.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Size = new System.Drawing.Size(444, 43);
+            this.BtnAddEdit.Size = new System.Drawing.Size(296, 28);
             this.BtnAddEdit.TabIndex = 34;
             this.BtnAddEdit.Text = "ADD NEW AIRPLANE";
             this.BtnAddEdit.Click += new System.EventHandler(this.BtnAddEdit_Click);
             // 
             // FrmAddEditAirplane
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(450, 452);
+            this.ClientSize = new System.Drawing.Size(304, 314);
             this.Controls.Add(this.bunifuGroupBox1);
             this.Controls.Add(this.BtnAddEdit);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(472, 508);
+            this.MinimumSize = new System.Drawing.Size(320, 344);
             this.Name = "FrmAddEditAirplane";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

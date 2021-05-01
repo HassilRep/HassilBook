@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TxtSeats.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TxtDepartment.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QUBCTAsGE6pGwAAAWtJREFU
@@ -131,30 +131,7 @@
         /YlTpJIjYwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="TxtModel.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QUBCS8s1RSnhQAAASVJREFU
-        OE+NUjFOAzEQPARfAIFEkYqOAvEMKInSpeEJvIUvUJzI2Wvh9SXNIZDCIyio0kSUER0cO2TtROIu8kgj
-        rcc745W1RR/Kstwn4lfr+AW1yvkw5unSEregBF2onA9r+SYGoFY5H0RhuJkgDFXOh7w62ppgpHIeJhM+
-        FeN7CiD+MCYM9Ho3Osz5ITvMkf0hGebI/yEd5pV83H06r+tVOksvPJ1mWZpnY/xZVdUnUfPeH+NV2co6
-        asL1JFK8qfAp5vFfqqBpmgNy4RtErbLsB4/RC4/UcwT8EPmHqpodaU+CNCxBPSagFx54sTDnqie0bbtn
-        XLi1FL5A1ND0OqHLW5TMh/LqFCNuExrutK0fRPWVGBay/4/G8R2IGppx/lrbFEXxC4KPaKnjpZRDAAAA
-        AElFTkSuQmCC
-</value>
-  </data>
-  <data name="TxtManufacturer.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QUBCS4eBNjHRAAAAP9JREFU
-        OE9jGHiwceO2Vxs2bnu3YeP2g1Ah0sD69Zvd1m7c4rd58w5LqBBpAGj7fxDeuHH7ZagQaQCbAUDXGG3Y
-        tG3hxo07gkD8det2iQHl69dv3D4BxF+1ahXbhk1bY4HeP4wwYNP2a+s3bwsACh5AGLqtZ8Om7fOA7B9Q
-        /oENG7ZXAw1/BlMDN4BcTH0D1q/f7rBhww4XuNimbX1APzMD2R+h/Dv///9n3Lhx6zIQH9MAYHQCDbCF
-        8zdubwMF3MZN295Cxa6C+Ru3zgfxsXnhIhBfQuI/BSayfUD6H4gPNOgXMDD3ANlvQHxqhMH2h0AGMCmT
-        g7e/AHlnIAEDAwCyfLIK+n7L2gAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="TxtRegistrationNumber.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TxtDepartmentID.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAHNJREFUKFNj
         oA9Yt2HbfiD+jxev37YXqhysAbsiNAxVjtCwfv12h3WbtjmB2Ru27gbS5SAMZWNqWLduu83ajVvtoPwj
