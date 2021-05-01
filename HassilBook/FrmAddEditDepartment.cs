@@ -47,21 +47,21 @@ namespace HassilBook
                 CmbManager.Items.Clear();
                 DataTable dt = new DataTable();
                 dt.Columns.Add("ID");
-                dt.Columns.Add("Model");
+                dt.Columns.Add("Firstname");
                 dt.Rows.Add("0","- Assign Manager -");
-                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Model FROM tbl_ClientAirplanes WHERE OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Firstname FROM tbl_ClientEmployees WHERE OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
                 DataTable table = new DataTable();
                 sda.Fill(table);
                 if(dt.Rows.Count > 0)
                 {
                     foreach (DataRow item in table.Rows)
                     {
-                        dt.Rows.Add(item["ID"], item["Model"]);
+                        dt.Rows.Add(item["ID"], item["Firstname"]);
                     }
                 }
                 CmbManager.DataSource = dt;
                 CmbManager.ValueMember = "ID";
-                CmbManager.DisplayMember = "Model";
+                CmbManager.DisplayMember = "Firstname";
 
                 con.ActiveConnection().Close();
             }
@@ -117,7 +117,6 @@ namespace HassilBook
                             cmd.ExecuteNonQuery();
                             MessageBox.Show($"Department '{TxtDepartmentID.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             F.LoadDepartments();
-                            LoadEmployees();
                             LoadDepartmentID();
                             BtnAddEdit.Text = "ADD NEW DEPARTMENT";
                             TxtDepartment.Text = string.Empty;
@@ -131,7 +130,6 @@ namespace HassilBook
                             cmd.ExecuteNonQuery();
                             MessageBox.Show($"Department '{TxtDepartmentID.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             F.LoadDepartments();
-                            LoadEmployees();
                             LoadDepartmentID();
                             BtnAddEdit.Text = "ADD NEW DEPARTMENT";
                             TxtDepartment.Text = string.Empty;
