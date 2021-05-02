@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +19,40 @@ namespace HassilBook
             InitializeComponent();
             m_IsHidden = false;
 
+            LoadClientLogo();
+
             // COPYRIGHT © [Year] Hassil Technology
             LblCopyright.Text = $"© {DateTime.Now.Year.ToString()} Hassil Technology";
         }
 
+        /// <summary>
+        /// Load current client logo
+        /// </summary>
+        private void LoadClientLogo()
+        {
+            try
+            {
+                byte[] UserImage = Convert.IsDBNull(FrmLogin.m_client.Logo) ? null : FrmLogin.m_client.Logo;
+                if(UserImage.Length < 0)
+                {
+                    PbClientLogo.Image = Properties.Resources.placeholder;
+                }
+                else
+                {
+                    MemoryStream ms = new MemoryStream(UserImage);
+                    PbClientLogo.Image = Image.FromStream(ms);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Loads selected user form
+        /// </summary>
+        /// <param name="changer"></param>
         private void MyContainer(Form changer)
         {
             if (pnlContainer.Controls.Count > 0)
@@ -71,6 +102,11 @@ namespace HassilBook
         private void BtnEmployees_Click(object sender, EventArgs e)
         {
             MyContainer(new FrmEmployees());
+        }
+
+        private void BtnAgencies_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmAgency());
         }
     }
 }

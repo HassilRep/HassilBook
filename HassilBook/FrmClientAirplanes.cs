@@ -33,7 +33,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM tbl_ClientAirplanes WHERE OfficeID = '" + FrmLogin.OfficeID + "' ORDER BY ID ASC";
+                cmd.CommandText = "SELECT * FROM tbl_ClientAirplanes WHERE OfficeID = '" + FrmLogin.m_client.ClientID + "' ORDER BY ID ASC";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while(dr.Read())
                 {
@@ -63,7 +63,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM tbl_ClientAirplanes WHERE RegNumber LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.OfficeID + "' OR Manufacturer LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.OfficeID + "' OR Model LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.OfficeID + "' OR Status LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.OfficeID + "' OR Category LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                cmd.CommandText = "SELECT * FROM tbl_ClientAirplanes WHERE RegNumber LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.m_client.ClientID + "' OR Manufacturer LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.m_client.ClientID + "' OR Model LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.m_client.ClientID + "' OR Status LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.m_client.ClientID + "' OR Category LIKE '%" + keyword + "%' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -91,7 +91,7 @@ namespace HassilBook
                     MySqlCommand cmd;
                     cmd = con.ActiveConnection().CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT * FROM tbl_ClientAirplanes WHERE RegNumber = '"+DGClientAirplanes[2, e.RowIndex].Value.ToString()+"' AND OfficeID = '"+FrmLogin.OfficeID+"'";
+                    cmd.CommandText = "SELECT * FROM tbl_ClientAirplanes WHERE RegNumber = '"+DGClientAirplanes[2, e.RowIndex].Value.ToString()+"' AND OfficeID = '"+FrmLogin.m_client.ClientID+"'";
                     MySqlDataReader dr = cmd.ExecuteReader();
                     while(dr.Read())
                     {
@@ -114,7 +114,7 @@ namespace HassilBook
                     if(MessageBox.Show($"Do you want to delete this airplane {DGClientAirplanes[2, e.RowIndex].Value.ToString()}?","delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         Airplane airplane = new Airplane();
-                        airplane.Delete(FrmLogin.OfficeID, DGClientAirplanes[2, e.RowIndex].Value.ToString());
+                        airplane.Delete(FrmLogin.m_client.ClientID, DGClientAirplanes[2, e.RowIndex].Value.ToString());
                         LoadAirplanes();
                     }
                 }

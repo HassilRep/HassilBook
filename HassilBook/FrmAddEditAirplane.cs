@@ -47,7 +47,7 @@ namespace HassilBook
                         Airplane air = new Airplane();
                         AirplaneModel model = new AirplaneModel()
                         {
-                            OfficeID = FrmLogin.OfficeID,
+                            OfficeID = FrmLogin.m_client.ClientID,
                             RegistrationNumber = TxtRegistrationNumber.Text,
                             RegisteredDate = DtRegistrationDate.Value,
                             Manufacturer = TxtManufacturer.Text,
@@ -65,7 +65,7 @@ namespace HassilBook
                         Airplane air = new Airplane();
                         AirplaneModel model = new AirplaneModel()
                         {
-                            OfficeID = FrmLogin.OfficeID,
+                            OfficeID = FrmLogin.m_client.ClientID,
                             RegistrationNumber = TxtRegistrationNumber.Text,
                             RegisteredDate = DtRegistrationDate.Value,
                             Manufacturer = TxtManufacturer.Text,

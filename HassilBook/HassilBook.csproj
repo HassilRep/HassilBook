@@ -209,7 +209,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\AirlineAccessPoint.cs" />
+    <Compile Include="FrmAgency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgency.Designer.cs">
+      <DependentUpon>FrmAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ClientModel.cs" />
     <Compile Include="Controller\Airplane.cs" />
+    <Compile Include="Model\EmployeeModel.cs" />
     <Compile Include="FrmAddEditDepartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +349,9 @@
     <EmbeddedResource Include="FrmAddEditDepartment.resx">
       <DependentUpon>FrmAddEditDepartment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgency.resx">
+      <DependentUpon>FrmAgency.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAgencyDashboard.resx">
       <DependentUpon>FrmAgencyDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -415,6 +427,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Agencies\" />
+    <Folder Include="Forms\Airlines\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

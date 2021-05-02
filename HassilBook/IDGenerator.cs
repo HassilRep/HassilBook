@@ -12,6 +12,7 @@ namespace HassilBook
     {
         public string M_ClientDepartmentID;
         public string M_ClientEmployeeID;
+        public string M_ClientAgencyID;
 
 
         DatabaseConnection con = new DatabaseConnection();
@@ -51,6 +52,29 @@ namespace HassilBook
                 {
                     string GeneratedID = "000000" + dr.GetInt32(0);
                     M_ClientEmployeeID = "EMP" + GeneratedID.Substring(GeneratedID.Length - 7, 7);
+                }
+                dr.Close();
+                con.ActiveConnection().Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// This generates client travel agencies ID
+        /// </summary>
+        public void ClientAgencyID(int OfficeID)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(AgencyID, 4) AS INT)), 0) + 1 FROM tbl_ClientAgencies WHERE OfficeID LIKE '" + OfficeID + "'", con.ActiveConnection());
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    string GeneratedID = "0000" + dr.GetInt32(0);
+                    M_ClientAgencyID = "AG" + GeneratedID.Substring(GeneratedID.Length - 4, 4);
                 }
                 dr.Close();
                 con.ActiveConnection().Close();

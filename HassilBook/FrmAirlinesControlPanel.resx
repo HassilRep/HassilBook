@@ -472,7 +472,7 @@
         gbYqECzrRy8M5Q74JovwHxZgjv4A7bWCfoqT7cAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2Button5.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnEmployees.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QQJCQ0zB3rtDwAAAnNJREFU
@@ -489,7 +489,7 @@
         sFAeoOkrVHcy89DH7JPej2mEIyx43h9nf/VnVWHkjwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button5.HoverState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnEmployees.HoverState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QQJCQ0zB3rtDwAAAnNJREFU
@@ -559,7 +559,7 @@
         h9V4F3+zHuTIv7Nbsd7cjtT9IlcH1FCb5keuEo9a7Y7eS+5/N8/7DbDiRS/Za0y1AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2Button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnAgencies.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QQJCQwyaWbs2AAAAs1JREFU
@@ -777,7 +777,7 @@
         5BiD5Uvs94InXlJ6AMjlbgHD3SEEbWYYGgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PbClientLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAiwAAAH0CAIAAACRkOFhAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAGtWSURBVHhe7b13mGRVtff/++P1

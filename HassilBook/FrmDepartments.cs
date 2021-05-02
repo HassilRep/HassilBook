@@ -32,7 +32,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT D.DepartmentID, D.Description, CASE WHEN D.ManagerID IS NOT NULL THEN E.Firstname ELSE 'No Manager assigned yet' END AS Manager FROM tbl_ClientDepartment D LEFT JOIN tbl_ClientEmployees E ON D.ManagerID = E.ID WHERE D.OfficeID = '" + FrmLogin.OfficeID + "' ORDER BY D.ID ASC";
+                cmd.CommandText = "SELECT D.DepartmentID, D.Description, CASE WHEN D.ManagerID IS NOT NULL THEN E.Firstname ELSE 'No Manager assigned yet' END AS Manager FROM tbl_ClientDepartment D LEFT JOIN tbl_ClientEmployees E ON D.ManagerID = E.ID WHERE D.OfficeID = '" + FrmLogin.m_client.ClientID + "' ORDER BY D.ID ASC";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -52,7 +52,7 @@ namespace HassilBook
         {
             FrmAddEditDepartment F = new FrmAddEditDepartment(this);
             IDGenerator ID = new IDGenerator();
-            ID.ClientDepartmentID(FrmLogin.OfficeID);
+            ID.ClientDepartmentID(FrmLogin.m_client.ClientID);
             F.TxtDepartmentID.Text = ID.M_ClientDepartmentID;
             F.ShowDialog();
         }
@@ -70,7 +70,7 @@ namespace HassilBook
                     MySqlCommand cmd;
                     cmd = con.ActiveConnection().CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT D.DepartmentID, D.Description, CASE WHEN D.ManagerID IS NOT NULL THEN E.Firstname ELSE 'No Manager assigned yet' END AS Manager FROM tbl_ClientDepartment D LEFT JOIN tbl_ClientEmployees E ON D.ManagerID = E.ID WHERE D.DepartmentID = '" + DGClientDepartments[1, e.RowIndex].Value.ToString() + "' AND D.OfficeID = '" + FrmLogin.OfficeID + "'";
+                    cmd.CommandText = "SELECT D.DepartmentID, D.Description, CASE WHEN D.ManagerID IS NOT NULL THEN E.Firstname ELSE 'No Manager assigned yet' END AS Manager FROM tbl_ClientDepartment D LEFT JOIN tbl_ClientEmployees E ON D.ManagerID = E.ID WHERE D.DepartmentID = '" + DGClientDepartments[1, e.RowIndex].Value.ToString() + "' AND D.OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                     MySqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -97,7 +97,7 @@ namespace HassilBook
                         MySqlCommand cmd;
                         cmd = con.ActiveConnection().CreateCommand();
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "DELETE FROM tbl_ClientDepartment WHERE DepartmentID = '" + DGClientDepartments[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                        cmd.CommandText = "DELETE FROM tbl_ClientDepartment WHERE DepartmentID = '" + DGClientDepartments[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                         cmd.ExecuteNonQuery();
                         MessageBox.Show($"Department '{DGClientDepartments[1, e.RowIndex].Value.ToString()}' has been delete from the list.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadDepartments();
@@ -124,7 +124,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT D.DepartmentID, D.Description, CASE WHEN D.ManagerID IS NOT NULL THEN E.Firstname ELSE 'No Manager assigned yet' END AS Manager FROM tbl_ClientDepartment D LEFT JOIN tbl_ClientEmployees E ON D.ManagerID = E.ID WHERE D.DepartmentID LIKE '%" + TxtSearchWith.Text + "%' AND D.OfficeID = '" + FrmLogin.OfficeID + "' OR D.Description LIKE '%" + TxtSearchWith.Text + "%' AND D.OfficeID = '" + FrmLogin.OfficeID + "' OR E.Firstname LIKE '%" + TxtSearchWith.Text + "%' AND D.OfficeID = '" + FrmLogin.OfficeID + "' ORDER BY D.ID ASC";
+                cmd.CommandText = "SELECT D.DepartmentID, D.Description, CASE WHEN D.ManagerID IS NOT NULL THEN E.Firstname ELSE 'No Manager assigned yet' END AS Manager FROM tbl_ClientDepartment D LEFT JOIN tbl_ClientEmployees E ON D.ManagerID = E.ID WHERE D.DepartmentID LIKE '%" + TxtSearchWith.Text + "%' AND D.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR D.Description LIKE '%" + TxtSearchWith.Text + "%' AND D.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR E.Firstname LIKE '%" + TxtSearchWith.Text + "%' AND D.OfficeID = '" + FrmLogin.m_client.ClientID + "' ORDER BY D.ID ASC";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {

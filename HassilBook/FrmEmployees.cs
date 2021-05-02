@@ -1,13 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HassilBook
@@ -41,7 +36,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT E.EmployeeID, E.Firstname, E.Lastname, E.Email, E.Telephone, D.Description FROM tbl_ClientEmployees E INNER JOIN tbl_ClientDepartment D ON E.DepartmentID = D.ID WHERE E.OfficeID = '" + FrmLogin.OfficeID + "'";
+                cmd.CommandText = "SELECT E.EmployeeID, E.Firstname, E.Lastname, E.Email, E.Telephone, D.Description FROM tbl_ClientEmployees E INNER JOIN tbl_ClientDepartment D ON E.DepartmentID = D.ID WHERE E.OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -70,7 +65,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT E.EmployeeID, E.Firstname, E.Lastname, E.Email, E.Telephone, D.Description FROM tbl_ClientEmployees E INNER JOIN tbl_ClientDepartment D ON E.DepartmentID = D.ID WHERE E.EmployeeID LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.OfficeID + "' OR E.Firstname LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.OfficeID + "' OR E.Lastname LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.OfficeID + "' OR E.Email LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.OfficeID + "' OR E.Telephone LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.OfficeID + "' OR D.Description LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.OfficeID + "'";
+                cmd.CommandText = "SELECT E.EmployeeID, E.Firstname, E.Lastname, E.Email, E.Telephone, D.Description FROM tbl_ClientEmployees E INNER JOIN tbl_ClientDepartment D ON E.DepartmentID = D.ID WHERE E.EmployeeID LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR E.Firstname LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR E.Lastname LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR E.Email LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR E.Telephone LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR D.Description LIKE '%" + TxtSearchWith.Text + "%' AND E.OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -99,7 +94,7 @@ namespace HassilBook
                 dt.Columns.Add("ID");
                 dt.Columns.Add("Description");
                 dt.Rows.Add("0", "- Assign Department -");
-                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Description FROM tbl_ClientDepartment WHERE OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Description FROM tbl_ClientDepartment WHERE OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                 DataTable table = new DataTable();
                 sda.Fill(table);
                 if (dt.Rows.Count > 0)
@@ -129,7 +124,7 @@ namespace HassilBook
             try
             {
                 IDGenerator ID = new IDGenerator();
-                ID.ClientEmployeeID(FrmLogin.OfficeID);
+                ID.ClientEmployeeID(FrmLogin.m_client.ClientID);
                 TxtEmployeeID.Text = ID.M_ClientEmployeeID;
             }
             catch (Exception ex)
@@ -249,7 +244,7 @@ namespace HassilBook
 
                     if (BtnAddEdit.Text == "ADD NEW EMPLOYEE")
                     {
-                        MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientEmployees(OfficeID, EmployeeID, Firstname, Lastname, Gender, Email, Telephone, Birthdate, HiredDate, DepartmentID, Image)VALUES('" + FrmLogin.OfficeID + "','" + TxtEmployeeID.Text + "','" + TxtFirstname.Text + "','" + TxtLastname.Text + "','" + CmbGender.Text + "','" + TxtEmail.Text + "','" + TxtTelephone.Text + "','" + DtBirthdate.Value.ToString("yyyy/MM/dd") + "','" + DtHiredDate.Value.ToString("yyyy/MM/dd") + "','" + CmbDepartment.SelectedValue + "',@img)", con.ActiveConnection());
+                        MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientEmployees(OfficeID, EmployeeID, Firstname, Lastname, Gender, Email, Telephone, Birthdate, HiredDate, DepartmentID, Image)VALUES('" + FrmLogin.m_client.ClientID + "','" + TxtEmployeeID.Text + "','" + TxtFirstname.Text + "','" + TxtLastname.Text + "','" + CmbGender.Text + "','" + TxtEmail.Text + "','" + TxtTelephone.Text + "','" + DtBirthdate.Value.ToString("yyyy/MM/dd") + "','" + DtHiredDate.Value.ToString("yyyy/MM/dd") + "','" + CmbDepartment.SelectedValue + "',@img)", con.ActiveConnection());
                         MemoryStream ms = new MemoryStream();
                         pcUserImage.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                         byte[] pic = ms.ToArray();
@@ -266,7 +261,7 @@ namespace HassilBook
                         MySqlCommand cmd;
                         cmd = con.ActiveConnection().CreateCommand();
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "UPDATE tbl_ClientEmployees SET Firstname = '" + TxtFirstname.Text + "', Lastname = '" + TxtLastname.Text + "', Gender = '" + CmbGender.Text + "', Email = '" + TxtEmail.Text + "', Telephone = '" + TxtTelephone.Text + "', Birthdate = '" + DtBirthdate.Value.ToString("yyyy/MM/dd") + "', HiredDate = '" + DtHiredDate.Value.ToString("yyyy/MM/dd") + "', DepartmentID = '" + CmbDepartment.SelectedValue + "', Image = @img WHERE EmployeeID = '" + TxtEmployeeID.Text + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                        cmd.CommandText = "UPDATE tbl_ClientEmployees SET Firstname = '" + TxtFirstname.Text + "', Lastname = '" + TxtLastname.Text + "', Gender = '" + CmbGender.Text + "', Email = '" + TxtEmail.Text + "', Telephone = '" + TxtTelephone.Text + "', Birthdate = '" + DtBirthdate.Value.ToString("yyyy/MM/dd") + "', HiredDate = '" + DtHiredDate.Value.ToString("yyyy/MM/dd") + "', DepartmentID = '" + CmbDepartment.SelectedValue + "', Image = @img WHERE EmployeeID = '" + TxtEmployeeID.Text + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                         MemoryStream ms = new MemoryStream();
                         pcUserImage.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                         byte[] pic = ms.ToArray();
@@ -295,7 +290,7 @@ namespace HassilBook
             {
                 if (cel == "EDIT")
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT E.EmployeeID, E.Firstname, E.Lastname, E.Gender, E.Email, E.Telephone, E.Birthdate, E.HiredDate, D.Description, E.Image  FROM tbl_ClientEmployees E INNER JOIN tbl_ClientDepartment D ON E.DepartmentID = D.ID WHERE E.EmployeeID = '" + this.DGClientEmployee[1, e.RowIndex].Value.ToString() + "' AND E.OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT E.EmployeeID, E.Firstname, E.Lastname, E.Gender, E.Email, E.Telephone, E.Birthdate, E.HiredDate, D.Description, E.Image  FROM tbl_ClientEmployees E INNER JOIN tbl_ClientDepartment D ON E.DepartmentID = D.ID WHERE E.EmployeeID = '" + this.DGClientEmployee[1, e.RowIndex].Value.ToString() + "' AND E.OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
@@ -328,26 +323,26 @@ namespace HassilBook
                 {
                     if (MessageBox.Show($"Do you want to delete this employee '{DGClientEmployee[1, e.RowIndex].Value.ToString()}' from the list?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        //if (DGClientEmployee[1, e.RowIndex].Value.ToString() == FrmLogin.EmployeeProfile[1].ToString())
-                        //{
-                        //    MessageBox.Show($"Sorry you can't remove your self from the list. Please contact your adminstrator for more info.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //}
-                        //else
-                        //{
-                        //    MySqlCommand cmd;
-                        //    cmd = con.ActiveConnection().CreateCommand();
-                        //    cmd.CommandType = CommandType.Text;
-                        //    cmd.CommandText = "DELETE FROM tbl_ClientEmployees WHERE EmployeeID = '" + this.DGClientEmployee[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
-                        //    cmd.ExecuteNonQuery();
-                        //    MessageBox.Show($"Employee '{DGClientEmployee[1, e.RowIndex].Value.ToString()}' has been delete from the list.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (DGClientEmployee[1, e.RowIndex].Value.ToString() == FrmLogin.m_employee.EmployeeID)
+                        {
+                            MessageBox.Show($"Sorry you can't remove your self from the list. Please contact your adminstrator for more info.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MySqlCommand cmd;
+                            cmd = con.ActiveConnection().CreateCommand();
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "DELETE FROM tbl_ClientEmployees WHERE EmployeeID = '" + this.DGClientEmployee[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show($"Employee '{DGClientEmployee[1, e.RowIndex].Value.ToString()}' has been delete from the list.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //    LoadEmployeeID();
-                        //    LoadEmployees();
-                        //    LoadDepartments();
-                        //    con.ActiveConnection().Close();
+                            LoadEmployeeID();
+                            LoadEmployees();
+                            LoadDepartments();
+                            con.ActiveConnection().Close();
 
-                        //    ClearEmployeeComponents();
-                        //}
+                            ClearEmployeeComponents();
+                        }
                     }
                 }
             }
@@ -372,7 +367,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM tbl_ClientUserRoles WHERE OfficeID = '" + FrmLogin.OfficeID + "'";
+                cmd.CommandText = "SELECT * FROM tbl_ClientUserRoles WHERE OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -402,7 +397,7 @@ namespace HassilBook
 
                     if (BtnAddEditRole.Text == "ADD NEW ROLE")
                     {
-                        MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientUserRoles(OfficeID,Role,RoleType)VALUES('" + FrmLogin.OfficeID + "','" + TxtRole.Text + "','" + CmbRoleType.Text + "')", con.ActiveConnection());
+                        MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientUserRoles(OfficeID,Role,RoleType)VALUES('" + FrmLogin.m_client.ClientID + "','" + TxtRole.Text + "','" + CmbRoleType.Text + "')", con.ActiveConnection());
                         cmd.ExecuteReader();
                         LoadUserRoles();
                         con.ActiveConnection().Close();
@@ -414,7 +409,7 @@ namespace HassilBook
                         MySqlCommand cmd;
                         cmd = con.ActiveConnection().CreateCommand();
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "UPDATE tbl_ClientUserRoles SET Role = '" + TxtRole.Text + "',RoleType = '" + CmbRoleType.Text + "' WHERE ID = '" + m_roleID + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                        cmd.CommandText = "UPDATE tbl_ClientUserRoles SET Role = '" + TxtRole.Text + "',RoleType = '" + CmbRoleType.Text + "' WHERE ID = '" + m_roleID + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                         cmd.ExecuteNonQuery();
                         MessageBox.Show($"Role '{TxtRole.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadUserRoles();
@@ -439,7 +434,7 @@ namespace HassilBook
             {
                 if (cel == "UPDATE")
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbl_ClientUserRoles WHERE Role = '" + this.DGClientUserRoles[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbl_ClientUserRoles WHERE Role = '" + this.DGClientUserRoles[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
@@ -457,7 +452,7 @@ namespace HassilBook
                         MySqlCommand cmd;
                         cmd = con.ActiveConnection().CreateCommand();
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "DELETE FROM tbl_ClientUserRoles WHERE Role = '" + DGClientUserRoles[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                        cmd.CommandText = "DELETE FROM tbl_ClientUserRoles WHERE Role = '" + DGClientUserRoles[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                         cmd.ExecuteNonQuery();
                         MessageBox.Show($"Role '{DGClientUserRoles[1, e.RowIndex].Value.ToString()}' has been delete from the list.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -491,7 +486,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT E.EmployeeID, U.Username, R.Role, U.Status FROM tbl_ClientUsers U INNER JOIN tbl_ClientEmployees E ON U.EmployeeID = E.ID INNER JOIN tbl_ClientUserRoles R ON U.RoleID = R.ID WHERE U.OfficeID = '" + FrmLogin.OfficeID + "'";
+                cmd.CommandText = "SELECT E.EmployeeID, U.Username, R.Role, U.Status FROM tbl_ClientUsers U INNER JOIN tbl_ClientEmployees E ON U.EmployeeID = E.ID INNER JOIN tbl_ClientUserRoles R ON U.RoleID = R.ID WHERE U.OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -520,7 +515,7 @@ namespace HassilBook
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT E.EmployeeID, U.Username, R.Role, U.Status FROM tbl_ClientUsers U INNER JOIN tbl_ClientEmployees E ON U.EmployeeID = E.ID INNER JOIN tbl_ClientUserRoles R ON U.RoleID = R.ID WHERE E.EmployeeID LIKE '%" + TxtSearchWithKeyword.Text + "%' AND U.OfficeID = '" + FrmLogin.OfficeID + "' OR U.Username LIKE '%" + TxtSearchWithKeyword.Text + "%' AND U.OfficeID = '" + FrmLogin.OfficeID + "' OR R.Role LIKE '%" + TxtSearchWithKeyword.Text + "%' AND U.OfficeID = '" + FrmLogin.OfficeID + "' OR U.Status LIKE '%" + TxtSearchWithKeyword.Text + "%' AND U.OfficeID = '" + FrmLogin.OfficeID + "'";
+                cmd.CommandText = "SELECT E.EmployeeID, U.Username, R.Role, U.Status FROM tbl_ClientUsers U INNER JOIN tbl_ClientEmployees E ON U.EmployeeID = E.ID INNER JOIN tbl_ClientUserRoles R ON U.RoleID = R.ID WHERE E.EmployeeID LIKE '%" + TxtSearchWithKeyword.Text + "%' AND U.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR U.Username LIKE '%" + TxtSearchWithKeyword.Text + "%' AND U.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR R.Role LIKE '%" + TxtSearchWithKeyword.Text + "%' AND U.OfficeID = '" + FrmLogin.m_client.ClientID + "' OR U.Status LIKE '%" + TxtSearchWithKeyword.Text + "%' AND U.OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -550,7 +545,7 @@ namespace HassilBook
                 dt.Columns.Add("ID");
                 dt.Columns.Add("Role");
                 dt.Rows.Add("0", "- Assign Role -");
-                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Role FROM tbl_ClientUserRoles WHERE OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Role FROM tbl_ClientUserRoles WHERE OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                 DataTable table = new DataTable();
                 sda.Fill(table);
                 if (dt.Rows.Count > 0)
@@ -586,7 +581,7 @@ namespace HassilBook
                 dt.Columns.Add("ID");
                 dt.Columns.Add("Firstname");
                 dt.Rows.Add("0", "- Assign Employee -");
-                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Firstname FROM tbl_ClientEmployees WHERE OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Firstname FROM tbl_ClientEmployees WHERE OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                 DataTable table = new DataTable();
                 sda.Fill(table);
                 if (dt.Rows.Count > 0)
@@ -629,7 +624,7 @@ namespace HassilBook
                     DatabaseConnection con = new DatabaseConnection();
                     if (BtnAddEditUser.Text == "ADD NEW USER")
                     {
-                        MySqlDataAdapter sda = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE Username = '" + TxtUsername.Text + "' AND OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                        MySqlDataAdapter sda = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE Username = '" + TxtUsername.Text + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                         DataSet ds = new DataSet();
                         sda.Fill(ds);
                         if (ds.Tables[0].Rows.Count > 0)
@@ -639,7 +634,7 @@ namespace HassilBook
                         }
                         else
                         {
-                            MySqlDataAdapter sda1 = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE EmployeeID = '" + CmbEmployee.SelectedValue + "' AND OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                            MySqlDataAdapter sda1 = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE EmployeeID = '" + CmbEmployee.SelectedValue + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                             DataSet ds1 = new DataSet();
                             sda1.Fill(ds1);
                             if (ds1.Tables[0].Rows.Count > 0)
@@ -650,7 +645,7 @@ namespace HassilBook
                             else
                             {
                                 string InitialPassword = "hassilbook";
-                                MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientUsers(OfficeID, EmployeeID, Username, Password, RoleID,Status)VALUES('" + FrmLogin.OfficeID + "','" + CmbEmployee.SelectedValue + "','" + TxtUsername.Text + "','" + InitialPassword + "','" + CmbRoles.SelectedValue + "','" + CmbStatus.Text + "')", con.ActiveConnection());
+                                MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientUsers(OfficeID, EmployeeID, Username, Password, RoleID,Status)VALUES('" + FrmLogin.m_client.ClientID + "','" + CmbEmployee.SelectedValue + "','" + TxtUsername.Text + "','" + InitialPassword + "','" + CmbRoles.SelectedValue + "','" + CmbStatus.Text + "')", con.ActiveConnection());
                                 cmd.ExecuteNonQuery();
                                 MessageBox.Show($"User '{TxtUsername.Text}' has been created.", "created", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 con.ActiveConnection().Close();
@@ -662,7 +657,7 @@ namespace HassilBook
                     {
                         if (TxtUsername.Text.ToLower() != m_Username.ToLower())
                         {
-                            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE Username = '" + TxtUsername.Text + "' AND OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE Username = '" + TxtUsername.Text + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                             DataSet ds = new DataSet();
                             sda.Fill(ds);
                             if (ds.Tables[0].Rows.Count > 0)
@@ -674,7 +669,7 @@ namespace HassilBook
                             {
                                 if(CmbEmployee.Text.ToLower() != m_Employee.ToLower())
                                 {
-                                    MySqlDataAdapter sda1 = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE EmployeeID = '" + CmbEmployee.SelectedValue + "' AND OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                                    MySqlDataAdapter sda1 = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE EmployeeID = '" + CmbEmployee.SelectedValue + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                                     DataSet ds1 = new DataSet();
                                     sda1.Fill(ds1);
                                     if (ds1.Tables[0].Rows.Count > 0)
@@ -687,7 +682,7 @@ namespace HassilBook
                                         MySqlCommand cmd;
                                         cmd = con.ActiveConnection().CreateCommand();
                                         cmd.CommandType = CommandType.Text;
-                                        cmd.CommandText = "UPDATE tbl_ClientUsers SET Username = '" + TxtUsername.Text + "', RoleID = '" + CmbRoles.SelectedValue + "',Status = '" + CmbStatus.Text + "' WHERE ID = '" + m_userID + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                                        cmd.CommandText = "UPDATE tbl_ClientUsers SET Username = '" + TxtUsername.Text + "', RoleID = '" + CmbRoles.SelectedValue + "',Status = '" + CmbStatus.Text + "' WHERE ID = '" + m_userID + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                                         cmd.ExecuteNonQuery();
                                         MessageBox.Show($"User '{TxtUsername.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         con.ActiveConnection().Close();
@@ -699,7 +694,7 @@ namespace HassilBook
                                     MySqlCommand cmd;
                                     cmd = con.ActiveConnection().CreateCommand();
                                     cmd.CommandType = CommandType.Text;
-                                    cmd.CommandText = "UPDATE tbl_ClientUsers SET Username = '" + TxtUsername.Text + "', RoleID = '" + CmbRoles.SelectedValue + "',Status = '" + CmbStatus.Text + "' WHERE ID = '" + m_userID + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                                    cmd.CommandText = "UPDATE tbl_ClientUsers SET Username = '" + TxtUsername.Text + "', RoleID = '" + CmbRoles.SelectedValue + "',Status = '" + CmbStatus.Text + "' WHERE ID = '" + m_userID + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                                     cmd.ExecuteNonQuery();
                                     MessageBox.Show($"User '{TxtUsername.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     con.ActiveConnection().Close();
@@ -711,7 +706,7 @@ namespace HassilBook
                         {
                             if (CmbEmployee.Text.ToLower() != m_Employee.ToLower())
                             {
-                                MySqlDataAdapter sda1 = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE EmployeeID = '" + CmbEmployee.SelectedValue + "' AND OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                                MySqlDataAdapter sda1 = new MySqlDataAdapter("SELECT * FROM tbl_ClientUsers WHERE EmployeeID = '" + CmbEmployee.SelectedValue + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                                 DataSet ds1 = new DataSet();
                                 sda1.Fill(ds1);
                                 if (ds1.Tables[0].Rows.Count > 0)
@@ -724,7 +719,7 @@ namespace HassilBook
                                     MySqlCommand cmd;
                                     cmd = con.ActiveConnection().CreateCommand();
                                     cmd.CommandType = CommandType.Text;
-                                    cmd.CommandText = "UPDATE tbl_ClientUsers SET Username = '" + TxtUsername.Text + "', RoleID = '" + CmbRoles.SelectedValue + "',Status = '" + CmbStatus.Text + "' WHERE ID = '" + m_userID + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                                    cmd.CommandText = "UPDATE tbl_ClientUsers SET Username = '" + TxtUsername.Text + "', RoleID = '" + CmbRoles.SelectedValue + "',Status = '" + CmbStatus.Text + "' WHERE ID = '" + m_userID + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                                     cmd.ExecuteNonQuery();
                                     MessageBox.Show($"User '{TxtUsername.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     con.ActiveConnection().Close();
@@ -736,7 +731,7 @@ namespace HassilBook
                                 MySqlCommand cmd;
                                 cmd = con.ActiveConnection().CreateCommand();
                                 cmd.CommandType = CommandType.Text;
-                                cmd.CommandText = "UPDATE tbl_ClientUsers SET Username = '" + TxtUsername.Text + "', RoleID = '" + CmbRoles.SelectedValue + "',Status = '" + CmbStatus.Text + "' WHERE ID = '" + m_userID + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                                cmd.CommandText = "UPDATE tbl_ClientUsers SET Username = '" + TxtUsername.Text + "', RoleID = '" + CmbRoles.SelectedValue + "',Status = '" + CmbStatus.Text + "' WHERE ID = '" + m_userID + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                                 cmd.ExecuteNonQuery();
                                 MessageBox.Show($"User '{TxtUsername.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 con.ActiveConnection().Close();
@@ -760,7 +755,7 @@ namespace HassilBook
             {
                 if (cel == "EDT")
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT U.ID, U.Username, E.Firstname, R.Role, U.Status FROM tbl_ClientUsers U INNER JOIN tbl_ClientEmployees E ON U.EmployeeID = E.ID INNER JOIN tbl_ClientUserRoles R ON U.RoleID = R.ID WHERE U.Username = '" + this.DGClientUsers[2, e.RowIndex].Value.ToString() + "' AND U.OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT U.ID, U.Username, E.Firstname, R.Role, U.Status FROM tbl_ClientUsers U INNER JOIN tbl_ClientEmployees E ON U.EmployeeID = E.ID INNER JOIN tbl_ClientUserRoles R ON U.RoleID = R.ID WHERE U.Username = '" + this.DGClientUsers[2, e.RowIndex].Value.ToString() + "' AND U.OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
@@ -779,30 +774,30 @@ namespace HassilBook
                 {
                     if (MessageBox.Show($"Do you want to delete this user '{DGClientUsers[2, e.RowIndex].Value.ToString()}' from the list?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        //if (DGClientUsers[2, e.RowIndex].Value.ToString().ToLower() == FrmLogin.OfficeID)
-                        //{
-                        //    MessageBox.Show($"Sorry you can't remove your self from the list. Please contact your adminstrator for more info.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //}
-                        //else
-                        //{
-                        //    MySqlCommand cmd;
-                        //    cmd = con.ActiveConnection().CreateCommand();
-                        //    cmd.CommandType = CommandType.Text;
-                        //    cmd.CommandText = "DELETE FROM tbl_ClientUsers WHERE Username = '" + DGClientUsers[2, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmClientLogin.ClientProfile[0] + "'";
-                        //    cmd.ExecuteNonQuery();
-                        //    MessageBox.Show($"User '{DGClientUsers[2, e.RowIndex].Value.ToString()}' has been delete from the list.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (DGClientUsers[2, e.RowIndex].Value.ToString().ToLower() == FrmLogin.m_employee.Username)
+                        {
+                            MessageBox.Show($"Sorry you can't remove your self from the list. Please contact your adminstrator for more info.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MySqlCommand cmd;
+                            cmd = con.ActiveConnection().CreateCommand();
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "DELETE FROM tbl_ClientUsers WHERE Username = '" + DGClientUsers[2, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show($"User '{DGClientUsers[2, e.RowIndex].Value.ToString()}' has been delete from the list.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //    LoadRoles();
-                        //    LoadUsers();
-                        //    LoadEmployees();
-                        //    con.ActiveConnection().Close();
+                            LoadRoles();
+                            LoadUsers();
+                            LoadEmployees();
+                            con.ActiveConnection().Close();
 
-                        //    TxtUsername.Text = string.Empty;
-                        //    CmbEmployee.SelectedIndex = 0;
-                        //    CmbRoles.SelectedIndex = 0;
-                        //    CmbStatus.SelectedIndex = 0;
-                        //    BtnAddEdit.Text = "ADD NEW USER";
-                        //}
+                            TxtUsername.Text = string.Empty;
+                            CmbEmployee.SelectedIndex = 0;
+                            CmbRoles.SelectedIndex = 0;
+                            CmbStatus.SelectedIndex = 0;
+                            BtnAddEdit.Text = "ADD NEW USER";
+                        }
                     }
                 }
             }

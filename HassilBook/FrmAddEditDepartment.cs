@@ -27,7 +27,7 @@ namespace HassilBook
             try
             {
                 IDGenerator ID = new IDGenerator();
-                ID.ClientDepartmentID(FrmLogin.OfficeID);
+                ID.ClientDepartmentID(FrmLogin.m_client.ClientID);
                 TxtDepartmentID.Text = ID.M_ClientDepartmentID;
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace HassilBook
                 dt.Columns.Add("ID");
                 dt.Columns.Add("Firstname");
                 dt.Rows.Add("0","- Assign Manager -");
-                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Firstname FROM tbl_ClientEmployees WHERE OfficeID = '" + FrmLogin.OfficeID + "'", con.ActiveConnection());
+                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Firstname FROM tbl_ClientEmployees WHERE OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                 DataTable table = new DataTable();
                 sda.Fill(table);
                 if(dt.Rows.Count > 0)
@@ -87,7 +87,7 @@ namespace HassilBook
                     {
                         if (CmbManager.SelectedIndex == 0)
                         {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientDepartment(OfficeID,DepartmentID,Description)VALUES('" + FrmLogin.OfficeID + "','" + TxtDepartmentID.Text + "','" + TxtDepartment.Text + "')", con.ActiveConnection());
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientDepartment(OfficeID,DepartmentID,Description)VALUES('" + FrmLogin.m_client.ClientID + "','" + TxtDepartmentID.Text + "','" + TxtDepartment.Text + "')", con.ActiveConnection());
                             cmd.ExecuteNonQuery();
                             F.LoadDepartments();
                             TxtDepartment.Text = string.Empty;
@@ -97,7 +97,7 @@ namespace HassilBook
                         }
                         else
                         {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientDepartment(OfficeID,DepartmentID,Description,ManagerID)VALUES('" + FrmLogin.OfficeID + "','" + TxtDepartmentID.Text + "','" + TxtDepartment.Text + "','" + CmbManager.SelectedValue + "')", con.ActiveConnection());
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_ClientDepartment(OfficeID,DepartmentID,Description,ManagerID)VALUES('" + FrmLogin.m_client.ClientID + "','" + TxtDepartmentID.Text + "','" + TxtDepartment.Text + "','" + CmbManager.SelectedValue + "')", con.ActiveConnection());
                             cmd.ExecuteNonQuery();
                             F.LoadDepartments();
                             TxtDepartment.Text = string.Empty;
@@ -113,7 +113,7 @@ namespace HassilBook
                             MySqlCommand cmd;
                             cmd = con.ActiveConnection().CreateCommand();
                             cmd.CommandType = CommandType.Text;
-                            cmd.CommandText = "UPDATE tbl_ClientDepartment SET Description = '" + TxtDepartment.Text + "', ManagerID = NULL WHERE DepartmentID = '" + TxtDepartmentID.Text + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                            cmd.CommandText = "UPDATE tbl_ClientDepartment SET Description = '" + TxtDepartment.Text + "', ManagerID = NULL WHERE DepartmentID = '" + TxtDepartmentID.Text + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                             cmd.ExecuteNonQuery();
                             MessageBox.Show($"Department '{TxtDepartmentID.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             F.LoadDepartments();
@@ -126,7 +126,7 @@ namespace HassilBook
                             MySqlCommand cmd;
                             cmd = con.ActiveConnection().CreateCommand();
                             cmd.CommandType = CommandType.Text;
-                            cmd.CommandText = "UPDATE tbl_ClientDepartment SET Description = '" + TxtDepartment.Text + "', ManagerID = '" + CmbManager.SelectedValue + "' WHERE DepartmentID = '" + TxtDepartmentID.Text + "' AND OfficeID = '" + FrmLogin.OfficeID + "'";
+                            cmd.CommandText = "UPDATE tbl_ClientDepartment SET Description = '" + TxtDepartment.Text + "', ManagerID = '" + CmbManager.SelectedValue + "' WHERE DepartmentID = '" + TxtDepartmentID.Text + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                             cmd.ExecuteNonQuery();
                             MessageBox.Show($"Department '{TxtDepartmentID.Text}' has been updated.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             F.LoadDepartments();
