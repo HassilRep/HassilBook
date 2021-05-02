@@ -33,10 +33,10 @@ namespace HassilBook
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmployees));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnEmployees = new Guna.UI2.WinForms.Guna2Button();
             this.BtnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.BtnRoles = new Guna.UI2.WinForms.Guna2Button();
@@ -67,25 +67,14 @@ namespace HassilBook
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DEL = new System.Windows.Forms.DataGridViewImageColumn();
             this.Users = new System.Windows.Forms.TabPage();
-            this.Roles = new System.Windows.Forms.TabPage();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.DGClientUserRoles = new System.Windows.Forms.DataGridView();
-            this.CmbRoleType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.BtnAddEditRole = new Guna.UI2.WinForms.Guna2Button();
-            this.TxtRole = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UPDATE = new System.Windows.Forms.DataGridViewImageColumn();
-            this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.TxtSearchWithKeyword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DGClientUsers = new System.Windows.Forms.DataGridView();
             this.CmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CmbEmployee = new Guna.UI2.WinForms.Guna2ComboBox();
             this.BtnAddEditUser = new Guna.UI2.WinForms.Guna2Button();
             this.CmbRoles = new Guna.UI2.WinForms.Guna2ComboBox();
             this.TxtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxtSearchWithKeyword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DGClientUsers = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,17 +82,28 @@ namespace HassilBook
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DL = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Roles = new System.Windows.Forms.TabPage();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.CmbRoleType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.BtnAddEditRole = new Guna.UI2.WinForms.Guna2Button();
+            this.TxtRole = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DGClientUserRoles = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UPDATE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
             this.EmployeePage.SuspendLayout();
             this.Employees.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcUserImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGClientEmployee)).BeginInit();
             this.Users.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientUsers)).BeginInit();
             this.Roles.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGClientUserRoles)).BeginInit();
-            this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGClientUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnEmployees
@@ -121,10 +121,11 @@ namespace HassilBook
             this.BtnEmployees.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnEmployees.ForeColor = System.Drawing.Color.White;
             this.BtnEmployees.HoverState.Parent = this.BtnEmployees;
-            this.BtnEmployees.Location = new System.Drawing.Point(522, 3);
+            this.BtnEmployees.Location = new System.Drawing.Point(783, 5);
+            this.BtnEmployees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnEmployees.Name = "BtnEmployees";
             this.BtnEmployees.ShadowDecoration.Parent = this.BtnEmployees;
-            this.BtnEmployees.Size = new System.Drawing.Size(92, 28);
+            this.BtnEmployees.Size = new System.Drawing.Size(138, 43);
             this.BtnEmployees.TabIndex = 42;
             this.BtnEmployees.Text = "EMPLOYEE";
             this.BtnEmployees.Click += new System.EventHandler(this.BtnEmployees_Click);
@@ -145,10 +146,11 @@ namespace HassilBook
             this.BtnUsers.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnUsers.ForeColor = System.Drawing.Color.White;
             this.BtnUsers.HoverState.Parent = this.BtnUsers;
-            this.BtnUsers.Location = new System.Drawing.Point(613, 3);
+            this.BtnUsers.Location = new System.Drawing.Point(920, 5);
+            this.BtnUsers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnUsers.Name = "BtnUsers";
             this.BtnUsers.ShadowDecoration.Parent = this.BtnUsers;
-            this.BtnUsers.Size = new System.Drawing.Size(92, 28);
+            this.BtnUsers.Size = new System.Drawing.Size(138, 43);
             this.BtnUsers.TabIndex = 43;
             this.BtnUsers.Text = "USER";
             this.BtnUsers.Click += new System.EventHandler(this.BtnUsers_Click);
@@ -167,10 +169,11 @@ namespace HassilBook
             this.BtnRoles.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnRoles.ForeColor = System.Drawing.Color.White;
             this.BtnRoles.HoverState.Parent = this.BtnRoles;
-            this.BtnRoles.Location = new System.Drawing.Point(704, 3);
+            this.BtnRoles.Location = new System.Drawing.Point(1056, 5);
+            this.BtnRoles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnRoles.Name = "BtnRoles";
             this.BtnRoles.ShadowDecoration.Parent = this.BtnRoles;
-            this.BtnRoles.Size = new System.Drawing.Size(92, 28);
+            this.BtnRoles.Size = new System.Drawing.Size(138, 43);
             this.BtnRoles.TabIndex = 44;
             this.BtnRoles.Text = "ROLES";
             this.BtnRoles.Click += new System.EventHandler(this.BtnRoles_Click);
@@ -185,15 +188,16 @@ namespace HassilBook
             this.EmployeePage.Controls.Add(this.Employees);
             this.EmployeePage.Controls.Add(this.Users);
             this.EmployeePage.Controls.Add(this.Roles);
-            this.EmployeePage.Location = new System.Drawing.Point(-4, 34);
+            this.EmployeePage.Location = new System.Drawing.Point(-6, 52);
+            this.EmployeePage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EmployeePage.Multiline = true;
             this.EmployeePage.Name = "EmployeePage";
-            this.EmployeePage.Page = this.Users;
-            this.EmployeePage.PageIndex = 1;
-            this.EmployeePage.PageName = "Users";
-            this.EmployeePage.PageTitle = "tabPage2";
+            this.EmployeePage.Page = this.Employees;
+            this.EmployeePage.PageIndex = 0;
+            this.EmployeePage.PageName = "Employees";
+            this.EmployeePage.PageTitle = "tabPage1";
             this.EmployeePage.SelectedIndex = 0;
-            this.EmployeePage.Size = new System.Drawing.Size(810, 495);
+            this.EmployeePage.Size = new System.Drawing.Size(1215, 762);
             this.EmployeePage.TabIndex = 45;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -220,9 +224,10 @@ namespace HassilBook
             this.Employees.Controls.Add(this.TxtSearchWith);
             this.Employees.Controls.Add(this.DGClientEmployee);
             this.Employees.Location = new System.Drawing.Point(4, 4);
+            this.Employees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Employees.Name = "Employees";
-            this.Employees.Padding = new System.Windows.Forms.Padding(3);
-            this.Employees.Size = new System.Drawing.Size(802, 469);
+            this.Employees.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Employees.Size = new System.Drawing.Size(1207, 729);
             this.Employees.TabIndex = 0;
             this.Employees.Text = "tabPage1";
             // 
@@ -243,10 +248,11 @@ namespace HassilBook
             this.guna2Panel1.Controls.Add(this.CmbGender);
             this.guna2Panel1.Controls.Add(this.TxtFirstname);
             this.guna2Panel1.Controls.Add(this.TxtEmployeeID);
-            this.guna2Panel1.Location = new System.Drawing.Point(9, 37);
+            this.guna2Panel1.Location = new System.Drawing.Point(14, 57);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(267, 428);
+            this.guna2Panel1.Size = new System.Drawing.Size(400, 658);
             this.guna2Panel1.TabIndex = 44;
             // 
             // pcUserImage
@@ -254,15 +260,15 @@ namespace HassilBook
             this.pcUserImage.BackColor = System.Drawing.Color.Transparent;
             this.pcUserImage.BorderRadius = 5;
             this.pcUserImage.FillColor = System.Drawing.Color.White;
-            this.pcUserImage.Location = new System.Drawing.Point(196, 6);
-            this.pcUserImage.Margin = new System.Windows.Forms.Padding(2);
+            this.pcUserImage.Image = global::HassilBook.Properties.Resources.placeholder;
+            this.pcUserImage.Location = new System.Drawing.Point(294, 9);
             this.pcUserImage.Name = "pcUserImage";
             this.pcUserImage.ShadowDecoration.BorderRadius = 5;
             this.pcUserImage.ShadowDecoration.Depth = 3;
             this.pcUserImage.ShadowDecoration.Enabled = true;
             this.pcUserImage.ShadowDecoration.Parent = this.pcUserImage;
             this.pcUserImage.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2);
-            this.pcUserImage.Size = new System.Drawing.Size(65, 71);
+            this.pcUserImage.Size = new System.Drawing.Size(98, 109);
             this.pcUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcUserImage.TabIndex = 28;
             this.pcUserImage.TabStop = false;
@@ -279,10 +285,11 @@ namespace HassilBook
             this.BtnBrowse.HoverState.Parent = this.BtnBrowse;
             this.BtnBrowse.Image = ((System.Drawing.Image)(resources.GetObject("BtnBrowse.Image")));
             this.BtnBrowse.ImageSize = new System.Drawing.Size(18, 18);
-            this.BtnBrowse.Location = new System.Drawing.Point(163, 49);
+            this.BtnBrowse.Location = new System.Drawing.Point(244, 75);
+            this.BtnBrowse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnBrowse.Name = "BtnBrowse";
             this.BtnBrowse.ShadowDecoration.Parent = this.BtnBrowse;
-            this.BtnBrowse.Size = new System.Drawing.Size(29, 28);
+            this.BtnBrowse.Size = new System.Drawing.Size(44, 43);
             this.BtnBrowse.TabIndex = 27;
             this.BtnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
             // 
@@ -296,12 +303,13 @@ namespace HassilBook
             this.DtHiredDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DtHiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DtHiredDate.HoverState.Parent = this.DtHiredDate;
-            this.DtHiredDate.Location = new System.Drawing.Point(5, 280);
+            this.DtHiredDate.Location = new System.Drawing.Point(8, 431);
+            this.DtHiredDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DtHiredDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DtHiredDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DtHiredDate.Name = "DtHiredDate";
             this.DtHiredDate.ShadowDecoration.Parent = this.DtHiredDate;
-            this.DtHiredDate.Size = new System.Drawing.Size(256, 28);
+            this.DtHiredDate.Size = new System.Drawing.Size(384, 43);
             this.DtHiredDate.TabIndex = 24;
             this.DtHiredDate.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
             // 
@@ -315,12 +323,13 @@ namespace HassilBook
             this.DtBirthdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DtBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DtBirthdate.HoverState.Parent = this.DtBirthdate;
-            this.DtBirthdate.Location = new System.Drawing.Point(5, 247);
+            this.DtBirthdate.Location = new System.Drawing.Point(8, 380);
+            this.DtBirthdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DtBirthdate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DtBirthdate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DtBirthdate.Name = "DtBirthdate";
             this.DtBirthdate.ShadowDecoration.Parent = this.DtBirthdate;
-            this.DtBirthdate.Size = new System.Drawing.Size(256, 28);
+            this.DtBirthdate.Size = new System.Drawing.Size(384, 43);
             this.DtBirthdate.TabIndex = 23;
             this.DtBirthdate.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
             // 
@@ -342,10 +351,11 @@ namespace HassilBook
             this.CmbDepartment.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.CmbDepartment.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
             this.CmbDepartment.ItemsAppearance.Parent = this.CmbDepartment;
-            this.CmbDepartment.Location = new System.Drawing.Point(5, 313);
+            this.CmbDepartment.Location = new System.Drawing.Point(8, 482);
+            this.CmbDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmbDepartment.Name = "CmbDepartment";
             this.CmbDepartment.ShadowDecoration.Parent = this.CmbDepartment;
-            this.CmbDepartment.Size = new System.Drawing.Size(256, 28);
+            this.CmbDepartment.Size = new System.Drawing.Size(382, 28);
             this.CmbDepartment.StartIndex = 0;
             this.CmbDepartment.TabIndex = 25;
             // 
@@ -367,13 +377,14 @@ namespace HassilBook
             this.TxtTelephone.HoverState.Parent = this.TxtTelephone;
             this.TxtTelephone.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtTelephone.IconLeft")));
             this.TxtTelephone.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtTelephone.Location = new System.Drawing.Point(5, 214);
+            this.TxtTelephone.Location = new System.Drawing.Point(8, 329);
+            this.TxtTelephone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtTelephone.Name = "TxtTelephone";
             this.TxtTelephone.PasswordChar = '\0';
             this.TxtTelephone.PlaceholderText = "Telephone";
             this.TxtTelephone.SelectedText = "";
             this.TxtTelephone.ShadowDecoration.Parent = this.TxtTelephone;
-            this.TxtTelephone.Size = new System.Drawing.Size(256, 28);
+            this.TxtTelephone.Size = new System.Drawing.Size(384, 43);
             this.TxtTelephone.TabIndex = 22;
             // 
             // TxtEmail
@@ -394,13 +405,14 @@ namespace HassilBook
             this.TxtEmail.HoverState.Parent = this.TxtEmail;
             this.TxtEmail.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtEmail.IconLeft")));
             this.TxtEmail.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtEmail.Location = new System.Drawing.Point(5, 181);
+            this.TxtEmail.Location = new System.Drawing.Point(8, 278);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.PasswordChar = '\0';
             this.TxtEmail.PlaceholderText = "Email";
             this.TxtEmail.SelectedText = "";
             this.TxtEmail.ShadowDecoration.Parent = this.TxtEmail;
-            this.TxtEmail.Size = new System.Drawing.Size(256, 28);
+            this.TxtEmail.Size = new System.Drawing.Size(384, 43);
             this.TxtEmail.TabIndex = 21;
             // 
             // TxtLastname
@@ -421,13 +433,14 @@ namespace HassilBook
             this.TxtLastname.HoverState.Parent = this.TxtLastname;
             this.TxtLastname.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtLastname.IconLeft")));
             this.TxtLastname.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtLastname.Location = new System.Drawing.Point(5, 115);
+            this.TxtLastname.Location = new System.Drawing.Point(8, 177);
+            this.TxtLastname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtLastname.Name = "TxtLastname";
             this.TxtLastname.PasswordChar = '\0';
             this.TxtLastname.PlaceholderText = "Lastname";
             this.TxtLastname.SelectedText = "";
             this.TxtLastname.ShadowDecoration.Parent = this.TxtLastname;
-            this.TxtLastname.Size = new System.Drawing.Size(256, 28);
+            this.TxtLastname.Size = new System.Drawing.Size(384, 43);
             this.TxtLastname.TabIndex = 19;
             // 
             // BtnAddEdit
@@ -440,10 +453,11 @@ namespace HassilBook
             this.BtnAddEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAddEdit.ForeColor = System.Drawing.Color.White;
             this.BtnAddEdit.HoverState.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Location = new System.Drawing.Point(5, 346);
+            this.BtnAddEdit.Location = new System.Drawing.Point(8, 532);
+            this.BtnAddEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnAddEdit.Name = "BtnAddEdit";
             this.BtnAddEdit.ShadowDecoration.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Size = new System.Drawing.Size(256, 30);
+            this.BtnAddEdit.Size = new System.Drawing.Size(384, 46);
             this.BtnAddEdit.TabIndex = 26;
             this.BtnAddEdit.Text = "ADD NEW EMPLOYEE";
             this.BtnAddEdit.Click += new System.EventHandler(this.BtnAddEdit_Click);
@@ -468,10 +482,11 @@ namespace HassilBook
             this.CmbGender.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.CmbGender.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
             this.CmbGender.ItemsAppearance.Parent = this.CmbGender;
-            this.CmbGender.Location = new System.Drawing.Point(5, 148);
+            this.CmbGender.Location = new System.Drawing.Point(8, 228);
+            this.CmbGender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmbGender.Name = "CmbGender";
             this.CmbGender.ShadowDecoration.Parent = this.CmbGender;
-            this.CmbGender.Size = new System.Drawing.Size(256, 28);
+            this.CmbGender.Size = new System.Drawing.Size(382, 28);
             this.CmbGender.StartIndex = 0;
             this.CmbGender.TabIndex = 20;
             // 
@@ -493,13 +508,14 @@ namespace HassilBook
             this.TxtFirstname.HoverState.Parent = this.TxtFirstname;
             this.TxtFirstname.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtFirstname.IconLeft")));
             this.TxtFirstname.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtFirstname.Location = new System.Drawing.Point(5, 82);
+            this.TxtFirstname.Location = new System.Drawing.Point(8, 126);
+            this.TxtFirstname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtFirstname.Name = "TxtFirstname";
             this.TxtFirstname.PasswordChar = '\0';
             this.TxtFirstname.PlaceholderText = "Firstname";
             this.TxtFirstname.SelectedText = "";
             this.TxtFirstname.ShadowDecoration.Parent = this.TxtFirstname;
-            this.TxtFirstname.Size = new System.Drawing.Size(256, 28);
+            this.TxtFirstname.Size = new System.Drawing.Size(384, 43);
             this.TxtFirstname.TabIndex = 18;
             // 
             // TxtEmployeeID
@@ -520,14 +536,15 @@ namespace HassilBook
             this.TxtEmployeeID.HoverState.Parent = this.TxtEmployeeID;
             this.TxtEmployeeID.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtEmployeeID.IconLeft")));
             this.TxtEmployeeID.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtEmployeeID.Location = new System.Drawing.Point(5, 49);
+            this.TxtEmployeeID.Location = new System.Drawing.Point(8, 75);
+            this.TxtEmployeeID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtEmployeeID.Name = "TxtEmployeeID";
             this.TxtEmployeeID.PasswordChar = '\0';
             this.TxtEmployeeID.PlaceholderText = "Employee ID";
             this.TxtEmployeeID.ReadOnly = true;
             this.TxtEmployeeID.SelectedText = "";
             this.TxtEmployeeID.ShadowDecoration.Parent = this.TxtEmployeeID;
-            this.TxtEmployeeID.Size = new System.Drawing.Size(155, 28);
+            this.TxtEmployeeID.Size = new System.Drawing.Size(232, 43);
             this.TxtEmployeeID.TabIndex = 17;
             // 
             // TxtSearchWith
@@ -550,14 +567,15 @@ namespace HassilBook
             this.TxtSearchWith.HoverState.Parent = this.TxtSearchWith;
             this.TxtSearchWith.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSearchWith.IconLeft")));
             this.TxtSearchWith.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtSearchWith.Location = new System.Drawing.Point(9, 6);
+            this.TxtSearchWith.Location = new System.Drawing.Point(14, 9);
+            this.TxtSearchWith.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtSearchWith.Name = "TxtSearchWith";
             this.TxtSearchWith.PasswordChar = '\0';
             this.TxtSearchWith.PlaceholderText = "Search with employee ID, firstname, lastname , email, telephome or department by " +
     "pressing enter";
             this.TxtSearchWith.SelectedText = "";
             this.TxtSearchWith.ShadowDecoration.Parent = this.TxtSearchWith;
-            this.TxtSearchWith.Size = new System.Drawing.Size(782, 28);
+            this.TxtSearchWith.Size = new System.Drawing.Size(1173, 43);
             this.TxtSearchWith.TabIndex = 42;
             this.TxtSearchWith.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchWith_KeyDown);
             // 
@@ -602,7 +620,7 @@ namespace HassilBook
             this.DGClientEmployee.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGClientEmployee.EnableHeadersVisualStyles = false;
             this.DGClientEmployee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientEmployee.Location = new System.Drawing.Point(279, 37);
+            this.DGClientEmployee.Location = new System.Drawing.Point(418, 57);
             this.DGClientEmployee.Margin = new System.Windows.Forms.Padding(0);
             this.DGClientEmployee.Name = "DGClientEmployee";
             this.DGClientEmployee.ReadOnly = true;
@@ -611,7 +629,7 @@ namespace HassilBook
             this.DGClientEmployee.RowTemplate.Height = 25;
             this.DGClientEmployee.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DGClientEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientEmployee.Size = new System.Drawing.Size(512, 428);
+            this.DGClientEmployee.Size = new System.Drawing.Size(768, 658);
             this.DGClientEmployee.TabIndex = 40;
             this.DGClientEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientEmployee_CellContentClick);
             // 
@@ -622,7 +640,7 @@ namespace HassilBook
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 37;
+            this.Column4.Width = 54;
             // 
             // Column3
             // 
@@ -631,7 +649,7 @@ namespace HassilBook
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 41;
+            this.Column3.Width = 61;
             // 
             // Column5
             // 
@@ -648,31 +666,34 @@ namespace HassilBook
             this.Column9.MinimumWidth = 8;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 85;
+            this.Column9.Width = 130;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column1.HeaderText = "EMAIL";
+            this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 61;
+            this.Column1.Width = 93;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column2.HeaderText = "TELEPHONE";
+            this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 89;
+            this.Column2.Width = 137;
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column6.HeaderText = "DEPARTMENT";
+            this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 99;
+            this.Column6.Width = 152;
             // 
             // EDIT
             // 
@@ -682,7 +703,7 @@ namespace HassilBook
             this.EDIT.MinimumWidth = 8;
             this.EDIT.Name = "EDIT";
             this.EDIT.ReadOnly = true;
-            this.EDIT.Width = 34;
+            this.EDIT.Width = 49;
             // 
             // DEL
             // 
@@ -692,7 +713,7 @@ namespace HassilBook
             this.DEL.MinimumWidth = 8;
             this.DEL.Name = "DEL";
             this.DEL.ReadOnly = true;
-            this.DEL.Width = 30;
+            this.DEL.Width = 43;
             // 
             // Users
             // 
@@ -701,205 +722,12 @@ namespace HassilBook
             this.Users.Controls.Add(this.TxtSearchWithKeyword);
             this.Users.Controls.Add(this.DGClientUsers);
             this.Users.Location = new System.Drawing.Point(4, 4);
+            this.Users.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Users.Name = "Users";
-            this.Users.Padding = new System.Windows.Forms.Padding(3);
-            this.Users.Size = new System.Drawing.Size(802, 469);
+            this.Users.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Users.Size = new System.Drawing.Size(1207, 729);
             this.Users.TabIndex = 1;
             this.Users.Text = "tabPage2";
-            // 
-            // Roles
-            // 
-            this.Roles.BackColor = System.Drawing.Color.White;
-            this.Roles.Controls.Add(this.guna2Panel2);
-            this.Roles.Controls.Add(this.DGClientUserRoles);
-            this.Roles.Location = new System.Drawing.Point(4, 4);
-            this.Roles.Name = "Roles";
-            this.Roles.Padding = new System.Windows.Forms.Padding(3);
-            this.Roles.Size = new System.Drawing.Size(802, 469);
-            this.Roles.TabIndex = 2;
-            this.Roles.Text = "tabPage3";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
-            this.guna2Panel2.Controls.Add(this.CmbRoleType);
-            this.guna2Panel2.Controls.Add(this.BtnAddEditRole);
-            this.guna2Panel2.Controls.Add(this.TxtRole);
-            this.guna2Panel2.Location = new System.Drawing.Point(9, 6);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(267, 459);
-            this.guna2Panel2.TabIndex = 47;
-            // 
-            // DGClientUserRoles
-            // 
-            this.DGClientUserRoles.AllowUserToAddRows = false;
-            this.DGClientUserRoles.AllowUserToResizeColumns = false;
-            this.DGClientUserRoles.AllowUserToResizeRows = false;
-            this.DGClientUserRoles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGClientUserRoles.BackgroundColor = System.Drawing.Color.White;
-            this.DGClientUserRoles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGClientUserRoles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGClientUserRoles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGClientUserRoles.ColumnHeadersHeight = 25;
-            this.DGClientUserRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGClientUserRoles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.UPDATE,
-            this.DELETE});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGClientUserRoles.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DGClientUserRoles.EnableHeadersVisualStyles = false;
-            this.DGClientUserRoles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientUserRoles.Location = new System.Drawing.Point(279, 6);
-            this.DGClientUserRoles.Margin = new System.Windows.Forms.Padding(0);
-            this.DGClientUserRoles.Name = "DGClientUserRoles";
-            this.DGClientUserRoles.ReadOnly = true;
-            this.DGClientUserRoles.RowHeadersVisible = false;
-            this.DGClientUserRoles.RowHeadersWidth = 61;
-            this.DGClientUserRoles.RowTemplate.Height = 25;
-            this.DGClientUserRoles.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DGClientUserRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientUserRoles.Size = new System.Drawing.Size(512, 459);
-            this.DGClientUserRoles.TabIndex = 45;
-            this.DGClientUserRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientUserRoles_CellContentClick);
-            // 
-            // CmbRoleType
-            // 
-            this.CmbRoleType.BackColor = System.Drawing.Color.Transparent;
-            this.CmbRoleType.BorderRadius = 5;
-            this.CmbRoleType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbRoleType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbRoleType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbRoleType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbRoleType.FocusedState.Parent = this.CmbRoleType;
-            this.CmbRoleType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbRoleType.ForeColor = System.Drawing.Color.Black;
-            this.CmbRoleType.HoverState.Parent = this.CmbRoleType;
-            this.CmbRoleType.ItemHeight = 22;
-            this.CmbRoleType.Items.AddRange(new object[] {
-            "- User type -",
-            "Counter",
-            "Consultant",
-            "Financial",
-            "Admin"});
-            this.CmbRoleType.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbRoleType.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbRoleType.ItemsAppearance.Parent = this.CmbRoleType;
-            this.CmbRoleType.Location = new System.Drawing.Point(5, 41);
-            this.CmbRoleType.Name = "CmbRoleType";
-            this.CmbRoleType.ShadowDecoration.Parent = this.CmbRoleType;
-            this.CmbRoleType.Size = new System.Drawing.Size(256, 28);
-            this.CmbRoleType.StartIndex = 0;
-            this.CmbRoleType.TabIndex = 7;
-            // 
-            // BtnAddEditRole
-            // 
-            this.BtnAddEditRole.BorderRadius = 5;
-            this.BtnAddEditRole.CheckedState.Parent = this.BtnAddEditRole;
-            this.BtnAddEditRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnAddEditRole.CustomImages.Parent = this.BtnAddEditRole;
-            this.BtnAddEditRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnAddEditRole.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnAddEditRole.ForeColor = System.Drawing.Color.White;
-            this.BtnAddEditRole.HoverState.Parent = this.BtnAddEditRole;
-            this.BtnAddEditRole.Location = new System.Drawing.Point(5, 74);
-            this.BtnAddEditRole.Name = "BtnAddEditRole";
-            this.BtnAddEditRole.ShadowDecoration.Parent = this.BtnAddEditRole;
-            this.BtnAddEditRole.Size = new System.Drawing.Size(256, 30);
-            this.BtnAddEditRole.TabIndex = 6;
-            this.BtnAddEditRole.Text = "ADD NEW ROLE";
-            this.BtnAddEditRole.Click += new System.EventHandler(this.BtnAddEditRole_Click);
-            // 
-            // TxtRole
-            // 
-            this.TxtRole.BorderRadius = 5;
-            this.TxtRole.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtRole.DefaultText = "";
-            this.TxtRole.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtRole.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtRole.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtRole.DisabledState.Parent = this.TxtRole;
-            this.TxtRole.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtRole.FocusedState.Parent = this.TxtRole;
-            this.TxtRole.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtRole.ForeColor = System.Drawing.Color.Black;
-            this.TxtRole.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtRole.HoverState.Parent = this.TxtRole;
-            this.TxtRole.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtRole.IconLeft")));
-            this.TxtRole.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtRole.Location = new System.Drawing.Point(5, 8);
-            this.TxtRole.Name = "TxtRole";
-            this.TxtRole.PasswordChar = '\0';
-            this.TxtRole.PlaceholderText = "Role";
-            this.TxtRole.SelectedText = "";
-            this.TxtRole.ShadowDecoration.Parent = this.TxtRole;
-            this.TxtRole.Size = new System.Drawing.Size(256, 28);
-            this.TxtRole.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.HeaderText = "#";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 37;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "ROLE";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn7.HeaderText = "ROLE TYPE";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 83;
-            // 
-            // UPDATE
-            // 
-            this.UPDATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.UPDATE.HeaderText = "EDIT";
-            this.UPDATE.Image = ((System.Drawing.Image)(resources.GetObject("UPDATE.Image")));
-            this.UPDATE.MinimumWidth = 8;
-            this.UPDATE.Name = "UPDATE";
-            this.UPDATE.ReadOnly = true;
-            this.UPDATE.Width = 34;
-            // 
-            // DELETE
-            // 
-            this.DELETE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.DELETE.HeaderText = "DEL";
-            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
-            this.DELETE.MinimumWidth = 8;
-            this.DELETE.Name = "DELETE";
-            this.DELETE.ReadOnly = true;
-            this.DELETE.Width = 30;
             // 
             // guna2Panel3
             // 
@@ -911,11 +739,139 @@ namespace HassilBook
             this.guna2Panel3.Controls.Add(this.BtnAddEditUser);
             this.guna2Panel3.Controls.Add(this.CmbRoles);
             this.guna2Panel3.Controls.Add(this.TxtUsername);
-            this.guna2Panel3.Location = new System.Drawing.Point(9, 37);
+            this.guna2Panel3.Location = new System.Drawing.Point(14, 57);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(267, 428);
+            this.guna2Panel3.Size = new System.Drawing.Size(400, 658);
             this.guna2Panel3.TabIndex = 47;
+            // 
+            // CmbStatus
+            // 
+            this.CmbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.CmbStatus.BorderRadius = 5;
+            this.CmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbStatus.FocusedState.Parent = this.CmbStatus;
+            this.CmbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbStatus.ForeColor = System.Drawing.Color.Black;
+            this.CmbStatus.HoverState.Parent = this.CmbStatus;
+            this.CmbStatus.ItemHeight = 22;
+            this.CmbStatus.Items.AddRange(new object[] {
+            "- Status -",
+            "Active",
+            "Deactivated"});
+            this.CmbStatus.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbStatus.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbStatus.ItemsAppearance.Parent = this.CmbStatus;
+            this.CmbStatus.Location = new System.Drawing.Point(8, 165);
+            this.CmbStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbStatus.Name = "CmbStatus";
+            this.CmbStatus.ShadowDecoration.Parent = this.CmbStatus;
+            this.CmbStatus.Size = new System.Drawing.Size(382, 28);
+            this.CmbStatus.StartIndex = 0;
+            this.CmbStatus.TabIndex = 10;
+            // 
+            // CmbEmployee
+            // 
+            this.CmbEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.CmbEmployee.BorderRadius = 5;
+            this.CmbEmployee.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbEmployee.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbEmployee.FocusedState.Parent = this.CmbEmployee;
+            this.CmbEmployee.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbEmployee.ForeColor = System.Drawing.Color.Black;
+            this.CmbEmployee.HoverState.Parent = this.CmbEmployee;
+            this.CmbEmployee.ItemHeight = 22;
+            this.CmbEmployee.Items.AddRange(new object[] {
+            "- Assign Employee -"});
+            this.CmbEmployee.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbEmployee.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbEmployee.ItemsAppearance.Parent = this.CmbEmployee;
+            this.CmbEmployee.Location = new System.Drawing.Point(8, 63);
+            this.CmbEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbEmployee.Name = "CmbEmployee";
+            this.CmbEmployee.ShadowDecoration.Parent = this.CmbEmployee;
+            this.CmbEmployee.Size = new System.Drawing.Size(382, 28);
+            this.CmbEmployee.StartIndex = 0;
+            this.CmbEmployee.TabIndex = 9;
+            // 
+            // BtnAddEditUser
+            // 
+            this.BtnAddEditUser.BorderRadius = 5;
+            this.BtnAddEditUser.CheckedState.Parent = this.BtnAddEditUser;
+            this.BtnAddEditUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAddEditUser.CustomImages.Parent = this.BtnAddEditUser;
+            this.BtnAddEditUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnAddEditUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnAddEditUser.ForeColor = System.Drawing.Color.White;
+            this.BtnAddEditUser.HoverState.Parent = this.BtnAddEditUser;
+            this.BtnAddEditUser.Location = new System.Drawing.Point(8, 215);
+            this.BtnAddEditUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnAddEditUser.Name = "BtnAddEditUser";
+            this.BtnAddEditUser.ShadowDecoration.Parent = this.BtnAddEditUser;
+            this.BtnAddEditUser.Size = new System.Drawing.Size(384, 46);
+            this.BtnAddEditUser.TabIndex = 8;
+            this.BtnAddEditUser.Text = "ADD NEW USER";
+            this.BtnAddEditUser.Click += new System.EventHandler(this.BtnAddEditUser_Click);
+            // 
+            // CmbRoles
+            // 
+            this.CmbRoles.BackColor = System.Drawing.Color.Transparent;
+            this.CmbRoles.BorderRadius = 5;
+            this.CmbRoles.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbRoles.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbRoles.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbRoles.FocusedState.Parent = this.CmbRoles;
+            this.CmbRoles.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbRoles.ForeColor = System.Drawing.Color.Black;
+            this.CmbRoles.HoverState.Parent = this.CmbRoles;
+            this.CmbRoles.ItemHeight = 22;
+            this.CmbRoles.Items.AddRange(new object[] {
+            "- Roles -"});
+            this.CmbRoles.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbRoles.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbRoles.ItemsAppearance.Parent = this.CmbRoles;
+            this.CmbRoles.Location = new System.Drawing.Point(8, 114);
+            this.CmbRoles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbRoles.Name = "CmbRoles";
+            this.CmbRoles.ShadowDecoration.Parent = this.CmbRoles;
+            this.CmbRoles.Size = new System.Drawing.Size(382, 28);
+            this.CmbRoles.StartIndex = 0;
+            this.CmbRoles.TabIndex = 7;
+            // 
+            // TxtUsername
+            // 
+            this.TxtUsername.BorderRadius = 5;
+            this.TxtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtUsername.DefaultText = "";
+            this.TxtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtUsername.DisabledState.Parent = this.TxtUsername;
+            this.TxtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtUsername.FocusedState.Parent = this.TxtUsername;
+            this.TxtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtUsername.ForeColor = System.Drawing.Color.Black;
+            this.TxtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtUsername.HoverState.Parent = this.TxtUsername;
+            this.TxtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtUsername.IconLeft")));
+            this.TxtUsername.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtUsername.Location = new System.Drawing.Point(8, 12);
+            this.TxtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtUsername.Name = "TxtUsername";
+            this.TxtUsername.PasswordChar = '\0';
+            this.TxtUsername.PlaceholderText = "Username";
+            this.TxtUsername.SelectedText = "";
+            this.TxtUsername.ShadowDecoration.Parent = this.TxtUsername;
+            this.TxtUsername.Size = new System.Drawing.Size(384, 43);
+            this.TxtUsername.TabIndex = 6;
             // 
             // TxtSearchWithKeyword
             // 
@@ -937,13 +893,14 @@ namespace HassilBook
             this.TxtSearchWithKeyword.HoverState.Parent = this.TxtSearchWithKeyword;
             this.TxtSearchWithKeyword.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSearchWithKeyword.IconLeft")));
             this.TxtSearchWithKeyword.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtSearchWithKeyword.Location = new System.Drawing.Point(9, 6);
+            this.TxtSearchWithKeyword.Location = new System.Drawing.Point(14, 9);
+            this.TxtSearchWithKeyword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtSearchWithKeyword.Name = "TxtSearchWithKeyword";
             this.TxtSearchWithKeyword.PasswordChar = '\0';
             this.TxtSearchWithKeyword.PlaceholderText = "Search with employee ID, username, role or status by pressing enter";
             this.TxtSearchWithKeyword.SelectedText = "";
             this.TxtSearchWithKeyword.ShadowDecoration.Parent = this.TxtSearchWithKeyword;
-            this.TxtSearchWithKeyword.Size = new System.Drawing.Size(782, 28);
+            this.TxtSearchWithKeyword.Size = new System.Drawing.Size(1173, 43);
             this.TxtSearchWithKeyword.TabIndex = 46;
             this.TxtSearchWithKeyword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchWithKeyword_KeyDown);
             // 
@@ -986,7 +943,7 @@ namespace HassilBook
             this.DGClientUsers.DefaultCellStyle = dataGridViewCellStyle4;
             this.DGClientUsers.EnableHeadersVisualStyles = false;
             this.DGClientUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientUsers.Location = new System.Drawing.Point(279, 37);
+            this.DGClientUsers.Location = new System.Drawing.Point(418, 57);
             this.DGClientUsers.Margin = new System.Windows.Forms.Padding(0);
             this.DGClientUsers.Name = "DGClientUsers";
             this.DGClientUsers.ReadOnly = true;
@@ -995,131 +952,9 @@ namespace HassilBook
             this.DGClientUsers.RowTemplate.Height = 25;
             this.DGClientUsers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DGClientUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientUsers.Size = new System.Drawing.Size(512, 428);
+            this.DGClientUsers.Size = new System.Drawing.Size(768, 658);
             this.DGClientUsers.TabIndex = 45;
             this.DGClientUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientUsers_CellContentClick);
-            // 
-            // CmbStatus
-            // 
-            this.CmbStatus.BackColor = System.Drawing.Color.Transparent;
-            this.CmbStatus.BorderRadius = 5;
-            this.CmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbStatus.FocusedState.Parent = this.CmbStatus;
-            this.CmbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbStatus.ForeColor = System.Drawing.Color.Black;
-            this.CmbStatus.HoverState.Parent = this.CmbStatus;
-            this.CmbStatus.ItemHeight = 22;
-            this.CmbStatus.Items.AddRange(new object[] {
-            "- Status -",
-            "Active",
-            "Deactivated"});
-            this.CmbStatus.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbStatus.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbStatus.ItemsAppearance.Parent = this.CmbStatus;
-            this.CmbStatus.Location = new System.Drawing.Point(5, 107);
-            this.CmbStatus.Name = "CmbStatus";
-            this.CmbStatus.ShadowDecoration.Parent = this.CmbStatus;
-            this.CmbStatus.Size = new System.Drawing.Size(256, 28);
-            this.CmbStatus.StartIndex = 0;
-            this.CmbStatus.TabIndex = 10;
-            // 
-            // CmbEmployee
-            // 
-            this.CmbEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.CmbEmployee.BorderRadius = 5;
-            this.CmbEmployee.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbEmployee.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbEmployee.FocusedState.Parent = this.CmbEmployee;
-            this.CmbEmployee.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbEmployee.ForeColor = System.Drawing.Color.Black;
-            this.CmbEmployee.HoverState.Parent = this.CmbEmployee;
-            this.CmbEmployee.ItemHeight = 22;
-            this.CmbEmployee.Items.AddRange(new object[] {
-            "- Assign Employee -"});
-            this.CmbEmployee.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbEmployee.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbEmployee.ItemsAppearance.Parent = this.CmbEmployee;
-            this.CmbEmployee.Location = new System.Drawing.Point(5, 41);
-            this.CmbEmployee.Name = "CmbEmployee";
-            this.CmbEmployee.ShadowDecoration.Parent = this.CmbEmployee;
-            this.CmbEmployee.Size = new System.Drawing.Size(256, 28);
-            this.CmbEmployee.StartIndex = 0;
-            this.CmbEmployee.TabIndex = 9;
-            // 
-            // BtnAddEditUser
-            // 
-            this.BtnAddEditUser.BorderRadius = 5;
-            this.BtnAddEditUser.CheckedState.Parent = this.BtnAddEditUser;
-            this.BtnAddEditUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnAddEditUser.CustomImages.Parent = this.BtnAddEditUser;
-            this.BtnAddEditUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnAddEditUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnAddEditUser.ForeColor = System.Drawing.Color.White;
-            this.BtnAddEditUser.HoverState.Parent = this.BtnAddEditUser;
-            this.BtnAddEditUser.Location = new System.Drawing.Point(5, 140);
-            this.BtnAddEditUser.Name = "BtnAddEditUser";
-            this.BtnAddEditUser.ShadowDecoration.Parent = this.BtnAddEditUser;
-            this.BtnAddEditUser.Size = new System.Drawing.Size(256, 30);
-            this.BtnAddEditUser.TabIndex = 8;
-            this.BtnAddEditUser.Text = "ADD NEW USER";
-            this.BtnAddEditUser.Click += new System.EventHandler(this.BtnAddEditUser_Click);
-            // 
-            // CmbRoles
-            // 
-            this.CmbRoles.BackColor = System.Drawing.Color.Transparent;
-            this.CmbRoles.BorderRadius = 5;
-            this.CmbRoles.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbRoles.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbRoles.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbRoles.FocusedState.Parent = this.CmbRoles;
-            this.CmbRoles.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbRoles.ForeColor = System.Drawing.Color.Black;
-            this.CmbRoles.HoverState.Parent = this.CmbRoles;
-            this.CmbRoles.ItemHeight = 22;
-            this.CmbRoles.Items.AddRange(new object[] {
-            "- Roles -"});
-            this.CmbRoles.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbRoles.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbRoles.ItemsAppearance.Parent = this.CmbRoles;
-            this.CmbRoles.Location = new System.Drawing.Point(5, 74);
-            this.CmbRoles.Name = "CmbRoles";
-            this.CmbRoles.ShadowDecoration.Parent = this.CmbRoles;
-            this.CmbRoles.Size = new System.Drawing.Size(256, 28);
-            this.CmbRoles.StartIndex = 0;
-            this.CmbRoles.TabIndex = 7;
-            // 
-            // TxtUsername
-            // 
-            this.TxtUsername.BorderRadius = 5;
-            this.TxtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtUsername.DefaultText = "";
-            this.TxtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtUsername.DisabledState.Parent = this.TxtUsername;
-            this.TxtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtUsername.FocusedState.Parent = this.TxtUsername;
-            this.TxtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtUsername.ForeColor = System.Drawing.Color.Black;
-            this.TxtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtUsername.HoverState.Parent = this.TxtUsername;
-            this.TxtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtUsername.IconLeft")));
-            this.TxtUsername.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtUsername.Location = new System.Drawing.Point(5, 8);
-            this.TxtUsername.Name = "TxtUsername";
-            this.TxtUsername.PasswordChar = '\0';
-            this.TxtUsername.PlaceholderText = "Username";
-            this.TxtUsername.SelectedText = "";
-            this.TxtUsername.ShadowDecoration.Parent = this.TxtUsername;
-            this.TxtUsername.Size = new System.Drawing.Size(256, 28);
-            this.TxtUsername.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -1128,7 +963,7 @@ namespace HassilBook
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 37;
+            this.dataGridViewTextBoxColumn2.Width = 54;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1137,7 +972,7 @@ namespace HassilBook
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 97;
+            this.dataGridViewTextBoxColumn3.Width = 149;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -1154,15 +989,16 @@ namespace HassilBook
             this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 56;
+            this.dataGridViewTextBoxColumn5.Width = 85;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn8.HeaderText = "STATUS";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 67;
+            this.dataGridViewTextBoxColumn8.Width = 101;
             // 
             // EDT
             // 
@@ -1172,7 +1008,7 @@ namespace HassilBook
             this.EDT.MinimumWidth = 8;
             this.EDT.Name = "EDT";
             this.EDT.ReadOnly = true;
-            this.EDT.Width = 34;
+            this.EDT.Width = 49;
             // 
             // DL
             // 
@@ -1182,19 +1018,221 @@ namespace HassilBook
             this.DL.MinimumWidth = 8;
             this.DL.Name = "DL";
             this.DL.ReadOnly = true;
-            this.DL.Width = 30;
+            this.DL.Width = 43;
+            // 
+            // Roles
+            // 
+            this.Roles.BackColor = System.Drawing.Color.White;
+            this.Roles.Controls.Add(this.guna2Panel2);
+            this.Roles.Controls.Add(this.DGClientUserRoles);
+            this.Roles.Location = new System.Drawing.Point(4, 4);
+            this.Roles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Roles.Name = "Roles";
+            this.Roles.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Roles.Size = new System.Drawing.Size(1207, 729);
+            this.Roles.TabIndex = 2;
+            this.Roles.Text = "tabPage3";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
+            this.guna2Panel2.Controls.Add(this.CmbRoleType);
+            this.guna2Panel2.Controls.Add(this.BtnAddEditRole);
+            this.guna2Panel2.Controls.Add(this.TxtRole);
+            this.guna2Panel2.Location = new System.Drawing.Point(14, 9);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(400, 706);
+            this.guna2Panel2.TabIndex = 47;
+            // 
+            // CmbRoleType
+            // 
+            this.CmbRoleType.BackColor = System.Drawing.Color.Transparent;
+            this.CmbRoleType.BorderRadius = 5;
+            this.CmbRoleType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbRoleType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbRoleType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbRoleType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbRoleType.FocusedState.Parent = this.CmbRoleType;
+            this.CmbRoleType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbRoleType.ForeColor = System.Drawing.Color.Black;
+            this.CmbRoleType.HoverState.Parent = this.CmbRoleType;
+            this.CmbRoleType.ItemHeight = 22;
+            this.CmbRoleType.Items.AddRange(new object[] {
+            "- User type -",
+            "Counter",
+            "Consultant",
+            "Financial",
+            "Admin"});
+            this.CmbRoleType.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbRoleType.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbRoleType.ItemsAppearance.Parent = this.CmbRoleType;
+            this.CmbRoleType.Location = new System.Drawing.Point(8, 63);
+            this.CmbRoleType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbRoleType.Name = "CmbRoleType";
+            this.CmbRoleType.ShadowDecoration.Parent = this.CmbRoleType;
+            this.CmbRoleType.Size = new System.Drawing.Size(382, 28);
+            this.CmbRoleType.StartIndex = 0;
+            this.CmbRoleType.TabIndex = 7;
+            // 
+            // BtnAddEditRole
+            // 
+            this.BtnAddEditRole.BorderRadius = 5;
+            this.BtnAddEditRole.CheckedState.Parent = this.BtnAddEditRole;
+            this.BtnAddEditRole.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAddEditRole.CustomImages.Parent = this.BtnAddEditRole;
+            this.BtnAddEditRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnAddEditRole.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnAddEditRole.ForeColor = System.Drawing.Color.White;
+            this.BtnAddEditRole.HoverState.Parent = this.BtnAddEditRole;
+            this.BtnAddEditRole.Location = new System.Drawing.Point(8, 114);
+            this.BtnAddEditRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnAddEditRole.Name = "BtnAddEditRole";
+            this.BtnAddEditRole.ShadowDecoration.Parent = this.BtnAddEditRole;
+            this.BtnAddEditRole.Size = new System.Drawing.Size(384, 46);
+            this.BtnAddEditRole.TabIndex = 6;
+            this.BtnAddEditRole.Text = "ADD NEW ROLE";
+            this.BtnAddEditRole.Click += new System.EventHandler(this.BtnAddEditRole_Click);
+            // 
+            // TxtRole
+            // 
+            this.TxtRole.BorderRadius = 5;
+            this.TxtRole.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtRole.DefaultText = "";
+            this.TxtRole.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtRole.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtRole.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtRole.DisabledState.Parent = this.TxtRole;
+            this.TxtRole.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtRole.FocusedState.Parent = this.TxtRole;
+            this.TxtRole.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtRole.ForeColor = System.Drawing.Color.Black;
+            this.TxtRole.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtRole.HoverState.Parent = this.TxtRole;
+            this.TxtRole.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtRole.IconLeft")));
+            this.TxtRole.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtRole.Location = new System.Drawing.Point(8, 12);
+            this.TxtRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtRole.Name = "TxtRole";
+            this.TxtRole.PasswordChar = '\0';
+            this.TxtRole.PlaceholderText = "Role";
+            this.TxtRole.SelectedText = "";
+            this.TxtRole.ShadowDecoration.Parent = this.TxtRole;
+            this.TxtRole.Size = new System.Drawing.Size(384, 43);
+            this.TxtRole.TabIndex = 5;
+            // 
+            // DGClientUserRoles
+            // 
+            this.DGClientUserRoles.AllowUserToAddRows = false;
+            this.DGClientUserRoles.AllowUserToResizeColumns = false;
+            this.DGClientUserRoles.AllowUserToResizeRows = false;
+            this.DGClientUserRoles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGClientUserRoles.BackgroundColor = System.Drawing.Color.White;
+            this.DGClientUserRoles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGClientUserRoles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGClientUserRoles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DGClientUserRoles.ColumnHeadersHeight = 25;
+            this.DGClientUserRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGClientUserRoles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.UPDATE,
+            this.DELETE});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGClientUserRoles.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DGClientUserRoles.EnableHeadersVisualStyles = false;
+            this.DGClientUserRoles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DGClientUserRoles.Location = new System.Drawing.Point(418, 9);
+            this.DGClientUserRoles.Margin = new System.Windows.Forms.Padding(0);
+            this.DGClientUserRoles.Name = "DGClientUserRoles";
+            this.DGClientUserRoles.ReadOnly = true;
+            this.DGClientUserRoles.RowHeadersVisible = false;
+            this.DGClientUserRoles.RowHeadersWidth = 61;
+            this.DGClientUserRoles.RowTemplate.Height = 25;
+            this.DGClientUserRoles.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DGClientUserRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGClientUserRoles.Size = new System.Drawing.Size(768, 706);
+            this.DGClientUserRoles.TabIndex = 45;
+            this.DGClientUserRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientUserRoles_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.HeaderText = "#";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 54;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "ROLE";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn7.HeaderText = "ROLE TYPE";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 128;
+            // 
+            // UPDATE
+            // 
+            this.UPDATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.UPDATE.HeaderText = "EDIT";
+            this.UPDATE.Image = ((System.Drawing.Image)(resources.GetObject("UPDATE.Image")));
+            this.UPDATE.MinimumWidth = 8;
+            this.UPDATE.Name = "UPDATE";
+            this.UPDATE.ReadOnly = true;
+            this.UPDATE.Width = 49;
+            // 
+            // DELETE
+            // 
+            this.DELETE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DELETE.HeaderText = "DEL";
+            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
+            this.DELETE.MinimumWidth = 8;
+            this.DELETE.Name = "DELETE";
+            this.DELETE.ReadOnly = true;
+            this.DELETE.Width = 43;
             // 
             // FrmEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 512);
+            this.ClientSize = new System.Drawing.Size(1200, 788);
             this.Controls.Add(this.EmployeePage);
             this.Controls.Add(this.BtnRoles);
             this.Controls.Add(this.BtnUsers);
             this.Controls.Add(this.BtnEmployees);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmEmployees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEmployees";
@@ -1204,11 +1242,11 @@ namespace HassilBook
             ((System.ComponentModel.ISupportInitialize)(this.pcUserImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGClientEmployee)).EndInit();
             this.Users.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientUsers)).EndInit();
             this.Roles.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGClientUserRoles)).EndInit();
-            this.guna2Panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGClientUsers)).EndInit();
             this.ResumeLayout(false);
 
         }

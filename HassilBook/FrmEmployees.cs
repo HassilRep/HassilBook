@@ -144,7 +144,7 @@ namespace HassilBook
         private void ClearEmployeeComponents()
         {
             LoadEmployeeID();
-            pcUserImage.Image = null;
+            pcUserImage.Image = Properties.Resources.placeholder;
             TxtFirstname.Text = string.Empty;
             TxtLastname.Text = string.Empty;
             CmbGender.SelectedIndex = 0;
