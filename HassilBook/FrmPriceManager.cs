@@ -45,7 +45,7 @@ namespace HassilBook
             try
             {
                 DatabaseConnection con = new DatabaseConnection();
-                DGClientPriceID.Rows.Clear();
+                DGClientPrice.Rows.Clear();
                 int i = 1;
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
@@ -54,7 +54,36 @@ namespace HassilBook
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while(dr.Read())
                 {
-                    DGClientPriceID.Rows.Add(i, dr["PriceID"].ToString(), dr["PriceType"].ToString(), dr["AdultEconomy"].ToString(), dr["AdultBusiness"].ToString(), dr["ChildEconomy"].ToString(), dr["ChildBusiness"].ToString(), dr["InfantEconomy"].ToString(), dr["InfantBusiness"].ToString());
+                    DGClientPrice.Rows.Add(i, dr["PriceID"].ToString(), dr["PriceType"].ToString(), dr["AdultEconomy"].ToString(), dr["AdultBusiness"].ToString(), dr["ChildEconomy"].ToString(), dr["ChildBusiness"].ToString(), dr["InfantEconomy"].ToString(), dr["InfantBusiness"].ToString());
+                    i++;
+                }
+                dr.Close();
+                con.ActiveConnection().Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// search client saved prices with given keyword
+        /// </summary>
+        private void SearchPrices()
+        {
+            try
+            {
+                DatabaseConnection con = new DatabaseConnection();
+                DGClientPrice.Rows.Clear();
+                int i = 1;
+                MySqlCommand cmd;
+                cmd = con.ActiveConnection().CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM tbl_ClientFlightPrices WHERE PriceID LIKE '%"+TxtSearchWith.Text+"%' AND OfficeID = '" + FrmLogin.m_client.ClientID + "' OR PriceType LIKE '%" + TxtSearchWith.Text + "%' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    DGClientPrice.Rows.Add(i, dr["PriceID"].ToString(), dr["PriceType"].ToString(), dr["AdultEconomy"].ToString(), dr["AdultBusiness"].ToString(), dr["ChildEconomy"].ToString(), dr["ChildBusiness"].ToString(), dr["InfantEconomy"].ToString(), dr["InfantBusiness"].ToString());
                     i++;
                 }
                 dr.Close();
@@ -119,6 +148,67 @@ namespace HassilBook
 
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+
+        private void DGClientPriceID_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string cel = DGClientPrice.Columns[e.ColumnIndex].Name;
+            try
+            {
+                DatabaseConnection con = new DatabaseConnection();
+                if(cel =="EDIT")
+                {
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_ClientFlightPrices WHERE PriceID = '" + DGClientPrice[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    while(dr.Read())
+                    {
+                        TxtPriceID.Text = dr["PriceID"].ToString();
+                        TxtPriceType.Text = dr["PriceType"].ToString();
+                        TxtAdultEconomy.Text = dr["AdultEconomy"].ToString();
+                        TxtAdultBusiness.Text = dr["AdultBusiness"].ToString();
+                        TxtChildEcomony.Text = dr["ChildEconomy"].ToString();
+                        TxtChildBusiness.Text = dr["ChildBusiness"].ToString();
+                        TxtInfantEconomy.Text = dr["InfantEconomy"].ToString();
+                        TxtInfantBusiness.Text = dr["InfantBusiness"].ToString();
+                        BtnAddEdit.Text = "UPDATE PRICE";
+                    }
+                    dr.Close();
+                    con.ActiveConnection().Close();
+
+                }
+                else if (cel == "DEL")
+                {
+                    if(MessageBox.Show($"Do you want to delete this price tag '{DGClientPrice[1, e.RowIndex].Value.ToString()}'?", "delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        MySqlCommand cmd = new MySqlCommand("DELETE FROM tbl_ClientFlightPrices WHERE PriceID = '" + DGClientPrice[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Congratulation, price tag has been successfully deleted", "deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadPriceID();
+                        LoadPrices();
+                        con.ActiveConnection().Close();
+                        TxtPriceType.Text = string.Empty;
+                        TxtAdultEconomy.Text = string.Empty;
+                        TxtAdultBusiness.Text = string.Empty;
+                        TxtChildEcomony.Text = string.Empty;
+                        TxtChildBusiness.Text = string.Empty;
+                        TxtInfantEconomy.Text = string.Empty;
+                        TxtInfantBusiness.Text = string.Empty;
+                        BtnAddEdit.Text = "ADD NEW PRICE";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void TxtSearchWith_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                SearchPrices();
             }
         }
     }
