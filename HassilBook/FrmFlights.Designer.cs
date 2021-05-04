@@ -1,7 +1,7 @@
 ﻿
 namespace HassilBook
 {
-    partial class FrmAgency
+    partial class FrmFlights
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace HassilBook
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgency));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFlights));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -47,7 +47,7 @@ namespace HassilBook
             this.DtJoinDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.BtnAddEdit = new Guna.UI2.WinForms.Guna2Button();
             this.TxtAgencyID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DGClientFlights = new System.Windows.Forms.DataGridView();
+            this.DGClientAgencies = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +58,13 @@ namespace HassilBook
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DEL = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TxtSearchWith = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CmbTo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CmbFrom = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGClientFlights)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientAgencies)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -87,7 +91,7 @@ namespace HassilBook
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(400, 835);
-            this.guna2Panel1.TabIndex = 47;
+            this.guna2Panel1.TabIndex = 50;
             // 
             // CmbStatus
             // 
@@ -636,7 +640,6 @@ namespace HassilBook
             this.BtnAddEdit.Size = new System.Drawing.Size(384, 46);
             this.BtnAddEdit.TabIndex = 35;
             this.BtnAddEdit.Text = "ADD NEW AGENCY";
-            this.BtnAddEdit.Click += new System.EventHandler(this.BtnAddEdit_Click);
             // 
             // TxtAgencyID
             // 
@@ -667,17 +670,16 @@ namespace HassilBook
             this.TxtAgencyID.Size = new System.Drawing.Size(384, 43);
             this.TxtAgencyID.TabIndex = 20;
             // 
-            // DGClientFlights
+            // DGClientAgencies
             // 
-            this.DGClientFlights.AllowUserToAddRows = false;
-            this.DGClientFlights.AllowUserToResizeColumns = false;
-            this.DGClientFlights.AllowUserToResizeRows = false;
-            this.DGClientFlights.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.DGClientAgencies.AllowUserToAddRows = false;
+            this.DGClientAgencies.AllowUserToResizeColumns = false;
+            this.DGClientAgencies.AllowUserToResizeRows = false;
+            this.DGClientAgencies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGClientFlights.BackgroundColor = System.Drawing.Color.White;
-            this.DGClientFlights.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGClientFlights.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGClientAgencies.BackgroundColor = System.Drawing.Color.White;
+            this.DGClientAgencies.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGClientAgencies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -685,10 +687,10 @@ namespace HassilBook
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGClientFlights.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGClientFlights.ColumnHeadersHeight = 25;
-            this.DGClientFlights.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGClientFlights.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGClientAgencies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGClientAgencies.ColumnHeadersHeight = 25;
+            this.DGClientAgencies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGClientAgencies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column3,
             this.Column5,
@@ -706,21 +708,20 @@ namespace HassilBook
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGClientFlights.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGClientFlights.EnableHeadersVisualStyles = false;
-            this.DGClientFlights.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientFlights.Location = new System.Drawing.Point(418, 57);
-            this.DGClientFlights.Margin = new System.Windows.Forms.Padding(0);
-            this.DGClientFlights.Name = "DGClientFlights";
-            this.DGClientFlights.ReadOnly = true;
-            this.DGClientFlights.RowHeadersVisible = false;
-            this.DGClientFlights.RowHeadersWidth = 61;
-            this.DGClientFlights.RowTemplate.Height = 25;
-            this.DGClientFlights.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DGClientFlights.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientFlights.Size = new System.Drawing.Size(768, 835);
-            this.DGClientFlights.TabIndex = 45;
-            this.DGClientFlights.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientAgencies_CellContentClick);
+            this.DGClientAgencies.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGClientAgencies.EnableHeadersVisualStyles = false;
+            this.DGClientAgencies.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DGClientAgencies.Location = new System.Drawing.Point(418, 57);
+            this.DGClientAgencies.Margin = new System.Windows.Forms.Padding(0);
+            this.DGClientAgencies.Name = "DGClientAgencies";
+            this.DGClientAgencies.ReadOnly = true;
+            this.DGClientAgencies.RowHeadersVisible = false;
+            this.DGClientAgencies.RowHeadersWidth = 61;
+            this.DGClientAgencies.RowTemplate.Height = 25;
+            this.DGClientAgencies.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DGClientAgencies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGClientAgencies.Size = new System.Drawing.Size(852, 835);
+            this.DGClientAgencies.TabIndex = 48;
             // 
             // Column4
             // 
@@ -813,53 +814,139 @@ namespace HassilBook
             this.DEL.ReadOnly = true;
             this.DEL.Width = 43;
             // 
-            // TxtSearchWith
+            // CmbTo
             // 
-            this.TxtSearchWith.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.CmbTo.BackColor = System.Drawing.Color.Transparent;
+            this.CmbTo.BorderRadius = 5;
+            this.CmbTo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbTo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbTo.FocusedState.Parent = this.CmbTo;
+            this.CmbTo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbTo.ForeColor = System.Drawing.Color.Black;
+            this.CmbTo.HoverState.Parent = this.CmbTo;
+            this.CmbTo.ItemHeight = 22;
+            this.CmbTo.Items.AddRange(new object[] {
+            "- To -"});
+            this.CmbTo.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbTo.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbTo.ItemsAppearance.Parent = this.CmbTo;
+            this.CmbTo.Location = new System.Drawing.Point(324, 9);
+            this.CmbTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbTo.Name = "CmbTo";
+            this.CmbTo.ShadowDecoration.Parent = this.CmbTo;
+            this.CmbTo.Size = new System.Drawing.Size(296, 28);
+            this.CmbTo.StartIndex = 0;
+            this.CmbTo.TabIndex = 52;
+            // 
+            // CmbFrom
+            // 
+            this.CmbFrom.BackColor = System.Drawing.Color.Transparent;
+            this.CmbFrom.BorderRadius = 5;
+            this.CmbFrom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbFrom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbFrom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbFrom.FocusedState.Parent = this.CmbFrom;
+            this.CmbFrom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbFrom.ForeColor = System.Drawing.Color.Black;
+            this.CmbFrom.HoverState.Parent = this.CmbFrom;
+            this.CmbFrom.ItemHeight = 22;
+            this.CmbFrom.Items.AddRange(new object[] {
+            "- From -"});
+            this.CmbFrom.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbFrom.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbFrom.ItemsAppearance.Parent = this.CmbFrom;
+            this.CmbFrom.Location = new System.Drawing.Point(16, 9);
+            this.CmbFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbFrom.Name = "CmbFrom";
+            this.CmbFrom.ShadowDecoration.Parent = this.CmbFrom;
+            this.CmbFrom.Size = new System.Drawing.Size(296, 28);
+            this.CmbFrom.StartIndex = 0;
+            this.CmbFrom.TabIndex = 51;
+            // 
+            // DtFrom
+            // 
+            this.DtFrom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtFrom.BorderRadius = 5;
+            this.DtFrom.BorderThickness = 1;
+            this.DtFrom.CheckedState.Parent = this.DtFrom;
+            this.DtFrom.FillColor = System.Drawing.Color.White;
+            this.DtFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtFrom.HoverState.Parent = this.DtFrom;
+            this.DtFrom.Location = new System.Drawing.Point(628, 9);
+            this.DtFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtFrom.Name = "DtFrom";
+            this.DtFrom.ShadowDecoration.Parent = this.DtFrom;
+            this.DtFrom.Size = new System.Drawing.Size(286, 43);
+            this.DtFrom.TabIndex = 53;
+            this.DtFrom.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            // 
+            // DtTo
+            // 
+            this.DtTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtSearchWith.BorderRadius = 5;
-            this.TxtSearchWith.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtSearchWith.DefaultText = "";
-            this.TxtSearchWith.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtSearchWith.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtSearchWith.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtSearchWith.DisabledState.Parent = this.TxtSearchWith;
-            this.TxtSearchWith.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtSearchWith.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtSearchWith.FocusedState.Parent = this.TxtSearchWith;
-            this.TxtSearchWith.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtSearchWith.ForeColor = System.Drawing.Color.Black;
-            this.TxtSearchWith.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtSearchWith.HoverState.Parent = this.TxtSearchWith;
-            this.TxtSearchWith.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSearchWith.IconLeft")));
-            this.TxtSearchWith.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtSearchWith.Location = new System.Drawing.Point(14, 9);
-            this.TxtSearchWith.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TxtSearchWith.Name = "TxtSearchWith";
-            this.TxtSearchWith.PasswordChar = '\0';
-            this.TxtSearchWith.PlaceholderText = "Search with agency ID, company name, owner name , email, telephone or status by p" +
-    "ressing enter";
-            this.TxtSearchWith.SelectedText = "";
-            this.TxtSearchWith.ShadowDecoration.Parent = this.TxtSearchWith;
-            this.TxtSearchWith.Size = new System.Drawing.Size(1173, 43);
-            this.TxtSearchWith.TabIndex = 50;
+            this.DtTo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtTo.BorderRadius = 5;
+            this.DtTo.BorderThickness = 1;
+            this.DtTo.CheckedState.Parent = this.DtTo;
+            this.DtTo.FillColor = System.Drawing.Color.White;
+            this.DtTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtTo.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtTo.HoverState.Parent = this.DtTo;
+            this.DtTo.Location = new System.Drawing.Point(922, 9);
+            this.DtTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtTo.Name = "DtTo";
+            this.DtTo.ShadowDecoration.Parent = this.DtTo;
+            this.DtTo.Size = new System.Drawing.Size(298, 43);
+            this.DtTo.TabIndex = 54;
+            this.DtTo.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
             // 
-            // FrmAgency
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2Button1.Location = new System.Drawing.Point(1227, 6);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(43, 43);
+            this.guna2Button1.TabIndex = 37;
+            // 
+            // FrmFlights
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 906);
-            this.Controls.Add(this.TxtSearchWith);
+            this.ClientSize = new System.Drawing.Size(1280, 906);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.DtTo);
+            this.Controls.Add(this.DtFrom);
+            this.Controls.Add(this.CmbTo);
+            this.Controls.Add(this.CmbFrom);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.DGClientFlights);
+            this.Controls.Add(this.DGClientAgencies);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FrmAgency";
+            this.Name = "FrmFlights";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAgency";
+            this.Text = "FrmFlights";
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGClientFlights)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientAgencies)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -867,7 +954,10 @@ namespace HassilBook
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.DataGridView DGClientFlights;
+        private Guna.UI2.WinForms.Guna2ComboBox CmbStatus;
+        private Guna.UI2.WinForms.Guna2ComboBox CmbAgencyType;
+        private Guna.UI2.WinForms.Guna2TextBox TxtTelephone;
+        private Guna.UI2.WinForms.Guna2TextBox TxtEmail;
         private Guna.UI2.WinForms.Guna2ComboBox CmbCountry;
         private Guna.UI2.WinForms.Guna2TextBox TxtStreet;
         private Guna.UI2.WinForms.Guna2TextBox TxtPostalCode;
@@ -876,12 +966,9 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2TextBox TxtOwnerName;
         private Guna.UI2.WinForms.Guna2TextBox TxtCompany;
         private Guna.UI2.WinForms.Guna2DateTimePicker DtJoinDate;
-        private Guna.UI2.WinForms.Guna2TextBox TxtAgencyID;
-        private Guna.UI2.WinForms.Guna2ComboBox CmbAgencyType;
-        private Guna.UI2.WinForms.Guna2TextBox TxtTelephone;
-        private Guna.UI2.WinForms.Guna2TextBox TxtEmail;
         private Guna.UI2.WinForms.Guna2Button BtnAddEdit;
-        private Guna.UI2.WinForms.Guna2ComboBox CmbStatus;
+        private Guna.UI2.WinForms.Guna2TextBox TxtAgencyID;
+        private System.Windows.Forms.DataGridView DGClientAgencies;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
@@ -892,6 +979,10 @@ namespace HassilBook
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DEL;
-        private Guna.UI2.WinForms.Guna2TextBox TxtSearchWith;
+        private Guna.UI2.WinForms.Guna2ComboBox CmbTo;
+        private Guna.UI2.WinForms.Guna2ComboBox CmbFrom;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DtFrom;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DtTo;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -45,7 +45,7 @@ namespace HassilBook
             try
             {
                 DatabaseConnection con = new DatabaseConnection();
-                DGClientAgencies.Rows.Clear();
+                DGClientFlights.Rows.Clear();
                 int i = 1;
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
@@ -54,7 +54,7 @@ namespace HassilBook
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while(dr.Read())
                 {
-                    DGClientAgencies.Rows.Add(i, dr["AgencyID"].ToString(), dr["Company"].ToString(), dr["OwnerName"].ToString(), dr["Email"].ToString(), dr["Telephone"].ToString(), dr["AgencyType"].ToString(), dr["Status"].ToString());
+                    DGClientFlights.Rows.Add(i, dr["AgencyID"].ToString(), dr["Company"].ToString(), dr["OwnerName"].ToString(), dr["Email"].ToString(), dr["Telephone"].ToString(), dr["AgencyType"].ToString(), dr["Status"].ToString());
                     i++;
                 }
                 dr.Close();
@@ -154,12 +154,12 @@ namespace HassilBook
             try
             {
 
-                string cel = DGClientAgencies.Columns[e.ColumnIndex].Name;
+                string cel = DGClientFlights.Columns[e.ColumnIndex].Name;
                 DatabaseConnection con = new DatabaseConnection();
 
                 if (cel == "EDIT")
                 {
-                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_ClientAgencies WHERE AgencyID = '" + DGClientAgencies[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" +FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_ClientAgencies WHERE AgencyID = '" + DGClientFlights[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" +FrmLogin.m_client.ClientID + "'", con.ActiveConnection());
                     MySqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -184,14 +184,14 @@ namespace HassilBook
                 }
                 else if (cel == "DEL")
                 {
-                    if (MessageBox.Show($"Do you want to delete this agency '{DGClientAgencies[1, e.RowIndex].Value.ToString()}'?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show($"Do you want to delete this agency '{DGClientFlights[1, e.RowIndex].Value.ToString()}'?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         MySqlCommand cmd;
                         cmd = con.ActiveConnection().CreateCommand();
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "DELETE FROM tbl_ClientAgencies WHERE AgencyID = '" + DGClientAgencies[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
+                        cmd.CommandText = "DELETE FROM tbl_ClientAgencies WHERE AgencyID = '" + DGClientFlights[1, e.RowIndex].Value.ToString() + "' AND OfficeID = '" + FrmLogin.m_client.ClientID + "'";
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show($"Agency '{DGClientAgencies[1, e.RowIndex].Value.ToString()}' has been successfully deleted from the database", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Agency '{DGClientFlights[1, e.RowIndex].Value.ToString()}' has been successfully deleted from the database", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         con.ActiveConnection().Close();
                         LoadClientAgencies();
@@ -227,7 +227,7 @@ namespace HassilBook
             try
             {
                 DatabaseConnection con = new DatabaseConnection();
-                DGClientAgencies.Rows.Clear();
+                DGClientFlights.Rows.Clear();
                 int i = 1;
                 MySqlCommand cmd;
                 cmd = con.ActiveConnection().CreateCommand();
@@ -236,7 +236,7 @@ namespace HassilBook
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    DGClientAgencies.Rows.Add(i, dr["AgencyID"].ToString(), dr["Company"].ToString(), dr["OwnerName"].ToString(), dr["Email"].ToString(), dr["Telephone"].ToString(), dr["AgencyType"].ToString(),dr["Status"].ToString());
+                    DGClientFlights.Rows.Add(i, dr["AgencyID"].ToString(), dr["Company"].ToString(), dr["OwnerName"].ToString(), dr["Email"].ToString(), dr["Telephone"].ToString(), dr["AgencyType"].ToString(),dr["Status"].ToString());
                     i++;
                 }
                 dr.Close();

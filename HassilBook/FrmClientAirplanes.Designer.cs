@@ -90,7 +90,7 @@ namespace HassilBook
             this.DGClientAirplanes.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGClientAirplanes.EnableHeadersVisualStyles = false;
             this.DGClientAirplanes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientAirplanes.Location = new System.Drawing.Point(9, 37);
+            this.DGClientAirplanes.Location = new System.Drawing.Point(14, 57);
             this.DGClientAirplanes.Margin = new System.Windows.Forms.Padding(0);
             this.DGClientAirplanes.Name = "DGClientAirplanes";
             this.DGClientAirplanes.ReadOnly = true;
@@ -99,7 +99,7 @@ namespace HassilBook
             this.DGClientAirplanes.RowTemplate.Height = 25;
             this.DGClientAirplanes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DGClientAirplanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientAirplanes.Size = new System.Drawing.Size(782, 504);
+            this.DGClientAirplanes.Size = new System.Drawing.Size(1173, 775);
             this.DGClientAirplanes.TabIndex = 36;
             this.DGClientAirplanes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientAirplanes_CellContentClick);
             // 
@@ -110,15 +110,16 @@ namespace HassilBook
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 37;
+            this.Column4.Width = 54;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column3.HeaderText = "REG. DATE";
+            this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 83;
+            this.Column3.Width = 125;
             // 
             // Column5
             // 
@@ -127,6 +128,7 @@ namespace HassilBook
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 151;
             // 
             // Column9
             // 
@@ -143,31 +145,34 @@ namespace HassilBook
             this.Column11.MinimumWidth = 8;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 67;
+            this.Column11.Width = 102;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column1.HeaderText = "SEATS";
+            this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 60;
+            this.Column1.Width = 90;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column2.HeaderText = "CATEGORY";
+            this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 84;
+            this.Column2.Width = 129;
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column6.HeaderText = "STATUS";
+            this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 67;
+            this.Column6.Width = 101;
             // 
             // EDIT
             // 
@@ -177,7 +182,7 @@ namespace HassilBook
             this.EDIT.MinimumWidth = 8;
             this.EDIT.Name = "EDIT";
             this.EDIT.ReadOnly = true;
-            this.EDIT.Width = 34;
+            this.EDIT.Width = 49;
             // 
             // DEL
             // 
@@ -187,7 +192,7 @@ namespace HassilBook
             this.DEL.MinimumWidth = 8;
             this.DEL.Name = "DEL";
             this.DEL.ReadOnly = true;
-            this.DEL.Width = 30;
+            this.DEL.Width = 43;
             // 
             // TxtSearchWith
             // 
@@ -209,13 +214,15 @@ namespace HassilBook
             this.TxtSearchWith.HoverState.Parent = this.TxtSearchWith;
             this.TxtSearchWith.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtSearchWith.IconLeft")));
             this.TxtSearchWith.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtSearchWith.Location = new System.Drawing.Point(9, 5);
+            this.TxtSearchWith.Location = new System.Drawing.Point(14, 8);
+            this.TxtSearchWith.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtSearchWith.Name = "TxtSearchWith";
             this.TxtSearchWith.PasswordChar = '\0';
-            this.TxtSearchWith.PlaceholderText = "Search with department ID, description or manager by pressing enter";
+            this.TxtSearchWith.PlaceholderText = "Search with registration number, manufacturer, model, seats, category or status b" +
+    "y pressing enter";
             this.TxtSearchWith.SelectedText = "";
             this.TxtSearchWith.ShadowDecoration.Parent = this.TxtSearchWith;
-            this.TxtSearchWith.Size = new System.Drawing.Size(611, 28);
+            this.TxtSearchWith.Size = new System.Drawing.Size(916, 43);
             this.TxtSearchWith.TabIndex = 37;
             this.TxtSearchWith.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchWith_KeyDown);
             // 
@@ -230,24 +237,26 @@ namespace HassilBook
             this.BtnAddEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAddEdit.ForeColor = System.Drawing.Color.White;
             this.BtnAddEdit.HoverState.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Location = new System.Drawing.Point(626, 5);
+            this.BtnAddEdit.Location = new System.Drawing.Point(939, 8);
+            this.BtnAddEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnAddEdit.Name = "BtnAddEdit";
             this.BtnAddEdit.ShadowDecoration.Parent = this.BtnAddEdit;
-            this.BtnAddEdit.Size = new System.Drawing.Size(165, 28);
+            this.BtnAddEdit.Size = new System.Drawing.Size(248, 43);
             this.BtnAddEdit.TabIndex = 38;
             this.BtnAddEdit.Text = "ADD NEW AIRPLANE";
             this.BtnAddEdit.Click += new System.EventHandler(this.BtnAddEdit_Click);
             // 
             // FrmClientAirplanes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.ClientSize = new System.Drawing.Size(1200, 846);
             this.Controls.Add(this.BtnAddEdit);
             this.Controls.Add(this.TxtSearchWith);
             this.Controls.Add(this.DGClientAirplanes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmClientAirplanes";
             this.Text = "FrmClientAirlines";
             ((System.ComponentModel.ISupportInitialize)(this.DGClientAirplanes)).EndInit();

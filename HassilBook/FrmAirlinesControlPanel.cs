@@ -113,5 +113,10 @@ namespace HassilBook
         {
             MyContainer(new FrmPriceManager());
         }
+
+        private void BtnFlights_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmFlights());
+        }
     }
 }

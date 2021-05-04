@@ -216,6 +216,12 @@
     <Compile Include="FrmAgency.Designer.cs">
       <DependentUpon>FrmAgency.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFlights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFlights.Designer.cs">
+      <DependentUpon>FrmFlights.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPriceManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmployees.resx">
       <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFlights.resx">
+      <DependentUpon>FrmFlights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoader.resx">
       <DependentUpon>FrmLoader.cs</DependentUpon>
