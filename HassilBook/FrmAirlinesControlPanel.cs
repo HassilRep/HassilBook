@@ -123,5 +123,15 @@ namespace HassilBook
         {
             MyContainer(new FrmHaWallet());
         }
+
+        private void BtnCoupons_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmCoupons());
+        }
+
+        private void BtnCompany_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmCompany());
+        }
     }
 }

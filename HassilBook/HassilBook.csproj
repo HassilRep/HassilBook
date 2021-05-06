@@ -211,11 +211,24 @@
   <ItemGroup>
     <Compile Include="Const.cs" />
     <Compile Include="Controller\AirlineAccessPoint.cs" />
+    <Compile Include="CouponGenerator.cs" />
     <Compile Include="FrmAgency.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAgency.Designer.cs">
       <DependentUpon>FrmAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCoupons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCoupons.Designer.cs">
+      <DependentUpon>FrmCoupons.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmFlights.cs">
       <SubType>Form</SubType>
@@ -379,6 +392,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientAirplanes.resx">
       <DependentUpon>FrmClientAirplanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCoupons.resx">
+      <DependentUpon>FrmCoupons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>

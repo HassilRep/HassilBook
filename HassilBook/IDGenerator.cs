@@ -16,6 +16,7 @@ namespace HassilBook
         public string M_ClientPriceID;
         public string M_ClientFlightID;
         public string M_ClientWalletPaymentID;
+        public string M_ClientCouponID;
 
 
         DatabaseConnection con = new DatabaseConnection();
@@ -147,6 +148,29 @@ namespace HassilBook
                 {
                     string GeneratedID = "000000" + dr.GetInt32(0);
                     M_ClientWalletPaymentID = "WCR" + GeneratedID.Substring(GeneratedID.Length - 7, 7);
+                }
+                dr.Close();
+                con.ActiveConnection().Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// This generates client coupon ID
+        /// </summary>
+        public void ClientCouponID(int OfficeID)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(CouponID, 7) AS INT)), 0) + 1 FROM tbl_ClientCoupons WHERE OfficeID = '" + OfficeID + "'", con.ActiveConnection());
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    string GeneratedID = "000000" + dr.GetInt32(0);
+                    M_ClientCouponID = "CPN" + GeneratedID.Substring(GeneratedID.Length - 7, 7);
                 }
                 dr.Close();
                 con.ActiveConnection().Close();

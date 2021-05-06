@@ -33,14 +33,14 @@ namespace HassilBook
         {
             AirlineAccessPoint accessPoint = new AirlineAccessPoint();
             var result = accessPoint.Login(TxtOfficeID.Text, TxtAirUsername.Text, TxtAirPassword.Text);
-            if(result.Count > 0)
+            if (result.Count > 0)
             {
-                if(result[1].ToString() == "Admin")
+                if (result[1].ToString() == "Admin")
                 {
                     // profile information
                     m_client = accessPoint.ClientProfile(TxtOfficeID.Text);
                     m_employee = accessPoint.ClientEmployeeProfile(TxtOfficeID.Text, TxtAirUsername.Text);
-                    
+
                     // admin control panel
                     FrmAirlinesControlPanel F = new FrmAirlinesControlPanel();
                     this.Hide();
