@@ -118,5 +118,10 @@ namespace HassilBook
         {
             MyContainer(new FrmFlights());
         }
+
+        private void BtnWallet_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmHaWallet());
+        }
     }
 }

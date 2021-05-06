@@ -14,6 +14,8 @@ namespace HassilBook
         public string M_ClientEmployeeID;
         public string M_ClientAgencyID;
         public string M_ClientPriceID;
+        public string M_ClientFlightID;
+        public string M_ClientWalletPaymentID;
 
 
         DatabaseConnection con = new DatabaseConnection();
@@ -47,7 +49,7 @@ namespace HassilBook
         {
             try
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(EmployeeID, 7) AS INT)), 0) + 1 FROM tbl_ClientEmployees WHERE OfficeID LIKE '" + OfficeID + "'", con.ActiveConnection());
+                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(EmployeeID, 7) AS INT)), 0) + 1 FROM tbl_ClientEmployees WHERE OfficeID = '" + OfficeID + "'", con.ActiveConnection());
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -70,7 +72,7 @@ namespace HassilBook
         {
             try
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(AgencyID, 4) AS INT)), 0) + 1 FROM tbl_ClientAgencies WHERE OfficeID LIKE '" + OfficeID + "'", con.ActiveConnection());
+                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(AgencyID, 4) AS INT)), 0) + 1 FROM tbl_ClientAgencies WHERE OfficeID = '" + OfficeID + "'", con.ActiveConnection());
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -93,12 +95,58 @@ namespace HassilBook
         {
             try
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(PriceID, 7) AS INT)), 0) + 1 FROM tbl_ClientFlightPrices WHERE OfficeID LIKE '" + OfficeID + "'", con.ActiveConnection());
+                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(PriceID, 7) AS INT)), 0) + 1 FROM tbl_ClientFlightPrices WHERE OfficeID = '" + OfficeID + "'", con.ActiveConnection());
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     string GeneratedID = "000000" + dr.GetInt32(0);
                     M_ClientPriceID = "PRS" + GeneratedID.Substring(GeneratedID.Length - 7, 7);
+                }
+                dr.Close();
+                con.ActiveConnection().Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// This generates client flight ID
+        /// </summary>
+        public void ClientFlightID(int OfficeID)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(FlightID, 7) AS INT)), 0) + 1 FROM tbl_ClientFlights WHERE OfficeID = '" + OfficeID + "'", con.ActiveConnection());
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    string GeneratedID = "000000" + dr.GetInt32(0);
+                    M_ClientFlightID = "FLT" + GeneratedID.Substring(GeneratedID.Length - 7, 7);
+                }
+                dr.Close();
+                con.ActiveConnection().Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// This generates client wallet payment ID
+        /// </summary>
+        public void ClientWalletPaymentID(int OfficeID)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(CAST(RIGHT(Refrence, 7) AS INT)), 0) + 1 FROM tbl_ClientHaWallet WHERE Refrence LIKE 'WCR%' AND OfficeID = '" + OfficeID + "'", con.ActiveConnection());
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    string GeneratedID = "000000" + dr.GetInt32(0);
+                    M_ClientWalletPaymentID = "WCR" + GeneratedID.Substring(GeneratedID.Length - 7, 7);
                 }
                 dr.Close();
                 con.ActiveConnection().Close();

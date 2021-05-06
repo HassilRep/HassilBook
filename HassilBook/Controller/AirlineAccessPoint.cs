@@ -150,7 +150,7 @@ namespace HassilBook
             try
             {
                 DatabaseConnection con = new DatabaseConnection();
-                MySqlDataAdapter sda = new MySqlDataAdapter($@"SELECT E.ID, E.EmployeeID, E.Firstname, E.Lastname, E.Gender, E.Email, E.Telephone, E.Birthdate, E.HiredDate, D.Description, U.Username, R.Role, E.Image FROM tbl_ClientEmployees E 
+                MySqlDataAdapter sda = new MySqlDataAdapter($@"SELECT E.ID, U.ID AS UsernameID, E.EmployeeID, E.Firstname, E.Lastname, E.Gender, E.Email, E.Telephone, E.Birthdate, E.HiredDate, D.Description, U.Username, R.Role, E.Image FROM tbl_ClientEmployees E 
                                                         INNER JOIN tbl_ClientUsers U ON U.EmployeeID = E.ID
                                                         INNER JOIN tbl_Clients C ON E.OfficeID = C.ID
                                                         INNER JOIN tbl_ClientDepartment D ON E.DepartmentID = D.ID
@@ -161,6 +161,7 @@ namespace HassilBook
                 if(dt.Rows.Count > 0)
                 {
                     employee.ID = int.Parse(dt.Rows[0]["ID"].ToString());
+                    employee.UsernameID = int.Parse(dt.Rows[0]["UsernameID"].ToString());
                     employee.EmployeeID = dt.Rows[0]["EmployeeID"].ToString();
                     employee.Firstname = dt.Rows[0]["Firstname"].ToString();
                     employee.Lastname = dt.Rows[0]["Lastname"].ToString();

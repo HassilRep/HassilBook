@@ -60,6 +60,11 @@ namespace HassilBook
         public string Username { get; set; }
 
         /// <summary>
+        /// Client employee username ID
+        /// </summary>
+        public int UsernameID { get; set; }
+
+        /// <summary>
         /// Client employee Role
         /// </summary>
         public string Role { get; set; }

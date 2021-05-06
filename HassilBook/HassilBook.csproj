@@ -209,6 +209,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Const.cs" />
     <Compile Include="Controller\AirlineAccessPoint.cs" />
     <Compile Include="FrmAgency.cs">
       <SubType>Form</SubType>
@@ -221,6 +222,12 @@
     </Compile>
     <Compile Include="FrmFlights.Designer.cs">
       <DependentUpon>FrmFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHaWallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHaWallet.Designer.cs">
+      <DependentUpon>FrmHaWallet.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPriceManager.cs">
       <SubType>Form</SubType>
@@ -384,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFlights.resx">
       <DependentUpon>FrmFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHaWallet.resx">
+      <DependentUpon>FrmHaWallet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoader.resx">
       <DependentUpon>FrmLoader.cs</DependentUpon>
