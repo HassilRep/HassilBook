@@ -19,8 +19,8 @@ namespace HassilBook
             InitializeComponent();
             CheckRadionButton();
 
-            DtFrom.Text = DateTime.Now.ToString();
-            DtTo.Text = DateTime.Now.ToString();
+            DtFrom.Text = DateTime.Now.ToShortDateString();
+            DtTo.Text = DateTime.Now.ToShortDateString();
         }
 
         private void BtnFindFlights_Click(object sender, EventArgs e)

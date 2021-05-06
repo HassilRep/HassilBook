@@ -99,7 +99,7 @@ namespace HassilBook
 
                             LoadClientAgencies();
                             TxtAgencyID.Text = string.Empty;
-                            DtJoinDate.Text = DateTime.Now.ToString();
+                            DtJoinDate.Text = DateTime.Now.ToShortDateString();
                             TxtCompany.Text = string.Empty;
                             TxtOwnerName.Text = string.Empty;
                             CmbGender.SelectedIndex = 0;
@@ -126,7 +126,7 @@ namespace HassilBook
 
                         LoadClientAgencies();
                         TxtAgencyID.Text = string.Empty;
-                        DtJoinDate.Text = DateTime.Now.ToString();
+                        DtJoinDate.Text = DateTime.Now.ToShortDateString();
                         TxtCompany.Text = string.Empty;
                         TxtOwnerName.Text = string.Empty;
                         CmbGender.SelectedIndex = 0;
@@ -196,7 +196,7 @@ namespace HassilBook
                         con.ActiveConnection().Close();
                         LoadClientAgencies();
                         TxtAgencyID.Text = string.Empty;
-                        DtJoinDate.Text = DateTime.Now.ToString();
+                        DtJoinDate.Text = DateTime.Now.ToShortDateString();
                         TxtCompany.Text = string.Empty;
                         TxtOwnerName.Text = string.Empty;
                         CmbGender.SelectedIndex = 0;

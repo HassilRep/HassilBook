@@ -19,7 +19,7 @@ namespace HassilBook
             InitializeComponent();
             LoadCouponID();
             BtnAllCoupons.PerformClick();
-            DtExpirationDate.Text = DateTime.Now.ToString();
+            DtExpirationDate.Text = DateTime.Now.ToShortDateString();
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace HassilBook
                         TxtRate.Text = string.Empty;
                         CmbStatus.SelectedIndex = 0;
                         TxtMaxUses.Text = string.Empty;
-                        DtExpirationDate.Text = DateTime.Now.ToString();
+                        DtExpirationDate.Text = DateTime.Now.ToShortDateString();
                     }
                     else
                     {
@@ -130,7 +130,7 @@ namespace HassilBook
                         TxtRate.Text = string.Empty;
                         CmbStatus.SelectedIndex = 0;
                         TxtMaxUses.Text = string.Empty;
-                        DtExpirationDate.Text = DateTime.Now.ToString();
+                        DtExpirationDate.Text = DateTime.Now.ToShortDateString();
                         BtnAddEdit.Text = "ADD NEW COUPON";
                     }
                 }
@@ -187,7 +187,7 @@ namespace HassilBook
                         TxtRate.Text = string.Empty;
                         CmbStatus.SelectedIndex = 0;
                         TxtMaxUses.Text = string.Empty;
-                        DtExpirationDate.Text = DateTime.Now.ToString();
+                        DtExpirationDate.Text = DateTime.Now.ToShortDateString();
                         BtnAddEdit.Text = "ADD NEW COUPON";
                     }
                 }

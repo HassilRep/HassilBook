@@ -22,8 +22,8 @@ namespace HassilBook
             InitializeComponent();
             MyTooltip();
 
-            DtFrom.Text = DateTime.Now.ToString();
-            DtTo.Text = DateTime.Now.ToString();
+            DtFrom.Text = DateTime.Now.ToShortDateString();
+            DtTo.Text = DateTime.Now.ToShortDateString();
         }
 
 

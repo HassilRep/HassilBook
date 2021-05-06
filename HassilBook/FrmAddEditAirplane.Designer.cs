@@ -210,10 +210,11 @@ namespace HassilBook
             this.DtRegistrationDate.BorderRadius = 5;
             this.DtRegistrationDate.BorderThickness = 1;
             this.DtRegistrationDate.CheckedState.Parent = this.DtRegistrationDate;
+            this.DtRegistrationDate.CustomFormat = "dd MMM yyyy";
             this.DtRegistrationDate.FillColor = System.Drawing.Color.White;
             this.DtRegistrationDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DtRegistrationDate.ForeColor = System.Drawing.Color.Black;
-            this.DtRegistrationDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtRegistrationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtRegistrationDate.HoverState.Parent = this.DtRegistrationDate;
             this.DtRegistrationDate.Location = new System.Drawing.Point(9, 94);
             this.DtRegistrationDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

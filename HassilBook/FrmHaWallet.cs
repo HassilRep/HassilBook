@@ -13,11 +13,12 @@ namespace HassilBook
 {
     public partial class FrmHaWallet : Form
     {
+        DatabaseConnection con = new DatabaseConnection();
         public FrmHaWallet()
         {
             InitializeComponent();
-            DtFrom.Text = DateTime.Now.ToString();
-            DtTo.Text = DateTime.Now.ToString();
+            DtFrom.Text = DateTime.Now.ToShortDateString();
+            DtTo.Text = DateTime.Now.ToShortDateString();
 
             LoadWalletID();
             LoadAgencies();
@@ -25,11 +26,21 @@ namespace HassilBook
             LoadWalletPaymentTransactions();
         }
 
+        /// <summary>
+        /// Load new wallet ID
+        /// </summary>
         private void LoadWalletID()
         {
-            IDGenerator ID = new IDGenerator();
-            ID.ClientWalletPaymentID(FrmLogin.m_client.ClientID);
-            TxtWalletID.Text = ID.M_ClientWalletPaymentID;
+            try
+            {
+                IDGenerator ID = new IDGenerator();
+                ID.ClientWalletPaymentID(FrmLogin.m_client.ClientID);
+                TxtWalletID.Text = ID.M_ClientWalletPaymentID;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         /// <summary>
@@ -39,36 +50,37 @@ namespace HassilBook
         {
             try
             {
-                DatabaseConnection con = new DatabaseConnection();
                 CmbAgencies.Items.Clear();
                 DataTable dt = new DataTable();
                 dt.Columns.Add("ID");
                 dt.Columns.Add("Company");
                 dt.Rows.Add("0", "- Agencies -");
 
-                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Company FROM tbl_ClientAgencies", con.ActiveConnection());
-                DataTable table = new DataTable();
-                sda.Fill(table);
-                if (dt.Rows.Count > 0)
+                using (MySqlDataAdapter sda = new MySqlDataAdapter("SELECT ID, Company FROM tbl_ClientAgencies", con.ActiveConnection()))
                 {
-                    foreach (DataRow item in table.Rows)
+                    DataTable table = new DataTable();
+                    sda.Fill(table);
+                    if (dt.Rows.Count > 0)
                     {
-                        dt.Rows.Add(item["ID"], item["Company"]);
+                        foreach (DataRow item in table.Rows)
+                        {
+                            dt.Rows.Add(item["ID"], item["Company"]);
+                        }
                     }
+                    CmbAgencies.DataSource = dt;
+                    CmbAgencies.ValueMember = "ID";
+                    CmbAgencies.DisplayMember = "Company";
+
+                    CmbAgency.DataSource = dt;
+                    CmbAgency.ValueMember = "ID";
+                    CmbAgency.DisplayMember = "Company";
+
+                    CmbCompanies.DataSource = dt;
+                    CmbCompanies.ValueMember = "ID";
+                    CmbCompanies.DisplayMember = "Company";
+
+                    con.ActiveConnection().Close();
                 }
-                CmbAgencies.DataSource = dt;
-                CmbAgencies.ValueMember = "ID";
-                CmbAgencies.DisplayMember = "Company";
-
-                CmbAgency.DataSource = dt;
-                CmbAgency.ValueMember = "ID";
-                CmbAgency.DisplayMember = "Company";
-
-                CmbCompanies.DataSource = dt;
-                CmbCompanies.ValueMember = "ID";
-                CmbCompanies.DisplayMember = "Company";
-
-                con.ActiveConnection().Close();
             }
             catch (Exception ex)
             {
@@ -83,7 +95,6 @@ namespace HassilBook
         {
             try
             {
-                DatabaseConnection con = new DatabaseConnection();
                 DGClientAgencyHaWallet.Rows.Clear();
                 int i = 1;
                 MySqlCommand cmd;
@@ -133,7 +144,6 @@ namespace HassilBook
                     i++;
                 }
                 dr.Close();
-                con.ActiveConnection().Close();
             }
             catch (Exception ex)
             {
@@ -145,8 +155,8 @@ namespace HassilBook
         {
             LoadWalletTransactions();
             CmbAgencies.SelectedIndex = 0;
-            DtFrom.Text = DateTime.Now.ToString();
-            DtTo.Text = DateTime.Now.ToString();
+            DtFrom.Text = DateTime.Now.ToShortDateString();
+            DtTo.Text = DateTime.Now.ToShortDateString();
             WalletPage.SelectTab("History");
         }
 
@@ -156,9 +166,9 @@ namespace HassilBook
             CmbAgency.SelectedIndex = 0;
             LoadWalletID();
             LoadWalletPaymentTransactions();
-            DtTranFrom.Text = DateTime.Now.ToString();
-            DtTranTo.Text = DateTime.Now.ToString();
-            DtTransactionDate.Text = DateTime.Now.ToString();
+            DtTranFrom.Text = DateTime.Now.ToShortDateString();
+            DtTranTo.Text = DateTime.Now.ToShortDateString();
+            DtTransactionDate.Text = DateTime.Now.ToShortDateString();
             TxtAmount.Text = string.Empty;
             TxtDescription.Text = string.Empty;
             WalletPage.SelectTab("Payments");
@@ -174,7 +184,6 @@ namespace HassilBook
                 }
                 else
                 {
-                    DatabaseConnection con = new DatabaseConnection();
                     DGClientAgencyHaWallet.Rows.Clear();
                     int i = 1;
                     MySqlCommand cmd;
@@ -215,7 +224,6 @@ namespace HassilBook
             {
                 try
                 {
-                    DatabaseConnection con = new DatabaseConnection();
                     if(BtnAddEdit.Text == "ADD NEW PAYMENT")
                     {
                         decimal debit = 0;
@@ -255,7 +263,6 @@ namespace HassilBook
                 }
                 else
                 {
-                    DatabaseConnection con = new DatabaseConnection();
                     DGClientWalletPaymentTransactions.Rows.Clear();
                     int i = 1;
                     MySqlCommand cmd;
@@ -287,7 +294,6 @@ namespace HassilBook
             string cel = DGClientWalletPaymentTransactions.Columns[e.ColumnIndex].Name;
             try
             {
-                DatabaseConnection con = new DatabaseConnection();
                 
                 if(cel == "UPDATE")
                 {

@@ -29,32 +29,27 @@ namespace HassilBook
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFlights));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.TxtFlightID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CmbPriceType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CmbAirplaneModel = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CmbStop = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CbStop = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CmbDestination = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CmbOrigin = new Guna.UI2.WinForms.Guna2ComboBox();
             this.TxtDepTime = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtArrTime = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtEconomySeats = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxtBusinessSeats = new Guna.UI2.WinForms.Guna2TextBox();
             this.DtDepDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.TxtBusinessSeats = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnAddEdit = new Guna.UI2.WinForms.Guna2Button();
             this.TxtFlightNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGClientFlights = new System.Windows.Forms.DataGridView();
-            this.CmbTo = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.CmbFrom = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.DtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.DtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.BtnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.CmbDestination = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.CmbOrigin = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.CbStop = new Guna.UI2.WinForms.Guna2CustomCheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.CmbStop = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.CmbAirplaneModel = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.CmbPriceType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.TxtFlightID = new Guna.UI2.WinForms.Guna2TextBox();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +64,11 @@ namespace HassilBook
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DEL = new System.Windows.Forms.DataGridViewImageColumn();
+            this.CmbTo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CmbFrom = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.BtnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGClientFlights)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +101,174 @@ namespace HassilBook
             this.guna2Panel1.Size = new System.Drawing.Size(400, 835);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // TxtFlightID
+            // 
+            this.TxtFlightID.BorderRadius = 5;
+            this.TxtFlightID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtFlightID.DefaultText = "";
+            this.TxtFlightID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtFlightID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtFlightID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtFlightID.DisabledState.Parent = this.TxtFlightID;
+            this.TxtFlightID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtFlightID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtFlightID.FocusedState.Parent = this.TxtFlightID;
+            this.TxtFlightID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtFlightID.ForeColor = System.Drawing.Color.Black;
+            this.TxtFlightID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtFlightID.HoverState.Parent = this.TxtFlightID;
+            this.TxtFlightID.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtFlightID.IconLeft")));
+            this.TxtFlightID.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtFlightID.Location = new System.Drawing.Point(8, 9);
+            this.TxtFlightID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtFlightID.Name = "TxtFlightID";
+            this.TxtFlightID.PasswordChar = '\0';
+            this.TxtFlightID.PlaceholderText = "Flight ID";
+            this.TxtFlightID.ReadOnly = true;
+            this.TxtFlightID.SelectedText = "";
+            this.TxtFlightID.ShadowDecoration.Parent = this.TxtFlightID;
+            this.TxtFlightID.Size = new System.Drawing.Size(382, 43);
+            this.TxtFlightID.TabIndex = 0;
+            // 
+            // CmbPriceType
+            // 
+            this.CmbPriceType.BackColor = System.Drawing.Color.Transparent;
+            this.CmbPriceType.BorderRadius = 5;
+            this.CmbPriceType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbPriceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPriceType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbPriceType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbPriceType.FocusedState.Parent = this.CmbPriceType;
+            this.CmbPriceType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbPriceType.ForeColor = System.Drawing.Color.Black;
+            this.CmbPriceType.HoverState.Parent = this.CmbPriceType;
+            this.CmbPriceType.ItemHeight = 22;
+            this.CmbPriceType.Items.AddRange(new object[] {
+            "- Price type -"});
+            this.CmbPriceType.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbPriceType.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbPriceType.ItemsAppearance.Parent = this.CmbPriceType;
+            this.CmbPriceType.Location = new System.Drawing.Point(8, 162);
+            this.CmbPriceType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbPriceType.Name = "CmbPriceType";
+            this.CmbPriceType.ShadowDecoration.Parent = this.CmbPriceType;
+            this.CmbPriceType.Size = new System.Drawing.Size(382, 28);
+            this.CmbPriceType.StartIndex = 0;
+            this.CmbPriceType.TabIndex = 3;
+            // 
+            // CmbAirplaneModel
+            // 
+            this.CmbAirplaneModel.BackColor = System.Drawing.Color.Transparent;
+            this.CmbAirplaneModel.BorderRadius = 5;
+            this.CmbAirplaneModel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbAirplaneModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbAirplaneModel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbAirplaneModel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbAirplaneModel.FocusedState.Parent = this.CmbAirplaneModel;
+            this.CmbAirplaneModel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbAirplaneModel.ForeColor = System.Drawing.Color.Black;
+            this.CmbAirplaneModel.HoverState.Parent = this.CmbAirplaneModel;
+            this.CmbAirplaneModel.ItemHeight = 22;
+            this.CmbAirplaneModel.Items.AddRange(new object[] {
+            "- Airplane model -"});
+            this.CmbAirplaneModel.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbAirplaneModel.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbAirplaneModel.ItemsAppearance.Parent = this.CmbAirplaneModel;
+            this.CmbAirplaneModel.Location = new System.Drawing.Point(8, 111);
+            this.CmbAirplaneModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbAirplaneModel.Name = "CmbAirplaneModel";
+            this.CmbAirplaneModel.ShadowDecoration.Parent = this.CmbAirplaneModel;
+            this.CmbAirplaneModel.Size = new System.Drawing.Size(382, 28);
+            this.CmbAirplaneModel.StartIndex = 0;
+            this.CmbAirplaneModel.TabIndex = 2;
+            // 
+            // CmbStop
+            // 
+            this.CmbStop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CmbStop.BackColor = System.Drawing.Color.Transparent;
+            this.CmbStop.BorderRadius = 5;
+            this.CmbStop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbStop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbStop.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbStop.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbStop.FocusedState.Parent = this.CmbStop;
+            this.CmbStop.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbStop.ForeColor = System.Drawing.Color.Black;
+            this.CmbStop.HoverState.Parent = this.CmbStop;
+            this.CmbStop.ItemHeight = 22;
+            this.CmbStop.Items.AddRange(new object[] {
+            "- Stop -"});
+            this.CmbStop.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbStop.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbStop.ItemsAppearance.Parent = this.CmbStop;
+            this.CmbStop.Location = new System.Drawing.Point(91, 622);
+            this.CmbStop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbStop.Name = "CmbStop";
+            this.CmbStop.ShadowDecoration.Parent = this.CmbStop;
+            this.CmbStop.Size = new System.Drawing.Size(299, 28);
+            this.CmbStop.StartIndex = 0;
+            this.CmbStop.TabIndex = 13;
+            this.CmbStop.Visible = false;
+            // 
+            // CbStop
+            // 
+            this.CbStop.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(200)))), ((int)(((byte)(138)))));
+            this.CbStop.CheckedState.BorderRadius = 2;
+            this.CbStop.CheckedState.BorderThickness = 0;
+            this.CbStop.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(200)))), ((int)(((byte)(138)))));
+            this.CbStop.CheckedState.Parent = this.CbStop;
+            this.CbStop.Location = new System.Drawing.Point(10, 631);
+            this.CbStop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CbStop.Name = "CbStop";
+            this.CbStop.ShadowDecoration.Parent = this.CbStop;
+            this.CbStop.Size = new System.Drawing.Size(22, 23);
+            this.CbStop.TabIndex = 12;
+            this.CbStop.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(235)))));
+            this.CbStop.UncheckedState.BorderRadius = 2;
+            this.CbStop.UncheckedState.BorderThickness = 0;
+            this.CbStop.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(235)))));
+            this.CbStop.UncheckedState.Parent = this.CbStop;
+            this.CbStop.CheckedChanged += new System.EventHandler(this.CbStop_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(40, 633);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Stop";
+            // 
+            // CmbDestination
+            // 
+            this.CmbDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CmbDestination.BackColor = System.Drawing.Color.Transparent;
+            this.CmbDestination.BorderRadius = 5;
+            this.CmbDestination.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbDestination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbDestination.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbDestination.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbDestination.FocusedState.Parent = this.CmbDestination;
+            this.CmbDestination.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbDestination.ForeColor = System.Drawing.Color.Black;
+            this.CmbDestination.HoverState.Parent = this.CmbDestination;
+            this.CmbDestination.ItemHeight = 22;
+            this.CmbDestination.Items.AddRange(new object[] {
+            "- To -"});
+            this.CmbDestination.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbDestination.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbDestination.ItemsAppearance.Parent = this.CmbDestination;
+            this.CmbDestination.Location = new System.Drawing.Point(8, 366);
+            this.CmbDestination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbDestination.Name = "CmbDestination";
+            this.CmbDestination.ShadowDecoration.Parent = this.CmbDestination;
+            this.CmbDestination.Size = new System.Drawing.Size(382, 28);
+            this.CmbDestination.StartIndex = 0;
+            this.CmbDestination.TabIndex = 7;
+            // 
             // CmbStatus
             // 
             this.CmbStatus.BackColor = System.Drawing.Color.Transparent;
@@ -128,6 +296,34 @@ namespace HassilBook
             this.CmbStatus.Size = new System.Drawing.Size(382, 28);
             this.CmbStatus.StartIndex = 0;
             this.CmbStatus.TabIndex = 11;
+            // 
+            // CmbOrigin
+            // 
+            this.CmbOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CmbOrigin.BackColor = System.Drawing.Color.Transparent;
+            this.CmbOrigin.BorderRadius = 5;
+            this.CmbOrigin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbOrigin.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbOrigin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbOrigin.FocusedState.Parent = this.CmbOrigin;
+            this.CmbOrigin.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbOrigin.ForeColor = System.Drawing.Color.Black;
+            this.CmbOrigin.HoverState.Parent = this.CmbOrigin;
+            this.CmbOrigin.ItemHeight = 22;
+            this.CmbOrigin.Items.AddRange(new object[] {
+            "- From -"});
+            this.CmbOrigin.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbOrigin.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbOrigin.ItemsAppearance.Parent = this.CmbOrigin;
+            this.CmbOrigin.Location = new System.Drawing.Point(8, 315);
+            this.CmbOrigin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbOrigin.Name = "CmbOrigin";
+            this.CmbOrigin.ShadowDecoration.Parent = this.CmbOrigin;
+            this.CmbOrigin.Size = new System.Drawing.Size(382, 28);
+            this.CmbOrigin.StartIndex = 0;
+            this.CmbOrigin.TabIndex = 6;
             // 
             // TxtDepTime
             // 
@@ -220,6 +416,26 @@ namespace HassilBook
             this.TxtEconomySeats.TabIndex = 4;
             this.TxtEconomySeats.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
+            // DtDepDate
+            // 
+            this.DtDepDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtDepDate.BorderRadius = 5;
+            this.DtDepDate.BorderThickness = 1;
+            this.DtDepDate.CheckedState.Parent = this.DtDepDate;
+            this.DtDepDate.FillColor = System.Drawing.Color.White;
+            this.DtDepDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtDepDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtDepDate.HoverState.Parent = this.DtDepDate;
+            this.DtDepDate.Location = new System.Drawing.Point(8, 417);
+            this.DtDepDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtDepDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtDepDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtDepDate.Name = "DtDepDate";
+            this.DtDepDate.ShadowDecoration.Parent = this.DtDepDate;
+            this.DtDepDate.Size = new System.Drawing.Size(382, 43);
+            this.DtDepDate.TabIndex = 8;
+            this.DtDepDate.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            // 
             // TxtBusinessSeats
             // 
             this.TxtBusinessSeats.BorderRadius = 5;
@@ -248,26 +464,6 @@ namespace HassilBook
             this.TxtBusinessSeats.Size = new System.Drawing.Size(382, 43);
             this.TxtBusinessSeats.TabIndex = 5;
             this.TxtBusinessSeats.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
-            // 
-            // DtDepDate
-            // 
-            this.DtDepDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.DtDepDate.BorderRadius = 5;
-            this.DtDepDate.BorderThickness = 1;
-            this.DtDepDate.CheckedState.Parent = this.DtDepDate;
-            this.DtDepDate.FillColor = System.Drawing.Color.White;
-            this.DtDepDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DtDepDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DtDepDate.HoverState.Parent = this.DtDepDate;
-            this.DtDepDate.Location = new System.Drawing.Point(8, 417);
-            this.DtDepDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DtDepDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DtDepDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DtDepDate.Name = "DtDepDate";
-            this.DtDepDate.ShadowDecoration.Parent = this.DtDepDate;
-            this.DtDepDate.Size = new System.Drawing.Size(382, 43);
-            this.DtDepDate.TabIndex = 8;
-            this.DtDepDate.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
             // 
             // BtnAddEdit
             // 
@@ -326,14 +522,14 @@ namespace HassilBook
             this.DGClientFlights.BackgroundColor = System.Drawing.Color.White;
             this.DGClientFlights.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGClientFlights.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGClientFlights.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGClientFlights.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGClientFlights.ColumnHeadersHeight = 25;
             this.DGClientFlights.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGClientFlights.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -351,14 +547,14 @@ namespace HassilBook
             this.Column7,
             this.EDIT,
             this.DEL});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGClientFlights.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGClientFlights.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGClientFlights.EnableHeadersVisualStyles = false;
             this.DGClientFlights.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DGClientFlights.Location = new System.Drawing.Point(418, 57);
@@ -373,320 +569,6 @@ namespace HassilBook
             this.DGClientFlights.Size = new System.Drawing.Size(852, 835);
             this.DGClientFlights.TabIndex = 6;
             this.DGClientFlights.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientFlights_CellContentClick);
-            // 
-            // CmbTo
-            // 
-            this.CmbTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CmbTo.BackColor = System.Drawing.Color.Transparent;
-            this.CmbTo.BorderRadius = 5;
-            this.CmbTo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbTo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbTo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbTo.FocusedState.Parent = this.CmbTo;
-            this.CmbTo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbTo.ForeColor = System.Drawing.Color.Black;
-            this.CmbTo.HoverState.Parent = this.CmbTo;
-            this.CmbTo.ItemHeight = 22;
-            this.CmbTo.Items.AddRange(new object[] {
-            "- To -"});
-            this.CmbTo.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbTo.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbTo.ItemsAppearance.Parent = this.CmbTo;
-            this.CmbTo.Location = new System.Drawing.Point(501, 9);
-            this.CmbTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbTo.Name = "CmbTo";
-            this.CmbTo.ShadowDecoration.Parent = this.CmbTo;
-            this.CmbTo.Size = new System.Drawing.Size(237, 28);
-            this.CmbTo.StartIndex = 0;
-            this.CmbTo.TabIndex = 2;
-            // 
-            // CmbFrom
-            // 
-            this.CmbFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CmbFrom.BackColor = System.Drawing.Color.Transparent;
-            this.CmbFrom.BorderRadius = 5;
-            this.CmbFrom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbFrom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbFrom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbFrom.FocusedState.Parent = this.CmbFrom;
-            this.CmbFrom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbFrom.ForeColor = System.Drawing.Color.Black;
-            this.CmbFrom.HoverState.Parent = this.CmbFrom;
-            this.CmbFrom.ItemHeight = 22;
-            this.CmbFrom.Items.AddRange(new object[] {
-            "- From -"});
-            this.CmbFrom.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbFrom.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbFrom.ItemsAppearance.Parent = this.CmbFrom;
-            this.CmbFrom.Location = new System.Drawing.Point(418, 9);
-            this.CmbFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbFrom.Name = "CmbFrom";
-            this.CmbFrom.ShadowDecoration.Parent = this.CmbFrom;
-            this.CmbFrom.Size = new System.Drawing.Size(75, 28);
-            this.CmbFrom.StartIndex = 0;
-            this.CmbFrom.TabIndex = 1;
-            // 
-            // DtFrom
-            // 
-            this.DtFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtFrom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.DtFrom.BorderRadius = 5;
-            this.DtFrom.BorderThickness = 1;
-            this.DtFrom.CheckedState.Parent = this.DtFrom;
-            this.DtFrom.FillColor = System.Drawing.Color.White;
-            this.DtFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DtFrom.HoverState.Parent = this.DtFrom;
-            this.DtFrom.Location = new System.Drawing.Point(746, 9);
-            this.DtFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DtFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DtFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DtFrom.Name = "DtFrom";
-            this.DtFrom.ShadowDecoration.Parent = this.DtFrom;
-            this.DtFrom.Size = new System.Drawing.Size(226, 43);
-            this.DtFrom.TabIndex = 3;
-            this.DtFrom.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
-            // 
-            // DtTo
-            // 
-            this.DtTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtTo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.DtTo.BorderRadius = 5;
-            this.DtTo.BorderThickness = 1;
-            this.DtTo.CheckedState.Parent = this.DtTo;
-            this.DtTo.FillColor = System.Drawing.Color.White;
-            this.DtTo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DtTo.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DtTo.HoverState.Parent = this.DtTo;
-            this.DtTo.Location = new System.Drawing.Point(982, 9);
-            this.DtTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DtTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DtTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DtTo.Name = "DtTo";
-            this.DtTo.ShadowDecoration.Parent = this.DtTo;
-            this.DtTo.Size = new System.Drawing.Size(238, 43);
-            this.DtTo.TabIndex = 4;
-            this.DtTo.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
-            // 
-            // BtnSearch
-            // 
-            this.BtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSearch.BorderRadius = 5;
-            this.BtnSearch.CheckedState.Parent = this.BtnSearch;
-            this.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSearch.CustomImages.Parent = this.BtnSearch;
-            this.BtnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnSearch.ForeColor = System.Drawing.Color.White;
-            this.BtnSearch.HoverState.Parent = this.BtnSearch;
-            this.BtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearch.Image")));
-            this.BtnSearch.ImageSize = new System.Drawing.Size(15, 15);
-            this.BtnSearch.Location = new System.Drawing.Point(1227, 7);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.ShadowDecoration.Parent = this.BtnSearch;
-            this.BtnSearch.Size = new System.Drawing.Size(43, 43);
-            this.BtnSearch.TabIndex = 5;
-            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
-            // 
-            // CmbDestination
-            // 
-            this.CmbDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CmbDestination.BackColor = System.Drawing.Color.Transparent;
-            this.CmbDestination.BorderRadius = 5;
-            this.CmbDestination.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbDestination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbDestination.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbDestination.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbDestination.FocusedState.Parent = this.CmbDestination;
-            this.CmbDestination.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbDestination.ForeColor = System.Drawing.Color.Black;
-            this.CmbDestination.HoverState.Parent = this.CmbDestination;
-            this.CmbDestination.ItemHeight = 22;
-            this.CmbDestination.Items.AddRange(new object[] {
-            "- To -"});
-            this.CmbDestination.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbDestination.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbDestination.ItemsAppearance.Parent = this.CmbDestination;
-            this.CmbDestination.Location = new System.Drawing.Point(8, 366);
-            this.CmbDestination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbDestination.Name = "CmbDestination";
-            this.CmbDestination.ShadowDecoration.Parent = this.CmbDestination;
-            this.CmbDestination.Size = new System.Drawing.Size(382, 28);
-            this.CmbDestination.StartIndex = 0;
-            this.CmbDestination.TabIndex = 7;
-            // 
-            // CmbOrigin
-            // 
-            this.CmbOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CmbOrigin.BackColor = System.Drawing.Color.Transparent;
-            this.CmbOrigin.BorderRadius = 5;
-            this.CmbOrigin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbOrigin.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbOrigin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbOrigin.FocusedState.Parent = this.CmbOrigin;
-            this.CmbOrigin.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbOrigin.ForeColor = System.Drawing.Color.Black;
-            this.CmbOrigin.HoverState.Parent = this.CmbOrigin;
-            this.CmbOrigin.ItemHeight = 22;
-            this.CmbOrigin.Items.AddRange(new object[] {
-            "- From -"});
-            this.CmbOrigin.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbOrigin.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbOrigin.ItemsAppearance.Parent = this.CmbOrigin;
-            this.CmbOrigin.Location = new System.Drawing.Point(8, 315);
-            this.CmbOrigin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbOrigin.Name = "CmbOrigin";
-            this.CmbOrigin.ShadowDecoration.Parent = this.CmbOrigin;
-            this.CmbOrigin.Size = new System.Drawing.Size(382, 28);
-            this.CmbOrigin.StartIndex = 0;
-            this.CmbOrigin.TabIndex = 6;
-            // 
-            // CbStop
-            // 
-            this.CbStop.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(200)))), ((int)(((byte)(138)))));
-            this.CbStop.CheckedState.BorderRadius = 2;
-            this.CbStop.CheckedState.BorderThickness = 0;
-            this.CbStop.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(200)))), ((int)(((byte)(138)))));
-            this.CbStop.CheckedState.Parent = this.CbStop;
-            this.CbStop.Location = new System.Drawing.Point(10, 631);
-            this.CbStop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CbStop.Name = "CbStop";
-            this.CbStop.ShadowDecoration.Parent = this.CbStop;
-            this.CbStop.Size = new System.Drawing.Size(22, 23);
-            this.CbStop.TabIndex = 12;
-            this.CbStop.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(235)))));
-            this.CbStop.UncheckedState.BorderRadius = 2;
-            this.CbStop.UncheckedState.BorderThickness = 0;
-            this.CbStop.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(235)))));
-            this.CbStop.UncheckedState.Parent = this.CbStop;
-            this.CbStop.CheckedChanged += new System.EventHandler(this.CbStop_CheckedChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(40, 633);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 20);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Stop";
-            // 
-            // CmbStop
-            // 
-            this.CmbStop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CmbStop.BackColor = System.Drawing.Color.Transparent;
-            this.CmbStop.BorderRadius = 5;
-            this.CmbStop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbStop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbStop.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbStop.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbStop.FocusedState.Parent = this.CmbStop;
-            this.CmbStop.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbStop.ForeColor = System.Drawing.Color.Black;
-            this.CmbStop.HoverState.Parent = this.CmbStop;
-            this.CmbStop.ItemHeight = 22;
-            this.CmbStop.Items.AddRange(new object[] {
-            "- Stop -"});
-            this.CmbStop.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbStop.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbStop.ItemsAppearance.Parent = this.CmbStop;
-            this.CmbStop.Location = new System.Drawing.Point(91, 622);
-            this.CmbStop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbStop.Name = "CmbStop";
-            this.CmbStop.ShadowDecoration.Parent = this.CmbStop;
-            this.CmbStop.Size = new System.Drawing.Size(299, 28);
-            this.CmbStop.StartIndex = 0;
-            this.CmbStop.TabIndex = 13;
-            this.CmbStop.Visible = false;
-            // 
-            // CmbAirplaneModel
-            // 
-            this.CmbAirplaneModel.BackColor = System.Drawing.Color.Transparent;
-            this.CmbAirplaneModel.BorderRadius = 5;
-            this.CmbAirplaneModel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbAirplaneModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbAirplaneModel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbAirplaneModel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbAirplaneModel.FocusedState.Parent = this.CmbAirplaneModel;
-            this.CmbAirplaneModel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbAirplaneModel.ForeColor = System.Drawing.Color.Black;
-            this.CmbAirplaneModel.HoverState.Parent = this.CmbAirplaneModel;
-            this.CmbAirplaneModel.ItemHeight = 22;
-            this.CmbAirplaneModel.Items.AddRange(new object[] {
-            "- Airplane model -"});
-            this.CmbAirplaneModel.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbAirplaneModel.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbAirplaneModel.ItemsAppearance.Parent = this.CmbAirplaneModel;
-            this.CmbAirplaneModel.Location = new System.Drawing.Point(8, 111);
-            this.CmbAirplaneModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbAirplaneModel.Name = "CmbAirplaneModel";
-            this.CmbAirplaneModel.ShadowDecoration.Parent = this.CmbAirplaneModel;
-            this.CmbAirplaneModel.Size = new System.Drawing.Size(382, 28);
-            this.CmbAirplaneModel.StartIndex = 0;
-            this.CmbAirplaneModel.TabIndex = 2;
-            // 
-            // CmbPriceType
-            // 
-            this.CmbPriceType.BackColor = System.Drawing.Color.Transparent;
-            this.CmbPriceType.BorderRadius = 5;
-            this.CmbPriceType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbPriceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPriceType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbPriceType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbPriceType.FocusedState.Parent = this.CmbPriceType;
-            this.CmbPriceType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbPriceType.ForeColor = System.Drawing.Color.Black;
-            this.CmbPriceType.HoverState.Parent = this.CmbPriceType;
-            this.CmbPriceType.ItemHeight = 22;
-            this.CmbPriceType.Items.AddRange(new object[] {
-            "- Price type -"});
-            this.CmbPriceType.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbPriceType.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbPriceType.ItemsAppearance.Parent = this.CmbPriceType;
-            this.CmbPriceType.Location = new System.Drawing.Point(8, 162);
-            this.CmbPriceType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbPriceType.Name = "CmbPriceType";
-            this.CmbPriceType.ShadowDecoration.Parent = this.CmbPriceType;
-            this.CmbPriceType.Size = new System.Drawing.Size(382, 28);
-            this.CmbPriceType.StartIndex = 0;
-            this.CmbPriceType.TabIndex = 3;
-            // 
-            // TxtFlightID
-            // 
-            this.TxtFlightID.BorderRadius = 5;
-            this.TxtFlightID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtFlightID.DefaultText = "";
-            this.TxtFlightID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtFlightID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtFlightID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtFlightID.DisabledState.Parent = this.TxtFlightID;
-            this.TxtFlightID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtFlightID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFlightID.FocusedState.Parent = this.TxtFlightID;
-            this.TxtFlightID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtFlightID.ForeColor = System.Drawing.Color.Black;
-            this.TxtFlightID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFlightID.HoverState.Parent = this.TxtFlightID;
-            this.TxtFlightID.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtFlightID.IconLeft")));
-            this.TxtFlightID.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtFlightID.Location = new System.Drawing.Point(8, 9);
-            this.TxtFlightID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TxtFlightID.Name = "TxtFlightID";
-            this.TxtFlightID.PasswordChar = '\0';
-            this.TxtFlightID.PlaceholderText = "Flight ID";
-            this.TxtFlightID.ReadOnly = true;
-            this.TxtFlightID.SelectedText = "";
-            this.TxtFlightID.ShadowDecoration.Parent = this.TxtFlightID;
-            this.TxtFlightID.Size = new System.Drawing.Size(382, 43);
-            this.TxtFlightID.TabIndex = 0;
             // 
             // Column4
             // 
@@ -814,6 +696,126 @@ namespace HassilBook
             this.DEL.Name = "DEL";
             this.DEL.ReadOnly = true;
             this.DEL.Width = 43;
+            // 
+            // CmbTo
+            // 
+            this.CmbTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CmbTo.BackColor = System.Drawing.Color.Transparent;
+            this.CmbTo.BorderRadius = 5;
+            this.CmbTo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbTo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbTo.FocusedState.Parent = this.CmbTo;
+            this.CmbTo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbTo.ForeColor = System.Drawing.Color.Black;
+            this.CmbTo.HoverState.Parent = this.CmbTo;
+            this.CmbTo.ItemHeight = 22;
+            this.CmbTo.Items.AddRange(new object[] {
+            "- To -"});
+            this.CmbTo.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbTo.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbTo.ItemsAppearance.Parent = this.CmbTo;
+            this.CmbTo.Location = new System.Drawing.Point(501, 9);
+            this.CmbTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbTo.Name = "CmbTo";
+            this.CmbTo.ShadowDecoration.Parent = this.CmbTo;
+            this.CmbTo.Size = new System.Drawing.Size(237, 28);
+            this.CmbTo.StartIndex = 0;
+            this.CmbTo.TabIndex = 2;
+            // 
+            // CmbFrom
+            // 
+            this.CmbFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CmbFrom.BackColor = System.Drawing.Color.Transparent;
+            this.CmbFrom.BorderRadius = 5;
+            this.CmbFrom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbFrom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbFrom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbFrom.FocusedState.Parent = this.CmbFrom;
+            this.CmbFrom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbFrom.ForeColor = System.Drawing.Color.Black;
+            this.CmbFrom.HoverState.Parent = this.CmbFrom;
+            this.CmbFrom.ItemHeight = 22;
+            this.CmbFrom.Items.AddRange(new object[] {
+            "- From -"});
+            this.CmbFrom.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbFrom.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbFrom.ItemsAppearance.Parent = this.CmbFrom;
+            this.CmbFrom.Location = new System.Drawing.Point(418, 9);
+            this.CmbFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbFrom.Name = "CmbFrom";
+            this.CmbFrom.ShadowDecoration.Parent = this.CmbFrom;
+            this.CmbFrom.Size = new System.Drawing.Size(75, 28);
+            this.CmbFrom.StartIndex = 0;
+            this.CmbFrom.TabIndex = 1;
+            // 
+            // DtFrom
+            // 
+            this.DtFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DtFrom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtFrom.BorderRadius = 5;
+            this.DtFrom.BorderThickness = 1;
+            this.DtFrom.CheckedState.Parent = this.DtFrom;
+            this.DtFrom.CustomFormat = "dd MMM yyyy";
+            this.DtFrom.FillColor = System.Drawing.Color.White;
+            this.DtFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtFrom.HoverState.Parent = this.DtFrom;
+            this.DtFrom.Location = new System.Drawing.Point(746, 9);
+            this.DtFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtFrom.Name = "DtFrom";
+            this.DtFrom.ShadowDecoration.Parent = this.DtFrom;
+            this.DtFrom.Size = new System.Drawing.Size(226, 43);
+            this.DtFrom.TabIndex = 3;
+            this.DtFrom.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            // 
+            // DtTo
+            // 
+            this.DtTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DtTo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtTo.BorderRadius = 5;
+            this.DtTo.BorderThickness = 1;
+            this.DtTo.CheckedState.Parent = this.DtTo;
+            this.DtTo.CustomFormat = "dd MMM yyyy";
+            this.DtTo.FillColor = System.Drawing.Color.White;
+            this.DtTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtTo.HoverState.Parent = this.DtTo;
+            this.DtTo.Location = new System.Drawing.Point(982, 9);
+            this.DtTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtTo.Name = "DtTo";
+            this.DtTo.ShadowDecoration.Parent = this.DtTo;
+            this.DtTo.Size = new System.Drawing.Size(238, 43);
+            this.DtTo.TabIndex = 4;
+            this.DtTo.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSearch.BorderRadius = 5;
+            this.BtnSearch.CheckedState.Parent = this.BtnSearch;
+            this.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSearch.CustomImages.Parent = this.BtnSearch;
+            this.BtnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnSearch.ForeColor = System.Drawing.Color.White;
+            this.BtnSearch.HoverState.Parent = this.BtnSearch;
+            this.BtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearch.Image")));
+            this.BtnSearch.ImageSize = new System.Drawing.Size(15, 15);
+            this.BtnSearch.Location = new System.Drawing.Point(1227, 7);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.ShadowDecoration.Parent = this.BtnSearch;
+            this.BtnSearch.Size = new System.Drawing.Size(43, 43);
+            this.BtnSearch.TabIndex = 5;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // FrmFlights
             // 

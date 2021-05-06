@@ -17,12 +17,12 @@ namespace HassilBook
         {
             InitializeComponent();
             F = f;
-            DtRegistrationDate.Text = DateTime.Now.ToString();
+            DtRegistrationDate.Text = DateTime.Now.ToShortDateString();
         }
 
         private void ClearComponents()
         {
-            DtRegistrationDate.Text = DateTime.Now.ToString();
+            DtRegistrationDate.Text = DateTime.Now.ToShortDateString();
             TxtRegistrationNumber.Text = string.Empty;
             TxtModel.Text = string.Empty;
             TxtManufacturer.Text = string.Empty;

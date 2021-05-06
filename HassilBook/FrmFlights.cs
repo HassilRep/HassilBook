@@ -19,9 +19,9 @@ namespace HassilBook
 
         private void Clear()
         {
-            DtFrom.Text = DateTime.Now.ToString();
-            DtTo.Text = DateTime.Now.ToString();
-            DtDepDate.Text = DateTime.Now.ToString();
+            DtFrom.Text = DateTime.Now.ToShortDateString();
+            DtTo.Text = DateTime.Now.ToShortDateString();
+            DtDepDate.Text = DateTime.Now.ToShortDateString();
 
             LoadFlightID();
             LoadFlights();
