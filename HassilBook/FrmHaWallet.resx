@@ -139,19 +139,19 @@
   </data>
   <data name="TxtAmount.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACySURBVChTvZBBCsIwFER7EV258CbuFHThHTX9+bEkMXgHl+7cW6TV2gPoTzsQRV3qg4FhZij5
-        zf7LqiiGpG1O7M4QGbMdoX6lG7OrRXfRAYq+Zg4DzBL4chy0ZPycNnYm/oJsjVlCwlssNbu9Yj8RT6Im
-        ZqIrZgkJW5QnzXaXs1uKD8gazBKkPaMsc+OnWtuF+ArZ+5NUEcZS9Ecbd+zUj6uPR0eefmu8p5Fnqa/j
-        H5FlD/vlqBDr3rgpAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAALJJREFUKFO9
+        kEEKwjAURHsRXbnwJu4UdOEdNf35sSQxeAeX7txbpNXaA+hPOxBFXeqDgWFmKPnN/suqKIakbU7szhAZ
+        sx2hfqUbs6tFd9EBir5mDgPMEvhyHLRk/Jw2dib+gmyNWULCWyw1u71iPxFPoiZmoitmCQlblCfNdpez
+        W4oPyBrMEqQ9oyxz46da24X4Ctn7k1QRxlL0Rxt37NSPq49HR55+a7ynkWepr+MfkWUP++WoEOveuCkA
+        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="TxtDescription.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAABsSURBVChTYyALrN243W/dhm0d+PCGDdt8ocoZGIACP4H4PwH8HaocrAEsuHb91gaoEByAxKDy
-        /6BCCA0EMKYG+tuApBhDAzGhhNAAjYdyPPg+ECM0EAJr126TWbd+2y0olziwfv12BQYGBgYAHHnt5yDw
-        g/oAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAGxJREFUKFNj
+        IAus3bjdb92GbR348IYN23yhyhkYgAI/gfg/AfwdqhysASy4dv3WBqgQHIDEoPL/oEIIDQQwpgb624Ck
+        GEMDMaGE0ACNh3I8+D4QIzQQAmvXbpNZt37bLSiXOLB+/XYFBgYGBgAcee3nIPCD+gAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="TxtWalletID.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

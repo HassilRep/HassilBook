@@ -30,16 +30,21 @@ namespace HassilBook
         private void InitializeComponent()
         {
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHaWallet));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHaWallet));
             this.BtnHistory = new Guna.UI2.WinForms.Guna2Button();
             this.BtnPayments = new Guna.UI2.WinForms.Guna2Button();
             this.WalletPage = new Bunifu.UI.WinForms.BunifuPages();
             this.Payments = new System.Windows.Forms.TabPage();
+            this.BtnSearchPayment = new Guna.UI2.WinForms.Guna2Button();
+            this.DtTranTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DtTranFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.CmbAgency = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblCounter = new System.Windows.Forms.Label();
             this.DtTransactionDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.TxtAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtDescription = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,25 +52,6 @@ namespace HassilBook
             this.CmbCompanies = new Guna.UI2.WinForms.Guna2ComboBox();
             this.TxtWalletID = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGClientWalletPaymentTransactions = new System.Windows.Forms.DataGridView();
-            this.History = new System.Windows.Forms.TabPage();
-            this.DGClientAgencyHaWallet = new System.Windows.Forms.DataGridView();
-            this.BtnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.DtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.DtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.CmbAgencies = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LblCounter = new System.Windows.Forms.Label();
-            this.BtnSearchPayment = new Guna.UI2.WinForms.Guna2Button();
-            this.DtTranTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.DtTranFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.CmbAgency = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +61,20 @@ namespace HassilBook
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UPDATE = new System.Windows.Forms.DataGridViewImageColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.History = new System.Windows.Forms.TabPage();
+            this.BtnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.DtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.CmbAgencies = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DGClientAgencyHaWallet = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WalletPage.SuspendLayout();
             this.Payments.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -185,6 +185,99 @@ namespace HassilBook
             this.Payments.TabIndex = 0;
             this.Payments.Text = "tabPage1";
             // 
+            // BtnSearchPayment
+            // 
+            this.BtnSearchPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSearchPayment.BorderRadius = 5;
+            this.BtnSearchPayment.CheckedState.Parent = this.BtnSearchPayment;
+            this.BtnSearchPayment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSearchPayment.CustomImages.Parent = this.BtnSearchPayment;
+            this.BtnSearchPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnSearchPayment.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnSearchPayment.ForeColor = System.Drawing.Color.White;
+            this.BtnSearchPayment.HoverState.Parent = this.BtnSearchPayment;
+            this.BtnSearchPayment.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearchPayment.Image")));
+            this.BtnSearchPayment.ImageSize = new System.Drawing.Size(15, 15);
+            this.BtnSearchPayment.Location = new System.Drawing.Point(1228, 7);
+            this.BtnSearchPayment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnSearchPayment.Name = "BtnSearchPayment";
+            this.BtnSearchPayment.ShadowDecoration.Parent = this.BtnSearchPayment;
+            this.BtnSearchPayment.Size = new System.Drawing.Size(43, 43);
+            this.BtnSearchPayment.TabIndex = 49;
+            this.BtnSearchPayment.Click += new System.EventHandler(this.BtnSearchPayment_Click);
+            // 
+            // DtTranTo
+            // 
+            this.DtTranTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DtTranTo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtTranTo.BorderRadius = 5;
+            this.DtTranTo.BorderThickness = 1;
+            this.DtTranTo.CheckedState.Parent = this.DtTranTo;
+            this.DtTranTo.CustomFormat = "dd MMM yyyy";
+            this.DtTranTo.FillColor = System.Drawing.Color.White;
+            this.DtTranTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtTranTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtTranTo.HoverState.Parent = this.DtTranTo;
+            this.DtTranTo.Location = new System.Drawing.Point(983, 9);
+            this.DtTranTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtTranTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtTranTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtTranTo.Name = "DtTranTo";
+            this.DtTranTo.ShadowDecoration.Parent = this.DtTranTo;
+            this.DtTranTo.Size = new System.Drawing.Size(238, 43);
+            this.DtTranTo.TabIndex = 48;
+            this.DtTranTo.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            // 
+            // DtTranFrom
+            // 
+            this.DtTranFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DtTranFrom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtTranFrom.BorderRadius = 5;
+            this.DtTranFrom.BorderThickness = 1;
+            this.DtTranFrom.CheckedState.Parent = this.DtTranFrom;
+            this.DtTranFrom.CustomFormat = "dd MMM yyyy";
+            this.DtTranFrom.FillColor = System.Drawing.Color.White;
+            this.DtTranFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtTranFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtTranFrom.HoverState.Parent = this.DtTranFrom;
+            this.DtTranFrom.Location = new System.Drawing.Point(747, 9);
+            this.DtTranFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtTranFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtTranFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtTranFrom.Name = "DtTranFrom";
+            this.DtTranFrom.ShadowDecoration.Parent = this.DtTranFrom;
+            this.DtTranFrom.Size = new System.Drawing.Size(226, 43);
+            this.DtTranFrom.TabIndex = 47;
+            this.DtTranFrom.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            // 
+            // CmbAgency
+            // 
+            this.CmbAgency.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CmbAgency.BackColor = System.Drawing.Color.Transparent;
+            this.CmbAgency.BorderRadius = 5;
+            this.CmbAgency.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbAgency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbAgency.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbAgency.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbAgency.FocusedState.Parent = this.CmbAgency;
+            this.CmbAgency.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbAgency.ForeColor = System.Drawing.Color.Black;
+            this.CmbAgency.HoverState.Parent = this.CmbAgency;
+            this.CmbAgency.ItemHeight = 22;
+            this.CmbAgency.Items.AddRange(new object[] {
+            "- Agency -"});
+            this.CmbAgency.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.CmbAgency.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.CmbAgency.ItemsAppearance.Parent = this.CmbAgency;
+            this.CmbAgency.Location = new System.Drawing.Point(423, 9);
+            this.CmbAgency.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbAgency.Name = "CmbAgency";
+            this.CmbAgency.ShadowDecoration.Parent = this.CmbAgency;
+            this.CmbAgency.Size = new System.Drawing.Size(316, 28);
+            this.CmbAgency.StartIndex = 0;
+            this.CmbAgency.TabIndex = 46;
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -203,6 +296,16 @@ namespace HassilBook
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(400, 776);
             this.guna2Panel1.TabIndex = 44;
+            // 
+            // LblCounter
+            // 
+            this.LblCounter.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.LblCounter.Location = new System.Drawing.Point(291, 402);
+            this.LblCounter.Name = "LblCounter";
+            this.LblCounter.Size = new System.Drawing.Size(100, 23);
+            this.LblCounter.TabIndex = 27;
+            this.LblCounter.Text = "[0/150]";
+            this.LblCounter.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // DtTransactionDate
             // 
@@ -411,6 +514,88 @@ namespace HassilBook
             this.DGClientWalletPaymentTransactions.TabIndex = 40;
             this.DGClientWalletPaymentTransactions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientWalletPaymentTransactions_CellContentClick);
             // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "#";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 54;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "ID";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 61;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column5.HeaderText = "DATE";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 84;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column9.HeaderText = "AGENCY";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 110;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "DESCRIPTION";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "AMOUNT";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 118;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column6.HeaderText = "USERNAME";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 134;
+            // 
+            // UPDATE
+            // 
+            this.UPDATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.UPDATE.HeaderText = "EDIT";
+            this.UPDATE.Image = ((System.Drawing.Image)(resources.GetObject("UPDATE.Image")));
+            this.UPDATE.MinimumWidth = 8;
+            this.UPDATE.Name = "UPDATE";
+            this.UPDATE.ReadOnly = true;
+            this.UPDATE.Width = 49;
+            // 
+            // DELETE
+            // 
+            this.DELETE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DELETE.HeaderText = "DEL";
+            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
+            this.DELETE.MinimumWidth = 8;
+            this.DELETE.Name = "DELETE";
+            this.DELETE.ReadOnly = true;
+            this.DELETE.Width = 43;
+            // 
             // History
             // 
             this.History.BackColor = System.Drawing.Color.White;
@@ -426,58 +611,6 @@ namespace HassilBook
             this.History.Size = new System.Drawing.Size(1287, 847);
             this.History.TabIndex = 1;
             this.History.Text = "tabPage2";
-            // 
-            // DGClientAgencyHaWallet
-            // 
-            this.DGClientAgencyHaWallet.AllowUserToAddRows = false;
-            this.DGClientAgencyHaWallet.AllowUserToResizeColumns = false;
-            this.DGClientAgencyHaWallet.AllowUserToResizeRows = false;
-            this.DGClientAgencyHaWallet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGClientAgencyHaWallet.BackgroundColor = System.Drawing.Color.White;
-            this.DGClientAgencyHaWallet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGClientAgencyHaWallet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGClientAgencyHaWallet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DGClientAgencyHaWallet.ColumnHeadersHeight = 25;
-            this.DGClientAgencyHaWallet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGClientAgencyHaWallet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.Column10,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.Column7,
-            this.dataGridViewTextBoxColumn8,
-            this.Column8});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGClientAgencyHaWallet.DefaultCellStyle = dataGridViewCellStyle4;
-            this.DGClientAgencyHaWallet.EnableHeadersVisualStyles = false;
-            this.DGClientAgencyHaWallet.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientAgencyHaWallet.Location = new System.Drawing.Point(11, 57);
-            this.DGClientAgencyHaWallet.Margin = new System.Windows.Forms.Padding(0);
-            this.DGClientAgencyHaWallet.Name = "DGClientAgencyHaWallet";
-            this.DGClientAgencyHaWallet.ReadOnly = true;
-            this.DGClientAgencyHaWallet.RowHeadersVisible = false;
-            this.DGClientAgencyHaWallet.RowHeadersWidth = 61;
-            this.DGClientAgencyHaWallet.RowTemplate.Height = 25;
-            this.DGClientAgencyHaWallet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DGClientAgencyHaWallet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientAgencyHaWallet.Size = new System.Drawing.Size(1255, 785);
-            this.DGClientAgencyHaWallet.TabIndex = 45;
             // 
             // BtnSearch
             // 
@@ -570,6 +703,58 @@ namespace HassilBook
             this.CmbAgencies.StartIndex = 0;
             this.CmbAgencies.TabIndex = 46;
             // 
+            // DGClientAgencyHaWallet
+            // 
+            this.DGClientAgencyHaWallet.AllowUserToAddRows = false;
+            this.DGClientAgencyHaWallet.AllowUserToResizeColumns = false;
+            this.DGClientAgencyHaWallet.AllowUserToResizeRows = false;
+            this.DGClientAgencyHaWallet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGClientAgencyHaWallet.BackgroundColor = System.Drawing.Color.White;
+            this.DGClientAgencyHaWallet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGClientAgencyHaWallet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGClientAgencyHaWallet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGClientAgencyHaWallet.ColumnHeadersHeight = 25;
+            this.DGClientAgencyHaWallet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGClientAgencyHaWallet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.Column10,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.Column7,
+            this.dataGridViewTextBoxColumn8,
+            this.Column8});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGClientAgencyHaWallet.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DGClientAgencyHaWallet.EnableHeadersVisualStyles = false;
+            this.DGClientAgencyHaWallet.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DGClientAgencyHaWallet.Location = new System.Drawing.Point(11, 57);
+            this.DGClientAgencyHaWallet.Margin = new System.Windows.Forms.Padding(0);
+            this.DGClientAgencyHaWallet.Name = "DGClientAgencyHaWallet";
+            this.DGClientAgencyHaWallet.ReadOnly = true;
+            this.DGClientAgencyHaWallet.RowHeadersVisible = false;
+            this.DGClientAgencyHaWallet.RowHeadersWidth = 61;
+            this.DGClientAgencyHaWallet.RowTemplate.Height = 25;
+            this.DGClientAgencyHaWallet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DGClientAgencyHaWallet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGClientAgencyHaWallet.Size = new System.Drawing.Size(1255, 785);
+            this.DGClientAgencyHaWallet.TabIndex = 45;
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -640,189 +825,6 @@ namespace HassilBook
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             this.Column8.Width = 201;
-            // 
-            // LblCounter
-            // 
-            this.LblCounter.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.LblCounter.Location = new System.Drawing.Point(291, 402);
-            this.LblCounter.Name = "LblCounter";
-            this.LblCounter.Size = new System.Drawing.Size(100, 23);
-            this.LblCounter.TabIndex = 27;
-            this.LblCounter.Text = "[0/150]";
-            this.LblCounter.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // BtnSearchPayment
-            // 
-            this.BtnSearchPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSearchPayment.BorderRadius = 5;
-            this.BtnSearchPayment.CheckedState.Parent = this.BtnSearchPayment;
-            this.BtnSearchPayment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSearchPayment.CustomImages.Parent = this.BtnSearchPayment;
-            this.BtnSearchPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnSearchPayment.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnSearchPayment.ForeColor = System.Drawing.Color.White;
-            this.BtnSearchPayment.HoverState.Parent = this.BtnSearchPayment;
-            this.BtnSearchPayment.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearchPayment.Image")));
-            this.BtnSearchPayment.ImageSize = new System.Drawing.Size(15, 15);
-            this.BtnSearchPayment.Location = new System.Drawing.Point(1228, 7);
-            this.BtnSearchPayment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnSearchPayment.Name = "BtnSearchPayment";
-            this.BtnSearchPayment.ShadowDecoration.Parent = this.BtnSearchPayment;
-            this.BtnSearchPayment.Size = new System.Drawing.Size(43, 43);
-            this.BtnSearchPayment.TabIndex = 49;
-            this.BtnSearchPayment.Click += new System.EventHandler(this.BtnSearchPayment_Click);
-            // 
-            // DtTranTo
-            // 
-            this.DtTranTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtTranTo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.DtTranTo.BorderRadius = 5;
-            this.DtTranTo.BorderThickness = 1;
-            this.DtTranTo.CheckedState.Parent = this.DtTranTo;
-            this.DtTranTo.FillColor = System.Drawing.Color.White;
-            this.DtTranTo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DtTranTo.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DtTranTo.HoverState.Parent = this.DtTranTo;
-            this.DtTranTo.Location = new System.Drawing.Point(983, 9);
-            this.DtTranTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DtTranTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DtTranTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DtTranTo.Name = "DtTranTo";
-            this.DtTranTo.ShadowDecoration.Parent = this.DtTranTo;
-            this.DtTranTo.Size = new System.Drawing.Size(238, 43);
-            this.DtTranTo.TabIndex = 48;
-            this.DtTranTo.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
-            // 
-            // DtTranFrom
-            // 
-            this.DtTranFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtTranFrom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.DtTranFrom.BorderRadius = 5;
-            this.DtTranFrom.BorderThickness = 1;
-            this.DtTranFrom.CheckedState.Parent = this.DtTranFrom;
-            this.DtTranFrom.FillColor = System.Drawing.Color.White;
-            this.DtTranFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DtTranFrom.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DtTranFrom.HoverState.Parent = this.DtTranFrom;
-            this.DtTranFrom.Location = new System.Drawing.Point(747, 9);
-            this.DtTranFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DtTranFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DtTranFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DtTranFrom.Name = "DtTranFrom";
-            this.DtTranFrom.ShadowDecoration.Parent = this.DtTranFrom;
-            this.DtTranFrom.Size = new System.Drawing.Size(226, 43);
-            this.DtTranFrom.TabIndex = 47;
-            this.DtTranFrom.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
-            // 
-            // CmbAgency
-            // 
-            this.CmbAgency.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CmbAgency.BackColor = System.Drawing.Color.Transparent;
-            this.CmbAgency.BorderRadius = 5;
-            this.CmbAgency.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbAgency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbAgency.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbAgency.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbAgency.FocusedState.Parent = this.CmbAgency;
-            this.CmbAgency.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbAgency.ForeColor = System.Drawing.Color.Black;
-            this.CmbAgency.HoverState.Parent = this.CmbAgency;
-            this.CmbAgency.ItemHeight = 22;
-            this.CmbAgency.Items.AddRange(new object[] {
-            "- Agency -"});
-            this.CmbAgency.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.CmbAgency.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.CmbAgency.ItemsAppearance.Parent = this.CmbAgency;
-            this.CmbAgency.Location = new System.Drawing.Point(423, 9);
-            this.CmbAgency.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbAgency.Name = "CmbAgency";
-            this.CmbAgency.ShadowDecoration.Parent = this.CmbAgency;
-            this.CmbAgency.Size = new System.Drawing.Size(316, 28);
-            this.CmbAgency.StartIndex = 0;
-            this.CmbAgency.TabIndex = 46;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "#";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 54;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "ID";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 61;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "DATE";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 84;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "AGENCY";
-            this.Column9.MinimumWidth = 8;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 110;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "DESCRIPTION";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "AMOUNT";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 118;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "USERNAME";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 134;
-            // 
-            // UPDATE
-            // 
-            this.UPDATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.UPDATE.HeaderText = "EDIT";
-            this.UPDATE.Image = ((System.Drawing.Image)(resources.GetObject("UPDATE.Image")));
-            this.UPDATE.MinimumWidth = 8;
-            this.UPDATE.Name = "UPDATE";
-            this.UPDATE.ReadOnly = true;
-            this.UPDATE.Width = 49;
-            // 
-            // DELETE
-            // 
-            this.DELETE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.DELETE.HeaderText = "DEL";
-            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
-            this.DELETE.MinimumWidth = 8;
-            this.DELETE.Name = "DELETE";
-            this.DELETE.ReadOnly = true;
-            this.DELETE.Width = 43;
             // 
             // FrmHaWallet
             // 
