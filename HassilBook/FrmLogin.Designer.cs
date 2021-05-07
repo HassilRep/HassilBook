@@ -65,10 +65,10 @@ namespace HassilBook
             this.LoginTabForm.Location = new System.Drawing.Point(242, 209);
             this.LoginTabForm.Multiline = true;
             this.LoginTabForm.Name = "LoginTabForm";
-            this.LoginTabForm.Page = this.AirlineLoginPage;
-            this.LoginTabForm.PageIndex = 0;
-            this.LoginTabForm.PageName = "AirlineLoginPage";
-            this.LoginTabForm.PageTitle = "tabPage1";
+            this.LoginTabForm.Page = this.AgencyLoginPage;
+            this.LoginTabForm.PageIndex = 1;
+            this.LoginTabForm.PageName = "AgencyLoginPage";
+            this.LoginTabForm.PageTitle = "tabPage2";
             this.LoginTabForm.SelectedIndex = 0;
             this.LoginTabForm.Size = new System.Drawing.Size(482, 388);
             this.LoginTabForm.TabIndex = 1;
@@ -100,7 +100,7 @@ namespace HassilBook
             this.AirlineLoginPage.Controls.Add(this.TxtAirUsername);
             this.AirlineLoginPage.Location = new System.Drawing.Point(4, 4);
             this.AirlineLoginPage.Name = "AirlineLoginPage";
-            this.AirlineLoginPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.AirlineLoginPage.Padding = new System.Windows.Forms.Padding(3);
             this.AirlineLoginPage.Size = new System.Drawing.Size(474, 355);
             this.AirlineLoginPage.TabIndex = 0;
             this.AirlineLoginPage.Text = "tabPage1";
@@ -252,7 +252,7 @@ namespace HassilBook
             this.AgencyLoginPage.Controls.Add(this.TxtAgencyUsername);
             this.AgencyLoginPage.Location = new System.Drawing.Point(4, 4);
             this.AgencyLoginPage.Name = "AgencyLoginPage";
-            this.AgencyLoginPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.AgencyLoginPage.Padding = new System.Windows.Forms.Padding(3);
             this.AgencyLoginPage.Size = new System.Drawing.Size(474, 355);
             this.AgencyLoginPage.TabIndex = 1;
             this.AgencyLoginPage.Text = "tabPage2";
@@ -262,7 +262,7 @@ namespace HassilBook
             // 
             this.TxtAgencyID.BorderRadius = 5;
             this.TxtAgencyID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtAgencyID.DefaultText = "";
+            this.TxtAgencyID.DefaultText = "AG0001";
             this.TxtAgencyID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtAgencyID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtAgencyID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -282,6 +282,7 @@ namespace HassilBook
             this.TxtAgencyID.PasswordChar = '\0';
             this.TxtAgencyID.PlaceholderText = "Your agency ID";
             this.TxtAgencyID.SelectedText = "";
+            this.TxtAgencyID.SelectionStart = 6;
             this.TxtAgencyID.ShadowDecoration.Parent = this.TxtAgencyID;
             this.TxtAgencyID.Size = new System.Drawing.Size(414, 43);
             this.TxtAgencyID.TabIndex = 1;
@@ -301,7 +302,7 @@ namespace HassilBook
             // 
             this.TxtAgencyPassword.BorderRadius = 5;
             this.TxtAgencyPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtAgencyPassword.DefaultText = "";
+            this.TxtAgencyPassword.DefaultText = "123456";
             this.TxtAgencyPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtAgencyPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtAgencyPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -321,6 +322,7 @@ namespace HassilBook
             this.TxtAgencyPassword.PasswordChar = '\0';
             this.TxtAgencyPassword.PlaceholderText = "Your password";
             this.TxtAgencyPassword.SelectedText = "";
+            this.TxtAgencyPassword.SelectionStart = 6;
             this.TxtAgencyPassword.ShadowDecoration.Parent = this.TxtAgencyPassword;
             this.TxtAgencyPassword.Size = new System.Drawing.Size(414, 43);
             this.TxtAgencyPassword.TabIndex = 3;
@@ -343,6 +345,7 @@ namespace HassilBook
             this.BtnLoginAgency.Size = new System.Drawing.Size(414, 43);
             this.BtnLoginAgency.TabIndex = 4;
             this.BtnLoginAgency.Text = "LOG IN";
+            this.BtnLoginAgency.Click += new System.EventHandler(this.BtnLoginAgency_Click);
             // 
             // BtnAgencyExit
             // 
@@ -366,7 +369,7 @@ namespace HassilBook
             // 
             this.TxtAgencyUsername.BorderRadius = 5;
             this.TxtAgencyUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtAgencyUsername.DefaultText = "";
+            this.TxtAgencyUsername.DefaultText = "info@hassildesk.com";
             this.TxtAgencyUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtAgencyUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtAgencyUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -386,6 +389,7 @@ namespace HassilBook
             this.TxtAgencyUsername.PasswordChar = '\0';
             this.TxtAgencyUsername.PlaceholderText = "Your email or username";
             this.TxtAgencyUsername.SelectedText = "";
+            this.TxtAgencyUsername.SelectionStart = 19;
             this.TxtAgencyUsername.ShadowDecoration.Parent = this.TxtAgencyUsername;
             this.TxtAgencyUsername.Size = new System.Drawing.Size(414, 43);
             this.TxtAgencyUsername.TabIndex = 2;

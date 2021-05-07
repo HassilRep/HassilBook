@@ -263,7 +263,7 @@ namespace HassilBook
 
                         FlpFlightSearchResults.Controls.Clear();
                         Flight f = new Flight();
-                        var flight = f.EconomySearch(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"));
+                        var flight = f.SearchEconomyFromAllAirlines(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"));
                         UcFoundFlights[] uc = new UcFoundFlights[flight.Count];
                         for (int i = 0; i < uc.Length; i++)
                         {
@@ -341,7 +341,7 @@ namespace HassilBook
 
                         FlpFlightSearchResults.Controls.Clear();
                         Flight f = new Flight();
-                        var flight = f.BusinessSearch(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"));
+                        var flight = f.SearchBusinessFromSingleAirline(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"));
                         UcFoundFlights[] uc = new UcFoundFlights[flight.Count];
                         for (int i = 0; i < uc.Length; i++)
                         {

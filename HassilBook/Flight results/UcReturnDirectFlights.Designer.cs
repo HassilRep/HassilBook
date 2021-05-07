@@ -1,7 +1,7 @@
 ﻿
 namespace HassilBook
 {
-    partial class UcOnewayDirectFlights
+    partial class UcReturnDirectFlights
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace HassilBook
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcOnewayDirectFlights));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcReturnDirectFlights));
             this.pnlPrice = new Guna.UI2.WinForms.Guna2Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.LblPrice = new System.Windows.Forms.Label();
@@ -65,7 +65,6 @@ namespace HassilBook
             this.pnlFlights = new Guna.UI2.WinForms.Guna2Panel();
             this.PbLogo2 = new Guna.UI2.WinForms.Guna2Button();
             this.PbLogo1 = new Guna.UI2.WinForms.Guna2Button();
-            this.LblNumberOfStops = new System.Windows.Forms.Label();
             this.LblDuration = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -78,9 +77,28 @@ namespace HassilBook
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.LblFrom = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblDepartureTime = new System.Windows.Forms.Label();
             this.LblFromAndDepDate = new System.Windows.Forms.Label();
             this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2VSeparator3 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2VSeparator4 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlPrice.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -88,6 +106,7 @@ namespace HassilBook
             this.guna2Panel3.SuspendLayout();
             this.pnlFlights.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPrice
@@ -431,7 +450,7 @@ namespace HassilBook
             this.guna2Panel2.ShadowDecoration.Depth = 5;
             this.guna2Panel2.ShadowDecoration.Enabled = true;
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(268, 229);
+            this.guna2Panel2.Size = new System.Drawing.Size(268, 469);
             this.guna2Panel2.TabIndex = 19;
             // 
             // guna2Panel4
@@ -439,7 +458,7 @@ namespace HassilBook
             this.guna2Panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel4.Controls.Add(this.LblTotalPrice);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 181);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 421);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
@@ -517,7 +536,6 @@ namespace HassilBook
             this.pnlFlights.BackColor = System.Drawing.Color.White;
             this.pnlFlights.Controls.Add(this.PbLogo2);
             this.pnlFlights.Controls.Add(this.PbLogo1);
-            this.pnlFlights.Controls.Add(this.LblNumberOfStops);
             this.pnlFlights.Controls.Add(this.LblDuration);
             this.pnlFlights.Controls.Add(this.label14);
             this.pnlFlights.Controls.Add(this.bunifuSeparator3);
@@ -530,7 +548,7 @@ namespace HassilBook
             this.pnlFlights.Controls.Add(this.bunifuSeparator1);
             this.pnlFlights.Controls.Add(this.bunifuSeparator2);
             this.pnlFlights.Controls.Add(this.LblFrom);
-            this.pnlFlights.Controls.Add(this.label1);
+            this.pnlFlights.Controls.Add(this.LblDepartureTime);
             this.pnlFlights.Controls.Add(this.LblFromAndDepDate);
             this.pnlFlights.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlFlights.Location = new System.Drawing.Point(15, 11);
@@ -541,7 +559,7 @@ namespace HassilBook
             this.pnlFlights.ShadowDecoration.Parent = this.pnlFlights;
             this.pnlFlights.Size = new System.Drawing.Size(878, 143);
             this.pnlFlights.TabIndex = 20;
-            this.pnlFlights.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.pnlFlights.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // PbLogo2
             // 
@@ -561,7 +579,7 @@ namespace HassilBook
             this.PbLogo2.ShadowDecoration.Parent = this.PbLogo2;
             this.PbLogo2.Size = new System.Drawing.Size(34, 35);
             this.PbLogo2.TabIndex = 47;
-            this.PbLogo2.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.PbLogo2.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // PbLogo1
             // 
@@ -581,19 +599,7 @@ namespace HassilBook
             this.PbLogo1.ShadowDecoration.Parent = this.PbLogo1;
             this.PbLogo1.Size = new System.Drawing.Size(34, 35);
             this.PbLogo1.TabIndex = 46;
-            this.PbLogo1.Click += new System.EventHandler(this.UcDirectFlights_Click);
-            // 
-            // LblNumberOfStops
-            // 
-            this.LblNumberOfStops.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNumberOfStops.Location = new System.Drawing.Point(198, 86);
-            this.LblNumberOfStops.Name = "LblNumberOfStops";
-            this.LblNumberOfStops.Size = new System.Drawing.Size(171, 43);
-            this.LblNumberOfStops.TabIndex = 19;
-            this.LblNumberOfStops.Text = "0 Stops";
-            this.LblNumberOfStops.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LblNumberOfStops.Visible = false;
-            this.LblNumberOfStops.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.PbLogo1.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // LblDuration
             // 
@@ -605,7 +611,7 @@ namespace HassilBook
             this.LblDuration.TabIndex = 17;
             this.LblDuration.Text = "2h 25m";
             this.LblDuration.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LblDuration.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.LblDuration.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // label14
             // 
@@ -617,7 +623,7 @@ namespace HassilBook
             this.label14.TabIndex = 16;
             this.label14.Text = "Duration";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label14.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.label14.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // bunifuSeparator3
             // 
@@ -635,7 +641,7 @@ namespace HassilBook
             this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
             this.bunifuSeparator3.Size = new System.Drawing.Size(22, 82);
             this.bunifuSeparator3.TabIndex = 15;
-            this.bunifuSeparator3.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.bunifuSeparator3.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // LblTo
             // 
@@ -646,7 +652,7 @@ namespace HassilBook
             this.LblTo.Size = new System.Drawing.Size(127, 28);
             this.LblTo.TabIndex = 14;
             this.LblTo.Text = "MOGADISHU";
-            this.LblTo.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.LblTo.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // LblArrivalTime
             // 
@@ -657,7 +663,7 @@ namespace HassilBook
             this.LblArrivalTime.Size = new System.Drawing.Size(88, 38);
             this.LblArrivalTime.TabIndex = 12;
             this.LblArrivalTime.Text = "04:25";
-            this.LblArrivalTime.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.LblArrivalTime.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // LblStops
             // 
@@ -668,7 +674,7 @@ namespace HassilBook
             this.LblStops.TabIndex = 14;
             this.LblStops.Text = "Stops";
             this.LblStops.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LblStops.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.LblStops.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // label4
             // 
@@ -680,7 +686,7 @@ namespace HassilBook
             this.label4.Size = new System.Drawing.Size(68, 28);
             this.label4.TabIndex = 4;
             this.label4.Text = "Details";
-            this.label4.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.label4.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // bunifuPictureBox1
             // 
@@ -697,7 +703,7 @@ namespace HassilBook
             this.bunifuPictureBox1.TabIndex = 1;
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            this.bunifuPictureBox1.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.bunifuPictureBox1.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // LblToAndArrDate
             // 
@@ -708,7 +714,7 @@ namespace HassilBook
             this.LblToAndArrDate.Size = new System.Drawing.Size(131, 28);
             this.LblToAndArrDate.TabIndex = 13;
             this.LblToAndArrDate.Text = "MGQ - 16 Apr";
-            this.LblToAndArrDate.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.LblToAndArrDate.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // bunifuSeparator1
             // 
@@ -726,7 +732,7 @@ namespace HassilBook
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
             this.bunifuSeparator1.Size = new System.Drawing.Size(22, 82);
             this.bunifuSeparator1.TabIndex = 0;
-            this.bunifuSeparator1.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.bunifuSeparator1.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // bunifuSeparator2
             // 
@@ -743,7 +749,7 @@ namespace HassilBook
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator2.Size = new System.Drawing.Size(244, 22);
             this.bunifuSeparator2.TabIndex = 7;
-            this.bunifuSeparator2.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.bunifuSeparator2.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // LblFrom
             // 
@@ -754,18 +760,18 @@ namespace HassilBook
             this.LblFrom.Size = new System.Drawing.Size(127, 28);
             this.LblFrom.TabIndex = 9;
             this.LblFrom.Text = "MOGADISHU";
-            this.LblFrom.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.LblFrom.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
-            // label1
+            // LblDepartureTime
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "04:25";
-            this.label1.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.LblDepartureTime.AutoSize = true;
+            this.LblDepartureTime.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDepartureTime.Location = new System.Drawing.Point(10, 15);
+            this.LblDepartureTime.Name = "LblDepartureTime";
+            this.LblDepartureTime.Size = new System.Drawing.Size(88, 38);
+            this.LblDepartureTime.TabIndex = 2;
+            this.LblDepartureTime.Text = "04:25";
+            this.LblDepartureTime.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // LblFromAndDepDate
             // 
@@ -776,28 +782,299 @@ namespace HassilBook
             this.LblFromAndDepDate.Size = new System.Drawing.Size(131, 28);
             this.LblFromAndDepDate.TabIndex = 3;
             this.LblFromAndDepDate.Text = "MGQ - 16 Apr";
-            this.LblFromAndDepDate.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.LblFromAndDepDate.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             // 
             // tmrAnimation
             // 
             this.tmrAnimation.Interval = 10;
             this.tmrAnimation.Tick += new System.EventHandler(this.tmrAnimation_Tick);
             // 
-            // UcOnewayDirectFlights
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BackColor = System.Drawing.Color.White;
+            this.guna2Panel5.Controls.Add(this.label2);
+            this.guna2Panel5.Controls.Add(this.label5);
+            this.guna2Panel5.Controls.Add(this.guna2Button1);
+            this.guna2Panel5.Controls.Add(this.label6);
+            this.guna2Panel5.Controls.Add(this.guna2Button6);
+            this.guna2Panel5.Controls.Add(this.label8);
+            this.guna2Panel5.Controls.Add(this.label9);
+            this.guna2Panel5.Controls.Add(this.label10);
+            this.guna2Panel5.Controls.Add(this.label11);
+            this.guna2Panel5.Controls.Add(this.label12);
+            this.guna2Panel5.Controls.Add(this.guna2Button8);
+            this.guna2Panel5.Controls.Add(this.label13);
+            this.guna2Panel5.Controls.Add(this.label15);
+            this.guna2Panel5.Controls.Add(this.guna2Button9);
+            this.guna2Panel5.Controls.Add(this.guna2VSeparator3);
+            this.guna2Panel5.Controls.Add(this.guna2VSeparator4);
+            this.guna2Panel5.Controls.Add(this.guna2Button10);
+            this.guna2Panel5.Controls.Add(this.guna2Button11);
+            this.guna2Panel5.Location = new System.Drawing.Point(15, 414);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.BorderRadius = 3;
+            this.guna2Panel5.ShadowDecoration.Depth = 5;
+            this.guna2Panel5.ShadowDecoration.Enabled = true;
+            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
+            this.guna2Panel5.Size = new System.Drawing.Size(878, 229);
+            this.guna2Panel5.TabIndex = 46;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            this.label2.Location = new System.Drawing.Point(615, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(250, 54);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "ECONOMY";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(190, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(383, 28);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "04:25 - Aden Abdulle Internation Airport";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.LightGray;
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2Button1.Location = new System.Drawing.Point(657, 177);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(36, 26);
+            this.guna2Button1.TabIndex = 43;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(696, 177);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 28);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Refundable";
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.BorderColor = System.Drawing.Color.LightGray;
+            this.guna2Button6.BorderRadius = 5;
+            this.guna2Button6.CheckedState.Parent = this.guna2Button6;
+            this.guna2Button6.CustomImages.Parent = this.guna2Button6;
+            this.guna2Button6.FillColor = System.Drawing.Color.White;
+            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button6.ForeColor = System.Drawing.Color.White;
+            this.guna2Button6.HoverState.Parent = this.guna2Button6;
+            this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
+            this.guna2Button6.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2Button6.Location = new System.Drawing.Point(657, 135);
+            this.guna2Button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
+            this.guna2Button6.Size = new System.Drawing.Size(36, 26);
+            this.guna2Button6.TabIndex = 41;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(696, 135);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(142, 28);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Baggage 30kg";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(194, 62);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(115, 23);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "SE 524 Boeng";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(194, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 23);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "Operated by";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(194, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(146, 28);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Somali Airlines";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(12, 29);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 25);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Wed, 21 Apr";
+            // 
+            // guna2Button8
+            // 
+            this.guna2Button8.BorderColor = System.Drawing.Color.LightGray;
+            this.guna2Button8.BorderRadius = 5;
+            this.guna2Button8.CheckedState.Parent = this.guna2Button8;
+            this.guna2Button8.CustomImages.Parent = this.guna2Button8;
+            this.guna2Button8.FillColor = System.Drawing.Color.White;
+            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button8.ForeColor = System.Drawing.Color.White;
+            this.guna2Button8.HoverState.Parent = this.guna2Button8;
+            this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
+            this.guna2Button8.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2Button8.Location = new System.Drawing.Point(657, 94);
+            this.guna2Button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.ShadowDecoration.Parent = this.guna2Button8;
+            this.guna2Button8.Size = new System.Drawing.Size(36, 26);
+            this.guna2Button8.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(190, 185);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(395, 28);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "09:50 - Bender Qassim Internation Airport";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label15.Location = new System.Drawing.Point(696, 94);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(161, 28);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "3 Seats available";
+            // 
+            // guna2Button9
+            // 
+            this.guna2Button9.BorderColor = System.Drawing.Color.LightGray;
+            this.guna2Button9.BorderRadius = 5;
+            this.guna2Button9.CheckedState.Parent = this.guna2Button9;
+            this.guna2Button9.CustomImages.Parent = this.guna2Button9;
+            this.guna2Button9.FillColor = System.Drawing.Color.White;
+            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button9.ForeColor = System.Drawing.Color.White;
+            this.guna2Button9.HoverState.Parent = this.guna2Button9;
+            this.guna2Button9.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button9.Image")));
+            this.guna2Button9.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2Button9.Location = new System.Drawing.Point(147, 185);
+            this.guna2Button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.ShadowDecoration.Parent = this.guna2Button9;
+            this.guna2Button9.Size = new System.Drawing.Size(36, 26);
+            this.guna2Button9.TabIndex = 4;
+            // 
+            // guna2VSeparator3
+            // 
+            this.guna2VSeparator3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.guna2VSeparator3.Location = new System.Drawing.Point(156, 138);
+            this.guna2VSeparator3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2VSeparator3.Name = "guna2VSeparator3";
+            this.guna2VSeparator3.Size = new System.Drawing.Size(15, 38);
+            this.guna2VSeparator3.TabIndex = 3;
+            // 
+            // guna2VSeparator4
+            // 
+            this.guna2VSeparator4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.guna2VSeparator4.Location = new System.Drawing.Point(156, 77);
+            this.guna2VSeparator4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2VSeparator4.Name = "guna2VSeparator4";
+            this.guna2VSeparator4.Size = new System.Drawing.Size(15, 25);
+            this.guna2VSeparator4.TabIndex = 2;
+            // 
+            // guna2Button10
+            // 
+            this.guna2Button10.BorderColor = System.Drawing.Color.LightGray;
+            this.guna2Button10.BorderRadius = 5;
+            this.guna2Button10.CheckedState.Parent = this.guna2Button10;
+            this.guna2Button10.CustomImages.Parent = this.guna2Button10;
+            this.guna2Button10.FillColor = System.Drawing.Color.White;
+            this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button10.ForeColor = System.Drawing.Color.White;
+            this.guna2Button10.HoverState.Parent = this.guna2Button10;
+            this.guna2Button10.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button10.Image")));
+            this.guna2Button10.ImageSize = new System.Drawing.Size(10, 10);
+            this.guna2Button10.Location = new System.Drawing.Point(147, 106);
+            this.guna2Button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button10.Name = "guna2Button10";
+            this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
+            this.guna2Button10.Size = new System.Drawing.Size(36, 26);
+            this.guna2Button10.TabIndex = 1;
+            // 
+            // guna2Button11
+            // 
+            this.guna2Button11.BorderColor = System.Drawing.Color.LightGray;
+            this.guna2Button11.BorderRadius = 5;
+            this.guna2Button11.BorderThickness = 1;
+            this.guna2Button11.CheckedState.Parent = this.guna2Button11;
+            this.guna2Button11.CustomImages.Parent = this.guna2Button11;
+            this.guna2Button11.FillColor = System.Drawing.Color.White;
+            this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button11.ForeColor = System.Drawing.Color.White;
+            this.guna2Button11.HoverState.Parent = this.guna2Button11;
+            this.guna2Button11.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button11.Image")));
+            this.guna2Button11.Location = new System.Drawing.Point(141, 22);
+            this.guna2Button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button11.Name = "guna2Button11";
+            this.guna2Button11.ShadowDecoration.Parent = this.guna2Button11;
+            this.guna2Button11.Size = new System.Drawing.Size(45, 46);
+            this.guna2Button11.TabIndex = 0;
+            // 
+            // UcReturnDirectFlights
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.pnlFlights);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlPrice);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1190, 415);
+            this.MaximumSize = new System.Drawing.Size(1190, 649);
             this.MinimumSize = new System.Drawing.Size(1190, 162);
-            this.Name = "UcOnewayDirectFlights";
+            this.Name = "UcReturnDirectFlights";
             this.Size = new System.Drawing.Size(1190, 162);
-            this.Click += new System.EventHandler(this.UcDirectFlights_Click);
+            this.Click += new System.EventHandler(this.UcReturnDirectFlights_Click);
             this.pnlPrice.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -807,6 +1084,8 @@ namespace HassilBook
             this.pnlFlights.ResumeLayout(false);
             this.pnlFlights.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -827,7 +1106,6 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2Button BtnSelectFlight;
         public System.Windows.Forms.Label LblAdultPrice;
         private Guna.UI2.WinForms.Guna2Panel pnlFlights;
-        public System.Windows.Forms.Label LblNumberOfStops;
         public System.Windows.Forms.Label LblDuration;
         private System.Windows.Forms.Label label14;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
@@ -840,7 +1118,7 @@ namespace HassilBook
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         public System.Windows.Forms.Label LblFrom;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label LblDepartureTime;
         public System.Windows.Forms.Label LblFromAndDepDate;
         public System.Windows.Forms.Label LblAirType;
         public System.Windows.Forms.Label label7;
@@ -862,5 +1140,24 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2Button PbLogo2;
         private Guna.UI2.WinForms.Guna2Button PbLogo1;
         private System.Windows.Forms.Timer tmrAnimation;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        public System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator3;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button10;
+        private Guna.UI2.WinForms.Guna2Button guna2Button11;
     }
 }

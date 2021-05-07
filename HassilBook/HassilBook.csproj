@@ -209,9 +209,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Const.cs" />
+    <Compile Include="Controller\AgencyAccessPoint.cs" />
+    <Compile Include="FrmAgencyHaWallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgencyHaWallet.Designer.cs">
+      <DependentUpon>FrmAgencyHaWallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgencySearchEngine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgencySearchEngine.Designer.cs">
+      <DependentUpon>FrmAgencySearchEngine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AgencyModel.cs" />
+    <Compile Include="Global\Const.cs" />
     <Compile Include="Controller\AirlineAccessPoint.cs" />
-    <Compile Include="CouponGenerator.cs" />
+    <Compile Include="Global\CouponGenerator.cs" />
     <Compile Include="FrmAgency.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,9 +283,9 @@
     <Compile Include="FrmEmployees.Designer.cs">
       <DependentUpon>FrmEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="IDGenerator.cs" />
+    <Compile Include="Global\IDGenerator.cs" />
     <Compile Include="Model\AirplaneModel.cs" />
-    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="Global\DatabaseConnection.cs" />
     <Compile Include="Model\FlightModel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -330,46 +344,46 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controller\Flight.cs" />
-    <Compile Include="UcReturnBackStopFlights.cs">
+    <Compile Include="Flight results\UcReturnBackStopFlights.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcReturnBackStopFlights.Designer.cs">
+    <Compile Include="Flight results\UcReturnBackStopFlights.Designer.cs">
       <DependentUpon>UcReturnBackStopFlights.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcReturnGoStopFlights.cs">
+    <Compile Include="Flight results\UcReturnGoStopFlights.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcReturnGoStopFlights.Designer.cs">
+    <Compile Include="Flight results\UcReturnGoStopFlights.Designer.cs">
       <DependentUpon>UcReturnGoStopFlights.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcReturnStopFlights.cs">
+    <Compile Include="Flight results\UcReturnStopFlights.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcReturnStopFlights.Designer.cs">
+    <Compile Include="Flight results\UcReturnStopFlights.Designer.cs">
       <DependentUpon>UcReturnStopFlights.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcReturnDirectFlights.cs">
+    <Compile Include="Flight results\UcReturnDirectFlights.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcReturnDirectFlights.Designer.cs">
+    <Compile Include="Flight results\UcReturnDirectFlights.Designer.cs">
       <DependentUpon>UcReturnDirectFlights.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcOnewayStopFlights.cs">
+    <Compile Include="Flight results\UcOnewayStopFlights.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcOnewayStopFlights.Designer.cs">
+    <Compile Include="Flight results\UcOnewayStopFlights.Designer.cs">
       <DependentUpon>UcOnewayStopFlights.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcOnewayDirectFlights.cs">
+    <Compile Include="Flight results\UcOnewayDirectFlights.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcOnewayDirectFlights.Designer.cs">
+    <Compile Include="Flight results\UcOnewayDirectFlights.Designer.cs">
       <DependentUpon>UcOnewayDirectFlights.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcFoundFlights.cs">
+    <Compile Include="Flight results\UcFoundFlights.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcFoundFlights.Designer.cs">
+    <Compile Include="Flight results\UcFoundFlights.Designer.cs">
       <DependentUpon>UcFoundFlights.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
@@ -386,6 +400,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAgencyDashboard.resx">
       <DependentUpon>FrmAgencyDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgencyHaWallet.resx">
+      <DependentUpon>FrmAgencyHaWallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgencySearchEngine.resx">
+      <DependentUpon>FrmAgencySearchEngine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAirlinesControlPanel.resx">
       <DependentUpon>FrmAirlinesControlPanel.cs</DependentUpon>
@@ -437,25 +457,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UcReturnBackStopFlights.resx">
+    <EmbeddedResource Include="Flight results\UcReturnBackStopFlights.resx">
       <DependentUpon>UcReturnBackStopFlights.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcReturnGoStopFlights.resx">
+    <EmbeddedResource Include="Flight results\UcReturnGoStopFlights.resx">
       <DependentUpon>UcReturnGoStopFlights.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcReturnStopFlights.resx">
+    <EmbeddedResource Include="Flight results\UcReturnStopFlights.resx">
       <DependentUpon>UcReturnStopFlights.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcReturnDirectFlights.resx">
+    <EmbeddedResource Include="Flight results\UcReturnDirectFlights.resx">
       <DependentUpon>UcReturnDirectFlights.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcOnewayStopFlights.resx">
+    <EmbeddedResource Include="Flight results\UcOnewayStopFlights.resx">
       <DependentUpon>UcOnewayStopFlights.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcOnewayDirectFlights.resx">
+    <EmbeddedResource Include="Flight results\UcOnewayDirectFlights.resx">
       <DependentUpon>UcOnewayDirectFlights.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcFoundFlights.resx">
+    <EmbeddedResource Include="Flight results\UcFoundFlights.resx">
       <DependentUpon>UcFoundFlights.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

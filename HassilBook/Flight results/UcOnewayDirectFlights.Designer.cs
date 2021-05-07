@@ -1,7 +1,7 @@
 ﻿
 namespace HassilBook
 {
-    partial class UcOnewayStopFlights
+    partial class UcOnewayDirectFlights
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,17 +30,14 @@ namespace HassilBook
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcOnewayStopFlights));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcOnewayDirectFlights));
             this.pnlPrice = new Guna.UI2.WinForms.Guna2Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.LblPrice = new System.Windows.Forms.Label();
             this.BtnSelectFlight = new Guna.UI2.WinForms.Guna2Button();
             this.LblSeatsAvailable = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2VSeparator3 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.label18 = new System.Windows.Forms.Label();
+            this.LblClass = new System.Windows.Forms.Label();
             this.LblOriginAirport = new System.Windows.Forms.Label();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.LblRefundable = new System.Windows.Forms.Label();
@@ -68,7 +65,6 @@ namespace HassilBook
             this.pnlFlights = new Guna.UI2.WinForms.Guna2Panel();
             this.PbLogo2 = new Guna.UI2.WinForms.Guna2Button();
             this.PbLogo1 = new Guna.UI2.WinForms.Guna2Button();
-            this.LblNumberOfStops = new System.Windows.Forms.Label();
             this.LblDuration = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -81,7 +77,7 @@ namespace HassilBook
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.LblFrom = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblDepartureTime = new System.Windows.Forms.Label();
             this.LblFromAndDepDate = new System.Windows.Forms.Label();
             this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
             this.pnlPrice.SuspendLayout();
@@ -164,10 +160,7 @@ namespace HassilBook
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Controls.Add(this.guna2VSeparator3);
-            this.guna2Panel1.Controls.Add(this.label18);
+            this.guna2Panel1.Controls.Add(this.LblClass);
             this.guna2Panel1.Controls.Add(this.LblOriginAirport);
             this.guna2Panel1.Controls.Add(this.guna2Button7);
             this.guna2Panel1.Controls.Add(this.LblRefundable);
@@ -191,58 +184,20 @@ namespace HassilBook
             this.guna2Panel1.ShadowDecoration.Depth = 5;
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(878, 279);
+            this.guna2Panel1.Size = new System.Drawing.Size(878, 229);
             this.guna2Panel1.TabIndex = 18;
             // 
-            // label2
+            // LblClass
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(190, 240);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(395, 28);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "09:50 - Bender Qassim Internation Airport";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button1.Location = new System.Drawing.Point(147, 240);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(36, 26);
-            this.guna2Button1.TabIndex = 47;
-            // 
-            // guna2VSeparator3
-            // 
-            this.guna2VSeparator3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.guna2VSeparator3.Location = new System.Drawing.Point(156, 207);
-            this.guna2VSeparator3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2VSeparator3.Name = "guna2VSeparator3";
-            this.guna2VSeparator3.Size = new System.Drawing.Size(15, 25);
-            this.guna2VSeparator3.TabIndex = 46;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
-            this.label18.Location = new System.Drawing.Point(615, 9);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(250, 54);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "ECONOMY";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.LblClass.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.LblClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            this.LblClass.Location = new System.Drawing.Point(615, 9);
+            this.LblClass.Name = "LblClass";
+            this.LblClass.Size = new System.Drawing.Size(250, 54);
+            this.LblClass.TabIndex = 14;
+            this.LblClass.Text = "ECONOMY";
+            this.LblClass.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LblOriginAirport
             // 
@@ -380,11 +335,11 @@ namespace HassilBook
             // 
             this.LblDestinationAirport.AutoSize = true;
             this.LblDestinationAirport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.LblDestinationAirport.Location = new System.Drawing.Point(190, 172);
+            this.LblDestinationAirport.Location = new System.Drawing.Point(190, 185);
             this.LblDestinationAirport.Name = "LblDestinationAirport";
-            this.LblDestinationAirport.Size = new System.Drawing.Size(450, 28);
+            this.LblDestinationAirport.Size = new System.Drawing.Size(395, 28);
             this.LblDestinationAirport.TabIndex = 34;
-            this.LblDestinationAirport.Text = "Connection - Bender Qassim Internation Airport";
+            this.LblDestinationAirport.Text = "09:50 - Bender Qassim Internation Airport";
             // 
             // guna2Button4
             // 
@@ -397,8 +352,8 @@ namespace HassilBook
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
-            this.guna2Button4.ImageSize = new System.Drawing.Size(10, 10);
-            this.guna2Button4.Location = new System.Drawing.Point(147, 172);
+            this.guna2Button4.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2Button4.Location = new System.Drawing.Point(147, 185);
             this.guna2Button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
@@ -411,7 +366,7 @@ namespace HassilBook
             this.guna2VSeparator2.Location = new System.Drawing.Point(156, 138);
             this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2VSeparator2.Name = "guna2VSeparator2";
-            this.guna2VSeparator2.Size = new System.Drawing.Size(15, 25);
+            this.guna2VSeparator2.Size = new System.Drawing.Size(15, 38);
             this.guna2VSeparator2.TabIndex = 3;
             // 
             // guna2VSeparator1
@@ -475,7 +430,7 @@ namespace HassilBook
             this.guna2Panel2.ShadowDecoration.Depth = 5;
             this.guna2Panel2.ShadowDecoration.Enabled = true;
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(268, 279);
+            this.guna2Panel2.Size = new System.Drawing.Size(268, 229);
             this.guna2Panel2.TabIndex = 19;
             // 
             // guna2Panel4
@@ -483,7 +438,7 @@ namespace HassilBook
             this.guna2Panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel4.Controls.Add(this.LblTotalPrice);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 231);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 181);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
@@ -561,7 +516,6 @@ namespace HassilBook
             this.pnlFlights.BackColor = System.Drawing.Color.White;
             this.pnlFlights.Controls.Add(this.PbLogo2);
             this.pnlFlights.Controls.Add(this.PbLogo1);
-            this.pnlFlights.Controls.Add(this.LblNumberOfStops);
             this.pnlFlights.Controls.Add(this.LblDuration);
             this.pnlFlights.Controls.Add(this.label14);
             this.pnlFlights.Controls.Add(this.bunifuSeparator3);
@@ -574,7 +528,7 @@ namespace HassilBook
             this.pnlFlights.Controls.Add(this.bunifuSeparator1);
             this.pnlFlights.Controls.Add(this.bunifuSeparator2);
             this.pnlFlights.Controls.Add(this.LblFrom);
-            this.pnlFlights.Controls.Add(this.label1);
+            this.pnlFlights.Controls.Add(this.LblDepartureTime);
             this.pnlFlights.Controls.Add(this.LblFromAndDepDate);
             this.pnlFlights.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlFlights.Location = new System.Drawing.Point(15, 11);
@@ -585,7 +539,7 @@ namespace HassilBook
             this.pnlFlights.ShadowDecoration.Parent = this.pnlFlights;
             this.pnlFlights.Size = new System.Drawing.Size(878, 143);
             this.pnlFlights.TabIndex = 20;
-            this.pnlFlights.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.pnlFlights.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // PbLogo2
             // 
@@ -605,7 +559,7 @@ namespace HassilBook
             this.PbLogo2.ShadowDecoration.Parent = this.PbLogo2;
             this.PbLogo2.Size = new System.Drawing.Size(34, 35);
             this.PbLogo2.TabIndex = 47;
-            this.PbLogo2.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.PbLogo2.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // PbLogo1
             // 
@@ -625,19 +579,7 @@ namespace HassilBook
             this.PbLogo1.ShadowDecoration.Parent = this.PbLogo1;
             this.PbLogo1.Size = new System.Drawing.Size(34, 35);
             this.PbLogo1.TabIndex = 46;
-            this.PbLogo1.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
-            // 
-            // LblNumberOfStops
-            // 
-            this.LblNumberOfStops.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNumberOfStops.Location = new System.Drawing.Point(198, 86);
-            this.LblNumberOfStops.Name = "LblNumberOfStops";
-            this.LblNumberOfStops.Size = new System.Drawing.Size(171, 43);
-            this.LblNumberOfStops.TabIndex = 19;
-            this.LblNumberOfStops.Text = "0 Stops";
-            this.LblNumberOfStops.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LblNumberOfStops.Visible = false;
-            this.LblNumberOfStops.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.PbLogo1.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // LblDuration
             // 
@@ -649,7 +591,7 @@ namespace HassilBook
             this.LblDuration.TabIndex = 17;
             this.LblDuration.Text = "2h 25m";
             this.LblDuration.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LblDuration.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.LblDuration.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // label14
             // 
@@ -661,7 +603,7 @@ namespace HassilBook
             this.label14.TabIndex = 16;
             this.label14.Text = "Duration";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label14.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.label14.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // bunifuSeparator3
             // 
@@ -679,7 +621,7 @@ namespace HassilBook
             this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
             this.bunifuSeparator3.Size = new System.Drawing.Size(22, 82);
             this.bunifuSeparator3.TabIndex = 15;
-            this.bunifuSeparator3.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.bunifuSeparator3.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // LblTo
             // 
@@ -690,7 +632,7 @@ namespace HassilBook
             this.LblTo.Size = new System.Drawing.Size(127, 28);
             this.LblTo.TabIndex = 14;
             this.LblTo.Text = "MOGADISHU";
-            this.LblTo.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.LblTo.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // LblArrivalTime
             // 
@@ -701,7 +643,7 @@ namespace HassilBook
             this.LblArrivalTime.Size = new System.Drawing.Size(88, 38);
             this.LblArrivalTime.TabIndex = 12;
             this.LblArrivalTime.Text = "04:25";
-            this.LblArrivalTime.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.LblArrivalTime.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // LblStops
             // 
@@ -712,7 +654,7 @@ namespace HassilBook
             this.LblStops.TabIndex = 14;
             this.LblStops.Text = "Stops";
             this.LblStops.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LblStops.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.LblStops.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // label4
             // 
@@ -724,7 +666,7 @@ namespace HassilBook
             this.label4.Size = new System.Drawing.Size(68, 28);
             this.label4.TabIndex = 4;
             this.label4.Text = "Details";
-            this.label4.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.label4.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // bunifuPictureBox1
             // 
@@ -741,7 +683,7 @@ namespace HassilBook
             this.bunifuPictureBox1.TabIndex = 1;
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            this.bunifuPictureBox1.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.bunifuPictureBox1.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // LblToAndArrDate
             // 
@@ -752,7 +694,7 @@ namespace HassilBook
             this.LblToAndArrDate.Size = new System.Drawing.Size(131, 28);
             this.LblToAndArrDate.TabIndex = 13;
             this.LblToAndArrDate.Text = "MGQ - 16 Apr";
-            this.LblToAndArrDate.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.LblToAndArrDate.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // bunifuSeparator1
             // 
@@ -770,7 +712,7 @@ namespace HassilBook
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
             this.bunifuSeparator1.Size = new System.Drawing.Size(22, 82);
             this.bunifuSeparator1.TabIndex = 0;
-            this.bunifuSeparator1.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.bunifuSeparator1.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // bunifuSeparator2
             // 
@@ -787,7 +729,7 @@ namespace HassilBook
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator2.Size = new System.Drawing.Size(244, 22);
             this.bunifuSeparator2.TabIndex = 7;
-            this.bunifuSeparator2.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.bunifuSeparator2.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // LblFrom
             // 
@@ -798,18 +740,18 @@ namespace HassilBook
             this.LblFrom.Size = new System.Drawing.Size(127, 28);
             this.LblFrom.TabIndex = 9;
             this.LblFrom.Text = "MOGADISHU";
-            this.LblFrom.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.LblFrom.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
-            // label1
+            // LblDepartureTime
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "04:25";
-            this.label1.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.LblDepartureTime.AutoSize = true;
+            this.LblDepartureTime.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDepartureTime.Location = new System.Drawing.Point(10, 15);
+            this.LblDepartureTime.Name = "LblDepartureTime";
+            this.LblDepartureTime.Size = new System.Drawing.Size(88, 38);
+            this.LblDepartureTime.TabIndex = 2;
+            this.LblDepartureTime.Text = "04:25";
+            this.LblDepartureTime.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // LblFromAndDepDate
             // 
@@ -820,14 +762,14 @@ namespace HassilBook
             this.LblFromAndDepDate.Size = new System.Drawing.Size(131, 28);
             this.LblFromAndDepDate.TabIndex = 3;
             this.LblFromAndDepDate.Text = "MGQ - 16 Apr";
-            this.LblFromAndDepDate.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.LblFromAndDepDate.Click += new System.EventHandler(this.UcDirectFlights_Click);
             // 
             // tmrAnimation
             // 
             this.tmrAnimation.Interval = 10;
             this.tmrAnimation.Tick += new System.EventHandler(this.tmrAnimation_Tick);
             // 
-            // UcOnewayStopFlights
+            // UcOnewayDirectFlights
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -837,11 +779,11 @@ namespace HassilBook
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlPrice);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1190, 462);
+            this.MaximumSize = new System.Drawing.Size(1190, 415);
             this.MinimumSize = new System.Drawing.Size(1190, 162);
-            this.Name = "UcOnewayStopFlights";
+            this.Name = "UcOnewayDirectFlights";
             this.Size = new System.Drawing.Size(1190, 162);
-            this.Click += new System.EventHandler(this.UcOnewayStopFlights_Click);
+            this.Click += new System.EventHandler(this.UcDirectFlights_Click);
             this.pnlPrice.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -860,7 +802,6 @@ namespace HassilBook
         public System.Windows.Forms.Label LblSeatsAvailable;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Button PbLogo3;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
@@ -871,7 +812,6 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2Button BtnSelectFlight;
         public System.Windows.Forms.Label LblAdultPrice;
         private Guna.UI2.WinForms.Guna2Panel pnlFlights;
-        public System.Windows.Forms.Label LblNumberOfStops;
         public System.Windows.Forms.Label LblDuration;
         private System.Windows.Forms.Label label14;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
@@ -884,7 +824,7 @@ namespace HassilBook
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         public System.Windows.Forms.Label LblFrom;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label LblDepartureTime;
         public System.Windows.Forms.Label LblFromAndDepDate;
         public System.Windows.Forms.Label LblAirType;
         public System.Windows.Forms.Label label7;
@@ -899,15 +839,13 @@ namespace HassilBook
         public System.Windows.Forms.Label LblOriginAirport;
         private System.Windows.Forms.Label label17;
         public System.Windows.Forms.Label LblPrice;
-        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.Label LblClass;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         public System.Windows.Forms.Label LblTotalPrice;
         public System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button PbLogo2;
-        private Guna.UI2.WinForms.Guna2Button PbLogo1;
         private System.Windows.Forms.Timer tmrAnimation;
-        public System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator3;
+        public Guna.UI2.WinForms.Guna2Button PbLogo2;
+        public Guna.UI2.WinForms.Guna2Button PbLogo1;
+        public Guna.UI2.WinForms.Guna2Button PbLogo3;
     }
 }

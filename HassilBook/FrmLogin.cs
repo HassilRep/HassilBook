@@ -14,6 +14,7 @@ namespace HassilBook
     {
         public static ClientModel m_client;
         public static EmployeeModel m_employee;
+        public static AgencyModel m_agency;
         public FrmLogin()
         {
             InitializeComponent();
@@ -58,6 +59,35 @@ namespace HassilBook
                 {
                     MessageBox.Show("Counter coming soon");
                 }
+            }
+        }
+
+        private void BtnLoginAgency_Click(object sender, EventArgs e)
+        {
+            AgencyAccessPoint accessPoint = new AgencyAccessPoint();
+            var agencies = accessPoint.Login(TxtAgencyID.Text, TxtAgencyUsername.Text, TxtAgencyPassword.Text);
+
+            if(agencies.Count == 1)
+            {
+                foreach (var agency in agencies)
+                {
+                    // current agency
+                    m_agency = agency;
+                    if (agency.Status != "Active")
+                    {
+                        MessageBox.Show("This user is no more active.");
+                    }
+                    else
+                    {
+                        FrmAgencyDashboard F = new FrmAgencyDashboard();
+                        this.Hide();
+                        F.Show();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("You are using this login information more than 1 airlines.");
             }
         }
     }

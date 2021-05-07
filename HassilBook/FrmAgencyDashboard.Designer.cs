@@ -35,29 +35,29 @@ namespace HassilBook
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.BtnHamburgerMenu = new Guna.UI2.WinForms.Guna2Button();
             this.pnlLeft = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnSupplier = new Guna.UI2.WinForms.Guna2Button();
             this.pnlLeftBottom = new Guna.UI2.WinForms.Guna2Panel();
             this.LblCopyright = new System.Windows.Forms.Label();
-            this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblWalletBalance = new System.Windows.Forms.Label();
+            this.BtnHamburgerMenu = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnMyBookings = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnReports = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnMyHaWallet = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnSearchFlight = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlNavigator.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlLeftBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNavigator
@@ -120,25 +120,6 @@ namespace HassilBook
             this.guna2ControlBox1.Size = new System.Drawing.Size(38, 38);
             this.guna2ControlBox1.TabIndex = 3;
             // 
-            // BtnHamburgerMenu
-            // 
-            this.BtnHamburgerMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnHamburgerMenu.CheckedState.Parent = this.BtnHamburgerMenu;
-            this.BtnHamburgerMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnHamburgerMenu.CustomImages.Parent = this.BtnHamburgerMenu;
-            this.BtnHamburgerMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnHamburgerMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnHamburgerMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnHamburgerMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnHamburgerMenu.HoverState.Parent = this.BtnHamburgerMenu;
-            this.BtnHamburgerMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnHamburgerMenu.Image")));
-            this.BtnHamburgerMenu.Location = new System.Drawing.Point(0, 0);
-            this.BtnHamburgerMenu.Name = "BtnHamburgerMenu";
-            this.BtnHamburgerMenu.ShadowDecoration.Parent = this.BtnHamburgerMenu;
-            this.BtnHamburgerMenu.Size = new System.Drawing.Size(57, 62);
-            this.BtnHamburgerMenu.TabIndex = 2;
-            this.BtnHamburgerMenu.Click += new System.EventHandler(this.BtnHamburgerMenu_Click);
-            // 
             // pnlLeft
             // 
             this.pnlLeft.AutoScroll = true;
@@ -155,218 +136,25 @@ namespace HassilBook
             this.pnlLeft.ShadowDecoration.Enabled = true;
             this.pnlLeft.ShadowDecoration.Parent = this.pnlLeft;
             this.pnlLeft.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.pnlLeft.Size = new System.Drawing.Size(306, 788);
+            this.pnlLeft.Size = new System.Drawing.Size(306, 850);
             this.pnlLeft.TabIndex = 2;
             // 
             // pnlMenu
             // 
             this.pnlMenu.AutoScroll = true;
             this.pnlMenu.BackColor = System.Drawing.Color.White;
-            this.pnlMenu.Controls.Add(this.guna2Button2);
-            this.pnlMenu.Controls.Add(this.guna2Button6);
-            this.pnlMenu.Controls.Add(this.guna2Button7);
-            this.pnlMenu.Controls.Add(this.guna2Button3);
-            this.pnlMenu.Controls.Add(this.guna2Button1);
-            this.pnlMenu.Controls.Add(this.BtnSupplier);
+            this.pnlMenu.Controls.Add(this.BtnMyBookings);
+            this.pnlMenu.Controls.Add(this.BtnProfile);
+            this.pnlMenu.Controls.Add(this.BtnReports);
+            this.pnlMenu.Controls.Add(this.BtnMyHaWallet);
+            this.pnlMenu.Controls.Add(this.BtnSearchFlight);
+            this.pnlMenu.Controls.Add(this.BtnDashboard);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMenu.Location = new System.Drawing.Point(0, 178);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(306, 496);
+            this.pnlMenu.Size = new System.Drawing.Size(306, 558);
             this.pnlMenu.TabIndex = 5;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.CheckedState.Image")));
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button2.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.HoverState.Image")));
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 69);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.White;
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(304, 69);
-            this.guna2Button2.TabIndex = 14;
-            this.guna2Button2.Text = "BOOKINGS";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // guna2Button6
-            // 
-            this.guna2Button6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2Button6.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button6.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button6.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button6.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.CheckedState.Image")));
-            this.guna2Button6.CheckedState.Parent = this.guna2Button6;
-            this.guna2Button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button6.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Button6.CustomImages.Parent = this.guna2Button6;
-            this.guna2Button6.FillColor = System.Drawing.Color.White;
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button6.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.HoverState.Image")));
-            this.guna2Button6.HoverState.Parent = this.guna2Button6;
-            this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
-            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button6.Location = new System.Drawing.Point(0, 346);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.PressedColor = System.Drawing.Color.White;
-            this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
-            this.guna2Button6.Size = new System.Drawing.Size(304, 69);
-            this.guna2Button6.TabIndex = 6;
-            this.guna2Button6.Text = "AGENTS";
-            this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // guna2Button7
-            // 
-            this.guna2Button7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2Button7.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button7.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button7.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button7.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.CheckedState.Image")));
-            this.guna2Button7.CheckedState.Parent = this.guna2Button7;
-            this.guna2Button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button7.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.guna2Button7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Button7.CustomImages.Parent = this.guna2Button7;
-            this.guna2Button7.FillColor = System.Drawing.Color.White;
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button7.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.HoverState.Image")));
-            this.guna2Button7.HoverState.Parent = this.guna2Button7;
-            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
-            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button7.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button7.Location = new System.Drawing.Point(0, 277);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.PressedColor = System.Drawing.Color.White;
-            this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
-            this.guna2Button7.Size = new System.Drawing.Size(304, 69);
-            this.guna2Button7.TabIndex = 5;
-            this.guna2Button7.Text = "FLIGHTS";
-            this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button7.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.CheckedState.Image")));
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button3.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.HoverState.Image")));
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button3.Location = new System.Drawing.Point(0, 208);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.PressedColor = System.Drawing.Color.White;
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(304, 69);
-            this.guna2Button3.TabIndex = 3;
-            this.guna2Button3.Text = "PRICE MANAGER";
-            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.CheckedState.Image")));
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.HoverState.Image")));
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 138);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.White;
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(304, 69);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "AIRPLANES";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // BtnSupplier
-            // 
-            this.BtnSupplier.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.BtnSupplier.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.BtnSupplier.Checked = true;
-            this.BtnSupplier.CheckedState.FillColor = System.Drawing.Color.White;
-            this.BtnSupplier.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnSupplier.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("BtnSupplier.CheckedState.Image")));
-            this.BtnSupplier.CheckedState.Parent = this.BtnSupplier;
-            this.BtnSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSupplier.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.BtnSupplier.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.BtnSupplier.CustomImages.Parent = this.BtnSupplier;
-            this.BtnSupplier.FillColor = System.Drawing.Color.White;
-            this.BtnSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.BtnSupplier.HoverState.FillColor = System.Drawing.Color.White;
-            this.BtnSupplier.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.BtnSupplier.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("BtnSupplier.HoverState.Image")));
-            this.BtnSupplier.HoverState.Parent = this.BtnSupplier;
-            this.BtnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("BtnSupplier.Image")));
-            this.BtnSupplier.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BtnSupplier.ImageOffset = new System.Drawing.Point(5, 0);
-            this.BtnSupplier.Location = new System.Drawing.Point(0, 0);
-            this.BtnSupplier.Name = "BtnSupplier";
-            this.BtnSupplier.PressedColor = System.Drawing.Color.White;
-            this.BtnSupplier.ShadowDecoration.Parent = this.BtnSupplier;
-            this.BtnSupplier.Size = new System.Drawing.Size(304, 69);
-            this.BtnSupplier.TabIndex = 1;
-            this.BtnSupplier.Text = "DASHBOARD";
-            this.BtnSupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BtnSupplier.TextOffset = new System.Drawing.Point(30, 0);
             // 
             // pnlLeftBottom
             // 
@@ -374,7 +162,7 @@ namespace HassilBook
             this.pnlLeftBottom.Controls.Add(this.LblCopyright);
             this.pnlLeftBottom.Controls.Add(this.guna2Button12);
             this.pnlLeftBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlLeftBottom.Location = new System.Drawing.Point(0, 674);
+            this.pnlLeftBottom.Location = new System.Drawing.Point(0, 736);
             this.pnlLeftBottom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlLeftBottom.Name = "pnlLeftBottom";
             this.pnlLeftBottom.ShadowDecoration.Enabled = true;
@@ -394,6 +182,262 @@ namespace HassilBook
             this.LblCopyright.TabIndex = 5;
             this.LblCopyright.Text = "© 1998 Hassil Enterprise";
             this.LblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this.pnlNavigator;
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContainer.BackColor = System.Drawing.Color.White;
+            this.pnlContainer.Location = new System.Drawing.Point(316, 118);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(866, 727);
+            this.pnlContainer.TabIndex = 3;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
+            this.guna2Panel1.Controls.Add(this.LblWalletBalance);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(306, 62);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Depth = 10;
+            this.guna2Panel1.ShadowDecoration.Enabled = true;
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(885, 51);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // LblWalletBalance
+            // 
+            this.LblWalletBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblWalletBalance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblWalletBalance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblWalletBalance.Location = new System.Drawing.Point(411, 8);
+            this.LblWalletBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblWalletBalance.Name = "LblWalletBalance";
+            this.LblWalletBalance.Size = new System.Drawing.Size(465, 35);
+            this.LblWalletBalance.TabIndex = 6;
+            this.LblWalletBalance.Text = "YOUR HA-WALLET BALANCE : 0.00 USD";
+            this.LblWalletBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // BtnHamburgerMenu
+            // 
+            this.BtnHamburgerMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnHamburgerMenu.CheckedState.Parent = this.BtnHamburgerMenu;
+            this.BtnHamburgerMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnHamburgerMenu.CustomImages.Parent = this.BtnHamburgerMenu;
+            this.BtnHamburgerMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnHamburgerMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnHamburgerMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnHamburgerMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnHamburgerMenu.HoverState.Parent = this.BtnHamburgerMenu;
+            this.BtnHamburgerMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnHamburgerMenu.Image")));
+            this.BtnHamburgerMenu.Location = new System.Drawing.Point(0, 0);
+            this.BtnHamburgerMenu.Name = "BtnHamburgerMenu";
+            this.BtnHamburgerMenu.ShadowDecoration.Parent = this.BtnHamburgerMenu;
+            this.BtnHamburgerMenu.Size = new System.Drawing.Size(57, 62);
+            this.BtnHamburgerMenu.TabIndex = 2;
+            this.BtnHamburgerMenu.Click += new System.EventHandler(this.BtnHamburgerMenu_Click);
+            // 
+            // BtnMyBookings
+            // 
+            this.BtnMyBookings.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BtnMyBookings.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnMyBookings.CheckedState.FillColor = System.Drawing.Color.White;
+            this.BtnMyBookings.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnMyBookings.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.CheckedState.Image")));
+            this.BtnMyBookings.CheckedState.Parent = this.BtnMyBookings;
+            this.BtnMyBookings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMyBookings.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BtnMyBookings.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.BtnMyBookings.CustomImages.Parent = this.BtnMyBookings;
+            this.BtnMyBookings.FillColor = System.Drawing.Color.White;
+            this.BtnMyBookings.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMyBookings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.BtnMyBookings.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnMyBookings.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnMyBookings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.HoverState.Image")));
+            this.BtnMyBookings.HoverState.Parent = this.BtnMyBookings;
+            this.BtnMyBookings.Image = ((System.Drawing.Image)(resources.GetObject("BtnMyBookings.Image")));
+            this.BtnMyBookings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnMyBookings.ImageOffset = new System.Drawing.Point(5, 0);
+            this.BtnMyBookings.Location = new System.Drawing.Point(0, 69);
+            this.BtnMyBookings.Name = "BtnMyBookings";
+            this.BtnMyBookings.PressedColor = System.Drawing.Color.White;
+            this.BtnMyBookings.ShadowDecoration.Parent = this.BtnMyBookings;
+            this.BtnMyBookings.Size = new System.Drawing.Size(304, 69);
+            this.BtnMyBookings.TabIndex = 14;
+            this.BtnMyBookings.Text = "MY BOOKINGS";
+            this.BtnMyBookings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnMyBookings.TextOffset = new System.Drawing.Point(30, 0);
+            // 
+            // BtnProfile
+            // 
+            this.BtnProfile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BtnProfile.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnProfile.CheckedState.FillColor = System.Drawing.Color.White;
+            this.BtnProfile.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnProfile.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.CheckedState.Image")));
+            this.BtnProfile.CheckedState.Parent = this.BtnProfile;
+            this.BtnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnProfile.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BtnProfile.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.BtnProfile.CustomImages.Parent = this.BtnProfile;
+            this.BtnProfile.FillColor = System.Drawing.Color.White;
+            this.BtnProfile.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.BtnProfile.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnProfile.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnProfile.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.HoverState.Image")));
+            this.BtnProfile.HoverState.Parent = this.BtnProfile;
+            this.BtnProfile.Image = ((System.Drawing.Image)(resources.GetObject("BtnProfile.Image")));
+            this.BtnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnProfile.ImageOffset = new System.Drawing.Point(5, 0);
+            this.BtnProfile.Location = new System.Drawing.Point(0, 346);
+            this.BtnProfile.Name = "BtnProfile";
+            this.BtnProfile.PressedColor = System.Drawing.Color.White;
+            this.BtnProfile.ShadowDecoration.Parent = this.BtnProfile;
+            this.BtnProfile.Size = new System.Drawing.Size(304, 69);
+            this.BtnProfile.TabIndex = 6;
+            this.BtnProfile.Text = "PROFILE";
+            this.BtnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnProfile.TextOffset = new System.Drawing.Point(30, 0);
+            // 
+            // BtnReports
+            // 
+            this.BtnReports.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BtnReports.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnReports.CheckedState.FillColor = System.Drawing.Color.White;
+            this.BtnReports.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnReports.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.CheckedState.Image")));
+            this.BtnReports.CheckedState.Parent = this.BtnReports;
+            this.BtnReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnReports.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BtnReports.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.BtnReports.CustomImages.Parent = this.BtnReports;
+            this.BtnReports.FillColor = System.Drawing.Color.White;
+            this.BtnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.BtnReports.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnReports.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnReports.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.HoverState.Image")));
+            this.BtnReports.HoverState.Parent = this.BtnReports;
+            this.BtnReports.Image = ((System.Drawing.Image)(resources.GetObject("BtnReports.Image")));
+            this.BtnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnReports.ImageOffset = new System.Drawing.Point(5, 0);
+            this.BtnReports.Location = new System.Drawing.Point(0, 277);
+            this.BtnReports.Name = "BtnReports";
+            this.BtnReports.PressedColor = System.Drawing.Color.White;
+            this.BtnReports.ShadowDecoration.Parent = this.BtnReports;
+            this.BtnReports.Size = new System.Drawing.Size(304, 69);
+            this.BtnReports.TabIndex = 5;
+            this.BtnReports.Text = "REPORTS";
+            this.BtnReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnReports.TextOffset = new System.Drawing.Point(30, 0);
+            // 
+            // BtnMyHaWallet
+            // 
+            this.BtnMyHaWallet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BtnMyHaWallet.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnMyHaWallet.CheckedState.FillColor = System.Drawing.Color.White;
+            this.BtnMyHaWallet.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnMyHaWallet.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.CheckedState.Image")));
+            this.BtnMyHaWallet.CheckedState.Parent = this.BtnMyHaWallet;
+            this.BtnMyHaWallet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMyHaWallet.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BtnMyHaWallet.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.BtnMyHaWallet.CustomImages.Parent = this.BtnMyHaWallet;
+            this.BtnMyHaWallet.FillColor = System.Drawing.Color.White;
+            this.BtnMyHaWallet.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMyHaWallet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.BtnMyHaWallet.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnMyHaWallet.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnMyHaWallet.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.HoverState.Image")));
+            this.BtnMyHaWallet.HoverState.Parent = this.BtnMyHaWallet;
+            this.BtnMyHaWallet.Image = ((System.Drawing.Image)(resources.GetObject("BtnMyHaWallet.Image")));
+            this.BtnMyHaWallet.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnMyHaWallet.ImageOffset = new System.Drawing.Point(5, 0);
+            this.BtnMyHaWallet.Location = new System.Drawing.Point(0, 208);
+            this.BtnMyHaWallet.Name = "BtnMyHaWallet";
+            this.BtnMyHaWallet.PressedColor = System.Drawing.Color.White;
+            this.BtnMyHaWallet.ShadowDecoration.Parent = this.BtnMyHaWallet;
+            this.BtnMyHaWallet.Size = new System.Drawing.Size(304, 69);
+            this.BtnMyHaWallet.TabIndex = 3;
+            this.BtnMyHaWallet.Text = "MY HA-WALLET";
+            this.BtnMyHaWallet.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnMyHaWallet.TextOffset = new System.Drawing.Point(30, 0);
+            this.BtnMyHaWallet.Click += new System.EventHandler(this.BtnMyHaWallet_Click);
+            // 
+            // BtnSearchFlight
+            // 
+            this.BtnSearchFlight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BtnSearchFlight.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnSearchFlight.CheckedState.FillColor = System.Drawing.Color.White;
+            this.BtnSearchFlight.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnSearchFlight.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.CheckedState.Image")));
+            this.BtnSearchFlight.CheckedState.Parent = this.BtnSearchFlight;
+            this.BtnSearchFlight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSearchFlight.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BtnSearchFlight.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.BtnSearchFlight.CustomImages.Parent = this.BtnSearchFlight;
+            this.BtnSearchFlight.FillColor = System.Drawing.Color.White;
+            this.BtnSearchFlight.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSearchFlight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.BtnSearchFlight.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnSearchFlight.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnSearchFlight.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.HoverState.Image")));
+            this.BtnSearchFlight.HoverState.Parent = this.BtnSearchFlight;
+            this.BtnSearchFlight.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearchFlight.Image")));
+            this.BtnSearchFlight.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnSearchFlight.ImageOffset = new System.Drawing.Point(5, 0);
+            this.BtnSearchFlight.Location = new System.Drawing.Point(0, 138);
+            this.BtnSearchFlight.Name = "BtnSearchFlight";
+            this.BtnSearchFlight.PressedColor = System.Drawing.Color.White;
+            this.BtnSearchFlight.ShadowDecoration.Parent = this.BtnSearchFlight;
+            this.BtnSearchFlight.Size = new System.Drawing.Size(304, 69);
+            this.BtnSearchFlight.TabIndex = 2;
+            this.BtnSearchFlight.Text = "SEARCH FLIGHT";
+            this.BtnSearchFlight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnSearchFlight.TextOffset = new System.Drawing.Point(30, 0);
+            this.BtnSearchFlight.Click += new System.EventHandler(this.BtnSearchFlight_Click);
+            // 
+            // BtnDashboard
+            // 
+            this.BtnDashboard.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BtnDashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnDashboard.Checked = true;
+            this.BtnDashboard.CheckedState.FillColor = System.Drawing.Color.White;
+            this.BtnDashboard.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnDashboard.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("BtnSupplier.CheckedState.Image")));
+            this.BtnDashboard.CheckedState.Parent = this.BtnDashboard;
+            this.BtnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDashboard.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BtnDashboard.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.BtnDashboard.CustomImages.Parent = this.BtnDashboard;
+            this.BtnDashboard.FillColor = System.Drawing.Color.White;
+            this.BtnDashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.BtnDashboard.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnDashboard.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("BtnSupplier.HoverState.Image")));
+            this.BtnDashboard.HoverState.Parent = this.BtnDashboard;
+            this.BtnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("BtnDashboard.Image")));
+            this.BtnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnDashboard.ImageOffset = new System.Drawing.Point(5, 0);
+            this.BtnDashboard.Location = new System.Drawing.Point(0, 0);
+            this.BtnDashboard.Name = "BtnDashboard";
+            this.BtnDashboard.PressedColor = System.Drawing.Color.White;
+            this.BtnDashboard.ShadowDecoration.Parent = this.BtnDashboard;
+            this.BtnDashboard.Size = new System.Drawing.Size(304, 69);
+            this.BtnDashboard.TabIndex = 1;
+            this.BtnDashboard.Text = "DASHBOARD";
+            this.BtnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnDashboard.TextOffset = new System.Drawing.Point(30, 0);
             // 
             // guna2Button12
             // 
@@ -441,54 +485,12 @@ namespace HassilBook
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.ContainerControl = this;
-            this.guna2DragControl1.TargetControl = this.pnlNavigator;
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlContainer.BackColor = System.Drawing.Color.White;
-            this.pnlContainer.Location = new System.Drawing.Point(316, 118);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(866, 652);
-            this.pnlContainer.TabIndex = 3;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(306, 62);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Depth = 10;
-            this.guna2Panel1.ShadowDecoration.Enabled = true;
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(885, 51);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(411, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(465, 35);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "YOUR HA-WALLET BALANCE : 975.68 USD";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // FrmAgencyDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1191, 788);
+            this.ClientSize = new System.Drawing.Size(1191, 850);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlNavigator);
@@ -503,8 +505,8 @@ namespace HassilBook
             this.pnlLeft.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             this.pnlLeftBottom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -518,12 +520,12 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2Button BtnHamburgerMenu;
         private Guna.UI2.WinForms.Guna2Panel pnlLeft;
         private System.Windows.Forms.Panel pnlMenu;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button BtnSupplier;
+        private Guna.UI2.WinForms.Guna2Button BtnMyBookings;
+        private Guna.UI2.WinForms.Guna2Button BtnProfile;
+        private Guna.UI2.WinForms.Guna2Button BtnReports;
+        private Guna.UI2.WinForms.Guna2Button BtnMyHaWallet;
+        private Guna.UI2.WinForms.Guna2Button BtnSearchFlight;
+        private Guna.UI2.WinForms.Guna2Button BtnDashboard;
         private Guna.UI2.WinForms.Guna2Panel pnlLeftBottom;
         private System.Windows.Forms.Label LblCopyright;
         private Guna.UI2.WinForms.Guna2Button guna2Button12;
@@ -531,7 +533,7 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.Panel pnlContainer;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblWalletBalance;
         //private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

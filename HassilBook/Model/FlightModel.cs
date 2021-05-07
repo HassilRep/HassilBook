@@ -23,7 +23,17 @@ namespace HassilBook
         /// Airline flight ID
         /// </summary>
         public string FlightID { get; set; }
-        
+       
+        /// <summary>
+        /// Airline flight number
+        /// </summary>
+        public string FlightNo { get; set; }
+       
+        /// <summary>
+        /// Airline flight model
+        /// </summary>
+        public string Model { get; set; }
+
         /// <summary>
         /// Airplane registred number
         /// </summary>
