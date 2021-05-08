@@ -12,6 +12,8 @@ namespace HassilBook
 {
     public partial class UcOnewayDirectFlights : UserControl
     {
+        public static FlightModel m_flightmodel;
+        public static string m_flightmodels;
         private int m_panelHeight;
         private bool m_toggleStatus;
         public UcOnewayDirectFlights()
@@ -22,6 +24,10 @@ namespace HassilBook
             m_panelHeight = this.Height;
         }
 
+        public AgencyModel Book()
+        {
+            return null;
+        }
         private void tmrAnimation_Tick(object sender, EventArgs e)
         {
             if (m_toggleStatus)

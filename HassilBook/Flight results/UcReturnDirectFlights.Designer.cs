@@ -37,7 +37,7 @@ namespace HassilBook
             this.BtnSelectFlight = new Guna.UI2.WinForms.Guna2Button();
             this.LblSeatsAvailable = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.LblClass = new System.Windows.Forms.Label();
             this.LblOriginAirport = new System.Windows.Forms.Label();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.LblRefundable = new System.Windows.Forms.Label();
@@ -82,23 +82,23 @@ namespace HassilBook
             this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.LblOriginAirportR = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.LblAirTypeR = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.LblAirlinesR = new System.Windows.Forms.Label();
+            this.LblDayDateR = new System.Windows.Forms.Label();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.LblDestinationAirportR = new System.Windows.Forms.Label();
+            this.LblSeatsAvailableR = new System.Windows.Forms.Label();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2VSeparator3 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2VSeparator4 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
+            this.PbLogo4 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlPrice.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -180,7 +180,7 @@ namespace HassilBook
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.label18);
+            this.guna2Panel1.Controls.Add(this.LblClass);
             this.guna2Panel1.Controls.Add(this.LblOriginAirport);
             this.guna2Panel1.Controls.Add(this.guna2Button7);
             this.guna2Panel1.Controls.Add(this.LblRefundable);
@@ -207,17 +207,17 @@ namespace HassilBook
             this.guna2Panel1.Size = new System.Drawing.Size(878, 229);
             this.guna2Panel1.TabIndex = 18;
             // 
-            // label18
+            // LblClass
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
-            this.label18.Location = new System.Drawing.Point(615, 9);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(250, 54);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "ECONOMY";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.LblClass.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.LblClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            this.LblClass.Location = new System.Drawing.Point(615, 9);
+            this.LblClass.Name = "LblClass";
+            this.LblClass.Size = new System.Drawing.Size(250, 54);
+            this.LblClass.TabIndex = 14;
+            this.LblClass.Text = "ECONOMY";
+            this.LblClass.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LblOriginAirport
             // 
@@ -793,23 +793,23 @@ namespace HassilBook
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.White;
             this.guna2Panel5.Controls.Add(this.label2);
-            this.guna2Panel5.Controls.Add(this.label5);
+            this.guna2Panel5.Controls.Add(this.LblOriginAirportR);
             this.guna2Panel5.Controls.Add(this.guna2Button1);
             this.guna2Panel5.Controls.Add(this.label6);
             this.guna2Panel5.Controls.Add(this.guna2Button6);
             this.guna2Panel5.Controls.Add(this.label8);
-            this.guna2Panel5.Controls.Add(this.label9);
+            this.guna2Panel5.Controls.Add(this.LblAirTypeR);
             this.guna2Panel5.Controls.Add(this.label10);
-            this.guna2Panel5.Controls.Add(this.label11);
-            this.guna2Panel5.Controls.Add(this.label12);
+            this.guna2Panel5.Controls.Add(this.LblAirlinesR);
+            this.guna2Panel5.Controls.Add(this.LblDayDateR);
             this.guna2Panel5.Controls.Add(this.guna2Button8);
-            this.guna2Panel5.Controls.Add(this.label13);
-            this.guna2Panel5.Controls.Add(this.label15);
+            this.guna2Panel5.Controls.Add(this.LblDestinationAirportR);
+            this.guna2Panel5.Controls.Add(this.LblSeatsAvailableR);
             this.guna2Panel5.Controls.Add(this.guna2Button9);
             this.guna2Panel5.Controls.Add(this.guna2VSeparator3);
             this.guna2Panel5.Controls.Add(this.guna2VSeparator4);
             this.guna2Panel5.Controls.Add(this.guna2Button10);
-            this.guna2Panel5.Controls.Add(this.guna2Button11);
+            this.guna2Panel5.Controls.Add(this.PbLogo4);
             this.guna2Panel5.Location = new System.Drawing.Point(15, 414);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.BorderRadius = 3;
@@ -831,15 +831,15 @@ namespace HassilBook
             this.label2.Text = "ECONOMY";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // LblOriginAirportR
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(190, 106);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(383, 28);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "04:25 - Aden Abdulle Internation Airport";
+            this.LblOriginAirportR.AutoSize = true;
+            this.LblOriginAirportR.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblOriginAirportR.Location = new System.Drawing.Point(190, 106);
+            this.LblOriginAirportR.Name = "LblOriginAirportR";
+            this.LblOriginAirportR.Size = new System.Drawing.Size(383, 28);
+            this.LblOriginAirportR.TabIndex = 45;
+            this.LblOriginAirportR.Text = "04:25 - Aden Abdulle Internation Airport";
             // 
             // guna2Button1
             // 
@@ -901,16 +901,16 @@ namespace HassilBook
             this.label8.TabIndex = 42;
             this.label8.Text = "Baggage 30kg";
             // 
-            // label9
+            // LblAirTypeR
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(194, 62);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 23);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "SE 524 Boeng";
+            this.LblAirTypeR.AutoSize = true;
+            this.LblAirTypeR.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirTypeR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblAirTypeR.Location = new System.Drawing.Point(194, 62);
+            this.LblAirTypeR.Name = "LblAirTypeR";
+            this.LblAirTypeR.Size = new System.Drawing.Size(115, 23);
+            this.LblAirTypeR.TabIndex = 40;
+            this.LblAirTypeR.Text = "SE 524 Boeng";
             // 
             // label10
             // 
@@ -923,26 +923,26 @@ namespace HassilBook
             this.label10.TabIndex = 39;
             this.label10.Text = "Operated by";
             // 
-            // label11
+            // LblAirlinesR
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(194, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 28);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Somali Airlines";
+            this.LblAirlinesR.AutoSize = true;
+            this.LblAirlinesR.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblAirlinesR.Location = new System.Drawing.Point(194, 35);
+            this.LblAirlinesR.Name = "LblAirlinesR";
+            this.LblAirlinesR.Size = new System.Drawing.Size(146, 28);
+            this.LblAirlinesR.TabIndex = 38;
+            this.LblAirlinesR.Text = "Somali Airlines";
             // 
-            // label12
+            // LblDayDateR
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(12, 29);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(111, 25);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Wed, 21 Apr";
+            this.LblDayDateR.AutoSize = true;
+            this.LblDayDateR.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDayDateR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblDayDateR.Location = new System.Drawing.Point(12, 29);
+            this.LblDayDateR.Name = "LblDayDateR";
+            this.LblDayDateR.Size = new System.Drawing.Size(111, 25);
+            this.LblDayDateR.TabIndex = 37;
+            this.LblDayDateR.Text = "Wed, 21 Apr";
             // 
             // guna2Button8
             // 
@@ -963,26 +963,26 @@ namespace HassilBook
             this.guna2Button8.Size = new System.Drawing.Size(36, 26);
             this.guna2Button8.TabIndex = 5;
             // 
-            // label13
+            // LblDestinationAirportR
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(190, 185);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(395, 28);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "09:50 - Bender Qassim Internation Airport";
+            this.LblDestinationAirportR.AutoSize = true;
+            this.LblDestinationAirportR.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblDestinationAirportR.Location = new System.Drawing.Point(190, 185);
+            this.LblDestinationAirportR.Name = "LblDestinationAirportR";
+            this.LblDestinationAirportR.Size = new System.Drawing.Size(395, 28);
+            this.LblDestinationAirportR.TabIndex = 34;
+            this.LblDestinationAirportR.Text = "09:50 - Bender Qassim Internation Airport";
             // 
-            // label15
+            // LblSeatsAvailableR
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(696, 94);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(161, 28);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "3 Seats available";
+            this.LblSeatsAvailableR.AutoSize = true;
+            this.LblSeatsAvailableR.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeatsAvailableR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblSeatsAvailableR.Location = new System.Drawing.Point(696, 94);
+            this.LblSeatsAvailableR.Name = "LblSeatsAvailableR";
+            this.LblSeatsAvailableR.Size = new System.Drawing.Size(161, 28);
+            this.LblSeatsAvailableR.TabIndex = 10;
+            this.LblSeatsAvailableR.Text = "3 Seats available";
             // 
             // guna2Button9
             // 
@@ -1040,24 +1040,24 @@ namespace HassilBook
             this.guna2Button10.Size = new System.Drawing.Size(36, 26);
             this.guna2Button10.TabIndex = 1;
             // 
-            // guna2Button11
+            // PbLogo4
             // 
-            this.guna2Button11.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2Button11.BorderRadius = 5;
-            this.guna2Button11.BorderThickness = 1;
-            this.guna2Button11.CheckedState.Parent = this.guna2Button11;
-            this.guna2Button11.CustomImages.Parent = this.guna2Button11;
-            this.guna2Button11.FillColor = System.Drawing.Color.White;
-            this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button11.ForeColor = System.Drawing.Color.White;
-            this.guna2Button11.HoverState.Parent = this.guna2Button11;
-            this.guna2Button11.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button11.Image")));
-            this.guna2Button11.Location = new System.Drawing.Point(141, 22);
-            this.guna2Button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button11.Name = "guna2Button11";
-            this.guna2Button11.ShadowDecoration.Parent = this.guna2Button11;
-            this.guna2Button11.Size = new System.Drawing.Size(45, 46);
-            this.guna2Button11.TabIndex = 0;
+            this.PbLogo4.BorderColor = System.Drawing.Color.LightGray;
+            this.PbLogo4.BorderRadius = 5;
+            this.PbLogo4.BorderThickness = 1;
+            this.PbLogo4.CheckedState.Parent = this.PbLogo4;
+            this.PbLogo4.CustomImages.Parent = this.PbLogo4;
+            this.PbLogo4.FillColor = System.Drawing.Color.White;
+            this.PbLogo4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PbLogo4.ForeColor = System.Drawing.Color.White;
+            this.PbLogo4.HoverState.Parent = this.PbLogo4;
+            this.PbLogo4.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo4.Image")));
+            this.PbLogo4.Location = new System.Drawing.Point(141, 22);
+            this.PbLogo4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PbLogo4.Name = "PbLogo4";
+            this.PbLogo4.ShadowDecoration.Parent = this.PbLogo4;
+            this.PbLogo4.Size = new System.Drawing.Size(45, 46);
+            this.PbLogo4.TabIndex = 0;
             // 
             // UcReturnDirectFlights
             // 
@@ -1095,7 +1095,6 @@ namespace HassilBook
         public System.Windows.Forms.Label LblSeatsAvailable;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Button PbLogo3;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
@@ -1133,31 +1132,32 @@ namespace HassilBook
         public System.Windows.Forms.Label LblOriginAirport;
         private System.Windows.Forms.Label label17;
         public System.Windows.Forms.Label LblPrice;
-        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.Label LblClass;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         public System.Windows.Forms.Label LblTotalPrice;
         public System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button PbLogo2;
-        private Guna.UI2.WinForms.Guna2Button PbLogo1;
         private System.Windows.Forms.Timer tmrAnimation;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label LblOriginAirportR;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         public System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label LblAirTypeR;
         public System.Windows.Forms.Label label10;
-        public System.Windows.Forms.Label label11;
-        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label LblAirlinesR;
+        public System.Windows.Forms.Label LblDayDateR;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        public System.Windows.Forms.Label label13;
-        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Label LblDestinationAirportR;
+        public System.Windows.Forms.Label LblSeatsAvailableR;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator3;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator4;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private Guna.UI2.WinForms.Guna2Button guna2Button11;
+        public Guna.UI2.WinForms.Guna2Button PbLogo3;
+        public Guna.UI2.WinForms.Guna2Button PbLogo2;
+        public Guna.UI2.WinForms.Guna2Button PbLogo1;
+        public Guna.UI2.WinForms.Guna2Button PbLogo4;
     }
 }

@@ -75,7 +75,7 @@ namespace HassilBook
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.guna2Panel1.Size = new System.Drawing.Size(552, 848);
+            this.guna2Panel1.Size = new System.Drawing.Size(546, 848);
             this.guna2Panel1.TabIndex = 1;
             // 
             // lstDropDownFrom
@@ -403,18 +403,18 @@ namespace HassilBook
             this.FlpFlightSearchResults.AutoScroll = true;
             this.FlpFlightSearchResults.BackColor = System.Drawing.Color.White;
             this.FlpFlightSearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlpFlightSearchResults.Location = new System.Drawing.Point(552, 0);
+            this.FlpFlightSearchResults.Location = new System.Drawing.Point(546, 0);
             this.FlpFlightSearchResults.Name = "FlpFlightSearchResults";
-            this.FlpFlightSearchResults.Size = new System.Drawing.Size(632, 848);
+            this.FlpFlightSearchResults.Size = new System.Drawing.Size(664, 848);
             this.FlpFlightSearchResults.TabIndex = 4;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1184, 0);
+            this.panel2.Location = new System.Drawing.Point(1210, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(90, 848);
+            this.panel2.Size = new System.Drawing.Size(64, 848);
             this.panel2.TabIndex = 6;
             // 
             // FrmAgencySearchEngine
