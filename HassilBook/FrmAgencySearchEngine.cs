@@ -396,10 +396,10 @@ namespace HassilBook
                                                 if (Goflights[i].Logo != null)
                                                 {
                                                     MemoryStream ms = new MemoryStream(Goflights[i].Logo);
-                                                    ucDirect[i].PbLogo1.Image = Image.FromStream(ms);
-                                                    ucDirect[i].PbLogo2.Image = Image.FromStream(ms);
-                                                    ucDirect[i].PbLogo3.Image = Image.FromStream(ms);
-                                                    ucDirect[i].PbLogo4.Image = Image.FromStream(ms);
+                                                    ucDirect[j].PbLogo1.Image = Image.FromStream(ms);
+                                                    ucDirect[j].PbLogo2.Image = Image.FromStream(ms);
+                                                    ucDirect[j].PbLogo3.Image = Image.FromStream(ms);
+                                                    ucDirect[j].PbLogo4.Image = Image.FromStream(ms);
                                                 }
 
                                                 // Flight duration and intervals will be calculated here.
@@ -641,7 +641,7 @@ namespace HassilBook
                                                 }
 
                                                 ucStop[j].LblStops.Text = Goflights[i].Stops.ToString().Substring(0, 3);
-                                                ucStop[j].LblNumberOfStops.Text = "1 Stop";
+                                                ucStop[j].LblNumberOfStops.Text = "2 Stop";
 
                                                 // Flight duration and intervals will be calculated here.
                                                 var interval = Goflights[i].ArrivalTime - Goflights[i].DepartureTime;
