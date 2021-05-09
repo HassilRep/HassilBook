@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -9,6 +10,9 @@ namespace HassilBook
 {
     public partial class FrmAgencySearchEngine : Form
     {
+        private int m_noADL = 0;
+        private int m_noCHD = 0;
+        private int m_noINF = 0;
         DatabaseConnection con = new DatabaseConnection();
         public FrmAgencySearchEngine()
         {
@@ -212,6 +216,11 @@ namespace HassilBook
                                 UcOnewayDirectFlights[] ucDirect = new UcOnewayDirectFlights[flights.Count];
                                 UcOnewayStopFlights[] ucStop = new UcOnewayStopFlights[flights.Count];
 
+                                // FLIGHT LIST AND IT'S INDEX TO SELECT FROM THE USER
+                                List<Tuple<FlightModel, int>> directFlightList = new List<Tuple<FlightModel, int>>();
+                                List<Tuple<FlightModel, int>> StopFlightList = new List<Tuple<FlightModel, int>>();
+                                UcOnewayDirectFlights direct = new UcOnewayDirectFlights();
+
                                 for (int i = 0; i < flights.Count; i++)
                                 {
                                     // DIRECT FLIGHTS
@@ -247,9 +256,9 @@ namespace HassilBook
                                         total = adultsTotal + childTotal + infantTotal;
                                         ucDirect[i].LblPrice.Text = $"USD {total.ToString()}";
 
-                                        int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                        int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                        int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                        m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                        m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                        m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                         // DETAILS
                                         ucDirect[i].LblDayDate.Text = flights[i].DepartureDate.ToString("ddd, dd MMM");
@@ -260,14 +269,17 @@ namespace HassilBook
                                         ucDirect[i].LblSeatsAvailable.Text = $"{flights[i].EconomySeats} Seats available";
 
                                         // Price break down
-                                        ucDirect[i].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal} USD";
-                                        ucDirect[i].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal} USD";
-                                        ucDirect[i].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal} USD";
+                                        ucDirect[i].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal} USD";
+                                        ucDirect[i].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal} USD";
+                                        ucDirect[i].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal} USD";
                                         ucDirect[i].LblTotalPrice.Text = $"TOTAL: {total}";
 
 
                                         ucDirect[i].LblPrice.Text = $"USD {total.ToString()}";
-                                        
+
+                                        // ADD FLIGHTS TO DIRECT LIST
+                                        directFlightList.Add(new Tuple<FlightModel, int>(flights[i], i));
+                                        ucDirect[i].Tag = i;
                                         FlpFlightSearchResults.Controls.Add(ucDirect[i]);
 
                                     }
@@ -306,9 +318,9 @@ namespace HassilBook
                                         total = adultsTotal + childTotal + infantTotal;
                                         ucStop[i].LblPrice.Text = $"USD {total.ToString()}";
 
-                                        int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                        int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                        int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                        m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                        m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                        m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                         // DETAILS
                                         ucStop[i].LblDayDate.Text = flights[i].DepartureDate.ToString("ddd, dd MMM");
@@ -321,9 +333,9 @@ namespace HassilBook
 
                                         // Price break down
 
-                                        ucStop[i].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal} USD";
-                                        ucStop[i].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal} USD";
-                                        ucStop[i].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal} USD";
+                                        ucStop[i].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal} USD";
+                                        ucStop[i].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal} USD";
+                                        ucStop[i].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal} USD";
                                         ucStop[i].LblTotalPrice.Text = $"TOTAL: {total}";
 
 
@@ -332,6 +344,7 @@ namespace HassilBook
                                         FlpFlightSearchResults.Controls.Add(ucStop[i]);
                                     }
                                 }
+                                direct.Book(directFlightList, "ECONOMY", m_noADL, m_noCHD, m_noINF);
                             }
                             else
                             {
@@ -428,14 +441,14 @@ namespace HassilBook
                                                 GrandTotal = Gototal + Backtotal;
 
 
-                                                int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                                int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                                int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                                 // Price break down
-                                                ucDirect[j].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal + adultsBackTotal} USD";
-                                                ucDirect[j].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal + childBackTotal} USD";
-                                                ucDirect[j].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal + infantBackTotal} USD";
+                                                ucDirect[j].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal + adultsBackTotal} USD";
+                                                ucDirect[j].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal + childBackTotal} USD";
+                                                ucDirect[j].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal + infantBackTotal} USD";
                                                 ucDirect[j].LblTotalPrice.Text = $"TOTAL: {GrandTotal}";
 
 
@@ -511,14 +524,14 @@ namespace HassilBook
                                                 GrandTotal = Gototal + Backtotal;
 
 
-                                                int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                                int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                                int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                                 // Price break down
-                                                ucGoStop[j].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal + adultsBackTotal} USD";
-                                                ucGoStop[j].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal + childBackTotal} USD";
-                                                ucGoStop[j].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal + infantBackTotal} USD";
+                                                ucGoStop[j].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal + adultsBackTotal} USD";
+                                                ucGoStop[j].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal + childBackTotal} USD";
+                                                ucGoStop[j].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal + infantBackTotal} USD";
                                                 ucGoStop[j].LblTotalPrice.Text = $"TOTAL: {GrandTotal}";
 
 
@@ -589,14 +602,14 @@ namespace HassilBook
                                                 GrandTotal = Gototal + Backtotal;
 
 
-                                                int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                                int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                                int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                                 // Price break down
-                                                ucBackStop[j].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal + adultsBackTotal} USD";
-                                                ucBackStop[j].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal + childBackTotal} USD";
-                                                ucBackStop[j].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal + infantBackTotal} USD";
+                                                ucBackStop[j].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal + adultsBackTotal} USD";
+                                                ucBackStop[j].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal + childBackTotal} USD";
+                                                ucBackStop[j].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal + infantBackTotal} USD";
                                                 ucBackStop[j].LblTotalPrice.Text = $"TOTAL: {GrandTotal}";
 
 
@@ -671,14 +684,14 @@ namespace HassilBook
                                                 GrandTotal = Gototal + Backtotal;
 
 
-                                                int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                                int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                                int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                                 // Price break down
-                                                ucStop[j].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal + adultsBackTotal} USD";
-                                                ucStop[j].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal + childBackTotal} USD";
-                                                ucStop[j].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal + infantBackTotal} USD";
+                                                ucStop[j].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal + adultsBackTotal} USD";
+                                                ucStop[j].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal + childBackTotal} USD";
+                                                ucStop[j].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal + infantBackTotal} USD";
                                                 ucStop[j].LblTotalPrice.Text = $"TOTAL: {GrandTotal}";
 
 
@@ -756,9 +769,9 @@ namespace HassilBook
                                         total = adultsTotal + childTotal + infantTotal;
                                         ucDirect[i].LblPrice.Text = $"USD {total.ToString()}";
 
-                                        int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                        int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                        int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                        m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                        m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                        m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                         // DETAILS
                                         ucDirect[i].LblDayDate.Text = flights[i].DepartureDate.ToString("ddd, dd MMM");
@@ -769,9 +782,9 @@ namespace HassilBook
                                         ucDirect[i].LblSeatsAvailable.Text = $"{flights[i].BusinessSeats} Seats available";
 
                                         // Price break down
-                                        ucDirect[i].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal} USD";
-                                        ucDirect[i].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal} USD";
-                                        ucDirect[i].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal} USD";
+                                        ucDirect[i].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal} USD";
+                                        ucDirect[i].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal} USD";
+                                        ucDirect[i].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal} USD";
                                         ucDirect[i].LblTotalPrice.Text = $"TOTAL: {total}";
 
 
@@ -815,9 +828,9 @@ namespace HassilBook
                                         total = adultsTotal + childTotal + infantTotal;
                                         ucStop[i].LblPrice.Text = $"USD {total.ToString()}";
 
-                                        int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                        int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                        int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                        m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                        m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                        m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                         // DETAILS
                                         ucStop[i].LblDayDate.Text = flights[i].DepartureDate.ToString("ddd, dd MMM");
@@ -830,9 +843,9 @@ namespace HassilBook
 
                                         // Price break down
 
-                                        ucStop[i].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal} USD";
-                                        ucStop[i].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal} USD";
-                                        ucStop[i].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal} USD";
+                                        ucStop[i].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal} USD";
+                                        ucStop[i].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal} USD";
+                                        ucStop[i].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal} USD";
                                         ucStop[i].LblTotalPrice.Text = $"TOTAL: {total}";
 
 
@@ -937,14 +950,14 @@ namespace HassilBook
                                                 GrandTotal = Gototal + Backtotal;
 
 
-                                                int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                                int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                                int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                                 // Price break down
-                                                ucDirect[j].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal + adultsBackTotal} USD";
-                                                ucDirect[j].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal + childBackTotal} USD";
-                                                ucDirect[j].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal + infantBackTotal} USD";
+                                                ucDirect[j].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal + adultsBackTotal} USD";
+                                                ucDirect[j].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal + childBackTotal} USD";
+                                                ucDirect[j].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal + infantBackTotal} USD";
                                                 ucDirect[j].LblTotalPrice.Text = $"TOTAL: {GrandTotal}";
 
 
@@ -1020,14 +1033,14 @@ namespace HassilBook
                                                 GrandTotal = Gototal + Backtotal;
 
 
-                                                int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                                int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                                int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                                 // Price break down
-                                                ucGoStop[j].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal + adultsBackTotal} USD";
-                                                ucGoStop[j].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal + childBackTotal} USD";
-                                                ucGoStop[j].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal + infantBackTotal} USD";
+                                                ucGoStop[j].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal + adultsBackTotal} USD";
+                                                ucGoStop[j].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal + childBackTotal} USD";
+                                                ucGoStop[j].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal + infantBackTotal} USD";
                                                 ucGoStop[j].LblTotalPrice.Text = $"TOTAL: {GrandTotal}";
 
 
@@ -1098,14 +1111,14 @@ namespace HassilBook
                                                 GrandTotal = Gototal + Backtotal;
 
 
-                                                int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                                int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                                int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                                 // Price break down
-                                                ucBackStop[j].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal + adultsBackTotal} USD";
-                                                ucBackStop[j].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal + childBackTotal} USD";
-                                                ucBackStop[j].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal + infantBackTotal} USD";
+                                                ucBackStop[j].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal + adultsBackTotal} USD";
+                                                ucBackStop[j].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal + childBackTotal} USD";
+                                                ucBackStop[j].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal + infantBackTotal} USD";
                                                 ucBackStop[j].LblTotalPrice.Text = $"TOTAL: {GrandTotal}";
 
 
@@ -1180,14 +1193,14 @@ namespace HassilBook
                                                 GrandTotal = Gototal + Backtotal;
 
 
-                                                int noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
-                                                int noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
-                                                int noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+                                                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                                                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                                                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
 
                                                 // Price break down
-                                                ucStop[j].LblAdultPrice.Text = $"ADULT     x  {noADL}   {adultsTotal + adultsBackTotal} USD";
-                                                ucStop[j].LblChildPrice.Text = $"CHILD     x  {noCHD}   {childTotal + childBackTotal} USD";
-                                                ucStop[j].LblInfantPrice.Text = $"INFANT   x  {noINF}   {infantTotal + infantBackTotal} USD";
+                                                ucStop[j].LblAdultPrice.Text = $"ADULT     x  {m_noADL}   {adultsTotal + adultsBackTotal} USD";
+                                                ucStop[j].LblChildPrice.Text = $"CHILD     x  {m_noCHD}   {childTotal + childBackTotal} USD";
+                                                ucStop[j].LblInfantPrice.Text = $"INFANT   x  {m_noINF}   {infantTotal + infantBackTotal} USD";
                                                 ucStop[j].LblTotalPrice.Text = $"TOTAL: {GrandTotal}";
 
 
@@ -1210,6 +1223,26 @@ namespace HassilBook
                         }
                     }
                 }
+            }
+        }
+
+        private void BtnSwitch_Click(object sender, EventArgs e)
+        {
+            if(TxtFrom.Text == string.Empty && TxtTo.Text == string.Empty)
+            {
+                MessageBox.Show("No route available to switch.","switch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (TxtFrom.Text != string.Empty || TxtTo.Text != string.Empty)
+            {
+                var temp = TxtFrom.Text;
+                TxtFrom.Text = TxtTo.Text;
+                TxtTo.Text = temp;
+            }
+            else
+            {
+                var temp = TxtFrom.Text;
+                TxtFrom.Text = TxtTo.Text;
+                TxtTo.Text = temp;
             }
         }
     }

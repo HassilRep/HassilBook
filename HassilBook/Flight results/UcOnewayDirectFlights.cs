@@ -12,8 +12,12 @@ namespace HassilBook
 {
     public partial class UcOnewayDirectFlights : UserControl
     {
-        public static FlightModel m_flightmodel;
-        public static string m_flightmodels;
+        private List<Tuple<FlightModel, int>> m_flightmodel;
+        private string m_flightClass;
+        private int m_adult;
+        private int m_child;
+        private int m_infant;
+
         private int m_panelHeight;
         private bool m_toggleStatus;
         public UcOnewayDirectFlights()
@@ -24,9 +28,13 @@ namespace HassilBook
             m_panelHeight = this.Height;
         }
 
-        public AgencyModel Book()
+        public void Book(List<Tuple<FlightModel, int>> flightWithIndex, string Flightclass, int adl, int chd, int inf)
         {
-            return null;
+            m_flightmodel = flightWithIndex;
+            m_flightClass = Flightclass;
+            m_adult = adl;
+            m_child = chd;
+            m_infant = inf;
         }
         private void tmrAnimation_Tick(object sender, EventArgs e)
         {
@@ -55,6 +63,11 @@ namespace HassilBook
         private void UcDirectFlights_Click(object sender, EventArgs e)
         {
             tmrAnimation.Start();
+        }
+
+        private void BtnSelectFlight_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.Tag.ToString());
         }
     }
 }

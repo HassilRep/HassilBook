@@ -47,12 +47,14 @@ namespace HassilBook
             this.TxtTo = new Guna.UI2.WinForms.Guna2TextBox();
             this.FlpFlightSearchResults = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnSwitch = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
+            this.guna2Panel1.Controls.Add(this.BtnSwitch);
             this.guna2Panel1.Controls.Add(this.lstDropDownFrom);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.BtnSearchFlight);
@@ -86,7 +88,7 @@ namespace HassilBook
             this.lstDropDownFrom.Location = new System.Drawing.Point(18, 175);
             this.lstDropDownFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstDropDownFrom.Name = "lstDropDownFrom";
-            this.lstDropDownFrom.Size = new System.Drawing.Size(514, 60);
+            this.lstDropDownFrom.Size = new System.Drawing.Size(455, 60);
             this.lstDropDownFrom.TabIndex = 34;
             this.lstDropDownFrom.Visible = false;
             this.lstDropDownFrom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstDropDownFrom_MouseClick);
@@ -166,7 +168,7 @@ namespace HassilBook
             this.lstDropDownTo.Location = new System.Drawing.Point(18, 232);
             this.lstDropDownTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstDropDownTo.Name = "lstDropDownTo";
-            this.lstDropDownTo.Size = new System.Drawing.Size(514, 60);
+            this.lstDropDownTo.Size = new System.Drawing.Size(455, 60);
             this.lstDropDownTo.TabIndex = 22;
             this.lstDropDownTo.Visible = false;
             this.lstDropDownTo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstDropDownTo_MouseClick);
@@ -188,7 +190,7 @@ namespace HassilBook
             this.DtFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DtFrom.Name = "DtFrom";
             this.DtFrom.ShadowDecoration.Parent = this.DtFrom;
-            this.DtFrom.Size = new System.Drawing.Size(516, 43);
+            this.DtFrom.Size = new System.Drawing.Size(514, 43);
             this.DtFrom.TabIndex = 19;
             this.DtFrom.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
             // 
@@ -232,7 +234,7 @@ namespace HassilBook
             this.TxtFrom.PlaceholderText = "FROM?";
             this.TxtFrom.SelectedText = "";
             this.TxtFrom.ShadowDecoration.Parent = this.TxtFrom;
-            this.TxtFrom.Size = new System.Drawing.Size(516, 43);
+            this.TxtFrom.Size = new System.Drawing.Size(455, 43);
             this.TxtFrom.TabIndex = 15;
             this.TxtFrom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtFrom_KeyDown);
             this.TxtFrom.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFrom_KeyUp);
@@ -393,7 +395,7 @@ namespace HassilBook
             this.TxtTo.PlaceholderText = "TO?";
             this.TxtTo.SelectedText = "";
             this.TxtTo.ShadowDecoration.Parent = this.TxtTo;
-            this.TxtTo.Size = new System.Drawing.Size(516, 43);
+            this.TxtTo.Size = new System.Drawing.Size(455, 43);
             this.TxtTo.TabIndex = 16;
             this.TxtTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTo_KeyDown);
             this.TxtTo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtTo_KeyUp);
@@ -416,6 +418,33 @@ namespace HassilBook
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(64, 848);
             this.panel2.TabIndex = 6;
+            // 
+            // BtnSwitch
+            // 
+            this.BtnSwitch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.BtnSwitch.BorderRadius = 5;
+            this.BtnSwitch.BorderThickness = 1;
+            this.BtnSwitch.CheckedState.FillColor = System.Drawing.Color.White;
+            this.BtnSwitch.CheckedState.Parent = this.BtnSwitch;
+            this.BtnSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSwitch.CustomImages.Parent = this.BtnSwitch;
+            this.BtnSwitch.FillColor = System.Drawing.Color.White;
+            this.BtnSwitch.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnSwitch.ForeColor = System.Drawing.Color.White;
+            this.BtnSwitch.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.BtnSwitch.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnSwitch.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("BtnSwitch.HoverState.Image")));
+            this.BtnSwitch.HoverState.Parent = this.BtnSwitch;
+            this.BtnSwitch.Image = ((System.Drawing.Image)(resources.GetObject("BtnSwitch.Image")));
+            this.BtnSwitch.ImageSize = new System.Drawing.Size(15, 15);
+            this.BtnSwitch.Location = new System.Drawing.Point(481, 129);
+            this.BtnSwitch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnSwitch.Name = "BtnSwitch";
+            this.BtnSwitch.PressedColor = System.Drawing.Color.White;
+            this.BtnSwitch.ShadowDecoration.Parent = this.BtnSwitch;
+            this.BtnSwitch.Size = new System.Drawing.Size(51, 100);
+            this.BtnSwitch.TabIndex = 35;
+            this.BtnSwitch.Click += new System.EventHandler(this.BtnSwitch_Click);
             // 
             // FrmAgencySearchEngine
             // 
@@ -454,5 +483,6 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2TextBox TxtTo;
         private System.Windows.Forms.FlowLayoutPanel FlpFlightSearchResults;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2Button BtnSwitch;
     }
 }

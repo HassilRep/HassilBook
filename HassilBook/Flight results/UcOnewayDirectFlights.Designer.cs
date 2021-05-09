@@ -145,6 +145,7 @@ namespace HassilBook
             this.BtnSelectFlight.Size = new System.Drawing.Size(248, 43);
             this.BtnSelectFlight.TabIndex = 11;
             this.BtnSelectFlight.Text = "SELECT FLIGHT";
+            this.BtnSelectFlight.Click += new System.EventHandler(this.BtnSelectFlight_Click);
             // 
             // LblSeatsAvailable
             // 
