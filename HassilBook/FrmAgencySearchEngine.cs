@@ -196,6 +196,13 @@ namespace HassilBook
             }
             else
             {
+                m_noADL = (CmbAdult.SelectedIndex == 0 ? 0 : int.Parse(CmbAdult.Text));
+                m_noCHD = (CmbChild.SelectedIndex == 0 ? 0 : int.Parse(CmbChild.Text));
+                m_noINF = (CmbInfant.SelectedIndex == 0 ? 0 : int.Parse(CmbInfant.Text));
+
+                // NO OF SEATS TO BOOK
+                int totalSeats = m_noADL + m_noCHD + m_noINF;
+
                 if (CmbClass.SelectedIndex == 0 || CmbClass.SelectedIndex == 1)
                 {
                     // ONEWAY ECONOMY
@@ -208,7 +215,7 @@ namespace HassilBook
                         else
                         {
                             Flight search = new Flight();
-                            var flights = search.SearchEconomyFromSingleAirline(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"));
+                            var flights = search.SearchEconomyFromSingleAirline(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"), FrmLogin.m_client.ClientID, totalSeats);
 
                             FlpFlightSearchResults.Controls.Clear();
                             if (flights.Count > 0)
@@ -362,8 +369,8 @@ namespace HassilBook
                         else
                         {
                             Flight search = new Flight();
-                            var Goflights = search.SearchEconomyFromSingleAirline(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"));
-                            var Returnflights = search.SearchEconomyFromSingleAirline(TxtTo.Text, TxtFrom.Text, DtTo.Value.ToString("yyyy/MM/dd"));
+                            var Goflights = search.SearchEconomyFromSingleAirline(TxtFrom.Text, TxtTo.Text, DtFrom.Value.ToString("yyyy/MM/dd"), FrmLogin.m_client.ClientID, totalSeats);
+                            var Returnflights = search.SearchEconomyFromSingleAirline(TxtTo.Text, TxtFrom.Text, DtTo.Value.ToString("yyyy/MM/dd"), FrmLogin.m_client.ClientID, totalSeats);
 
                             FlpFlightSearchResults.Controls.Clear();
                             if (Goflights.Count > 0)

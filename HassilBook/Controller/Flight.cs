@@ -1,11 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace HassilBook
@@ -22,7 +18,7 @@ namespace HassilBook
         /// <param name="to"></param>
         /// <param name="dep"></param>
         /// <returns></returns>
-        public List<FlightModel> SearchEconomyFromSingleAirline(string from, string to, string dep)
+        public List<FlightModel> SearchEconomyFromSingleAirline(string from, string to, string dep, int officeID, int seats)
         {
             List<FlightModel> flightModel = new List<FlightModel>();
             try
@@ -38,7 +34,7 @@ namespace HassilBook
                                     INNER JOIN tbl_ClientAirplanes A ON F.AirplaneID = A.ID
                                     INNER JOIN tbl_ClientFlightPrices P ON F.PriceTypeID = P.ID
                                     INNER JOIN tbl_Clients C ON F.OfficeID = C.ID
-                                    WHERE D.Airport = '" + from + "' AND PP.Airport = '" + to + "' AND F.DepartureDate = '" + dep + "' AND F.EconomySeats > 0 AND F.OfficeID = '"+FrmLogin.m_agency.OfficeID+"' ORDER BY F.DepartureTime ASC";
+                                    WHERE D.Airport = '" + from + "' AND PP.Airport = '" + to + "' AND F.DepartureDate = '" + dep + "' AND F.EconomySeats >= '"+ seats + "' AND F.OfficeID = '"+officeID+"' ORDER BY F.DepartureTime ASC";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -78,7 +74,7 @@ namespace HassilBook
             }
             return flightModel;
         }
-        
+
         /// <summary>
         /// Searches economy seats from all airlines
         /// </summary>
@@ -102,9 +98,9 @@ namespace HassilBook
                                     INNER JOIN tbl_ClientAirplanes A ON F.AirplaneID = A.ID
                                     INNER JOIN tbl_ClientFlightPrices P ON F.PriceTypeID = P.ID
                                     INNER JOIN tbl_Clients C ON F.OfficeID = C.ID
-                                    WHERE D.Airport = '" + from+"' AND PP.Airport = '"+to+"' AND F.DepartureDate = '"+dep+ "' AND F.EconomySeats > 0 ORDER BY F.DepartureTime ASC";
+                                    WHERE D.Airport = '" + from + "' AND PP.Airport = '" + to + "' AND F.DepartureDate = '" + dep + "' AND F.EconomySeats > 0 ORDER BY F.DepartureTime ASC";
                 MySqlDataReader dr = cmd.ExecuteReader();
-                while(dr.Read())
+                while (dr.Read())
                 {
                     FlightModel flight = new FlightModel();
                     flight.OfficeID = int.Parse(dr["OfficeID"].ToString());
@@ -166,7 +162,7 @@ namespace HassilBook
                                     INNER JOIN tbl_ClientAirplanes A ON F.AirplaneID = A.ID
                                     INNER JOIN tbl_ClientFlightPrices P ON F.PriceTypeID = P.ID
                                     INNER JOIN tbl_Clients C ON F.OfficeID = C.ID
-                                    WHERE D.Airport = '" + from + "' AND PP.Airport = '" + to + "' AND F.DepartureDate = '" + dep + "' AND F.BusinessSeats > 0 AND F.OfficeID = '"+FrmLogin.m_agency.OfficeID+"'ORDER BY F.DepartureTime ASC";
+                                    WHERE D.Airport = '" + from + "' AND PP.Airport = '" + to + "' AND F.DepartureDate = '" + dep + "' AND F.BusinessSeats > 0 AND F.OfficeID = '" + FrmLogin.m_agency.OfficeID + "'ORDER BY F.DepartureTime ASC";
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {

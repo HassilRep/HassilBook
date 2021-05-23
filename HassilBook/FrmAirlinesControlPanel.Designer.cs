@@ -45,7 +45,7 @@ namespace HassilBook
             this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlLeft = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnBookings = new Guna.UI2.WinForms.Guna2Button();
             this.BtnCompany = new Guna.UI2.WinForms.Guna2Button();
             this.BtnCoupons = new Guna.UI2.WinForms.Guna2Button();
             this.BtnWallet = new Guna.UI2.WinForms.Guna2Button();
@@ -285,7 +285,7 @@ namespace HassilBook
             // 
             this.pnlMenu.AutoScroll = true;
             this.pnlMenu.BackColor = System.Drawing.Color.White;
-            this.pnlMenu.Controls.Add(this.guna2Button2);
+            this.pnlMenu.Controls.Add(this.BtnBookings);
             this.pnlMenu.Controls.Add(this.BtnCompany);
             this.pnlMenu.Controls.Add(this.BtnCoupons);
             this.pnlMenu.Controls.Add(this.BtnWallet);
@@ -304,37 +304,38 @@ namespace HassilBook
             this.pnlMenu.Size = new System.Drawing.Size(306, 650);
             this.pnlMenu.TabIndex = 5;
             // 
-            // guna2Button2
+            // BtnBookings
             // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.CheckedState.Image")));
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
-            this.guna2Button2.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.HoverState.Image")));
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 69);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.White;
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(304, 69);
-            this.guna2Button2.TabIndex = 14;
-            this.guna2Button2.Text = "BOOKINGS";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.TextOffset = new System.Drawing.Point(30, 0);
+            this.BtnBookings.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BtnBookings.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnBookings.CheckedState.FillColor = System.Drawing.Color.White;
+            this.BtnBookings.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnBookings.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.CheckedState.Image")));
+            this.BtnBookings.CheckedState.Parent = this.BtnBookings;
+            this.BtnBookings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBookings.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BtnBookings.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.BtnBookings.CustomImages.Parent = this.BtnBookings;
+            this.BtnBookings.FillColor = System.Drawing.Color.White;
+            this.BtnBookings.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBookings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
+            this.BtnBookings.HoverState.FillColor = System.Drawing.Color.White;
+            this.BtnBookings.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            this.BtnBookings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.HoverState.Image")));
+            this.BtnBookings.HoverState.Parent = this.BtnBookings;
+            this.BtnBookings.Image = ((System.Drawing.Image)(resources.GetObject("BtnBookings.Image")));
+            this.BtnBookings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnBookings.ImageOffset = new System.Drawing.Point(5, 0);
+            this.BtnBookings.Location = new System.Drawing.Point(0, 69);
+            this.BtnBookings.Name = "BtnBookings";
+            this.BtnBookings.PressedColor = System.Drawing.Color.White;
+            this.BtnBookings.ShadowDecoration.Parent = this.BtnBookings;
+            this.BtnBookings.Size = new System.Drawing.Size(304, 69);
+            this.BtnBookings.TabIndex = 14;
+            this.BtnBookings.Text = "BOOKINGS";
+            this.BtnBookings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BtnBookings.TextOffset = new System.Drawing.Point(30, 0);
+            this.BtnBookings.Click += new System.EventHandler(this.BtnBookings_Click);
             // 
             // BtnCompany
             // 
@@ -747,7 +748,7 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2Button BtnAirplanes;
         private Guna.UI2.WinForms.Guna2Button BtnCompany;
         private System.Windows.Forms.Panel pnlContainer;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button BtnBookings;
         private Guna.UI2.WinForms.Guna2Button guna2Button12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

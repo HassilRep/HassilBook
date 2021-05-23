@@ -1,7 +1,7 @@
 ﻿
 namespace HassilBook
 {
-    partial class FrmAgencySearchEngine
+    partial class FrmCheckFlights
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,13 @@ namespace HassilBook
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgencySearchEngine));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCheckFlights));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.BtnSwitch = new Guna.UI2.WinForms.Guna2Button();
             this.lstDropDownFrom = new System.Windows.Forms.ListBox();
@@ -46,16 +52,25 @@ namespace HassilBook
             this.CmbClass = new Guna.UI2.WinForms.Guna2ComboBox();
             this.DtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.TxtTo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.FlpFlightSearchResults = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DGClientAirplanes = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BOOK = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.DETAILS = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientAirplanes)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
-            this.guna2Panel1.Controls.Add(this.guna2DateTimePicker1);
             this.guna2Panel1.Controls.Add(this.BtnSwitch);
             this.guna2Panel1.Controls.Add(this.lstDropDownFrom);
             this.guna2Panel1.Controls.Add(this.label1);
@@ -79,8 +94,8 @@ namespace HassilBook
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.guna2Panel1.Size = new System.Drawing.Size(513, 788);
-            this.guna2Panel1.TabIndex = 1;
+            this.guna2Panel1.Size = new System.Drawing.Size(513, 804);
+            this.guna2Panel1.TabIndex = 2;
             // 
             // BtnSwitch
             // 
@@ -107,7 +122,6 @@ namespace HassilBook
             this.BtnSwitch.ShadowDecoration.Parent = this.BtnSwitch;
             this.BtnSwitch.Size = new System.Drawing.Size(51, 100);
             this.BtnSwitch.TabIndex = 35;
-            this.BtnSwitch.Click += new System.EventHandler(this.BtnSwitch_Click);
             // 
             // lstDropDownFrom
             // 
@@ -169,6 +183,7 @@ namespace HassilBook
             this.CmbAdult.ItemHeight = 22;
             this.CmbAdult.Items.AddRange(new object[] {
             "-ADL-",
+            "0",
             "1",
             "2",
             "3",
@@ -429,56 +444,208 @@ namespace HassilBook
             this.TxtTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTo_KeyDown);
             this.TxtTo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtTo_KeyUp);
             // 
-            // FlpFlightSearchResults
+            // DGClientAirplanes
             // 
-            this.FlpFlightSearchResults.AutoScroll = true;
-            this.FlpFlightSearchResults.BackColor = System.Drawing.Color.White;
-            this.FlpFlightSearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlpFlightSearchResults.Location = new System.Drawing.Point(513, 0);
-            this.FlpFlightSearchResults.Name = "FlpFlightSearchResults";
-            this.FlpFlightSearchResults.Size = new System.Drawing.Size(740, 788);
-            this.FlpFlightSearchResults.TabIndex = 4;
+            this.DGClientAirplanes.AllowUserToAddRows = false;
+            this.DGClientAirplanes.AllowUserToResizeColumns = false;
+            this.DGClientAirplanes.AllowUserToResizeRows = false;
+            this.DGClientAirplanes.BackgroundColor = System.Drawing.Color.White;
+            this.DGClientAirplanes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGClientAirplanes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGClientAirplanes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGClientAirplanes.ColumnHeadersHeight = 25;
+            this.DGClientAirplanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGClientAirplanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column19,
+            this.Column18,
+            this.BOOK,
+            this.DETAILS});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGClientAirplanes.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DGClientAirplanes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGClientAirplanes.EnableHeadersVisualStyles = false;
+            this.DGClientAirplanes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DGClientAirplanes.Location = new System.Drawing.Point(513, 0);
+            this.DGClientAirplanes.Margin = new System.Windows.Forms.Padding(0);
+            this.DGClientAirplanes.Name = "DGClientAirplanes";
+            this.DGClientAirplanes.ReadOnly = true;
+            this.DGClientAirplanes.RowHeadersVisible = false;
+            this.DGClientAirplanes.RowHeadersWidth = 61;
+            this.DGClientAirplanes.RowTemplate.Height = 50;
+            this.DGClientAirplanes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DGClientAirplanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGClientAirplanes.Size = new System.Drawing.Size(627, 804);
+            this.DGClientAirplanes.TabIndex = 37;
+            this.DGClientAirplanes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientAirplanes_CellContentClick);
+            this.DGClientAirplanes.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGClientAirplanes_CellMouseLeave);
+            this.DGClientAirplanes.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGClientAirplanes_CellMouseMove);
             // 
-            // panel2
+            // Column4
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1253, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(21, 788);
-            this.panel2.TabIndex = 6;
-            this.panel2.Visible = false;
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column4.Frozen = true;
+            this.Column4.HeaderText = "#";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 54;
             // 
-            // guna2DateTimePicker1
+            // Column12
             // 
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.CustomFormat = "dd/MMM/yyyy HH:mm:ss";
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(78, 540);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(358, 36);
-            this.guna2DateTimePicker1.TabIndex = 36;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 9, 18, 37, 1, 88);
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column12.HeaderText = "FLIGHT";
+            this.Column12.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Column12.MinimumWidth = 8;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 70;
             // 
-            // FrmAgencySearchEngine
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column13.HeaderText = "ORIGIN";
+            this.Column13.MinimumWidth = 8;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column13.Width = 73;
+            // 
+            // Column14
+            // 
+            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column14.HeaderText = "DESTINATION";
+            this.Column14.MinimumWidth = 8;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column15
+            // 
+            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column15.HeaderText = "DEP.";
+            this.Column15.MinimumWidth = 8;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column15.Width = 46;
+            // 
+            // Column16
+            // 
+            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column16.HeaderText = "ARR.";
+            this.Column16.MinimumWidth = 8;
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column16.Width = 51;
+            // 
+            // Column17
+            // 
+            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column17.HeaderText = "SEATS";
+            this.Column17.MinimumWidth = 8;
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Width = 90;
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column19.HeaderText = "PRICE";
+            this.Column19.MinimumWidth = 8;
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Width = 90;
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column18.HeaderText = "CLASS";
+            this.Column18.MinimumWidth = 8;
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Width = 92;
+            // 
+            // BOOK
+            // 
+            this.BOOK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(123)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.BOOK.DefaultCellStyle = dataGridViewCellStyle4;
+            this.BOOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BOOK.HeaderText = "";
+            this.BOOK.MinimumWidth = 8;
+            this.BOOK.Name = "BOOK";
+            this.BOOK.ReadOnly = true;
+            this.BOOK.Text = "BOOK";
+            this.BOOK.UseColumnTextForButtonValue = true;
+            this.BOOK.Width = 8;
+            // 
+            // DETAILS
+            // 
+            this.DETAILS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.DETAILS.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DETAILS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DETAILS.HeaderText = "";
+            this.DETAILS.MinimumWidth = 8;
+            this.DETAILS.Name = "DETAILS";
+            this.DETAILS.ReadOnly = true;
+            this.DETAILS.Text = "DETAILS";
+            this.DETAILS.UseColumnTextForButtonValue = true;
+            this.DETAILS.Width = 8;
+            // 
+            // FrmCheckFlights
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1274, 788);
-            this.Controls.Add(this.FlpFlightSearchResults);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1140, 804);
+            this.Controls.Add(this.DGClientAirplanes);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmAgencySearchEngine";
-            this.Text = "FrmAgencySearchEngine";
+            this.Name = "FrmCheckFlights";
+            this.Text = "FrmCheckFlights";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientAirplanes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -486,6 +653,7 @@ namespace HassilBook
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button BtnSwitch;
         private System.Windows.Forms.ListBox lstDropDownFrom;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button BtnSearchFlight;
@@ -500,9 +668,17 @@ namespace HassilBook
         private Guna.UI2.WinForms.Guna2ComboBox CmbClass;
         private Guna.UI2.WinForms.Guna2DateTimePicker DtTo;
         private Guna.UI2.WinForms.Guna2TextBox TxtTo;
-        private System.Windows.Forms.FlowLayoutPanel FlpFlightSearchResults;
-        private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button BtnSwitch;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.DataGridView DGClientAirplanes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewImageColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewButtonColumn BOOK;
+        private System.Windows.Forms.DataGridViewButtonColumn DETAILS;
     }
 }

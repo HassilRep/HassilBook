@@ -133,5 +133,10 @@ namespace HassilBook
         {
             MyContainer(new FrmCompany());
         }
+
+        private void BtnBookings_Click(object sender, EventArgs e)
+        {
+            MyContainer(new FrmCheckFlights());
+        }
     }
 }

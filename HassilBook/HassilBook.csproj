@@ -222,6 +222,18 @@
     <Compile Include="FrmAgencySearchEngine.Designer.cs">
       <DependentUpon>FrmAgencySearchEngine.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBookingCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookingCart.Designer.cs">
+      <DependentUpon>FrmBookingCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckFlights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckFlights.Designer.cs">
+      <DependentUpon>FrmCheckFlights.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\AgencyModel.cs" />
     <Compile Include="Global\Const.cs" />
     <Compile Include="Controller\AirlineAccessPoint.cs" />
@@ -409,6 +421,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAirlinesControlPanel.resx">
       <DependentUpon>FrmAirlinesControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBookingCart.resx">
+      <DependentUpon>FrmBookingCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheckFlights.resx">
+      <DependentUpon>FrmCheckFlights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientAirplanes.resx">
       <DependentUpon>FrmClientAirplanes.cs</DependentUpon>

@@ -65,6 +65,7 @@ namespace HassilBook
         private void BtnLoginAgency_Click(object sender, EventArgs e)
         {
             AgencyAccessPoint accessPoint = new AgencyAccessPoint();
+            AirlineAccessPoint access = new AirlineAccessPoint();
             var agencies = accessPoint.Login(TxtAgencyID.Text, TxtAgencyUsername.Text, TxtAgencyPassword.Text);
 
             if(agencies.Count == 1)
@@ -80,6 +81,8 @@ namespace HassilBook
                     else
                     {
                         FrmAgencyDashboard F = new FrmAgencyDashboard();
+                        // profile information
+                        m_client = access.ClientProfile(TxtOfficeID.Text);
                         this.Hide();
                         F.Show();
                     }
