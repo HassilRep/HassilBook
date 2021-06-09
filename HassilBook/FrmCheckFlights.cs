@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -12,6 +13,8 @@ namespace HassilBook
         #region MEMBERS
 
         DatabaseConnection con = new DatabaseConnection();
+        private List<FlightModel> m_availableFlights = new List<FlightModel>();
+        public static string abdi = "hanad";
         int m_noADL;
         int m_noCHD;
         int m_noINF;
@@ -33,7 +36,14 @@ namespace HassilBook
 
             if(cel == "BOOK")
             {
-                FrmBookingCart cart = new FrmBookingCart();
+                int index = int.Parse(DGClientAirplanes[0, e.RowIndex].Value.ToString()) - 1;
+                var flight = m_availableFlights[index];
+
+                // GENERATE REFRENCE
+                CouponGenerator coupon = new CouponGenerator();
+                var refrence = coupon.GenerateCoupon();
+
+                FrmBookingCart cart = new FrmBookingCart(flight, refrence);
                 cart.ShowDialog();
             }
             else if(cel == "DETAILS")
@@ -78,20 +88,21 @@ namespace HassilBook
                             if (flights.Count > 0)
                             {
                                 int i = 0;
-                                foreach (var item in flights)
+                                foreach (var flight in flights)
                                 {
+                                    m_availableFlights.Add(flight);
                                     i += 1;
 
                                     // LOAD FLIGHT IMAGE
-                                    MemoryStream ms = new MemoryStream(item.Logo);
+                                    MemoryStream ms = new MemoryStream(flight.Logo);
                                     Image img = null;
                                     img = Image.FromStream(ms);
 
                                     // CALCULATE TICKET PRISES
-                                    decimal total = (item.AdultEconomyPrice * m_noADL) + (item.ChildEconomyPrice * m_noCHD) + (item.InfantEconomyPrice * m_noINF);
+                                    decimal total = (flight.AdultEconomyPrice * m_noADL) + (flight.ChildEconomyPrice * m_noCHD) + (flight.InfantEconomyPrice * m_noINF);
                                     
                                     // ADD FLIGHT TO THE LIST
-                                    DGClientAirplanes.Rows.Add(i, img, item.From, item.To, item.DepartureTime, item.ArrivalTime, item.EconomySeats, total, CmbClass.Text);
+                                    DGClientAirplanes.Rows.Add(i, img, flight.From, flight.To, flight.DepartureTime, flight.ArrivalTime, flight.EconomySeats, total, CmbClass.Text);
                                 }
                             }
                             else

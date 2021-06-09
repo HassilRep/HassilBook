@@ -29,174 +29,98 @@ namespace HassilBook
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBookingCart));
-            this.DGClientCoupon = new System.Windows.Forms.DataGridView();
+            this.DGClientBookingCart = new System.Windows.Forms.DataGridView();
+            this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.CmbGender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.TxtPassengername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.LblInvoiceAmount = new System.Windows.Forms.Label();
+            this.BtnAddToCart = new Guna.UI2.WinForms.Guna2Button();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DEL = new System.Windows.Forms.DataGridViewImageColumn();
-            this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
-            this.CmbManager = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.TxtDepartment = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxtDepartmentID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.LblInvoiceAmount = new System.Windows.Forms.Label();
-            this.BtnAllCoupons = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGClientCoupon)).BeginInit();
+            this.DtIssuedDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.TxtBookingRef = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CmbPaymentType = new Guna.UI2.WinForms.Guna2ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientBookingCart)).BeginInit();
             this.bunifuGroupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DGClientCoupon
+            // DGClientBookingCart
             // 
-            this.DGClientCoupon.AllowUserToAddRows = false;
-            this.DGClientCoupon.AllowUserToResizeColumns = false;
-            this.DGClientCoupon.AllowUserToResizeRows = false;
-            this.DGClientCoupon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGClientBookingCart.AllowUserToAddRows = false;
+            this.DGClientBookingCart.AllowUserToResizeColumns = false;
+            this.DGClientBookingCart.AllowUserToResizeRows = false;
+            this.DGClientBookingCart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGClientCoupon.BackgroundColor = System.Drawing.Color.White;
-            this.DGClientCoupon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGClientCoupon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGClientCoupon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.DGClientCoupon.ColumnHeadersHeight = 25;
-            this.DGClientCoupon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGClientCoupon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGClientBookingCart.BackgroundColor = System.Drawing.Color.White;
+            this.DGClientBookingCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGClientBookingCart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(162)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGClientBookingCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGClientBookingCart.ColumnHeadersHeight = 25;
+            this.DGClientBookingCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGClientBookingCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column3,
             this.Column5,
             this.Column9,
+            this.Column7,
             this.Column1,
             this.Column6,
-            this.Column7,
             this.EDIT,
             this.DEL});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGClientCoupon.DefaultCellStyle = dataGridViewCellStyle8;
-            this.DGClientCoupon.EnableHeadersVisualStyles = false;
-            this.DGClientCoupon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DGClientCoupon.Location = new System.Drawing.Point(12, 351);
-            this.DGClientCoupon.Margin = new System.Windows.Forms.Padding(0);
-            this.DGClientCoupon.Name = "DGClientCoupon";
-            this.DGClientCoupon.ReadOnly = true;
-            this.DGClientCoupon.RowHeadersVisible = false;
-            this.DGClientCoupon.RowHeadersWidth = 61;
-            this.DGClientCoupon.RowTemplate.Height = 25;
-            this.DGClientCoupon.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DGClientCoupon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGClientCoupon.Size = new System.Drawing.Size(945, 281);
-            this.DGClientCoupon.TabIndex = 52;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "#";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 54;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "ID";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 61;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "COUPON CODE";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "MAX. USES";
-            this.Column9.MinimumWidth = 8;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 130;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "USED SO FAR";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 148;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "EXP. DATE";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 120;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column7.HeaderText = "STATUS";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 101;
-            // 
-            // EDIT
-            // 
-            this.EDIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.EDIT.HeaderText = "EDIT";
-            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
-            this.EDIT.MinimumWidth = 8;
-            this.EDIT.Name = "EDIT";
-            this.EDIT.ReadOnly = true;
-            this.EDIT.Width = 49;
-            // 
-            // DEL
-            // 
-            this.DEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.DEL.HeaderText = "DEL";
-            this.DEL.Image = ((System.Drawing.Image)(resources.GetObject("DEL.Image")));
-            this.DEL.MinimumWidth = 8;
-            this.DEL.Name = "DEL";
-            this.DEL.ReadOnly = true;
-            this.DEL.Width = 43;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGClientBookingCart.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGClientBookingCart.EnableHeadersVisualStyles = false;
+            this.DGClientBookingCart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DGClientBookingCart.Location = new System.Drawing.Point(12, 296);
+            this.DGClientBookingCart.Margin = new System.Windows.Forms.Padding(0);
+            this.DGClientBookingCart.Name = "DGClientBookingCart";
+            this.DGClientBookingCart.ReadOnly = true;
+            this.DGClientBookingCart.RowHeadersVisible = false;
+            this.DGClientBookingCart.RowHeadersWidth = 61;
+            this.DGClientBookingCart.RowTemplate.Height = 25;
+            this.DGClientBookingCart.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DGClientBookingCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGClientBookingCart.Size = new System.Drawing.Size(945, 307);
+            this.DGClientBookingCart.TabIndex = 52;
             // 
             // bunifuGroupBox1
             // 
+            this.bunifuGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.bunifuGroupBox1.BorderRadius = 1;
             this.bunifuGroupBox1.BorderThickness = 1;
-            this.bunifuGroupBox1.Controls.Add(this.CmbManager);
-            this.bunifuGroupBox1.Controls.Add(this.TxtDepartment);
-            this.bunifuGroupBox1.Controls.Add(this.TxtDepartmentID);
+            this.bunifuGroupBox1.Controls.Add(this.CmbPaymentType);
+            this.bunifuGroupBox1.Controls.Add(this.TxtBookingRef);
+            this.bunifuGroupBox1.Controls.Add(this.DtIssuedDate);
+            this.bunifuGroupBox1.Controls.Add(this.CmbGender);
+            this.bunifuGroupBox1.Controls.Add(this.TxtPassengername);
             this.bunifuGroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuGroupBox1.ForeColor = System.Drawing.Color.Gray;
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -206,93 +130,74 @@ namespace HassilBook
             this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
             this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(945, 211);
+            this.bunifuGroupBox1.Size = new System.Drawing.Size(945, 164);
             this.bunifuGroupBox1.TabIndex = 53;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Personal information";
             // 
-            // CmbManager
+            // CmbGender
             // 
-            this.CmbManager.BackColor = System.Drawing.Color.Transparent;
-            this.CmbManager.BorderRadius = 5;
-            this.CmbManager.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbManager.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbManager.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbManager.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CmbManager.FocusedState.Parent = this.CmbManager;
-            this.CmbManager.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CmbManager.ForeColor = System.Drawing.Color.Black;
-            this.CmbManager.HoverState.Parent = this.CmbManager;
-            this.CmbManager.ItemHeight = 23;
-            this.CmbManager.Items.AddRange(new object[] {
-            "- Manager -"});
-            this.CmbManager.ItemsAppearance.Parent = this.CmbManager;
-            this.CmbManager.Location = new System.Drawing.Point(9, 145);
-            this.CmbManager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CmbManager.Name = "CmbManager";
-            this.CmbManager.ShadowDecoration.Parent = this.CmbManager;
-            this.CmbManager.Size = new System.Drawing.Size(485, 29);
-            this.CmbManager.StartIndex = 0;
-            this.CmbManager.TabIndex = 40;
-            this.CmbManager.Visible = false;
+            this.CmbGender.BackColor = System.Drawing.Color.Transparent;
+            this.CmbGender.BorderRadius = 5;
+            this.CmbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbGender.FocusedState.Parent = this.CmbGender;
+            this.CmbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbGender.ForeColor = System.Drawing.Color.Black;
+            this.CmbGender.HoverState.Parent = this.CmbGender;
+            this.CmbGender.ItemHeight = 23;
+            this.CmbGender.Items.AddRange(new object[] {
+            "- Gender -",
+            "MR",
+            "MRS",
+            "MS",
+            "CHD",
+            "INF",
+            "MR + INF",
+            "MRS + INF",
+            "PROF",
+            "HE",
+            "DR"});
+            this.CmbGender.ItemsAppearance.Parent = this.CmbGender;
+            this.CmbGender.Location = new System.Drawing.Point(426, 96);
+            this.CmbGender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbGender.Name = "CmbGender";
+            this.CmbGender.ShadowDecoration.Parent = this.CmbGender;
+            this.CmbGender.Size = new System.Drawing.Size(238, 29);
+            this.CmbGender.StartIndex = 0;
+            this.CmbGender.TabIndex = 40;
             // 
-            // TxtDepartment
+            // TxtPassengername
             // 
-            this.TxtDepartment.BorderRadius = 5;
-            this.TxtDepartment.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtDepartment.DefaultText = "";
-            this.TxtDepartment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtDepartment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtDepartment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtDepartment.DisabledState.Parent = this.TxtDepartment;
-            this.TxtDepartment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtDepartment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtDepartment.FocusedState.Parent = this.TxtDepartment;
-            this.TxtDepartment.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtDepartment.ForeColor = System.Drawing.Color.Black;
-            this.TxtDepartment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtDepartment.HoverState.Parent = this.TxtDepartment;
-            this.TxtDepartment.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtDepartment.IconLeft")));
-            this.TxtDepartment.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtDepartment.Location = new System.Drawing.Point(9, 92);
-            this.TxtDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TxtDepartment.Name = "TxtDepartment";
-            this.TxtDepartment.PasswordChar = '\0';
-            this.TxtDepartment.PlaceholderText = "Department";
-            this.TxtDepartment.SelectedText = "";
-            this.TxtDepartment.ShadowDecoration.Parent = this.TxtDepartment;
-            this.TxtDepartment.Size = new System.Drawing.Size(487, 43);
-            this.TxtDepartment.TabIndex = 39;
-            this.TxtDepartment.Visible = false;
-            // 
-            // TxtDepartmentID
-            // 
-            this.TxtDepartmentID.BorderRadius = 5;
-            this.TxtDepartmentID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtDepartmentID.DefaultText = "";
-            this.TxtDepartmentID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtDepartmentID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtDepartmentID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtDepartmentID.DisabledState.Parent = this.TxtDepartmentID;
-            this.TxtDepartmentID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtDepartmentID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtDepartmentID.FocusedState.Parent = this.TxtDepartmentID;
-            this.TxtDepartmentID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtDepartmentID.ForeColor = System.Drawing.Color.Black;
-            this.TxtDepartmentID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtDepartmentID.HoverState.Parent = this.TxtDepartmentID;
-            this.TxtDepartmentID.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtDepartmentID.IconLeft")));
-            this.TxtDepartmentID.IconLeftSize = new System.Drawing.Size(12, 12);
-            this.TxtDepartmentID.Location = new System.Drawing.Point(9, 42);
-            this.TxtDepartmentID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TxtDepartmentID.Name = "TxtDepartmentID";
-            this.TxtDepartmentID.PasswordChar = '\0';
-            this.TxtDepartmentID.PlaceholderText = "Department ID";
-            this.TxtDepartmentID.SelectedText = "";
-            this.TxtDepartmentID.ShadowDecoration.Parent = this.TxtDepartmentID;
-            this.TxtDepartmentID.Size = new System.Drawing.Size(487, 43);
-            this.TxtDepartmentID.TabIndex = 35;
-            this.TxtDepartmentID.Visible = false;
+            this.TxtPassengername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtPassengername.BorderRadius = 5;
+            this.TxtPassengername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtPassengername.DefaultText = "";
+            this.TxtPassengername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtPassengername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtPassengername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtPassengername.DisabledState.Parent = this.TxtPassengername;
+            this.TxtPassengername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtPassengername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtPassengername.FocusedState.Parent = this.TxtPassengername;
+            this.TxtPassengername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtPassengername.ForeColor = System.Drawing.Color.Black;
+            this.TxtPassengername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtPassengername.HoverState.Parent = this.TxtPassengername;
+            this.TxtPassengername.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtPassengername.IconLeft")));
+            this.TxtPassengername.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtPassengername.Location = new System.Drawing.Point(426, 46);
+            this.TxtPassengername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtPassengername.Name = "TxtPassengername";
+            this.TxtPassengername.PasswordChar = '\0';
+            this.TxtPassengername.PlaceholderText = "Passenger name";
+            this.TxtPassengername.SelectedText = "";
+            this.TxtPassengername.ShadowDecoration.Parent = this.TxtPassengername;
+            this.TxtPassengername.Size = new System.Drawing.Size(508, 43);
+            this.TxtPassengername.TabIndex = 35;
             // 
             // panel1
             // 
@@ -315,43 +220,202 @@ namespace HassilBook
             this.LblInvoiceAmount.Text = "0.00";
             this.LblInvoiceAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // BtnAllCoupons
+            // BtnAddToCart
             // 
-            this.BtnAllCoupons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAllCoupons.BorderRadius = 5;
-            this.BtnAllCoupons.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.BtnAllCoupons.CheckedState.Parent = this.BtnAllCoupons;
-            this.BtnAllCoupons.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnAllCoupons.CustomImages.Parent = this.BtnAllCoupons;
-            this.BtnAllCoupons.CustomizableEdges.BottomRight = false;
-            this.BtnAllCoupons.CustomizableEdges.TopRight = false;
-            this.BtnAllCoupons.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
-            this.BtnAllCoupons.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnAllCoupons.ForeColor = System.Drawing.Color.White;
-            this.BtnAllCoupons.HoverState.Parent = this.BtnAllCoupons;
-            this.BtnAllCoupons.Location = new System.Drawing.Point(669, 303);
-            this.BtnAllCoupons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnAllCoupons.Name = "BtnAllCoupons";
-            this.BtnAllCoupons.ShadowDecoration.Parent = this.BtnAllCoupons;
-            this.BtnAllCoupons.Size = new System.Drawing.Size(288, 43);
-            this.BtnAllCoupons.TabIndex = 56;
-            this.BtnAllCoupons.Text = "ADD TO CART";
+            this.BtnAddToCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAddToCart.BorderRadius = 5;
+            this.BtnAddToCart.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnAddToCart.CheckedState.Parent = this.BtnAddToCart;
+            this.BtnAddToCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAddToCart.CustomImages.Parent = this.BtnAddToCart;
+            this.BtnAddToCart.CustomizableEdges.BottomRight = false;
+            this.BtnAddToCart.CustomizableEdges.TopRight = false;
+            this.BtnAddToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(191)))), ((int)(((byte)(133)))));
+            this.BtnAddToCart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnAddToCart.ForeColor = System.Drawing.Color.White;
+            this.BtnAddToCart.HoverState.Parent = this.BtnAddToCart;
+            this.BtnAddToCart.Location = new System.Drawing.Point(669, 248);
+            this.BtnAddToCart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnAddToCart.Name = "BtnAddToCart";
+            this.BtnAddToCart.ShadowDecoration.Parent = this.BtnAddToCart;
+            this.BtnAddToCart.Size = new System.Drawing.Size(288, 43);
+            this.BtnAddToCart.TabIndex = 56;
+            this.BtnAddToCart.Text = "ADD TO CART";
+            this.BtnAddToCart.Click += new System.EventHandler(this.BtnAddToCart_Click);
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "#";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 54;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "BOOKING REF";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 154;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column5.HeaderText = "FLIGHT";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.HeaderText = "PASSENGER";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column7.HeaderText = "GENDER";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 110;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "PRICE";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 90;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column6.HeaderText = "CLASS";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 92;
+            // 
+            // EDIT
+            // 
+            this.EDIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.EDIT.HeaderText = "EDIT";
+            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
+            this.EDIT.MinimumWidth = 8;
+            this.EDIT.Name = "EDIT";
+            this.EDIT.ReadOnly = true;
+            this.EDIT.Width = 49;
+            // 
+            // DEL
+            // 
+            this.DEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DEL.HeaderText = "DEL";
+            this.DEL.Image = ((System.Drawing.Image)(resources.GetObject("DEL.Image")));
+            this.DEL.MinimumWidth = 8;
+            this.DEL.Name = "DEL";
+            this.DEL.ReadOnly = true;
+            this.DEL.Width = 43;
+            // 
+            // DtIssuedDate
+            // 
+            this.DtIssuedDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.DtIssuedDate.BorderRadius = 5;
+            this.DtIssuedDate.BorderThickness = 1;
+            this.DtIssuedDate.CheckedState.Parent = this.DtIssuedDate;
+            this.DtIssuedDate.FillColor = System.Drawing.Color.White;
+            this.DtIssuedDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DtIssuedDate.ForeColor = System.Drawing.Color.Black;
+            this.DtIssuedDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtIssuedDate.HoverState.Parent = this.DtIssuedDate;
+            this.DtIssuedDate.Location = new System.Drawing.Point(8, 96);
+            this.DtIssuedDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DtIssuedDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtIssuedDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtIssuedDate.Name = "DtIssuedDate";
+            this.DtIssuedDate.ShadowDecoration.Parent = this.DtIssuedDate;
+            this.DtIssuedDate.Size = new System.Drawing.Size(405, 43);
+            this.DtIssuedDate.TabIndex = 52;
+            this.DtIssuedDate.Value = new System.DateTime(2021, 4, 13, 19, 45, 57, 839);
+            // 
+            // TxtBookingRef
+            // 
+            this.TxtBookingRef.BorderRadius = 5;
+            this.TxtBookingRef.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtBookingRef.DefaultText = "";
+            this.TxtBookingRef.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtBookingRef.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtBookingRef.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtBookingRef.DisabledState.Parent = this.TxtBookingRef;
+            this.TxtBookingRef.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtBookingRef.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtBookingRef.FocusedState.Parent = this.TxtBookingRef;
+            this.TxtBookingRef.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtBookingRef.ForeColor = System.Drawing.Color.Black;
+            this.TxtBookingRef.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtBookingRef.HoverState.Parent = this.TxtBookingRef;
+            this.TxtBookingRef.IconLeft = ((System.Drawing.Image)(resources.GetObject("TxtBookingRef.IconLeft")));
+            this.TxtBookingRef.IconLeftSize = new System.Drawing.Size(12, 12);
+            this.TxtBookingRef.Location = new System.Drawing.Point(8, 46);
+            this.TxtBookingRef.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtBookingRef.Name = "TxtBookingRef";
+            this.TxtBookingRef.PasswordChar = '\0';
+            this.TxtBookingRef.PlaceholderText = "Booking refrence";
+            this.TxtBookingRef.SelectedText = "";
+            this.TxtBookingRef.ShadowDecoration.Parent = this.TxtBookingRef;
+            this.TxtBookingRef.Size = new System.Drawing.Size(405, 43);
+            this.TxtBookingRef.TabIndex = 53;
+            // 
+            // CmbPaymentType
+            // 
+            this.CmbPaymentType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CmbPaymentType.BackColor = System.Drawing.Color.Transparent;
+            this.CmbPaymentType.BorderRadius = 5;
+            this.CmbPaymentType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbPaymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPaymentType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbPaymentType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbPaymentType.FocusedState.Parent = this.CmbPaymentType;
+            this.CmbPaymentType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbPaymentType.ForeColor = System.Drawing.Color.Black;
+            this.CmbPaymentType.HoverState.Parent = this.CmbPaymentType;
+            this.CmbPaymentType.ItemHeight = 23;
+            this.CmbPaymentType.Items.AddRange(new object[] {
+            "- Payment -",
+            "HA-Wallet",
+            "Postpaid account"});
+            this.CmbPaymentType.ItemsAppearance.Parent = this.CmbPaymentType;
+            this.CmbPaymentType.Location = new System.Drawing.Point(672, 96);
+            this.CmbPaymentType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmbPaymentType.Name = "CmbPaymentType";
+            this.CmbPaymentType.ShadowDecoration.Parent = this.CmbPaymentType;
+            this.CmbPaymentType.Size = new System.Drawing.Size(262, 29);
+            this.CmbPaymentType.StartIndex = 0;
+            this.CmbPaymentType.TabIndex = 54;
             // 
             // FrmBookingCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(969, 641);
-            this.Controls.Add(this.BtnAllCoupons);
+            this.ClientSize = new System.Drawing.Size(969, 612);
+            this.Controls.Add(this.BtnAddToCart);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuGroupBox1);
-            this.Controls.Add(this.DGClientCoupon);
+            this.Controls.Add(this.DGClientBookingCart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmBookingCart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Your booking cart";
-            ((System.ComponentModel.ISupportInitialize)(this.DGClientCoupon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGClientBookingCart)).EndInit();
             this.bunifuGroupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -359,22 +423,24 @@ namespace HassilBook
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView DGClientCoupon;
+        private System.Windows.Forms.DataGridView DGClientBookingCart;
+        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
+        public Guna.UI2.WinForms.Guna2ComboBox CmbGender;
+        public Guna.UI2.WinForms.Guna2TextBox TxtPassengername;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LblInvoiceAmount;
+        private Guna.UI2.WinForms.Guna2Button BtnAddToCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DEL;
-        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
-        public Guna.UI2.WinForms.Guna2ComboBox CmbManager;
-        public Guna.UI2.WinForms.Guna2TextBox TxtDepartment;
-        public Guna.UI2.WinForms.Guna2TextBox TxtDepartmentID;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label LblInvoiceAmount;
-        private Guna.UI2.WinForms.Guna2Button BtnAllCoupons;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DtIssuedDate;
+        public Guna.UI2.WinForms.Guna2TextBox TxtBookingRef;
+        public Guna.UI2.WinForms.Guna2ComboBox CmbPaymentType;
     }
 }
